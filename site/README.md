@@ -46,7 +46,7 @@ The Internet's architecture rests on a set of design principles. Some are formal
 
 ## About This Project
 
-This analysis was produced as part of the **[IETF 125 Hackathon](https://www.ietf.org/meeting/125/)** (November 2025, Yokohama). It demonstrates how [vCons (virtualized conversations)](https://datatracker.ietf.org/doc/draft-ietf-vcon-vcon-container/) can be used not just to store conversation records, but to *analyze* them at scale and produce derived insights.
+This analysis was produced as part of the **[IETF 125 Hackathon](https://www.ietf.org/meeting/125/)** (March 2026, Shenzhen). It demonstrates how [vCons (virtualized conversations)](https://datatracker.ietf.org/doc/draft-ietf-vcon-vcon-container/) can be used not just to store conversation records, but to *analyze* them at scale and produce derived insights.
 
 ### The Technical Pipeline
 

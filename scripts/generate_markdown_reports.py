@@ -197,7 +197,7 @@ IETF_MEETING_DATES = {
     "ietf121": "November 2024 (Dublin)",
     "ietf122": "March 2025 (Bangkok)",
     "ietf123": "July 2025 (Madrid)",
-    "ietf124": "November 2025 (Yokohama)",
+    "ietf124": "November 2025 (Shenzhen)",
 }
 
 
