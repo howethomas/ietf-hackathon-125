@@ -1,0 +1,57 @@
+{
+  "vcon": "0.0.1",
+  "uuid": "d6da0ad2-370b-4c44-bfd0-9af3e4afdce2",
+  "created_at": "2026-03-14T14:47:32.670357+00:00",
+  "updated_at": "2026-03-14T14:47:32.670357+00:00",
+  "subject": "Simplicity / complexity management \u2014 IETF Discussion Corpus (ietf120-ietf120)",
+  "group": [
+    {
+      "uuid": "2c63f7db-d5b7-4586-869a-2569f5152ae0"
+    }
+  ],
+  "parties": [],
+  "dialog": [],
+  "attachments": [
+    {
+      "type": "application/json",
+      "purpose": "principle_definition",
+      "body": "{\"principle_id\": \"simplicity\", \"name\": \"Simplicity / complexity management\", \"description\": \"Complexity is the primary impediment to scaling. Keep designs simple.\", \"rfc_refs\": [\"RFC 3439\"]}",
+      "encoding": "json"
+    },
+    {
+      "type": "application/json",
+      "purpose": "collected_evidence",
+      "body": "{\"total_sessions\": 1, \"sessions\": [{\"source_uuid\": \"2c63f7db-d5b7-4586-869a-2569f5152ae0\", \"meeting\": \"ietf120\", \"working_group\": \"6man\", \"subject\": \"IETF 120 - 6MAN Working Group Session\", \"matches\": [{\"context\": \"now there were certain participants who were like very convinced that FD should be SL 48 and people said well okay but for FC which we haven't defined yet we should be more flexible so that's why the complexity came about just yeah s Krish I was going to say pretty much what Jen said somehow she rea\", \"matched_pattern\": \"complexity.*scal\"}], \"confidence\": \"low\"}]}",
+      "encoding": "json"
+    }
+  ],
+  "analysis": [
+    {
+      "type": "ietf_principle_corpus_summary",
+      "dialog": [],
+      "vendor": "ietf-hackathon-125",
+      "body": {
+        "principle_id": "simplicity",
+        "principle_name": "Simplicity / complexity management",
+        "total_sessions": 1,
+        "total_unique_sources": 1,
+        "meetings_represented": [
+          "ietf120"
+        ],
+        "working_groups": [
+          "6man"
+        ],
+        "top_working_groups": [
+          {
+            "group": "6man",
+            "count": 1
+          }
+        ],
+        "meeting_frequency": {
+          "ietf120": 1
+        }
+      },
+      "encoding": "json"
+    }
+  ]
+}

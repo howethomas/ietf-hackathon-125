@@ -1,0 +1,57 @@
+{
+  "vcon": "0.0.1",
+  "uuid": "d05a6f15-6f19-4bad-a398-9f2b7d2ec011",
+  "created_at": "2026-03-14T14:47:32.669721+00:00",
+  "updated_at": "2026-03-14T14:47:32.669721+00:00",
+  "subject": "Rough consensus and running code \u2014 IETF Discussion Corpus (ietf120-ietf120)",
+  "group": [
+    {
+      "uuid": "2c63f7db-d5b7-4586-869a-2569f5152ae0"
+    }
+  ],
+  "parties": [],
+  "dialog": [],
+  "attachments": [
+    {
+      "type": "application/json",
+      "purpose": "principle_definition",
+      "body": "{\"principle_id\": \"rough_consensus\", \"name\": \"Rough consensus and running code\", \"description\": \"IETF decision-making: address all issues but not necessarily accommodate all. Prefer working implementations.\", \"rfc_refs\": [\"RFC 7282\"]}",
+      "encoding": "json"
+    },
+    {
+      "type": "application/json",
+      "purpose": "collected_evidence",
+      "body": "{\"total_sessions\": 1, \"sessions\": [{\"source_uuid\": \"2c63f7db-d5b7-4586-869a-2569f5152ae0\", \"meeting\": \"ietf120\", \"working_group\": \"6man\", \"subject\": \"IETF 120 - 6MAN Working Group Session\", \"matches\": [{\"context\": \"nd there was another question I was like why are we creating a new addressing model well um Quest that's kind of of a question for V6 Ops why did we create it but I mean I think there does seem to be rough consensus that it's this model does make sense in some places right um and as for why we beari\", \"matched_pattern\": \"rough\\\\s+consensus\"}], \"confidence\": \"low\"}]}",
+      "encoding": "json"
+    }
+  ],
+  "analysis": [
+    {
+      "type": "ietf_principle_corpus_summary",
+      "dialog": [],
+      "vendor": "ietf-hackathon-125",
+      "body": {
+        "principle_id": "rough_consensus",
+        "principle_name": "Rough consensus and running code",
+        "total_sessions": 1,
+        "total_unique_sources": 1,
+        "meetings_represented": [
+          "ietf120"
+        ],
+        "working_groups": [
+          "6man"
+        ],
+        "top_working_groups": [
+          {
+            "group": "6man",
+            "count": 1
+          }
+        ],
+        "meeting_frequency": {
+          "ietf120": 1
+        }
+      },
+      "encoding": "json"
+    }
+  ]
+}

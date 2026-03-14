@@ -1,0 +1,57 @@
+{
+  "vcon": "0.0.1",
+  "uuid": "c63d6315-c98f-4f50-8f66-1a693d42f48c",
+  "created_at": "2026-03-14T14:47:32.670655+00:00",
+  "updated_at": "2026-03-14T14:47:32.670655+00:00",
+  "subject": "Principle of constant change \u2014 IETF Discussion Corpus (ietf120-ietf120)",
+  "group": [
+    {
+      "uuid": "2c63f7db-d5b7-4586-869a-2569f5152ae0"
+    }
+  ],
+  "parties": [],
+  "dialog": [],
+  "attachments": [
+    {
+      "type": "application/json",
+      "purpose": "principle_definition",
+      "body": "{\"principle_id\": \"constant_change\", \"name\": \"Principle of constant change\", \"description\": \"The Internet must continue to evolve. Design for extensibility.\", \"rfc_refs\": [\"RFC 1958\"]}",
+      "encoding": "json"
+    },
+    {
+      "type": "application/json",
+      "purpose": "collected_evidence",
+      "body": "{\"total_sessions\": 1, \"sessions\": [{\"source_uuid\": \"2c63f7db-d5b7-4586-869a-2569f5152ae0\", \"meeting\": \"ietf120\", \"working_group\": \"6man\", \"subject\": \"IETF 120 - 6MAN Working Group Session\", \"matches\": [{\"context\": \"this is a bad thing but I I would at least try to do an Outreach to somebody like you know somebody at broadcom or something to see what they feel about it right like you know does it close off some extensibility path for them that's fair enough um let's meet offline and you can give me some referen\", \"matched_pattern\": \"extensib\"}, {\"context\": \"e solution uh one issue that has you know been there when we have discussed had this discussion in the past is well slack is used everywhere and we don't want to break anything that's existing so the backward compatiability and having a concrete solution is really key to really making this really go\", \"matched_pattern\": \"backward.?compat\"}, {\"context\": \"ot of concerns about the race to the bottom so we're try to kind of nip that one that we don't have the race to the bottom and then I think the second big issue that had come up in the past was U was backward compatibility there there is you know tremendous a number of devices around the world that \", \"matched_pattern\": \"backward.?compat\"}], \"confidence\": \"high\"}]}",
+      "encoding": "json"
+    }
+  ],
+  "analysis": [
+    {
+      "type": "ietf_principle_corpus_summary",
+      "dialog": [],
+      "vendor": "ietf-hackathon-125",
+      "body": {
+        "principle_id": "constant_change",
+        "principle_name": "Principle of constant change",
+        "total_sessions": 1,
+        "total_unique_sources": 1,
+        "meetings_represented": [
+          "ietf120"
+        ],
+        "working_groups": [
+          "6man"
+        ],
+        "top_working_groups": [
+          {
+            "group": "6man",
+            "count": 1
+          }
+        ],
+        "meeting_frequency": {
+          "ietf120": 1
+        }
+      },
+      "encoding": "json"
+    }
+  ]
+}

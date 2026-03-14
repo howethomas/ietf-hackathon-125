@@ -1,0 +1,9 @@
+title: "The Design of the Internet"
+description: "Internet architecture principles revealed by IETF conversation analysis using vCons"
+theme: jekyll-theme-cayman
+markdown: kramdown
+
+exclude:
+  - book.json
+  - .gitbook.yaml
+  - SUMMARY.md
