@@ -1,0 +1,33 @@
+{
+  "title": "The Design of the Internet",
+  "description": "An exploration of Internet architecture principles as revealed by IETF working group conversations, analyzed using vCons. Produced at the IETF 125 Hackathon.",
+  "author": "IETF 125 Hackathon — vCon Working Group",
+  "language": "en",
+  "gitbook": ">=3.2.0",
+  "links": {
+    "sidebar": {
+      "Conserver.io": "https://conserver.io",
+      "IETF vCon WG": "https://datatracker.ietf.org/wg/vcon/about/",
+      "Source Data": "https://github.com/vcon-dev/ietf-meeting-vcons"
+    }
+  },
+  "plugins": [
+    "theme-default",
+    "search",
+    "sharing",
+    "fontsettings"
+  ],
+  "pluginsConfig": {
+    "theme-default": {
+      "showLevel": true
+    },
+    "sharing": {
+      "github": true,
+      "github_link": "https://github.com/vcon-dev/ietf-hackathon-125"
+    }
+  },
+  "structure": {
+    "readme": "README.md",
+    "summary": "SUMMARY.md"
+  }
+}
