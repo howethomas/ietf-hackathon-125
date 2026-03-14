@@ -1,0 +1,317 @@
+{
+  "vcon": "0.0.1",
+  "uuid": "317f8ebe-3225-45da-8907-8704b0027aab",
+  "created_at": "2026-03-14T15:12:40.966271+00:00",
+  "updated_at": "2026-03-14T15:12:40.966271+00:00",
+  "subject": "End-to-end principle \u2014 IETF Discussion Corpus (ietf110-ietf123)",
+  "group": [
+    {
+      "uuid": "0b87ef1f-22d5-4cb3-9025-09858590a5f6"
+    },
+    {
+      "uuid": "47af32c3-2e01-4071-a957-b1430780cea4"
+    },
+    {
+      "uuid": "e1454928-f4ff-44c7-a6de-8d1e1b44fcb0"
+    },
+    {
+      "uuid": "15979ffe-9bf3-4a77-b8b5-ea650866c364"
+    },
+    {
+      "uuid": "044f2a65-de1e-41cf-9527-c4f1dbfbdd26"
+    },
+    {
+      "uuid": "7811df67-03a9-4e5c-a6ad-9d090e21f875"
+    },
+    {
+      "uuid": "ec7c1132-d803-4b90-9c63-48adc4369edd"
+    },
+    {
+      "uuid": "0f0baed5-89d2-41af-ba20-cde410bdd396"
+    },
+    {
+      "uuid": "92bdc646-610b-4f5c-a1f9-35ec94ec979d"
+    },
+    {
+      "uuid": "8c0809fa-03fa-46ed-b2bd-a4329ff38914"
+    },
+    {
+      "uuid": "a98747a3-866f-4ef3-bebe-fe583a542529"
+    },
+    {
+      "uuid": "850adcb2-b9d2-4742-a3be-f4e343c67fe4"
+    },
+    {
+      "uuid": "7d16a401-8341-4bec-8630-2ed9838ee7c0"
+    },
+    {
+      "uuid": "f84808ec-bd84-47af-9464-39dfddf37369"
+    },
+    {
+      "uuid": "a0f04763-e99c-46e9-ad4c-8a4b6f73912e"
+    },
+    {
+      "uuid": "80d57654-d410-4286-936a-595eca67bb50"
+    },
+    {
+      "uuid": "3505ef88-eee7-4194-a8d2-f20af2e5185f"
+    },
+    {
+      "uuid": "eb4db66f-091c-478c-a1b2-1dbe7a0bafe8"
+    },
+    {
+      "uuid": "32807d5a-a7f5-49ee-9a3f-cda7bf75d659"
+    },
+    {
+      "uuid": "8e0fb2f6-de4c-4381-a313-2a6f5c468250"
+    },
+    {
+      "uuid": "aa783659-866f-4c90-a033-9f91432076ed"
+    },
+    {
+      "uuid": "18fe5dc7-eea8-40df-aa06-48aa97990214"
+    },
+    {
+      "uuid": "1d885818-b263-49ff-ba13-807c2f4e48a4"
+    },
+    {
+      "uuid": "73f103cf-0b33-4561-8945-881acb00f22b"
+    },
+    {
+      "uuid": "9d5724d4-ca92-4a0c-9930-91ba483a8620"
+    },
+    {
+      "uuid": "b3040a6c-5854-41e9-bbf9-b39b25d4246a"
+    },
+    {
+      "uuid": "9ae6a5d4-dfe3-4eae-9ea2-a375ccbc60eb"
+    },
+    {
+      "uuid": "f855c2cb-e124-4f88-8943-3db8f36e7124"
+    },
+    {
+      "uuid": "abd72644-7618-4218-9330-da4c37f094de"
+    },
+    {
+      "uuid": "f3b8e735-66a1-48ac-8989-0b2d253dfe0f"
+    },
+    {
+      "uuid": "f2d7fd7e-85a4-4677-a6ec-f4a37880c1a5"
+    },
+    {
+      "uuid": "a573a480-c015-4f36-9b52-65ab84f8f4f0"
+    },
+    {
+      "uuid": "58687a90-ff77-48c9-ad3e-349547d6c2c2"
+    },
+    {
+      "uuid": "e3d0161e-5ddb-4d90-9f56-3261046a9e40"
+    },
+    {
+      "uuid": "0d56db5e-71c5-427f-9176-f26aeb48376a"
+    },
+    {
+      "uuid": "ad975fca-dd93-457b-8f57-e5b09a67dc51"
+    },
+    {
+      "uuid": "7995bccb-9809-43d2-8c26-e3ec068658cd"
+    },
+    {
+      "uuid": "cf9f0347-71db-4f72-a0c4-ea54e3b6aa7d"
+    },
+    {
+      "uuid": "3f8ccd44-f546-4c87-b555-ce5e341b6e9e"
+    },
+    {
+      "uuid": "5d3db4cc-b3fe-490f-b6ee-d6f28a9db82a"
+    },
+    {
+      "uuid": "3d808128-e356-46ed-bc87-bae8c0961d1d"
+    },
+    {
+      "uuid": "ce593fd6-4fd5-47bf-8561-cca76971fb2c"
+    },
+    {
+      "uuid": "d9b7c32a-a8fb-4112-9561-bd1f9ae49e7a"
+    },
+    {
+      "uuid": "62a0e01c-51b4-47c1-bd53-87b559325b6c"
+    },
+    {
+      "uuid": "8c6af37b-e84e-4b7b-8da0-4eeb128d2b17"
+    },
+    {
+      "uuid": "e4944a32-102a-449e-aa34-3b5178d68968"
+    },
+    {
+      "uuid": "7ea61936-303c-49f8-bf8b-32d238679e5e"
+    },
+    {
+      "uuid": "fca2546d-51af-496f-8d14-1d7422083d01"
+    },
+    {
+      "uuid": "e0a0da64-c5a7-45db-993c-8af1842a729b"
+    },
+    {
+      "uuid": "e8b463d3-b13e-4735-b5f9-fbcfbdf47797"
+    },
+    {
+      "uuid": "232cd07b-4d91-4983-93a4-76f69e50467a"
+    },
+    {
+      "uuid": "1ac48264-d48f-47ce-80ea-7b5121861305"
+    },
+    {
+      "uuid": "469c1a23-dc1d-4e67-b834-c17a8640f618"
+    },
+    {
+      "uuid": "a54e5df3-455f-4a50-8e9f-8afb49ca2b14"
+    },
+    {
+      "uuid": "3a937894-964c-4e10-8811-eae69a1f5c4c"
+    },
+    {
+      "uuid": "c59b34b5-69f2-48fb-a31d-d2d9070c9ee6"
+    }
+  ],
+  "parties": [],
+  "dialog": [],
+  "attachments": [
+    {
+      "type": "application/json",
+      "purpose": "principle_definition",
+      "body": "{\"principle_id\": \"end_to_end\", \"name\": \"End-to-end principle\", \"description\": \"Intelligence should be at endpoints, not in the network. Functions can only be correctly implemented at the application layer.\", \"rfc_refs\": [\"RFC 1958\", \"RFC 3724\"]}",
+      "encoding": "json"
+    },
+    {
+      "type": "application/json",
+      "purpose": "collected_evidence",
+      "body": "{\"total_sessions\": 56, \"sessions\": [{\"source_uuid\": \"0b87ef1f-22d5-4cb3-9025-09858590a5f6\", \"meeting\": \"ietf110\", \"working_group\": \"ace\", \"subject\": \"IETF 110 - ACE Working Group Session\", \"matches\": [{\"context\": \"teady machine the crap application should be in charge of managing all this complexity and i think it might be interesting to look for if that is possible and how much can we achieve giving this this intelligence to the to the co-op application but i think it's worth exploring at least yeah carsten \", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"47af32c3-2e01-4071-a957-b1430780cea4\", \"meeting\": \"ietf110\", \"working_group\": \"babel\", \"subject\": \"IETF 110 - BABEL Working Group Session\", \"matches\": [{\"context\": \"no fate sharing between the data between on the one hand the date and act pass and on the other hand the icmp path so this protocol breaks the main properties of it breaks the main properties of the end-to-end principle so okay i've already said that next please okay so what is the problem well with\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"e1454928-f4ff-44c7-a6de-8d1e1b44fcb0\", \"meeting\": \"ietf110\", \"working_group\": \"coinrg\", \"subject\": \"IETF 110 - COINRG Working Group Session\", \"matches\": [{\"context\": \"w okay go ahead okay so uh i'm going to tell you why networks should and from and can provide more expressive routing and this is a little bit controversial because it uh touches on uh the end-to-end end-to-end principle but um i i think you'll you'll enjoy it so i worked in this together with uh wi\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"15979ffe-9bf3-4a77-b8b5-ea650866c364\", \"meeting\": \"ietf110\", \"working_group\": \"maprg\", \"subject\": \"IETF 110 - MAPRG Working Group Session\", \"matches\": [{\"context\": \"sort of relative impact of of you know uh um the actual size of the anonymity set so i mean like in some cases 10 is quite good right if it's like facebook and you know telegram that actually conceal intelligence traffic and facebook is quite valuable um on the other hand um um and also um there's u\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"044f2a65-de1e-41cf-9527-c4f1dbfbdd26\", \"meeting\": \"ietf110\", \"working_group\": \"sframe\", \"subject\": \"IETF 110 - SFRAME Working Group Session\", \"matches\": [{\"context\": \"or the sender that knows if it's useful in which contexts but i think that's enough i think that's a good point thanks magnus uh yes for being passionate it's not it's not often that i get to make an end-to-end argument here but um i'm not working in webrtc or whatever i'm doing stuff that is entire\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"7811df67-03a9-4e5c-a6ad-9d090e21f875\", \"meeting\": \"ietf111\", \"working_group\": \"avtcore\", \"subject\": \"IETF 111 - AVTCORE Working Group Session\", \"matches\": [{\"context\": \"ia stack it has a scalable codec it has you know differentiated you know uh frames it has all these things and it would try to do those things intelligently on its own and not assume that there's any intelligence in the transport it's assuming our to be packet pusher right but if you're over quick n\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"ec7c1132-d803-4b90-9c63-48adc4369edd\", \"meeting\": \"ietf111\", \"working_group\": \"dtn\", \"subject\": \"IETF 111 - DTN Working Group Session\", \"matches\": [{\"context\": \"erability with ion and the implementation of the t3t and dtm implementation and this connection allowed to uh connect between uh earth and space and also process images connecting with the artificial intelligence software of google by dr larissa suzuki alberto matilla and the group of d3tm and also \", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"0f0baed5-89d2-41af-ba20-cde410bdd396\", \"meeting\": \"ietf111\", \"working_group\": \"nmrg\", \"subject\": \"IETF 111 - NMRG Working Group Session\", \"matches\": [{\"context\": \"ata is processed and and combined and aggregated to to provide the intended results and how this combination of the orchestration and the data infrastructures facilitates the the use of of artificial intelligence mechanisms for control and management on the of the uh of the network uh environment ca\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"92bdc646-610b-4f5c-a1f9-35ec94ec979d\", \"meeting\": \"ietf111\", \"working_group\": \"opsec\", \"subject\": \"IETF 111 - OPSEC Working Group Session\", \"matches\": [{\"context\": \"know you know that tens of thousands hundreds of thousands of endpoints and and that allows us to very quickly turn on a dime in terms of when we come across new threat or infrastructure or we we get intelligence through an instant response to effectively light up where that threat actor also is and\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"8c0809fa-03fa-46ed-b2bd-a4329ff38914\", \"meeting\": \"ietf111\", \"working_group\": \"secdispatch\", \"subject\": \"IETF 111 - SECDISPATCH Working Group Session\", \"matches\": [{\"context\": \"the specifics now that it's broken into three parts we started with a very the first section was really succinct i was just trying to attempt a formal definition based on the constituent parts of the end-to-end principle in encryption but we realized that actually quite a bit of the work we're going\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"a98747a3-866f-4ef3-bebe-fe583a542529\", \"meeting\": \"ietf111\", \"working_group\": \"teas\", \"subject\": \"IETF 111 - TEAS Working Group Session\", \"matches\": [{\"context\": \"similar slice cycle as the one in 5g services probably here in this case would be at least how the the way in which this has been defined in oran and because they are leveraging so much in artificial intelligence and close loop automation probably will be more dynamism than in 3dpp at least by now t\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"850adcb2-b9d2-4742-a3be-f4e343c67fe4\", \"meeting\": \"ietf113\", \"working_group\": \"dtn\", \"subject\": \"IETF 113 - DTN Working Group Session\", \"matches\": [{\"context\": \"nterplanetary environment we're interested in showing that these protocols are capable of supporting useful applications and so we'll be testing messaging and real-time video and federated artificial intelligence and machine learning among a number of other applications and we encourage all of you a\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"7d16a401-8341-4bec-8630-2ed9838ee7c0\", \"meeting\": \"ietf113\", \"working_group\": \"i2nsf\", \"subject\": \"IETF 113 - I2NSF Working Group Session\", \"matches\": [{\"context\": \"the itunes remote station to enhance edge security function and then the security automation i may use iphone sf remote station to manage the asf and the last bullet is that a decentralized security intelligence sharing may use remote attestation to judge the trustworthiness of such intelligence for\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"f84808ec-bd84-47af-9464-39dfddf37369\", \"meeting\": \"ietf113\", \"working_group\": \"ohai\", \"subject\": \"IETF 113 - OHAI Working Group Session\", \"matches\": [{\"context\": \"t that now the now the dependence is on the target server somehow knowing that this is coming through a proxy infrastructure and i need to have separate headers for that or you are talking of putting intelligence at the request resource level to identify that when i get a rate limit zero okay i am n\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"a0f04763-e99c-46e9-ad4c-8a4b6f73912e\", \"meeting\": \"ietf113\", \"working_group\": \"openpgp\", \"subject\": \"IETF 113 - OPENPGP Working Group Session\", \"matches\": [{\"context\": \"ption in three different ways and we believe in aggregate that is what is required to actually come up with a full definition the first way of course is a formal definition what is an end what is the end to end principle what is encryption and then can you summarize that in one or two sentences and \", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"80d57654-d410-4286-936a-595eca67bb50\", \"meeting\": \"ietf113\", \"working_group\": \"panrg\", \"subject\": \"IETF 113 - PANRG Working Group Session\", \"matches\": [{\"context\": \"definition of an end-to-end path property which is simply a path property defined on both end points and the virtual link between them which is very useful since many concepts are defined using this end-to-end principle and as a result of this we replaced most occurrences of host in the draft with e\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"3505ef88-eee7-4194-a8d2-f20af2e5185f\", \"meeting\": \"ietf114\", \"working_group\": \"alto\", \"subject\": \"IETF 114 - ALTO Working Group Session\", \"matches\": [{\"context\": \"olved here as well and so moving on the next one um yeah and this is about closing the loop here building what we call sort of the edge Loop so from a network you have first visibility then you apply intelligence and then control back to the network and this orchestration as well we believe that Alt\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"eb4db66f-091c-478c-a1b2-1dbe7a0bafe8\", \"meeting\": \"ietf114\", \"working_group\": \"dinrg\", \"subject\": \"IETF 114 - DINRG Working Group Session\", \"matches\": [{\"context\": \"s of consolidation and centralization some of them are talking about the economic part of it some of them are talking about the architectural part of it how how centralization affects things like the end-to-end principle and so forth some of it talks about specific protocols we do have a lot of inde\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"32807d5a-a7f5-49ee-9a3f-cda7bf75d659\", \"meeting\": \"ietf114\", \"working_group\": \"lsr\", \"subject\": \"IETF 114 - LSR Working Group Session\", \"matches\": [{\"context\": \"is doesn't need a key or you know or something like that well again we're trying not to be a catalog because then somebody asks why didn't you list this one and you know we'd rather have people apply intelligence the capability should not make a difference as to the behavior um it should just be a c\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"8e0fb2f6-de4c-4381-a313-2a6f5c468250\", \"meeting\": \"ietf114\", \"working_group\": \"nmrg\", \"subject\": \"IETF 114 - NMRG Working Group Session\", \"matches\": [{\"context\": \"your slides so we will start with this current introduction and research group status then we will have a guest presentation and a number of topics on network digital twin green networking artificial intelligence and newton-based networking i'm not go through the details because we want to save a bi\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"aa783659-866f-4c90-a033-9f91432076ed\", \"meeting\": \"ietf114\", \"working_group\": \"panrg\", \"subject\": \"IETF 114 - PANRG Working Group Session\", \"matches\": [{\"context\": \"el machine machine communication and edge computing and in network computing in network computing is a little bit uh difficult for me still but we have more middle boxes in the network so i think the end to end principle is now over so we need to think about how to our review how to design the in th\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"18fe5dc7-eea8-40df-aa06-48aa97990214\", \"meeting\": \"ietf114\", \"working_group\": \"raw\", \"subject\": \"IETF 114 - RAW Working Group Session\", \"matches\": [{\"context\": \"o happen if there is you know smartness in the coordination between the access phones and the stations so in July as well another group has formed which is called AIML which is essentially artificial intelligence and machine learning for Wi-Fi and the goal here is to examine how you know each side c\", \"matched_pattern\": \"\"}, {\"context\": \"carsten go ahead yeah just a quick comment I think we have to be careful that in making the network more reliable we don't start applying the transport service model to the network there is still an end-to-end argument uh here and a lot of people seem to think that that we can change IP so every dat\", \"matched_pattern\": \"\"}], \"confidence\": \"medium\"}, {\"source_uuid\": \"1d885818-b263-49ff-ba13-807c2f4e48a4\", \"meeting\": \"ietf115\", \"working_group\": \"can\", \"subject\": \"IETF 115 - CAN Working Group Session\", \"matches\": [{\"context\": \"there is some certain ways like in the edge Computing like uh and the do is mentioned for the in the Computing the the domain there's another called AF guidance so basically it does have some sort of intelligence and if AF can provide intelligence to uh aware an EF and to a PCF and then to the UE fo\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"73f103cf-0b33-4561-8945-881acb00f22b\", \"meeting\": \"ietf115\", \"working_group\": \"coinrg\", \"subject\": \"IETF 115 - COINRG Working Group Session\", \"matches\": [{\"context\": \"lectrical in network classification implementation and then second Ike will introduce their paper about the end-to-end transporter layer and that he will discuss the very interesting topic related to end-to-end argument and then they've from Theo Munich he is working together with Dr chosen he will \", \"matched_pattern\": \"\"}, {\"context\": \"had had at this research group earlier and what we now try to do is basically um yeah have a bit more thoughts on how we can actually combine or what is the interplay between transport protocols the end-to-end principle and Computing in the network and this has resulted in the paper that we've prese\", \"matched_pattern\": \"\"}, {\"context\": \"aybe um that it would also come out on the other side mainly unchanged and this is then often seen that the network is just a gunpipe that forwards the packets and this is somewhat encompassed in the end-to-end principle and um is it typically also used as a basis for transport protocols so for exam\", \"matched_pattern\": \"\"}, {\"context\": \"think about a more general or have more General considerations regarding this topic so basically uh what we would actually need to have a coin-enable transport protocol that ideally also respects the end-to-end principle and just to get your uh thoughts right for the stock here so I won't provide a \", \"matched_pattern\": \"\"}, {\"context\": \"I won't provide a lot of answers but mainly I will raise a lot of questions that perhaps we as a research Community have to answer eventually and in the following I would first like to go back to the end-to-end principle and then talk a bit about a few considerations that we had how um such solution\", \"matched_pattern\": \"\"}], \"confidence\": \"high\"}, {\"source_uuid\": \"9d5724d4-ca92-4a0c-9930-91ba483a8620\", \"meeting\": \"ietf115\", \"working_group\": \"dinrg\", \"subject\": \"IETF 115 - DINRG Working Group Session\", \"matches\": [{\"context\": \"drives the user base up and that builds the economy of scale in today's internet the result is really a flattening of the traditional topology of the internet what we've got is a situation where the end-to-end principle isn't really the principle that's at work here right in fact one of the things t\", \"matched_pattern\": \"\"}, {\"context\": \"t the economics part in terms of the architectural considerations uh see cdns is an example of an architectural change to the internet and the way the way I think about it is the historic view of the end-to-end principle is really no longer in play we're asking we're asking the core and the edges of\", \"matched_pattern\": \"\"}, {\"context\": \"m online uh on the mailing list so Dominique you up thanks so thank you Mark um and Mark's long before Mark's excellent work uh we co-authored um this particular uh draft which actually addresses the end-to-end principle addresses what um a little bit to a short extent also addresses some of the um \", \"matched_pattern\": \"\"}, {\"context\": \"ere's a whole branch of work on that I'm a little annoyed with Alec didn't tell me anyway have to live hello Roland Bliss uh just a quick comment on end to end that is quite fuzzy term so there's the end-to-end argument system design there is end-to-end transparency there's end-to-end encryption and\", \"matched_pattern\": \"\"}], \"confidence\": \"high\"}, {\"source_uuid\": \"b3040a6c-5854-41e9-bbf9-b39b25d4246a\", \"meeting\": \"ietf115\", \"working_group\": \"dispatch\", \"subject\": \"IETF 115 - DISPATCH Working Group Session\", \"matches\": [{\"context\": \"o point out that uh the conversations that we use today are an active uh place for automations for insight for sentiment for for generating models for providing uh uh the fuel the food for artificial intelligence and machine learning and we have a an oncoming I think maybe economic disaster which is\", \"matched_pattern\": \"\"}, {\"context\": \"t uh joining from Intel and I'll quickly talk about the future possibility to initiate building trust for the modern internet and please go to the slide one the next slide all right cool so following end-to-end principle we're proposing an L7 protocol to help achieve trustworthy web services called \", \"matched_pattern\": \"\"}], \"confidence\": \"medium\"}, {\"source_uuid\": \"9ae6a5d4-dfe3-4eae-9ea2-a375ccbc60eb\", \"meeting\": \"ietf115\", \"working_group\": \"i2nsf\", \"subject\": \"IETF 115 - I2NSF Working Group Session\", \"matches\": [{\"context\": \"o extend the model or make any change on this I mean something that this is perfectly right in the architecture and uh and it's it's good that you you make this work to to highlight how um somehow of intelligence can be uh pushed can be pushed down the stack but they need what this notification mean\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"f855c2cb-e124-4f88-8943-3db8f36e7124\", \"meeting\": \"ietf115\", \"working_group\": \"raw\", \"subject\": \"IETF 115 - RAW Working Group Session\", \"matches\": [{\"context\": \"a noob um I have attempted to parse the net documents and I have attempted to parse the raw documents and despite what is obviously an enormous amount of work by both groups and an enormous amount of intelligence underneath that work I find neither of them particularly accessible to a newbie such as\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"abd72644-7618-4218-9330-da4c37f094de\", \"meeting\": \"ietf115\", \"working_group\": \"secdispatch\", \"subject\": \"IETF 115 - SECDISPATCH Working Group Session\", \"matches\": [{\"context\": \"hope our work can draw attention initialism discussion and accelerate the transformation towards the perfect vision which is the trustworthy internet I think in the long-term future so following the end-to-end principle here we are proposing an L7 protocol to help achieve trustworthy web services we\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"f3b8e735-66a1-48ac-8989-0b2d253dfe0f\", \"meeting\": \"ietf116\", \"working_group\": \"dinrg\", \"subject\": \"IETF 116 - DINRG Working Group Session\", \"matches\": [{\"context\": \"o be honest and so in terms of the recent evolution of the internet what we see is that principles that were true 20 years ago no longer hold true now for instance we'll talk a little later about the end-to-end principle but one of the things that we see in the last two years in the ITF is this conc\", \"matched_pattern\": \"\"}, {\"context\": \"e middle of the networks and provide provide services in between uh uh to an end node and and the device providing services to it um the there's a section in the draft that talks about the end of the end-to-end principle as an example of that architectural change and talks about the emergence of cer\", \"matched_pattern\": \"\"}, {\"context\": \"re connection you can't right and now you'll go to PowerPoint it's one truth yeah yeah great okay so this is actually way easier um maybe I should sit down here um I had long wanted to talk about the end-to-end argument because lately there have been lots of discussions whether it's even still relev\", \"matched_pattern\": \"\"}, {\"context\": \"t reliability and the trustworthiness resides at the end nodes of networks rather than in the network itself and after many words I think at the end of the subsection it it is stated that rapidly the end-to-end principle is becoming the edge to edge principle and this triggered even stronger stateme\", \"matched_pattern\": \"\"}, {\"context\": \"d middlebox but I must claim that I made the words I didn't create middle box myself the uh why I call the word this is about in the late 90s that's because I actually had a long history with uh this end-to-end principle so-called so what created the meter box is let's described in that talk this is\", \"matched_pattern\": \"\"}], \"confidence\": \"high\"}, {\"source_uuid\": \"f2d7fd7e-85a4-4677-a6ec-f4a37880c1a5\", \"meeting\": \"ietf116\", \"working_group\": \"satp\", \"subject\": \"IETF 116 - SATP Working Group Session\", \"matches\": [{\"context\": \"t to finish the commitment and to ensure both networks are consistent and you hear the word consistent use meaning that there's no double spend literally what that means and this is the analog to the end-to-end principles principle for those who are on the din mailing list uh with lyxia there there \", \"matched_pattern\": \"\"}, {\"context\": \"er routers and running bgp for example right so so the bgp portion is standardized and that's what we're trying to develop here is the Gateway the Gateway protocol that's akin to a bgp next slide and end-to-end principle uh the the function the context is at the endpoints right and this but this is \", \"matched_pattern\": \"\"}, {\"context\": \"le uh the the function the context is at the endpoints right and this but this is a it's that document under the the the the the salsa read and and Dave Clark's document 8981 it used to be called the end-to-end argument because they did have a long argument in public about you know should we put enc\", \"matched_pattern\": \"\"}], \"confidence\": \"high\"}, {\"source_uuid\": \"a573a480-c015-4f36-9b52-65ab84f8f4f0\", \"meeting\": \"ietf117\", \"working_group\": \"dinrg\", \"subject\": \"IETF 117 - DINRG Working Group Session\", \"matches\": [{\"context\": \"ce of those users so let me conclude by giving some examples of policies that let us treat these highly combustible often on fire platforms as damage and Route around them the first is to restore the end-to-end principle with a rule that requires platforms to connect willing senders with willing rec\", \"matched_pattern\": \"\"}, {\"context\": \"ey ignore the much more Salient debate about whether the solicited emails that you asked to see from your elected representatives should go to spam even after you mark them as not spam now beyond the end-to-end principle I want to establish the right to exit you may have heard a story about mastodon\", \"matched_pattern\": \"\"}], \"confidence\": \"medium\"}, {\"source_uuid\": \"58687a90-ff77-48c9-ad3e-349547d6c2c2\", \"meeting\": \"ietf117\", \"working_group\": \"dmm\", \"subject\": \"IETF 117 - DMM Working Group Session\", \"matches\": [{\"context\": \"ing problem of data plane pack that's maybe useful here so next slide please and that's the last one it's it's not complete but um that's what we mainly concluded and um so we learned our lesson that end-to-end principle does not apply to any kind of deployment and architecture so we need a little b\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"e3d0161e-5ddb-4d90-9f56-3261046a9e40\", \"meeting\": \"ietf117\", \"working_group\": \"pearg\", \"subject\": \"IETF 117 - PEARG Working Group Session\", \"matches\": [{\"context\": \"y for protocol um designers so they are aware of what is needed and what is not needed absolutely the Social Security Administration in the United States has an offline case of this where we put some intelligence in there and had many of those problems so thank you thank you for documenting it Jonat\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"0d56db5e-71c5-427f-9176-f26aeb48376a\", \"meeting\": \"ietf117\", \"working_group\": \"secdispatch\", \"subject\": \"IETF 117 - SECDISPATCH Working Group Session\", \"matches\": [{\"context\": \"ys like okay that sounds great and and we're only going to send traffic through that and here's my client certificate or something like that uh so this works this is not considered a violation of the end-to-end principle right like packets are still flowing end to end there's a tunnel in the middle \", \"matched_pattern\": \"\"}, {\"context\": \"ot the same as the end-to-end communications the packet is mutated as it exits the source a s and that mutation is inverted as it enters the receiving as um but in my view that is consistent with the end-to-end principle maybe even is is really supporting it by providing some cryptographic oomph beh\", \"matched_pattern\": \"\"}, {\"context\": \"rs that would want to benefit from this currently have be like yes a very manual process but they're not the ones likely with the As and while uh Ben what you're saying about this doesn't violate the end-to-end principle in terms of like it does about any of the rxcs that I think is technically true\", \"matched_pattern\": \"\"}, {\"context\": \"this doesn't violate the end-to-end principle in terms of like it does about any of the rxcs that I think is technically true but not a useful statement I think that this doesn't give you any of the end-to-end principles for any of the guarantees that you would actually want right it's not observabl\", \"matched_pattern\": \"\"}], \"confidence\": \"high\"}, {\"source_uuid\": \"ad975fca-dd93-457b-8f57-e5b09a67dc51\", \"meeting\": \"ietf117\", \"working_group\": \"spring\", \"subject\": \"IETF 117 - SPRING Working Group Session\", \"matches\": [{\"context\": \"different methods of picking the best best candidate path but now with this with this feature we're a solution uh you're we're with with these added constraints you're now making it um you're adding intelligence to the picking of the candidate path that's a that's just a question but I believe that'\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"7995bccb-9809-43d2-8c26-e3ec068658cd\", \"meeting\": \"ietf117\", \"working_group\": \"tcpm\", \"subject\": \"IETF 117 - TCPM Working Group Session\", \"matches\": [{\"context\": \"the rfcs um just as a sort of mechanistic reflector so that you can use it for things like testing for screw-ups in mangling in the network and stuff like that you know and you can um and so all the intelligences at the sender side and that it also helps not having two intelligent things both trying\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"cf9f0347-71db-4f72-a0c4-ea54e3b6aa7d\", \"meeting\": \"ietf118\", \"working_group\": \"cats\", \"subject\": \"IETF 118 - CATS Working Group Session\", \"matches\": [{\"context\": \"management platform can perform some work intelligently uh next please and uh the second the second consideration is to provide inhester capabilities for the demanding scenarios uh for example in the intelligence uh Transportation scenarios the optimal service instance and the optimal uh forwarding \", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"3f8ccd44-f546-4c87-b555-ce5e341b6e9e\", \"meeting\": \"ietf118\", \"working_group\": \"coinrg\", \"subject\": \"IETF 118 - COINRG Working Group Session\", \"matches\": [{\"context\": \"ment um that is also something that we especially had in our presentation in London um and here we then based on those on this general statement um try to kind of find find uh different views on this end to end principle or argument as we saw quite a different different views um there and um yeah I'\", \"matched_pattern\": \"\"}, {\"context\": \"e replied from the device or from the and server so but they all follow the similar um application pattern next slides but but appear uh apparently first thing we can observe is that it TR breaks the end to end principle of the transport uh protocol because um in even in the network we need touch th\", \"matched_pattern\": \"\"}], \"confidence\": \"medium\"}, {\"source_uuid\": \"5d3db4cc-b3fe-490f-b6ee-d6f28a9db82a\", \"meeting\": \"ietf118\", \"working_group\": \"dinrg\", \"subject\": \"IETF 118 - DINRG Working Group Session\", \"matches\": [{\"context\": \"tive impact on people so learning um running networks as I said was always a thing for me I always liked that and if we're all honest the internet used to be a network of networks with like this nice end to-end principle um and if you want to ruin your mute uh mood you usually have to listen to Jeff\", \"matched_pattern\": \"\"}, {\"context\": \"nd it read it if you have not for also in the references in my draft yeah okay yeah that's a point there too so but the from origin is my question just to clarify one specific point with regarding to end to end principle I think today it's not just we lost the end to end principle we lost the end to\", \"matched_pattern\": \"\"}, {\"context\": \"y draft yeah okay yeah that's a point there too so but the from origin is my question just to clarify one specific point with regarding to end to end principle I think today it's not just we lost the end to end principle we lost the end to end when I communicating with you the end is not you the end\", \"matched_pattern\": \"\"}], \"confidence\": \"high\"}, {\"source_uuid\": \"3d808128-e356-46ed-bc87-bae8c0961d1d\", \"meeting\": \"ietf118\", \"working_group\": \"dtn\", \"subject\": \"IETF 118 - DTN Working Group Session\", \"matches\": [{\"context\": \"entation which is that the concept of custody transfer is not really um a retransmission mechanism it is um I think a way to think about it is that it's an exception or um an adaptation anyway of the end to end principle that is to improve performance the forwarding nodes along the path from the sou\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"ce593fd6-4fd5-47bf-8561-cca76971fb2c\", \"meeting\": \"ietf118\", \"working_group\": \"iabopen\", \"subject\": \"IETF 118 - IABOPEN Working Group Session\", \"matches\": [{\"context\": \"orted right um in uh uh this is one of the the type of ways that we can expose the information that we have so bear in mind that if you are using the Microsoft Technology platform all right uh threat intelligence is built onto that that comes fre you all right if however you want the curated expert \", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"d9b7c32a-a8fb-4112-9561-bd1f9ae49e7a\", \"meeting\": \"ietf118\", \"working_group\": \"icnrg\", \"subject\": \"IETF 118 - ICNRG Working Group Session\", \"matches\": [{\"context\": \"ctions and Stat and the the there need a lot of space inside the network node and also the encryption will make it worse so in another way that the intermediate node doesn't act as a end point so the end to end principle is maintained but in this way the switch doesn't need to maintain um food trans\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"62a0e01c-51b4-47c1-bd53-87b559325b6c\", \"meeting\": \"ietf118\", \"working_group\": \"qirg\", \"subject\": \"IETF 118 - QIRG Working Group Session\", \"matches\": [{\"context\": \"sly so this the idea is to have autonomic networks without human intervention and a big problem in this is the huge Control Data that has to be managed um and for this the the paradigma of in network intelligence the massive usage of AI uh for Network management reactive but also predictive in the s\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"8c6af37b-e84e-4b7b-8da0-4eeb128d2b17\", \"meeting\": \"ietf119\", \"working_group\": \"dult\", \"subject\": \"IETF 119 - DULT Working Group Session\", \"matches\": [{\"context\": \"gram where um you know I was working primarily with survivors who had just relocated or were fleeing and so I I definitely Drew from my experiences with that as well as having been um the open source intelligence lead for a while at Operation Safe Escape which also works with survivors next next sce\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"e4944a32-102a-449e-aa34-3b5178d68968\", \"meeting\": \"ietf119\", \"working_group\": \"hotrfc\", \"subject\": \"IETF 119 - HOTRFC Working Group Session\", \"matches\": [{\"context\": \"se results based on the visibility which means the all the useful information about the defense scheduling strategy they can be the Tech features Network Telemetry uh information were the do right in intelligence and based on this kind of information uh they can do the schedule strategy and use the \", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"7ea61936-303c-49f8-bf8b-32d238679e5e\", \"meeting\": \"ietf119\", \"working_group\": \"nmrg\", \"subject\": \"IETF 119 - NMRG Working Group Session\", \"matches\": [{\"context\": \"so positive feedback so we will uh we will continue with the document proceed to know this irsg review the document which was in last call was related to the research challenge in coupling artificial intelligence and network management and for this one uh also good positive feedback and the differen\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"fca2546d-51af-496f-8d14-1d7422083d01\", \"meeting\": \"ietf120\", \"working_group\": \"dinrg\", \"subject\": \"IETF 120 - DINRG Working Group Session\", \"matches\": [{\"context\": \"nk would be instructive is to consider the end user in all of this um as a starting point uh we wouldn't be starting from scratch um if we did that because there are existing principles including the end to end principle um and rfc's looking at how that's being how it's evolving uh but we think that\", \"matched_pattern\": \"\"}, {\"context\": \"it so that what we discuss in this research group in this part of the the ITF also goes into the rest of the ITF because I think that that's what we are failing at and the other comment is about the end to end principle which of course we all share but I think that we often fail to realize that the \", \"matched_pattern\": \"\"}, {\"context\": \"the application developers and the and the user interface designers by making reference applications that Empower users to choose their license or even more granular rights as to copyright and to the end to end principle get the data out of the out of the middle of the internet and on the ends by in\", \"matched_pattern\": \"\"}], \"confidence\": \"high\"}, {\"source_uuid\": \"e0a0da64-c5a7-45db-993c-8af1842a729b\", \"meeting\": \"ietf121\", \"working_group\": \"nmrg\", \"subject\": \"IETF 121 - NMRG Working Group Session\", \"matches\": [{\"context\": \"he weekend and have some time to spend uh we welcome your participation to the to the meeting we have a few good topics that we are going to talk about digital twin intern based networking artificial intelligence this is also of course open to other topics and the idea is um to we have a bit of an a\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"e8b463d3-b13e-4735-b5f9-fbcfbdf47797\", \"meeting\": \"ietf122\", \"working_group\": \"dinrg\", \"subject\": \"IETF 122 - DINRG Working Group Session\", \"matches\": [{\"context\": \"to um Foster portability so remove the barriers um of for users to exit those platforms and um the second thing is also bit aligned to what we discussed here before is to um kind of reinstalling the end to end principle for future application development so um um Foster development on um application\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"232cd07b-4d91-4983-93a4-76f69e50467a\", \"meeting\": \"ietf122\", \"working_group\": \"nasr\", \"subject\": \"IETF 122 - NASR Working Group Session\", \"matches\": [{\"context\": \"s and so oh yeah it's okay so hi I'm Richard Barnes from Cisco um so you're talking about this in terms of network path and assuring a given network path um which is you know a bit intention with the end to-end principle so I wonder which why you could uh if you could elaborate a bit on why this is \", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"1ac48264-d48f-47ce-80ea-7b5121861305\", \"meeting\": \"ietf122\", \"working_group\": \"rtgwg\", \"subject\": \"IETF 122 - RTGWG Working Group Session\", \"matches\": [{\"context\": \"the cloud backbone can provide um more reliable connection and also can provide services of like uh uh Network function Services Integrated Network function services and um they can impose threat uh intelligence for those traffic even though they are encrypted between a and b um through the cloud Ga\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"469c1a23-dc1d-4e67-b834-c17a8640f618\", \"meeting\": \"ietf123\", \"working_group\": \"dtn\", \"subject\": \"IETF 123 - DTN Working Group Session\", \"matches\": [{\"context\": \"king about the extended procedures of CFTP and the idea being that um the environments that DTN addresses are different enough from terrestrial inter networking uh to to motivate uh relaxation of the end to end argument that governs the the internet protocols. The retransmission of lost bundle data \", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"a54e5df3-455f-4a50-8e9f-8afb49ca2b14\", \"meeting\": \"ietf123\", \"working_group\": \"hrpc\", \"subject\": \"IETF 123 - HRPC Working Group Session\", \"matches\": [{\"context\": \"ssion is to advance online uh anonymity, security, and freedom in high-risisk countries. And we do that uh through several different ways, but they all mainly focus on research and providing internet intelligence and engineering capacity and developing and distributing circumvention and security too\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"3a937894-964c-4e10-8811-eae69a1f5c4c\", \"meeting\": \"ietf123\", \"working_group\": \"lsr\", \"subject\": \"IETF 123 - LSR Working Group Session\", \"matches\": [{\"context\": \"by your participation. Also, there's a whole bunch of BCPS on behavior and respect for your your colleagues. So we debate the technical issues without uh calling into question anybody's character or intelligence. Now here's additional administr. Okay, here's the status. We have one uh RFC since IETF\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"c59b34b5-69f2-48fb-a31d-d2d9070c9ee6\", \"meeting\": \"ietf123\", \"working_group\": \"srv6ops\", \"subject\": \"IETF 123 - SRV6OPS Working Group Session\", \"matches\": [{\"context\": \"e 100,000 plus nicks figuring out what entropy to use, which pass to use, whether it's active inactive monitoring of this it's staggering amount of work. I I agree that there is um basically a lot of intelligence that we are putting into the the nick obviously because in this case we are starting SR\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}]}",
+      "encoding": "json"
+    }
+  ],
+  "analysis": [
+    {
+      "type": "ietf_principle_corpus_summary",
+      "dialog": [],
+      "vendor": "ietf-hackathon-125",
+      "body": {
+        "principle_id": "end_to_end",
+        "principle_name": "End-to-end principle",
+        "total_sessions": 56,
+        "total_unique_sources": 56,
+        "meetings_represented": [
+          "ietf110",
+          "ietf111",
+          "ietf113",
+          "ietf114",
+          "ietf115",
+          "ietf116",
+          "ietf117",
+          "ietf118",
+          "ietf119",
+          "ietf120",
+          "ietf121",
+          "ietf122",
+          "ietf123"
+        ],
+        "working_groups": [
+          "ace",
+          "alto",
+          "avtcore",
+          "babel",
+          "can",
+          "cats",
+          "coinrg",
+          "dinrg",
+          "dispatch",
+          "dmm",
+          "dtn",
+          "dult",
+          "hotrfc",
+          "hrpc",
+          "i2nsf",
+          "iabopen",
+          "icnrg",
+          "lsr",
+          "maprg",
+          "nasr",
+          "nmrg",
+          "ohai",
+          "openpgp",
+          "opsec",
+          "panrg",
+          "pearg",
+          "qirg",
+          "raw",
+          "rtgwg",
+          "satp",
+          "secdispatch",
+          "sframe",
+          "spring",
+          "srv6ops",
+          "tcpm",
+          "teas"
+        ],
+        "top_working_groups": [
+          {
+            "group": "dinrg",
+            "count": 7
+          },
+          {
+            "group": "dtn",
+            "count": 4
+          },
+          {
+            "group": "nmrg",
+            "count": 4
+          },
+          {
+            "group": "coinrg",
+            "count": 3
+          },
+          {
+            "group": "secdispatch",
+            "count": 3
+          },
+          {
+            "group": "i2nsf",
+            "count": 2
+          },
+          {
+            "group": "panrg",
+            "count": 2
+          },
+          {
+            "group": "lsr",
+            "count": 2
+          },
+          {
+            "group": "raw",
+            "count": 2
+          },
+          {
+            "group": "ace",
+            "count": 1
+          }
+        ],
+        "meeting_frequency": {
+          "ietf110": 5,
+          "ietf111": 6,
+          "ietf113": 5,
+          "ietf114": 6,
+          "ietf115": 7,
+          "ietf116": 2,
+          "ietf117": 6,
+          "ietf118": 7,
+          "ietf119": 3,
+          "ietf120": 1,
+          "ietf121": 1,
+          "ietf122": 3,
+          "ietf123": 4
+        }
+      },
+      "encoding": "json"
+    }
+  ]
+}

@@ -1,0 +1,411 @@
+{
+  "vcon": "0.0.1",
+  "uuid": "439ba615-90d3-4236-b5bb-adc5180162a6",
+  "created_at": "2026-03-14T15:12:40.967494+00:00",
+  "updated_at": "2026-03-14T15:12:40.967494+00:00",
+  "subject": "Robustness principle / Postel's law \u2014 IETF Discussion Corpus (ietf110-ietf123)",
+  "group": [
+    {
+      "uuid": "c01891d4-c072-43e3-b1eb-423334c8b1a3"
+    },
+    {
+      "uuid": "5d93a0aa-d824-47ca-89b4-bc63c090929f"
+    },
+    {
+      "uuid": "651acaf7-2b4d-4330-9087-0fc3826600ef"
+    },
+    {
+      "uuid": "7f6163a6-8c1f-42cc-b75f-2b93abd89005"
+    },
+    {
+      "uuid": "a032f6f1-d489-4595-a02f-d8202debc2f2"
+    },
+    {
+      "uuid": "a4c345fb-c740-4031-bd53-12fae8c2c129"
+    },
+    {
+      "uuid": "89c695bc-efe7-41fc-8530-37f901e475dc"
+    },
+    {
+      "uuid": "2bae741e-0931-4c72-916d-5ada0672cf74"
+    },
+    {
+      "uuid": "a461b978-a3c7-4122-9ccc-af4cdb04d0e4"
+    },
+    {
+      "uuid": "acaf52bd-95bd-4032-9195-5dc4087d8d02"
+    },
+    {
+      "uuid": "825cbb05-b99c-4fa1-8efd-0854169d68b1"
+    },
+    {
+      "uuid": "054f2cb3-3cb4-4948-9f77-a3c619c5812d"
+    },
+    {
+      "uuid": "ec7c1132-d803-4b90-9c63-48adc4369edd"
+    },
+    {
+      "uuid": "ad8df744-57ff-4e63-a68e-468a9c6f1e14"
+    },
+    {
+      "uuid": "88cd8d71-74c9-4077-841a-77295d1320be"
+    },
+    {
+      "uuid": "a9b91372-6dc1-4b05-b8ac-2e16ee1c6d1d"
+    },
+    {
+      "uuid": "1e18baa9-1e6b-44a3-a3cd-5aa10bf554a9"
+    },
+    {
+      "uuid": "b365cf65-5ea5-4213-96cb-842c9fbaa166"
+    },
+    {
+      "uuid": "549be192-f37e-46b3-b3b8-c781f84e20fa"
+    },
+    {
+      "uuid": "850adcb2-b9d2-4742-a3be-f4e343c67fe4"
+    },
+    {
+      "uuid": "2eb049d7-b888-4996-8a5d-959c194f65b3"
+    },
+    {
+      "uuid": "999449e2-f887-43bc-b7a2-e7f16fcaab7e"
+    },
+    {
+      "uuid": "ae025a95-b753-4056-8da6-b5e4218fbb20"
+    },
+    {
+      "uuid": "0b06f344-0c21-4b56-bf0e-843c3f24e90a"
+    },
+    {
+      "uuid": "18fe5dc7-eea8-40df-aa06-48aa97990214"
+    },
+    {
+      "uuid": "88d13f37-7d81-4e19-acb6-eafd299d34be"
+    },
+    {
+      "uuid": "eab232ad-0333-4f9b-a260-5da9ca57c46f"
+    },
+    {
+      "uuid": "d45f8807-da47-4b2a-a2ac-819a8ec01e45"
+    },
+    {
+      "uuid": "cb21949e-b4a8-45aa-ae87-60a25e982bc4"
+    },
+    {
+      "uuid": "ae489e76-e3fc-4520-bfca-0afcf22af341"
+    },
+    {
+      "uuid": "1fe32284-9261-4fa8-b1b3-18f84721c3a7"
+    },
+    {
+      "uuid": "375146de-8970-4261-b67b-94dc39fec1a0"
+    },
+    {
+      "uuid": "f65c187a-4224-41ad-9a3c-5b4ef048970a"
+    },
+    {
+      "uuid": "9c34321f-46aa-464e-ad44-ece027a08282"
+    },
+    {
+      "uuid": "bd53d5b5-97c6-491e-b1c1-463805f9cf2d"
+    },
+    {
+      "uuid": "f4008408-6ca6-4a4f-862c-df1ef6ea67e1"
+    },
+    {
+      "uuid": "c9a06223-4ea6-47b0-99be-07b9409957d7"
+    },
+    {
+      "uuid": "fd2cd2e5-11dd-4d78-95d8-41c5e5ed123a"
+    },
+    {
+      "uuid": "3dda0b70-f79d-41be-bcdf-951eb6a10873"
+    },
+    {
+      "uuid": "8cc66edd-9efd-4380-9610-e3a63f533431"
+    },
+    {
+      "uuid": "3440f72c-6718-4aeb-8a90-d15c42b5e5d6"
+    },
+    {
+      "uuid": "d94ae8f3-007b-4244-bccf-c736e1a25792"
+    },
+    {
+      "uuid": "cd97a388-7035-4c82-ba54-be0bcff01ca3"
+    },
+    {
+      "uuid": "33a4f0fc-2c88-473d-8b8a-7116c086c72c"
+    },
+    {
+      "uuid": "95746889-a789-43db-9655-1c1e76c1b9ce"
+    },
+    {
+      "uuid": "3d808128-e356-46ed-bc87-bae8c0961d1d"
+    },
+    {
+      "uuid": "468f24db-996b-4ba3-bcc4-f85d8da5bb8b"
+    },
+    {
+      "uuid": "2a318df7-9ff5-49c2-b007-6ec60e97b9e7"
+    },
+    {
+      "uuid": "8e9a46e9-6f10-4c09-b080-984eea2bbfd7"
+    },
+    {
+      "uuid": "96f717ca-fd10-43fc-b8d7-7d05b69a35b2"
+    },
+    {
+      "uuid": "997f1ca3-a882-4bed-b8cc-6c1947a7209f"
+    },
+    {
+      "uuid": "74e6a426-1f9e-4726-97d6-7df2b4748331"
+    },
+    {
+      "uuid": "0761ee60-f2d3-4e59-a49c-5351768e45a4"
+    },
+    {
+      "uuid": "2fd4dc6c-a7c4-4242-a507-e4f4098ff701"
+    },
+    {
+      "uuid": "ee80df18-667f-41bf-9a07-519d7d4a5516"
+    },
+    {
+      "uuid": "864d53e9-1800-473f-98b0-09e0747ed281"
+    },
+    {
+      "uuid": "ab39cafd-5ca6-4676-9b56-ca10ae00cf84"
+    },
+    {
+      "uuid": "169f3b27-8600-449a-85d0-c0ae5ed4d266"
+    },
+    {
+      "uuid": "74e444e2-0832-4c3c-a44a-dd1665e7620b"
+    },
+    {
+      "uuid": "c048c6d6-5254-4b03-8f03-5eae25ce9a7a"
+    },
+    {
+      "uuid": "b87ba450-efee-44c9-bf6e-ba3464a78ca3"
+    },
+    {
+      "uuid": "0c859174-a866-40af-8b89-f1b3923b9b5a"
+    },
+    {
+      "uuid": "e47e52a8-8edc-43a9-a303-fe65e8f042e0"
+    },
+    {
+      "uuid": "eb440cd8-2d02-4a7e-b665-9c7f3ddefd0b"
+    },
+    {
+      "uuid": "46fdc762-c308-4200-8f96-9b9d813976bc"
+    },
+    {
+      "uuid": "83532960-4771-4192-8486-204baa96c68b"
+    },
+    {
+      "uuid": "2cc8ff90-cbf4-4dd1-9e80-7b7f91e832f0"
+    },
+    {
+      "uuid": "d1496de5-04fa-4fee-a7bd-e5320449ae25"
+    },
+    {
+      "uuid": "ab5f1b2b-c253-4d0a-8f1a-db5509033ed0"
+    },
+    {
+      "uuid": "619f8656-ef57-4fb4-bf16-cc9cbf9d6a5c"
+    },
+    {
+      "uuid": "39e2f24b-b0e2-4c96-ac17-60615d3fae33"
+    },
+    {
+      "uuid": "91712bcf-5626-4dac-b0e5-f9c9d064500d"
+    },
+    {
+      "uuid": "02a48adc-1130-458d-84c1-d8c4f9613017"
+    },
+    {
+      "uuid": "e42d97bc-fb3e-4ea7-a595-e78bd458ca8c"
+    },
+    {
+      "uuid": "eae245cb-fc55-4d96-9ed1-33719b3c4ba4"
+    },
+    {
+      "uuid": "469c1a23-dc1d-4e67-b834-c17a8640f618"
+    },
+    {
+      "uuid": "96916198-1404-47d5-86f5-c72fc5a9db56"
+    },
+    {
+      "uuid": "8723496e-c552-4858-87f1-e3096fe3f81b"
+    },
+    {
+      "uuid": "683251c6-6c01-4a90-a295-4891323a7bce"
+    },
+    {
+      "uuid": "8f84a79d-27e8-4a98-bd33-0c97d53ddf6a"
+    }
+  ],
+  "parties": [],
+  "dialog": [],
+  "attachments": [
+    {
+      "type": "application/json",
+      "purpose": "principle_definition",
+      "body": "{\"principle_id\": \"robustness\", \"name\": \"Robustness principle / Postel's law\", \"description\": \"Be conservative in what you send, be liberal in what you accept.\", \"rfc_refs\": [\"RFC 761\", \"RFC 1122\", \"RFC 9413\"]}",
+      "encoding": "json"
+    },
+    {
+      "type": "application/json",
+      "purpose": "collected_evidence",
+      "body": "{\"total_sessions\": 80, \"sessions\": [{\"source_uuid\": \"c01891d4-c072-43e3-b1eb-423334c8b1a3\", \"meeting\": \"ietf110\", \"working_group\": \"dtn\", \"subject\": \"IETF 110 - DTN Working Group Session\", \"matches\": [{\"context\": \"al custody holder would never receive a custody acknowledgement and uh the custody transmission would just basically break down all the same there were and are some deployment scenarios where a delay tolerant asymmetric acknowledgement mechanism is needed and bundled protocol is is clearly the way t\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"5d93a0aa-d824-47ca-89b4-bc63c090929f\", \"meeting\": \"ietf110\", \"working_group\": \"emu\", \"subject\": \"IETF 110 - EMU Working Group Session\", \"matches\": [{\"context\": \"ething along the lines of should uh issue one session ticket or and and not going with must might make sense i don't know what's your opinion on that um sure i mean you know in the principle of um be conservative in what you send and and liberal in what you expect um it really is a hard question to \", \"matched_pattern\": \"\"}, {\"context\": \"sue one session ticket or and and not going with must might make sense i don't know what's your opinion on that um sure i mean you know in the principle of um be conservative in what you send and and liberal in what you expect um it really is a hard question to figure out exactly where that boundary\", \"matched_pattern\": \"\"}], \"confidence\": \"medium\"}, {\"source_uuid\": \"651acaf7-2b4d-4330-9087-0fc3826600ef\", \"meeting\": \"ietf110\", \"working_group\": \"hrpc\", \"subject\": \"IETF 110 - HRPC Working Group Session\", \"matches\": [{\"context\": \"this system shall we say um it is uh a lot later than um the [Music] international okay then the international openness and one of the things that's that i find interesting and peculiar i teach at a liberal arts college for women is that in the social the kind of post-1990s social area much of the l\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"7f6163a6-8c1f-42cc-b75f-2b93abd89005\", \"meeting\": \"ietf110\", \"working_group\": \"irtfopen\", \"subject\": \"IETF 110 - IRTFOPEN Working Group Session\", \"matches\": [{\"context\": \"ve a 60 second ttl you're only going to have a drift of a few seconds and that's probably not going to be an issue for you even if you have such a short ttl and if you have a long ttl you're probably tolerant of more drift so we concluded that the actual problems here are likely to be very small and\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"a032f6f1-d489-4595-a02f-d8202debc2f2\", \"meeting\": \"ietf110\", \"working_group\": \"lsvr\", \"subject\": \"IETF 110 - LSVR Working Group Session\", \"matches\": [{\"context\": \"little more formal in terms of document sharing and those kind of things so making it possible for uh you know your lsvr group to you know comment vote whatever on the documents we're typically very liberal about accepting comments from from anybody anyway uh in the earliest phases once you get to t\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"a4c345fb-c740-4031-bd53-12fae8c2c129\", \"meeting\": \"ietf110\", \"working_group\": \"nmrg\", \"subject\": \"IETF 110 - NMRG Working Group Session\", \"matches\": [{\"context\": \"rtf contributions covered by patents you should declare that the ihf expects that you file such ibr the closer in the timely manner for the rfc documents that the irtf publishes rtf prefers the most liberal licensing terms possible and so yeah further references um for patterns and participation in \", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"89c695bc-efe7-41fc-8530-37f901e475dc\", \"meeting\": \"ietf110\", \"working_group\": \"rtcweb\", \"subject\": \"IETF 110 - RTCWEB Working Group Session\", \"matches\": [{\"context\": \"ort nine rather than than port zero and the concern then becomes okay how will these how endpoints that have been receiving nine you know suddenly react when they start receiving zero you'll see that liberal weapon you see does not spill in ice credentials for that second m section uh just like jaso\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"2bae741e-0931-4c72-916d-5ada0672cf74\", \"meeting\": \"ietf110\", \"working_group\": \"tdd\", \"subject\": \"IETF 110 - TDD Working Group Session\", \"matches\": [{\"context\": \"er and there used to be this famous company called freecom that had a problem with that so we changed the rules uh still for instance today uh and this illustrates the uh principle that you should be liberal with what it said things like 4011 411. um exist and work even though the standards say that\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"a461b978-a3c7-4122-9ccc-af4cdb04d0e4\", \"meeting\": \"ietf110\", \"working_group\": \"tsvarea\", \"subject\": \"IETF 110 - TSVAREA Working Group Session\", \"matches\": [{\"context\": \"i'm a co-chair of the dtn working group along with uh rick taylor from airbus defense in space uh i wanted to spend a little bit of time today and talk about uh just sort of the general area of delay tolerant networking and then some of the things that we're doing in the working group and i i see a \", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"acaf52bd-95bd-4032-9195-5dc4087d8d02\", \"meeting\": \"ietf111\", \"working_group\": \"6man\", \"subject\": \"IETF 111 - 6MAN Working Group Session\", \"matches\": [{\"context\": \"rocessing that we just saw is probably a subset of this this um draft more addresses the the larger problem with hopi hop options uh this is just a little bit of background so we do want to apply the robustness principle to limits so when we sign be conservative deliver on what you receive but i thi\", \"matched_pattern\": \"\"}, {\"context\": \"itrarily drop the packet because um they have this limited capability another important consideration is public internet versus limited domains so kind of a simple rule when we're playing this uh our robustness principle if we're sending to an anonymous destination the public internet apply the most\", \"matched_pattern\": \"\"}], \"confidence\": \"medium\"}, {\"source_uuid\": \"825cbb05-b99c-4fa1-8efd-0854169d68b1\", \"meeting\": \"ietf111\", \"working_group\": \"acme\", \"subject\": \"IETF 111 - ACME Working Group Session\", \"matches\": [{\"context\": \"y token and draft acme authority token tnfist submitted to asg review last august but it's waiting for the other document in order to progress so that's where we are with these two [Music] acme delay tolerant network node id validation extension acme dtn node id went through working group last call \", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"054f2cb3-3cb4-4948-9f77-a3c619c5812d\", \"meeting\": \"ietf111\", \"working_group\": \"dispatch\", \"subject\": \"IETF 111 - DISPATCH Working Group Session\", \"matches\": [{\"context\": \"rlund so it shouldn't not come as a surprise to anybody that estes has a lot of known security weaknesses and problems it's vulnerable to ssrc collisions which lead to so-called two-time pads this is strictly worse than using a 32-bit mac as it might lead to loss of confidentiality and integrity the\", \"matched_pattern\": \"\"}, {\"context\": \"ole process there and i think the other part of that asynchronous nature is that the network between my server and your server might not be very fast we really should be talking about this is a delay tolerant network kind of problem and that's where i think we should be addressing it uh how do i sen\", \"matched_pattern\": \"\"}], \"confidence\": \"medium\"}, {\"source_uuid\": \"ec7c1132-d803-4b90-9c63-48adc4369edd\", \"meeting\": \"ietf111\", \"working_group\": \"dtn\", \"subject\": \"IETF 111 - DTN Working Group Session\", \"matches\": [{\"context\": \"ng to tackle and these are where we think the the bulk of the the working group work is going to be as we try and make those decisions and designs uh the first is the asynchronous management of delay tolerant devices networks or applications the second is a naming and addressing architecture i think\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"ad8df744-57ff-4e63-a68e-468a9c6f1e14\", \"meeting\": \"ietf112\", \"working_group\": \"dtn\", \"subject\": \"IETF 112 - DTN Working Group Session\", \"matches\": [{\"context\": \"slide um if we were to take a step back and look at the kind of blocking statements that were on that charter they they really came down to a common concern and that is that dtn delay and disruption tolerant networking touches lots of topics and not just topics that are restricted in an ietf sense t\", \"matched_pattern\": \"\"}, {\"context\": \"statements that were on that charter they they really came down to a common concern and that is that dtn delay and disruption tolerant networking touches lots of topics and not just topics that are restricted in an ietf sense to the transport area to the transport area and so when the working group \", \"matched_pattern\": \"\"}], \"confidence\": \"medium\"}, {\"source_uuid\": \"88cd8d71-74c9-4077-841a-77295d1320be\", \"meeting\": \"ietf112\", \"working_group\": \"irtfopen\", \"subject\": \"IETF 112 - IRTFOPEN Working Group Session\", \"matches\": [{\"context\": \"ence from the ietf disclosure rules is that uh the irtf expects you to to file these disclosures in in a timely manner in a period of um days or weeks rather than months uh and we expect the the most liberal uh licensing terms uh possible are made available for irtf stream documents and if you need \", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"a9b91372-6dc1-4b05-b8ac-2e16ee1c6d1d\", \"meeting\": \"ietf112\", \"working_group\": \"mops\", \"subject\": \"IETF 112 - MOPS Working Group Session\", \"matches\": [{\"context\": \"ll the spot video on demand and you know that's what we've been doing when we watch a movie we're watching video on demand and we've got it pretty well done but one of the things that you can be very tolerant of in a vaude setting is latency you don't care if you know the movie is starting up one yo\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"1e18baa9-1e6b-44a3-a3cd-5aa10bf554a9\", \"meeting\": \"ietf112\", \"working_group\": \"ntp\", \"subject\": \"IETF 112 - NTP Working Group Session\", \"matches\": [{\"context\": \"you use it or you lose it um this is a long and bitter experience in tls it so greece was introduced into tls for this reason it's a good idea it prevents you from having situations where you have intolerant firewalls or other middle boxes that prevent you from saying the protocol further um and the\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"b365cf65-5ea5-4213-96cb-842c9fbaa166\", \"meeting\": \"ietf112\", \"working_group\": \"v6ops\", \"subject\": \"IETF 112 - V6OPS Working Group Session\", \"matches\": [{\"context\": \"ve it is to actually limit the number of bytes of headers so that's the motivation for this limit uh limits also apply both to senders and receivers uh but we won't do want to adhere to the canonical robustness principle for that so be conservative from what you're saying liberal and what you receiv\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"549be192-f37e-46b3-b3b8-c781f84e20fa\", \"meeting\": \"ietf113\", \"working_group\": \"detnet\", \"subject\": \"IETF 113 - DETNET Working Group Session\", \"matches\": [{\"context\": \"ion latency brings long-distance latency to support it and the third one is accommodates a higher inner speed and force is key over to numerous network devices and massive traffic flows and the fifth tolerant figures of links or notes and topology changes because those will bring maybe second levels\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"850adcb2-b9d2-4742-a3be-f4e343c67fe4\", \"meeting\": \"ietf113\", \"working_group\": \"dtn\", \"subject\": \"IETF 113 - DTN Working Group Session\", \"matches\": [{\"context\": \"the way that we intend with the dtn so that's one thing the second thing i think is that we'd like very much to see more energy put into applications uh to understand what it means to build a delight tolerant application and finally uh i mean among many other things i i'd like to exercise the naming\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"2eb049d7-b888-4996-8a5d-959c194f65b3\", \"meeting\": \"ietf114\", \"working_group\": \"anrw\", \"subject\": \"IETF 114 - ANRW Working Group Session\", \"matches\": [{\"context\": \"ot participate in the discussion rtf expects you to file such ipr disclosures in a timely manner i'm hoping you have done so uh in a period measured in days or weeks not months irtf prefers that most liberal licensing terms possible are made available for irtf stream documents and the definitive inf\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"999449e2-f887-43bc-b7a2-e7f16fcaab7e\", \"meeting\": \"ietf114\", \"working_group\": \"dtn\", \"subject\": \"IETF 114 - DTN Working Group Session\", \"matches\": [{\"context\": \"assuming those people are struggling to get in can find the information on how to get in in-person participants can we request that you use the in-person tool it's great on a phone there are qr codes liberally scattered around the room if you scan that it will take you straight to the relevant meeti\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"ae025a95-b753-4056-8da6-b5e4218fbb20\", \"meeting\": \"ietf114\", \"working_group\": \"edm\", \"subject\": \"IETF 114 - EDM Working Group Session\", \"matches\": [{\"context\": \"nd we decided oh well let's let's chat in person things always work out better when we're face to face uh even if virtually so what i was thinking is um maybe starting with like the definition of the robustness principle that we chose to use in this document because it became clear that those words \", \"matched_pattern\": \"\"}, {\"context\": \"star of c we could find um a sensible option i i can totally see that there are other interpretations but just to set the stage um when the so the the overall message of the document is um we had the robustness principle which said uh you know follow the spec but you're you're gonna find something a\", \"matched_pattern\": \"\"}, {\"context\": \"t clear in the spec uh because it's not possible to make a perfect spec otherwise we wouldn't have job security um and when you do how do you react to that and the leading idea in the 90s was you are liberal in what you get meaning you take this erroneous input and [Music] you make do you do not err\", \"matched_pattern\": \"\"}, {\"context\": \"over time so the document has come a long way in terms of overly focusing on the negative at first we still have a ways to go we have a pr that wants to improve this but it's kind of the idea is the robustness principle is no longer the best thing we have we have something else that is protocol main\", \"matched_pattern\": \"\"}, {\"context\": \"ve to admit that when i read the draft i had a fairly strong negative reaction to the tone and i'll explain why even though i agreed with the technical points and it gets to that same point about the robustness principle meaning different things okay uh that there's at least four different things th\", \"matched_pattern\": \"\"}], \"confidence\": \"high\"}, {\"source_uuid\": \"0b06f344-0c21-4b56-bf0e-843c3f24e90a\", \"meeting\": \"ietf114\", \"working_group\": \"iabopen\", \"subject\": \"IETF 114 - IABOPEN Working Group Session\", \"matches\": [{\"context\": \"documenting them and we write documents aimed at this and we're focusing on one of those documents which is uh draft ib protocol maintenance which talks about when it might be a good idea to use the robustness principle and when it might not be and so we're having a thursday morning meeting from 9 t\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"18fe5dc7-eea8-40df-aa06-48aa97990214\", \"meeting\": \"ietf114\", \"working_group\": \"raw\", \"subject\": \"IETF 114 - RAW Working Group Session\", \"matches\": [{\"context\": \"d we also have people remotely and in order to ensure that we can maintain a single cue for comments Etc I recommend everyone in the room uses the meat Echo either the on-site tool there are QR codes liberally scattered around the room which take you straight to the on-site version of the uh the too\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"88d13f37-7d81-4e19-acb6-eafd299d34be\", \"meeting\": \"ietf114\", \"working_group\": \"sidrops\", \"subject\": \"IETF 114 - SIDROPS Working Group Session\", \"matches\": [{\"context\": \"d tool then becomes an operational cost and that's the underlying concern when i review this work going you're starting from a small set that's constrained rather than a large set that's maybe overly liberal but at least it encompasses all of that connectivity bound and you know there's more work to\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"eab232ad-0333-4f9b-a260-5da9ca57c46f\", \"meeting\": \"ietf115\", \"working_group\": \"dtn\", \"subject\": \"IETF 115 - DTN Working Group Session\", \"matches\": [{\"context\": \"blication of that draft it introduces the Ping service or the echo Service uh needs a well-known service number just for General op stuff so you can ping a node see if it is actually there in a delay tolerant manner it's going to need a well-known number it doesn't have one at the moment this is an \", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"d45f8807-da47-4b2a-a2ac-819a8ec01e45\", \"meeting\": \"ietf115\", \"working_group\": \"gaia\", \"subject\": \"IETF 115 - GAIA Working Group Session\", \"matches\": [{\"context\": \"now it we that's one of the motivations to a cancer for six gigahertz going to Wi-Fi because if we could just have more Spectrum in Wi-Fi we could solve that problem straight away yeah the Brazilians liberalize the entire 60 year gigahertz band for unlicensed Spectrum the Saudi Arabia has done that \", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"cb21949e-b4a8-45aa-ae87-60a25e982bc4\", \"meeting\": \"ietf115\", \"working_group\": \"iccrg\", \"subject\": \"IETF 115 - ICCRG Working Group Session\", \"matches\": [{\"context\": \"weak and so what I mean by strength and that the formal protocol model was too constrained it didn't allow some behavior that should have been allowed and it could have been too weak that it was too liberal and it needed to be made more conservative uh we of course found numerous errors with impleme\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"ae489e76-e3fc-4520-bfca-0afcf22af341\", \"meeting\": \"ietf116\", \"working_group\": \"bpf\", \"subject\": \"IETF 116 - BPF Working Group Session\", \"matches\": [{\"context\": \"ank you Eric Larson sorry about that thank you go ahead yeah I was going to say something similar or that at some point we should probably look at the charter text because the I think the list of the Liberals is pretty uncontroversial right um also in terms of having had the pre-buff discussion righ\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"1fe32284-9261-4fa8-b1b3-18f84721c3a7\", \"meeting\": \"ietf116\", \"working_group\": \"hrpc\", \"subject\": \"IETF 116 - HRPC Working Group Session\", \"matches\": [{\"context\": \"o read um and a lot of the homework involves like loading CSV files and looping through every row and making it easier to create in ways like this um and this shows that someone from Marin County's District Attorney office which is just North of North of San Francisco submitted this suspicious activ\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"375146de-8970-4261-b67b-94dc39fec1a0\", \"meeting\": \"ietf116\", \"working_group\": \"httpbis\", \"subject\": \"IETF 116 - HTTPBIS Working Group Session\", \"matches\": [{\"context\": \"said in the web um and the web is not just browsers that's not great well we don't do it because we want to do it we do it because the servers send us these things right um and for some reason we're tolerant of that sort of thing thank you pastel so I'd like to set those options up if you can put th\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"f65c187a-4224-41ad-9a3c-5b4ef048970a\", \"meeting\": \"ietf116\", \"working_group\": \"keytrans\", \"subject\": \"IETF 116 - KEYTRANS Working Group Session\", \"matches\": [{\"context\": \"um why not just use that for other things um and I guess um here's a little schematic but let's not go over that the point I want to make is that doing this is basically as good as uh Byzantine fault tolerant consensus protocols except you trade uh liveness for getting something much faster um and i\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"9c34321f-46aa-464e-ad44-ece027a08282\", \"meeting\": \"ietf116\", \"working_group\": \"ntp\", \"subject\": \"IETF 116 - NTP Working Group Session\", \"matches\": [{\"context\": \"elay is founded based off of that that Network traffic and um so um the the current state of the art for gnss authentication uses an algorithm called Tesla which stands for time deficient stream loss tolerant Authentication the reason why we have to use this algorithm is because gnss signals general\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"bd53d5b5-97c6-491e-b1c1-463805f9cf2d\", \"meeting\": \"ietf116\", \"working_group\": \"rswg\", \"subject\": \"IETF 116 - RSWG Working Group Session\", \"matches\": [{\"context\": \"came out with a statement that said whatever RFC 7997 doesn't explicitly forbid is allowed I was very split into two when I saw that statement because on the one hand I'm very much for being all the liberal and using Unicode where it makes sense and so on and was when when that thing was worked on o\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"f4008408-6ca6-4a4f-862c-df1ef6ea67e1\", \"meeting\": \"ietf116\", \"working_group\": \"tvr\", \"subject\": \"IETF 116 - TVR Working Group Session\", \"matches\": [{\"context\": \"time uh and one thing that's very important to understand for this model it's completely abstract from the producers of the information to the users of the information so what I mean there is this is strictly the information model for conveying the state of a system or a feature to a system a proper\", \"matched_pattern\": \"\"}, {\"context\": \"n you hear me yes okay good uh my name is Scott Burley I'm going to be talking about contact graph routing which is a Time variant routing mechanism developed for what ultimately turned into uh delay tolerant networking um and I'm gonna in this presentation talk about the origins of of that mechanis\", \"matched_pattern\": \"\"}], \"confidence\": \"medium\"}, {\"source_uuid\": \"c9a06223-4ea6-47b0-99be-07b9409957d7\", \"meeting\": \"ietf117\", \"working_group\": \"ccwg\", \"subject\": \"IETF 117 - CCWG Working Group Session\", \"matches\": [{\"context\": \"are about this and this is probably a documentary which we should do at that care visible so there's a need to react to congestion I think most people would hopefully agree with that would need to be tolerant to A diversity of path characteristics and we need to kind of somehow tease out what that i\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"fd2cd2e5-11dd-4d78-95d8-41c5e5ed123a\", \"meeting\": \"ietf117\", \"working_group\": \"dmarc\", \"subject\": \"IETF 117 - DMARC Working Group Session\", \"matches\": [{\"context\": \"a lot of working groups not producing much or not not uh they're not they're not meeting their milestones and I think that this is starting to become a very obvious example the next ad may not be as tolerant of this as as the four of us have been you might get someone in who's just wants to shed wor\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"3dda0b70-f79d-41be-bcdf-951eb6a10873\", \"meeting\": \"ietf117\", \"working_group\": \"dtn\", \"subject\": \"IETF 117 - DTN Working Group Session\", \"matches\": [{\"context\": \"vironment and the people are not feel feeling harassed or aggressively attacked on their opinions Etc uh we are blessed to have a member of the ombuds team in the back of the room so we will be under strict um examination but uh in general dtn has not really had these problems so long may that conti\", \"matched_pattern\": \"\"}, {\"context\": \"arted with July 2022 aspirationally finishing in July of 2024 which which we're about halfway through and this is uh how we would score ourselves right now there is good work going on in in the delay tolerant management architecture and there's good work going on in the naming addressing and archite\", \"matched_pattern\": \"\"}], \"confidence\": \"medium\"}, {\"source_uuid\": \"8cc66edd-9efd-4380-9610-e3a63f533431\", \"meeting\": \"ietf117\", \"working_group\": \"hrpc\", \"subject\": \"IETF 117 - HRPC Working Group Session\", \"matches\": [{\"context\": \"trol aspect along the lines of what one would find in China and increasingly in Iran and Russia democracy is as also repressed as well so they're not exempt and particularly if you go one level below liberal democracies and look at uh hybrid regimes and weaker democracies places like uh the Philippi\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"3440f72c-6718-4aeb-8a90-d15c42b5e5d6\", \"meeting\": \"ietf117\", \"working_group\": \"ippm\", \"subject\": \"IETF 117 - IPPM Working Group Session\", \"matches\": [{\"context\": \"all the way up and down the graph that the zero and 100 are the same yep in this case in this example what determines why at the p50 case it's over here and at the you know p99.9 case it is much more tolerant of slowness yeah so uh so to be honest I've just made these up right so uh it's not necessa\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"d94ae8f3-007b-4244-bccf-c736e1a25792\", \"meeting\": \"ietf117\", \"working_group\": \"pquip\", \"subject\": \"IETF 117 - PQUIP Working Group Session\", \"matches\": [{\"context\": \"private key is basically used to get the basically the shared secret that can be used to extract ultimately the plain text later on when a quantum computer or cryptographically relevant Quantum fault tolerant quantum computer becomes available yeah next slide please uh two primary cryptographic Prim\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"cd97a388-7035-4c82-ba54-be0bcff01ca3\", \"meeting\": \"ietf117\", \"working_group\": \"rswg\", \"subject\": \"IETF 117 - RSWG Working Group Session\", \"matches\": [{\"context\": \"s of semantics right um and and you know there's classic you know Backward Compatible versus you know not and and you know what and that sort of thing and I think we find that we can be a little more liberal about what XML changes we would allow and um I think that's okay right the other thing I wou\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"33a4f0fc-2c88-473d-8b8a-7116c086c72c\", \"meeting\": \"ietf118\", \"working_group\": \"dispatch\", \"subject\": \"IETF 118 - DISPATCH Working Group Session\", \"matches\": [{\"context\": \"as some very specific design goals that I think fit better in in today's world um for examp for example it has open participation peer-to-peer routing so it does not have access control it works in restricted route environments which I will get into detail um it supports route path recording which u\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"95746889-a789-43db-9655-1c1e76c1b9ce\", \"meeting\": \"ietf118\", \"working_group\": \"dnssd\", \"subject\": \"IETF 118 - DNSSD Working Group Session\", \"matches\": [{\"context\": \"he question count and it's the 16bit field so I'll do two questions um uh and it turns out that the servers answering those queries were written following the postel proceed postel principle of being liberal in what you accept and they said two questions yeah why not I can do that Stuart can I ask y\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"3d808128-e356-46ed-bc87-bae8c0961d1d\", \"meeting\": \"ietf118\", \"working_group\": \"dtn\", \"subject\": \"IETF 118 - DTN Working Group Session\", \"matches\": [{\"context\": \"intentional but it just appeared so should we hello everybody I was about to say good afternoon but for people who are dialed in that makes no logical sense um welcome to the uh delay and disruption tolerant networking working group meeting I f118 if you're in the wrong room now's your chance to qui\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"468f24db-996b-4ba3-bcc4-f85d8da5bb8b\", \"meeting\": \"ietf118\", \"working_group\": \"gendispatch\", \"subject\": \"IETF 118 - GENDISPATCH Working Group Session\", \"matches\": [{\"context\": \"room was already was also put forward in 2006 now personally I think that uh the consensus of the group then that I was sharing was wrong I think the independent submissions editor which has a more a liberal copyright statement got it wrer uh but I think that we need to consider carefully what we do\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"2a318df7-9ff5-49c2-b007-6ec60e97b9e7\", \"meeting\": \"ietf118\", \"working_group\": \"intarea\", \"subject\": \"IETF 118 - INTAREA Working Group Session\", \"matches\": [{\"context\": \"used but trying to tweak existing protocols after spending so many years on an architecture that we already put together on the irf and iitf you know for what we call dtn that is delay and disruption tolerant networking is like completely being ignored by this draft and I don't think it's uh of much\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"8e9a46e9-6f10-4c09-b080-984eea2bbfd7\", \"meeting\": \"ietf118\", \"working_group\": \"irtfopen\", \"subject\": \"IETF 118 - IRTFOPEN Working Group Session\", \"matches\": [{\"context\": \"f you're aware of that uh the contributions you're making are covered by patents or patents applications that are owned by you or your sponsors you need to disclose that uh and the iatf uh prefers uh liberal licensing terms and timely disclosures and the RFC is cited on the slide giv the details of \", \"matched_pattern\": \"\"}, {\"context\": \"n in seconds on the x-axis and the CDF on the y-axis and we can see that it took around it it can take up to two minutes to actually publish data into into the network which is especially for delay intolerant or delay sensitive applications probably nothing um yeah it's just yeah it's it's not not g\", \"matched_pattern\": \"\"}], \"confidence\": \"medium\"}, {\"source_uuid\": \"96f717ca-fd10-43fc-b8d7-7d05b69a35b2\", \"meeting\": \"ietf118\", \"working_group\": \"mls\", \"subject\": \"IETF 118 - MLS Working Group Session\", \"matches\": [{\"context\": \"now um verify the verify the proposals uh and in this case it's should be fine because you know it's modifying the group State and can see the group state but yeah it shouldn't be we shouldn't be too liberal with the the external commits yeah yeah just for a sake of completeness so it's not like I'm\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"997f1ca3-a882-4bed-b8cc-6c1947a7209f\", \"meeting\": \"ietf118\", \"working_group\": \"rtgwg\", \"subject\": \"IETF 118 - RTGWG Working Group Session\", \"matches\": [{\"context\": \"epending on deployment is just do nothing because the user payload is already encrypted the worst cause of the not do nothing is some packet some packet will be dropped in some deployment that can be tolerant it next page please um another way is very lightweight integrity and authentication check i\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"74e6a426-1f9e-4726-97d6-7df2b4748331\", \"meeting\": \"ietf119\", \"working_group\": \"dtn\", \"subject\": \"IETF 119 - DTN Working Group Session\", \"matches\": [{\"context\": \"io and video I'll take that as doesn't know he's definitely showing up as there yeah so Brian your audio is not working if you're talking all right so uh why don't we uh take a moment and be uh delay tolerant and uh move on with the next set of presentations and then maybe a little bit later when Br\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"0761ee60-f2d3-4e59-a49c-5351768e45a4\", \"meeting\": \"ietf119\", \"working_group\": \"httpapi\", \"subject\": \"IETF 119 - HTTPAPI Working Group Session\", \"matches\": [{\"context\": \"you can't stay here but you got to go home yeah yeah this is like a YouTube video where he explains it to all his other fellow Harvard grads at one of their reunions yeah I went yeah that that little liberal arts school up the street I went to the tech on the bank of the up truck River the technical\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"2fd4dc6c-a7c4-4242-a507-e4f4098ff701\", \"meeting\": \"ietf119\", \"working_group\": \"netmod\", \"subject\": \"IETF 119 - NETMOD Working Group Session\", \"matches\": [{\"context\": \"architecture relating to some of the management things that we are seeing in in mostly space networks uh so to that end there is a document that is uh going out um right now for Review called a delay tolerant Network management architecture that uh speaks to how we manage devices in certain circumst\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"ee80df18-667f-41bf-9a07-519d7d4a5516\", \"meeting\": \"ietf120\", \"working_group\": \"acme\", \"subject\": \"IETF 120 - ACME Working Group Session\", \"matches\": [{\"context\": \"o manipulate for a lot of the same reasons people regularly produce csrs that are broken and violate uh the X5 and Ein speec in a large number of ways and anyone who wants to be at least a little bit liberal in what they accept has to deal with that so a new order doesn't work for us right now to tw\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"864d53e9-1800-473f-98b0-09e0747ed281\", \"meeting\": \"ietf120\", \"working_group\": \"core\", \"subject\": \"IETF 120 - CORE Working Group Session\", \"matches\": [{\"context\": \"age time fortunately the possible values that we can represent with the existing uh specifications for max age is up to 136 years so hopefully this should cover our current uh requirements for delay tolerant applications then um in section five which uh was already existing on observe um we have add\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"ab39cafd-5ca6-4676-9b56-ca10ae00cf84\", \"meeting\": \"ietf120\", \"working_group\": \"dtn\", \"subject\": \"IETF 120 - DTN Working Group Session\", \"matches\": [{\"context\": \"editorial changes uh in the last revision of the document uh we added um minimum interoperability for a few different algorithms that were just missing this doesn't change the behavior but it just restricts uh at the very least you have to support these specific kind of algorithms and allows uh sing\", \"matched_pattern\": \"\"}, {\"context\": \"shadowing the the discussion at the end of the meeting so this work here although has a binding for transport over bundle protocol is trying to solve a general purpose problem in delay and disruption tolerant Networks or delay and disrupted environments more precisely how do you manage Monitor and a\", \"matched_pattern\": \"\"}], \"confidence\": \"medium\"}, {\"source_uuid\": \"169f3b27-8600-449a-85d0-c0ae5ed4d266\", \"meeting\": \"ietf120\", \"working_group\": \"extra\", \"subject\": \"IETF 120 - EXTRA Working Group Session\", \"matches\": [{\"context\": \"up all right next up is er the is it going to take longer than my first two drafts thanks Pete right one of my problems with the Unicode mail is that I get pushed back because the syntax is extremely liberal um I get questions that I can't answer the type um what addresses are safe to uh to um provi\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"74e444e2-0832-4c3c-a44a-dd1665e7620b\", \"meeting\": \"ietf120\", \"working_group\": \"hrpc\", \"subject\": \"IETF 120 - HRPC Working Group Session\", \"matches\": [{\"context\": \"people who have been accumulating so much power for so long um they started trying to give away power um they started trying to get rid of power um for Mark Zuckerberg this took the form of a kind of liberal Democratic intervention liberal human rights intervention maybe uh the uh informing the over\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"c048c6d6-5254-4b03-8f03-5eae25ce9a7a\", \"meeting\": \"ietf120\", \"working_group\": \"ohai\", \"subject\": \"IETF 120 - OHAI Working Group Session\", \"matches\": [{\"context\": \"t depends on the application I mean like in particular I I I so in some of the tests we had we would hard fail on that right but generically with chunto HTP that could work I see it if the client was tolerant of it the reason that this should be discussed in the htb working group is because it won't\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"b87ba450-efee-44c9-bf6e-ba3464a78ca3\", \"meeting\": \"ietf120\", \"working_group\": \"radext\", \"subject\": \"IETF 120 - RADEXT Working Group Session\", \"matches\": [{\"context\": \"rol as hecky was saying in the chat you know you have a username which gets echoed back now you have some kind of injection the other one is a failure of pel's law which is sometimes you shouldn't be liberal in what you AC accept right if the client sends a packet without proxy State and proxy state\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"0c859174-a866-40af-8b89-f1b3923b9b5a\", \"meeting\": \"ietf121\", \"working_group\": \"cdni\", \"subject\": \"IETF 121 - CDNI Working Group Session\", \"matches\": [{\"context\": \"there are two requests here will me will be getting out ofd object and actually that that will be actually will live in the cash even though the purchase has been completed if we allow dcdn to be so liberal with timing like oh you know uh kind of do whatever so in version 15 we fix that and what we'\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"e47e52a8-8edc-43a9-a303-fe65e8f042e0\", \"meeting\": \"ietf121\", \"working_group\": \"httpapi\", \"subject\": \"IETF 121 - HTTPAPI Working Group Session\", \"matches\": [{\"context\": \"help people figure out the considerations and the tradeoffs about when they should trigger this maybe I don't know yeah I wonder like maybe where we say stop listening on 4D 80 we could also say or restrict where you will accept connections from to closed inputs basically something like that I'm hap\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"eb440cd8-2d02-4a7e-b665-9c7f3ddefd0b\", \"meeting\": \"ietf121\", \"working_group\": \"ietf\", \"subject\": \"IETF 121 - IETF Working Group Session\", \"matches\": [{\"context\": \"e first one in RFC 791 the Internet Protocol implements two basic functions address and fragmentation which is the key for the above ipv4 IPv6 translation technology and the second one pastel slow be liberal in what you accept and conservative in what you send I believe that today's award is not mer\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"46fdc762-c308-4200-8f96-9b9d813976bc\", \"meeting\": \"ietf121\", \"working_group\": \"ippm\", \"subject\": \"IETF 121 - IPPM Working Group Session\", \"matches\": [{\"context\": \"tell you that I personally agree with you however I have heard the opposite from many people who work on video conferencing systems who say I am completely wrong and and they love what they call lost tolerant codecs where they can play a frame when they don't have all the packets now this has change\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"83532960-4771-4192-8486-204baa96c68b\", \"meeting\": \"ietf121\", \"working_group\": \"mailmaint\", \"subject\": \"IETF 121 - MAILMAINT Working Group Session\", \"matches\": [{\"context\": \"e safe to cut bed still a minute and a half left questions John since GRE this has been blamed on me I thought I should comment um first of all I've come to conclusion usion that the uh that the very liberal syntax which was adopted by the eii working group was probably a mistake so the first part o\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"2cc8ff90-cbf4-4dd1-9e80-7b7f91e832f0\", \"meeting\": \"ietf121\", \"working_group\": \"panrg\", \"subject\": \"IETF 121 - PANRG Working Group Session\", \"matches\": [{\"context\": \"e bottom uh left we can see disjointness of uh paths among air space here to we can see for almost major portion of the air space we have a high degree of disjointness this helps in being highly fall tolerant on the bottom right we are looking at uh the connectivity between air space uh if links are\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"d1496de5-04fa-4fee-a7bd-e5320449ae25\", \"meeting\": \"ietf121\", \"working_group\": \"rasprg\", \"subject\": \"IETF 121 - RASPRG Working Group Session\", \"matches\": [{\"context\": \"e owned or controlled by you or your sponsor you must disclose it or not participate in the discussion thef expects you that you file such IP discloses in a timey manner um the irtf prefers that most liberal lenses terms possible are made available to the irtf stream documents and definitive informa\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"ab5f1b2b-c253-4d0a-8f1a-db5509033ed0\", \"meeting\": \"ietf122\", \"working_group\": \"cbor\", \"subject\": \"IETF 122 - CBOR Working Group Session\", \"matches\": [{\"context\": \"ts uh which would be totally different than the ones that are currently in the in the document Michael rich is on the mic um by the way I discovered um that there are some base 64 decoders that are intolerant of white space between uh b64 quad quadal so you can put a new line a every four characters\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"619f8656-ef57-4fb4-bf16-cc9cbf9d6a5c\", \"meeting\": \"ietf122\", \"working_group\": \"dtn\", \"subject\": \"IETF 122 - DTN Working Group Session\", \"matches\": [{\"context\": \"So um 50% yeah love it 50% and I want to argue with you about it on the mailing list. Yeah, put on the mailing list. So our our next set of slides are the status of the network management work delay tolerant network management architecture uh uh presented by Jenny Cow. Jenny, would you like to share\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"39e2f24b-b0e2-4c96-ac17-60615d3fae33\", \"meeting\": \"ietf122\", \"working_group\": \"ivy\", \"subject\": \"IETF 122 - IVY Working Group Session\", \"matches\": [{\"context\": \"authors are still uh think that um May it may be a bit hard to predict the need for argumentations and in that case if we provide a um guideline it could be either you know too restrictive or uh too liberal which does not reflect the actual uh need right um and as a matter of fact um well but at the\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"91712bcf-5626-4dac-b0e5-f9c9d064500d\", \"meeting\": \"ietf122\", \"working_group\": \"lake\", \"subject\": \"IETF 122 - LAKE Working Group Session\", \"matches\": [{\"context\": \"and so on. Uh that's already clear from the producer point of view. We are not saying anything um from the point of view of the recipient. like done in other situations already, it makes sense to be tolerant and just um silently ignore if it's possible to avoid a hard uh failure. And another uh open\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"02a48adc-1130-458d-84c1-d8c4f9613017\", \"meeting\": \"ietf122\", \"working_group\": \"moq\", \"subject\": \"IETF 122 - MOQ Working Group Session\", \"matches\": [{\"context\": \"so the subject of a major reorganization um Ian will get into that but the the main issue here is that we have a consensus call on the entire document that expires on two April and um you know is not strictly speaking working group last call but the idea here is that um uh if there are any issues wi\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"e42d97bc-fb3e-4ea7-a595-e78bd458ca8c\", \"meeting\": \"ietf122\", \"working_group\": \"qirg\", \"subject\": \"IETF 122 - QIRG Working Group Session\", \"matches\": [{\"context\": \"eplace in the upper right several years ago professor John presal of Caltech introduced the term nisk noisy intermediate scale Quantum systems and today we are roughly at the level of the first fault tolerant demonstrations over the last year or so involving error correction to improve the Fidelity \", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"eae245cb-fc55-4d96-9ed1-33719b3c4ba4\", \"meeting\": \"ietf122\", \"working_group\": \"sshm\", \"subject\": \"IETF 122 - SSHM Working Group Session\", \"matches\": [{\"context\": \"s while we're in there um I think whatever we regardless of of when that happens the stuff that the stuff that is in stricks kex I believe is things that should happen anyway I think we should not be liberal in what we accept in the you know anywhere in the pre-authentication phase of SSH I think th\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"469c1a23-dc1d-4e67-b834-c17a8640f618\", \"meeting\": \"ietf123\", \"working_group\": \"dtn\", \"subject\": \"IETF 123 - DTN Working Group Session\", \"matches\": [{\"context\": \"adoption on the mailing list as well and then we can uh decide from there. >> Okay. Thank you for coming in today, Brian. Thank you. >> Next up, we have Justin Ether from uh to talk to us about delay tolerant network management updates. >> Hello. Can you hear me? >> Yes. Would you like to share your\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"96916198-1404-47d5-86f5-c72fc5a9db56\", \"meeting\": \"ietf123\", \"working_group\": \"icnrg\", \"subject\": \"IETF 123 - ICNRG Working Group Session\", \"matches\": [{\"context\": \", you know, is a kind of planer sort of idea and you're communicating between endpoints and passing the um the data along. But we wanted something that would be self-contained and also really failure tolerant and not just actual failures, but things going to sleep and coming back online. And in that\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"8723496e-c552-4858-87f1-e3096fe3f81b\", \"meeting\": \"ietf123\", \"working_group\": \"rasprg\", \"subject\": \"IETF 123 - RASPRG Working Group Session\", \"matches\": [{\"context\": \"n that is covered by patents or patent applications own or controlled by your sponsor you must disclose it. Thef expects that you file such IP disclosure in a timely manner. The RTF prefers that most liberal sensing terms possible are made available. Uh and definitive information is available in the\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"683251c6-6c01-4a90-a295-4891323a7bce\", \"meeting\": \"ietf123\", \"working_group\": \"schc\", \"subject\": \"IETF 123 - SCHC Working Group Session\", \"matches\": [{\"context\": \"DTN in the context of tiptop is understood as bundle protocol. So they are thinking like this. So when we say DTN it can be like okay >> no but but the draft specifically says this is for disruption tolerant networks. He doesn't talk about any specific protocol that solves >> exactly >> packet forwa\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"8f84a79d-27e8-4a98-bd33-0c97d53ddf6a\", \"meeting\": \"ietf123\", \"working_group\": \"sidrops\", \"subject\": \"IETF 123 - SIDROPS Working Group Session\", \"matches\": [{\"context\": \"any ASS uh would continue to have uh reachability to to ASC uh or the prefixes at ASC. Uh so what so the question is uh do the operators want to uh drop uh the uh updates or or do they want to pro be tolerant and uh uh and then uh fix the ASPA error as soon as possible uh as an add as an operational\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}]}",
+      "encoding": "json"
+    }
+  ],
+  "analysis": [
+    {
+      "type": "ietf_principle_corpus_summary",
+      "dialog": [],
+      "vendor": "ietf-hackathon-125",
+      "body": {
+        "principle_id": "robustness",
+        "principle_name": "Robustness principle / Postel's law",
+        "total_sessions": 80,
+        "total_unique_sources": 80,
+        "meetings_represented": [
+          "ietf110",
+          "ietf111",
+          "ietf112",
+          "ietf113",
+          "ietf114",
+          "ietf115",
+          "ietf116",
+          "ietf117",
+          "ietf118",
+          "ietf119",
+          "ietf120",
+          "ietf121",
+          "ietf122",
+          "ietf123"
+        ],
+        "working_groups": [
+          "6man",
+          "acme",
+          "anrw",
+          "bpf",
+          "cbor",
+          "ccwg",
+          "cdni",
+          "core",
+          "detnet",
+          "dispatch",
+          "dmarc",
+          "dnssd",
+          "dtn",
+          "edm",
+          "emu",
+          "extra",
+          "gaia",
+          "gendispatch",
+          "hrpc",
+          "httpapi",
+          "httpbis",
+          "iabopen",
+          "iccrg",
+          "icnrg",
+          "ietf",
+          "intarea",
+          "ippm",
+          "irtfopen",
+          "ivy",
+          "keytrans",
+          "lake",
+          "lsvr",
+          "mailmaint",
+          "mls",
+          "mops",
+          "moq",
+          "netmod",
+          "nmrg",
+          "ntp",
+          "ohai",
+          "panrg",
+          "pquip",
+          "qirg",
+          "radext",
+          "rasprg",
+          "raw",
+          "rswg",
+          "rtcweb",
+          "rtgwg",
+          "schc",
+          "sidrops",
+          "sshm",
+          "tdd",
+          "tsvarea",
+          "tvr",
+          "v6ops"
+        ],
+        "top_working_groups": [
+          {
+            "group": "dtn",
+            "count": 12
+          },
+          {
+            "group": "hrpc",
+            "count": 4
+          },
+          {
+            "group": "irtfopen",
+            "count": 3
+          },
+          {
+            "group": "acme",
+            "count": 2
+          },
+          {
+            "group": "dispatch",
+            "count": 2
+          },
+          {
+            "group": "ntp",
+            "count": 2
+          },
+          {
+            "group": "sidrops",
+            "count": 2
+          },
+          {
+            "group": "rswg",
+            "count": 2
+          },
+          {
+            "group": "ippm",
+            "count": 2
+          },
+          {
+            "group": "httpapi",
+            "count": 2
+          }
+        ],
+        "meeting_frequency": {
+          "ietf110": 9,
+          "ietf111": 4,
+          "ietf112": 5,
+          "ietf113": 2,
+          "ietf114": 6,
+          "ietf115": 3,
+          "ietf116": 7,
+          "ietf117": 7,
+          "ietf118": 8,
+          "ietf119": 3,
+          "ietf120": 7,
+          "ietf121": 7,
+          "ietf122": 7,
+          "ietf123": 5
+        }
+      },
+      "encoding": "json"
+    }
+  ]
+}

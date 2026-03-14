@@ -1,0 +1,292 @@
+{
+  "vcon": "0.0.1",
+  "uuid": "38a47da1-a32e-4d6d-83a0-8bf23b00bf8b",
+  "created_at": "2026-03-14T15:12:40.988430+00:00",
+  "updated_at": "2026-03-14T15:12:40.988430+00:00",
+  "subject": "Tussle in cyberspace \u2014 IETF Discussion Corpus (ietf110-ietf123)",
+  "group": [
+    {
+      "uuid": "651acaf7-2b4d-4330-9087-0fc3826600ef"
+    },
+    {
+      "uuid": "1bf9d4f3-aa0a-4b22-91ea-689180788184"
+    },
+    {
+      "uuid": "a4c345fb-c740-4031-bd53-12fae8c2c129"
+    },
+    {
+      "uuid": "31fb4123-0c69-46ed-ba63-3a713c0204bc"
+    },
+    {
+      "uuid": "7cbb8662-1efa-4562-a27e-42604fcda67a"
+    },
+    {
+      "uuid": "6fa0a307-cffd-4382-b097-0d686ef153b2"
+    },
+    {
+      "uuid": "4127d1bc-5465-4551-a7a3-cf923d78bfaf"
+    },
+    {
+      "uuid": "a07dc34a-ebba-480a-8626-cead09c097f0"
+    },
+    {
+      "uuid": "0235ea10-5cc4-46f7-a73e-30428be9285b"
+    },
+    {
+      "uuid": "a70f90fa-56be-455f-b8a2-c937f43dd855"
+    },
+    {
+      "uuid": "283ac3b6-ec21-48fa-a35c-2fcd3b67a7f3"
+    },
+    {
+      "uuid": "ae025a95-b753-4056-8da6-b5e4218fbb20"
+    },
+    {
+      "uuid": "0bf7a946-95c6-4cca-afea-e7330f9ea708"
+    },
+    {
+      "uuid": "3245db25-8b33-40e0-8b58-821c6c1677ba"
+    },
+    {
+      "uuid": "8e0fb2f6-de4c-4381-a313-2a6f5c468250"
+    },
+    {
+      "uuid": "71921048-6d99-4086-95bc-956a09b26f51"
+    },
+    {
+      "uuid": "d45f8807-da47-4b2a-a2ac-819a8ec01e45"
+    },
+    {
+      "uuid": "087492f1-2ce1-48db-9a44-b88edaf6870e"
+    },
+    {
+      "uuid": "375146de-8970-4261-b67b-94dc39fec1a0"
+    },
+    {
+      "uuid": "7b7a72bb-6972-496d-a372-899e3e81b02c"
+    },
+    {
+      "uuid": "3256ea42-7e74-43be-929f-a01f0d5dc0a7"
+    },
+    {
+      "uuid": "35d0ee23-effa-4206-a7e0-1dfec8bc632f"
+    },
+    {
+      "uuid": "a76f6899-86b9-47e7-86ea-0513b0b5141d"
+    },
+    {
+      "uuid": "468f24db-996b-4ba3-bcc4-f85d8da5bb8b"
+    },
+    {
+      "uuid": "a3079554-10d8-4b27-bfb6-625423ce7730"
+    },
+    {
+      "uuid": "ce593fd6-4fd5-47bf-8561-cca76971fb2c"
+    },
+    {
+      "uuid": "4ccbb48a-462e-40fc-aa55-6b312d3e2a0e"
+    },
+    {
+      "uuid": "272793b0-57f9-47f9-b0bd-8d356379c65a"
+    },
+    {
+      "uuid": "1e99f7be-5048-4704-ad13-316df00056c8"
+    },
+    {
+      "uuid": "9c092f5d-2fcd-4c0a-9857-b77f13fd7f12"
+    },
+    {
+      "uuid": "fca2546d-51af-496f-8d14-1d7422083d01"
+    },
+    {
+      "uuid": "e8c6deb4-9dbd-4b50-b3f3-4b6a6ed2b0f3"
+    },
+    {
+      "uuid": "45a7702a-40f3-45dd-8c7a-d88f6285c395"
+    },
+    {
+      "uuid": "74e444e2-0832-4c3c-a44a-dd1665e7620b"
+    },
+    {
+      "uuid": "8a06156f-652f-4e18-9351-827ade120c43"
+    },
+    {
+      "uuid": "103a947d-07eb-463c-b33e-1e55930a4326"
+    },
+    {
+      "uuid": "4b07f1a4-dfae-4963-b3bb-5711a84a1b96"
+    },
+    {
+      "uuid": "effc1e51-7a06-4303-a7d1-1c74814fac25"
+    },
+    {
+      "uuid": "d1496de5-04fa-4fee-a7bd-e5320449ae25"
+    },
+    {
+      "uuid": "e8f404f6-3ccd-445c-8823-14d17641f90c"
+    },
+    {
+      "uuid": "2ec7e2b8-46b2-4b4e-a466-ce373f2e476c"
+    },
+    {
+      "uuid": "85ce5525-9cf4-44c1-9cab-ae4237d88d43"
+    },
+    {
+      "uuid": "ad131d3f-91ac-4a5a-aec2-553865a88a9c"
+    },
+    {
+      "uuid": "3fe271f8-c119-49d8-9967-b2e53e01030f"
+    },
+    {
+      "uuid": "d7e74104-d79b-46fd-bc10-b8debaa87bc7"
+    },
+    {
+      "uuid": "97f0e1fb-6c51-416d-8f31-b37dd43204a2"
+    },
+    {
+      "uuid": "40f87b64-fd06-463f-9bfd-b41d9545c3dc"
+    },
+    {
+      "uuid": "d5ed5942-2e18-4c86-9c8b-23a317e360b0"
+    },
+    {
+      "uuid": "454adda3-66fb-48a5-b5ff-b3526269e4a2"
+    },
+    {
+      "uuid": "57bca8b1-928e-4286-a038-9c421cfc8e8e"
+    }
+  ],
+  "parties": [],
+  "dialog": [],
+  "attachments": [
+    {
+      "type": "application/json",
+      "purpose": "principle_definition",
+      "body": "{\"principle_id\": \"tussle\", \"name\": \"Tussle in cyberspace\", \"description\": \"Design for the inevitable tensions between stakeholders with different interests.\", \"rfc_refs\": []}",
+      "encoding": "json"
+    },
+    {
+      "type": "application/json",
+      "purpose": "collected_evidence",
+      "body": "{\"total_sessions\": 50, \"sessions\": [{\"source_uuid\": \"651acaf7-2b4d-4330-9087-0fc3826600ef\", \"meeting\": \"ietf110\", \"working_group\": \"hrpc\", \"subject\": \"IETF 110 - HRPC Working Group Session\", \"matches\": [{\"context\": \"ped a set of principles about how to arrive at standards they create the notion of technical committees in specific areas they set up and they came up with a norm such as you had to have a balance of stakeholders so you wanted some of them to be from the manufacturing firms some of them could be fro\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"1bf9d4f3-aa0a-4b22-91ea-689180788184\", \"meeting\": \"ietf110\", \"working_group\": \"ietf\", \"subject\": \"IETF 110 - IETF Working Group Session\", \"matches\": [{\"context\": \"munity um and again the view seemed impacted by specific personal experiences and how people perceive things you know glasses half full or empty or things like that um engaging with external impacted stakeholders uh in general there does seem to be a belief that the ietf cannot exist in a vacuum and\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"a4c345fb-c740-4031-bd53-12fae8c2c129\", \"meeting\": \"ietf110\", \"working_group\": \"nmrg\", \"subject\": \"IETF 110 - NMRG Working Group Session\", \"matches\": [{\"context\": \"ification and develop a taxonomy for the intent based networking or intend-driven networking next so the scope of this draft there was no clarity originally about what intent represents for different stakeholders so so we had the concepts graphed that gave some high level concept definition of the i\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"31fb4123-0c69-46ed-ba63-3a713c0204bc\", \"meeting\": \"ietf110\", \"working_group\": \"ntp\", \"subject\": \"IETF 110 - NTP Working Group Session\", \"matches\": [{\"context\": \"a year um i do not have a draft at this time i'm planning to write it up as a right to i'm planning to write it up as as a as an experimental track id um since there aren't really any stick any other stakeholders that i can identify at this time i'm not planning i'm planning to do this through the i\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"7cbb8662-1efa-4562-a27e-42604fcda67a\", \"meeting\": \"ietf111\", \"working_group\": \"hrpc\", \"subject\": \"IETF 111 - HRPC Working Group Session\", \"matches\": [{\"context\": \"lot outside of the ietf irtf and the internet governance forum is one of those key venues so i'll just sort of summarize what her talk would have been about and that was she's the chair of the multi-stakeholder advisory group of the igf at the moment and would have sort of given a talk to get us all\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"6fa0a307-cffd-4382-b097-0d686ef153b2\", \"meeting\": \"ietf112\", \"working_group\": \"hrpc\", \"subject\": \"IETF 112 - HRPC Working Group Session\", \"matches\": [{\"context\": \"a distance although i've attended some of the sessions at icann meetings and um i'm just very happy to be here so i'm andrew esterhosen i'm currently the chair of the internet governance forum multi-stakeholder advisory committee until the end of this year and i want to talk to you about the igf so \", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"4127d1bc-5465-4551-a7a3-cf923d78bfaf\", \"meeting\": \"ietf112\", \"working_group\": \"nmrg\", \"subject\": \"IETF 112 - NMRG Working Group Session\", \"matches\": [{\"context\": \"y of interconnecting and taking into account those other capabilities that allow two requests for more advanced services and here we are considering services like the ones that could permit different stakeholders to deploy a virtualized services for instance in different domains or to leverage in co\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"a07dc34a-ebba-480a-8626-cead09c097f0\", \"meeting\": \"ietf112\", \"working_group\": \"raw\", \"subject\": \"IETF 112 - RAW Working Group Session\", \"matches\": [{\"context\": \"l but actually i will express my gratitude as well that things have progressed and that the discussions have been both respectful but very candid and honest and that we're working through some of the tussles uh in the discussions around uh drafts and and references and things like that so um thank y\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"0235ea10-5cc4-46f7-a73e-30428be9285b\", \"meeting\": \"ietf113\", \"working_group\": \"gaia\", \"subject\": \"IETF 113 - GAIA Working Group Session\", \"matches\": [{\"context\": \"business and make it sustainable by following best practices that are used in in operating businesses they also need to have a user base that means they need to be able to bring in the buying of the stakeholders or the community whom they serve to be able to take on this service and finally they als\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"a70f90fa-56be-455f-b8a2-c937f43dd855\", \"meeting\": \"ietf113\", \"working_group\": \"hrpc\", \"subject\": \"IETF 113 - HRPC Working Group Session\", \"matches\": [{\"context\": \"l working group and not just the threats and harms task forces well thinking about the purpose of of this infrastructure what are the use cases who are the users and also very importantly who are the stakeholders so with that foundation we went on to think about the assessment right so so what are t\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"283ac3b6-ec21-48fa-a35c-2fcd3b67a7f3\", \"meeting\": \"ietf113\", \"working_group\": \"secdispatch\", \"subject\": \"IETF 113 - SECDISPATCH Working Group Session\", \"matches\": [{\"context\": \"tion sector uh in a looking at some of the security and privacy issues uh specific to schools uh in the sector next slide please so what we've done is to gather input from a variety multiple multiple stakeholders interestingly so lots of stakeholders um to really get an understanding of where and ho\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"ae025a95-b753-4056-8da6-b5e4218fbb20\", \"meeting\": \"ietf114\", \"working_group\": \"edm\", \"subject\": \"IETF 114 - EDM Working Group Session\", \"matches\": [{\"context\": \"over applying this somehow and i do i need to constrain is there some other case you need to call out and i think it's the job of a good ieb spec to actually call out those considerations when those tussles are those things that occur that says well it's there most of the time but this other case ma\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"0bf7a946-95c6-4cca-afea-e7330f9ea708\", \"meeting\": \"ietf114\", \"working_group\": \"gaia\", \"subject\": \"IETF 114 - GAIA Working Group Session\", \"matches\": [{\"context\": \"h the governance model while gets changed uh or we need to put more thoughts into the into the model based on the multi-state holder model that internet has been based on and because we have multiple stakeholders uh in the uh in the model such as network operators community users stakeholders and se\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"3245db25-8b33-40e0-8b58-821c6c1677ba\", \"meeting\": \"ietf114\", \"working_group\": \"hrpc\", \"subject\": \"IETF 114 - HRPC Working Group Session\", \"matches\": [{\"context\": \"an help with yeah I think so we have had some of those interactions I'm happy to say and we do really try to you know not view them as adversaries or antagonists but try and do them as like Community stakeholders and partners in this so I did recently speak um like so um meta does a good job of like\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"8e0fb2f6-de4c-4381-a313-2a6f5c468250\", \"meeting\": \"ietf114\", \"working_group\": \"nmrg\", \"subject\": \"IETF 114 - NMRG Working Group Session\", \"matches\": [{\"context\": \"some high-level models for the users and developers to evolve the solutions to discuss the solutions with for example in software engineer you can discuss your solutions with clients with developers stakeholders and so on in networking we can have topologies we have a egg model but is it easy to rea\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"71921048-6d99-4086-95bc-956a09b26f51\", \"meeting\": \"ietf114\", \"working_group\": \"secdispatch\", \"subject\": \"IETF 114 - SECDISPATCH Working Group Session\", \"matches\": [{\"context\": \"ctor and health sector in Sweden in the Federation for the school sector there was a great need to be able to translate the secure using Open Standards that was where the idea of fed TLS was born one stakeholder is the Swedish national Agency for Education which will use fed Telus for user life cycl\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"d45f8807-da47-4b2a-a2ac-819a8ec01e45\", \"meeting\": \"ietf115\", \"working_group\": \"gaia\", \"subject\": \"IETF 115 - GAIA Working Group Session\", \"matches\": [{\"context\": \"om Aspire and diverse around the world as we can and what we propose to do and it's illustrated by this small chart is to join the development of the standard to try and get the feedback from as many stakeholders as possible and by stakeholders we mean those exchanges exchange participants and also \", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"087492f1-2ce1-48db-9a44-b88edaf6870e\", \"meeting\": \"ietf115\", \"working_group\": \"gendispatch\", \"subject\": \"IETF 115 - GENDISPATCH Working Group Session\", \"matches\": [{\"context\": \"clarification followers so so you saying that do you so this tries to set the expectations from the ITF Community perspective do you think this should be broader and talk about expectations of other stakeholders that have their Assets in the trust because that would be for example the Ayana right so\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"375146de-8970-4261-b67b-94dc39fec1a0\", \"meeting\": \"ietf116\", \"working_group\": \"httpbis\", \"subject\": \"IETF 116 - HTTPBIS Working Group Session\", \"matches\": [{\"context\": \"uestion but what do we want to do with these documents Eric I suppose it's a good place to have my big bucket of cold water in a lot of this well I like a lot of this draft I've been speaking to many stakeholders within Google at Chrome and Google server infrastructure and the general consensus is n\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"7b7a72bb-6972-496d-a372-899e3e81b02c\", \"meeting\": \"ietf116\", \"working_group\": \"rasprg\", \"subject\": \"IETF 116 - RASPRG Working Group Session\", \"matches\": [{\"context\": \"omparison between sdos because we don't think that's a productive uh engagement or directly influence ietf operations we are here for knowledge production and understanding for all different involved stakeholders and do not concretely provide advice on uh on operations the goal for us is rather prod\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"3256ea42-7e74-43be-929f-a01f0d5dc0a7\", \"meeting\": \"ietf116\", \"working_group\": \"sml\", \"subject\": \"IETF 116 - SML Working Group Session\", \"matches\": [{\"context\": \"ooks highly useful my pessimistic statement is along the same lines as Barry so he I actually put myself in mind to say almost the same thing but here's an example right uh between Market forces that tussle with who gets to display content receivers versus senders we already have a very well known u\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"35d0ee23-effa-4206-a7e0-1dfec8bc632f\", \"meeting\": \"ietf117\", \"working_group\": \"6man\", \"subject\": \"IETF 117 - 6MAN Working Group Session\", \"matches\": [{\"context\": \"in English times and times and that brings me to the next point which is the current architecture has a very uh a a balance that we arrived at after a very like long like years of discussions and and tussles and so on which is that hosts can mostly do what they want and if they do things that are to\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"a76f6899-86b9-47e7-86ea-0513b0b5141d\", \"meeting\": \"ietf118\", \"working_group\": \"edm\", \"subject\": \"IETF 118 - EDM Working Group Session\", \"matches\": [{\"context\": \"do the greasing somehow we somehow have to know whether the tests we're doing actually go through the network so we know what works so that researchers can build big data sets over time and there's a tussle here because greeting kind of opticat that or maybe exercises that so I think it might be wor\", \"matched_pattern\": \"\"}, {\"context\": \"s much space and then do this thing right and maybe a few variances of those based on all of the different ways that the ITF defines his protocals okay David yeah I think uh there's an interesting um tussle here because on one end um let's say if you know your approach to Greece was just oh do somet\", \"matched_pattern\": \"\"}], \"confidence\": \"medium\"}, {\"source_uuid\": \"468f24db-996b-4ba3-bcc4-f85d8da5bb8b\", \"meeting\": \"ietf118\", \"working_group\": \"gendispatch\", \"subject\": \"IETF 118 - GENDISPATCH Working Group Session\", \"matches\": [{\"context\": \"se here um you know I think about a draft the internet is for end users it seems to have something we have consensus on um and we have this idea of diversity that we're trying to do and bring a multi-stakeholder model into these types of things now what happened to the w3c is their draft was forked \", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"a3079554-10d8-4b27-bfb6-625423ce7730\", \"meeting\": \"ietf118\", \"working_group\": \"hrpc\", \"subject\": \"IETF 118 - HRPC Working Group Session\", \"matches\": [{\"context\": \"t the end that's fine or you could go now okay uh George michaelsson a pck I just wanted to say thank you thank you for presenting I think are you familiar with the idea we talk about here often of a tussle the kind of disagreement tension between two parties in a conversation it happens a lot here \", \"matched_pattern\": \"\"}, {\"context\": \"u for presenting I think are you familiar with the idea we talk about here often of a tussle the kind of disagreement tension between two parties in a conversation it happens a lot here and we have a tussle that has gone on for a very long time about tension between privacy and identity so a lot of \", \"matched_pattern\": \"\"}], \"confidence\": \"medium\"}, {\"source_uuid\": \"ce593fd6-4fd5-47bf-8561-cca76971fb2c\", \"meeting\": \"ietf118\", \"working_group\": \"iabopen\", \"subject\": \"IETF 118 - IABOPEN Working Group Session\", \"matches\": [{\"context\": \"to deal with how do how do use doing that and actually the document that Maria mentioned earlier um we had a workshop on managing encrypted networks on on how do you how do you how do we balance this tussle between the need for privacy versus the need for defensive related Technologies um good quest\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"4ccbb48a-462e-40fc-aa55-6b312d3e2a0e\", \"meeting\": \"ietf118\", \"working_group\": \"ietf\", \"subject\": \"IETF 118 - IETF Working Group Session\", \"matches\": [{\"context\": \"one thing we could do is certainly could we could start a meeting list for site meeting conveners that they can use to talk to each other because that I don't think we currently have but there is the tussle that that's for for the iatf as an organization um we were more involved in uh deconflict sid\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"272793b0-57f9-47f9-b0bd-8d356379c65a\", \"meeting\": \"ietf118\", \"working_group\": \"iotops\", \"subject\": \"IETF 118 - IOTOPS Working Group Session\", \"matches\": [{\"context\": \"ficates or something and they have some magic you know uh thing that's going to solve your problem but the problem case is real and I think that the that I think that um I think we have a real a real tussle here right because you you many cases you just don't ever want those things to ever expire an\", \"matched_pattern\": \"\"}, {\"context\": \"h a light does someone come and maintain you I think it totally depends on the context and so I don't think we're going to ever have good advice here except that I think that we we could document the tussle right and say this is an unresolved issue a the B I just wanted to say that the other part wa\", \"matched_pattern\": \"\"}], \"confidence\": \"medium\"}, {\"source_uuid\": \"1e99f7be-5048-4704-ad13-316df00056c8\", \"meeting\": \"ietf118\", \"working_group\": \"rasprg\", \"subject\": \"IETF 118 - RASPRG Working Group Session\", \"matches\": [{\"context\": \"ards um in the right fora where they can get you know the proper technical scrutiny where they actually open uh to sort of feedback and and and uh sort of uh vetting from uh you know the larger multi-stakeholder Community even uh last word on the standard Observatory I already mentioned um our funde\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"9c092f5d-2fcd-4c0a-9857-b77f13fd7f12\", \"meeting\": \"ietf120\", \"working_group\": \"diem\", \"subject\": \"IETF 120 - DIEM Working Group Session\", \"matches\": [{\"context\": \"m digital emblems as well um enhanced security um having signs that are you don't have to put on the object itself because it's digital it can live somewhere else um can be used real time to multiple stakeholders in in a selective way um and you can support many types of objects um physical like car\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"fca2546d-51af-496f-8d14-1d7422083d01\", \"meeting\": \"ietf120\", \"working_group\": \"dinrg\", \"subject\": \"IETF 120 - DINRG Working Group Session\", \"matches\": [{\"context\": \"sing for years and years and years so just and and part of this right also happens in like the Us and other places where um the antitrust efforts are actually just the government picking sides in the tussle between big Tech Network and big tech service and and of course right the people who are losi\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"e8c6deb4-9dbd-4b50-b3f3-4b6a6ed2b0f3\", \"meeting\": \"ietf120\", \"working_group\": \"emailcore\", \"subject\": \"IETF 120 - EMAILCORE Working Group Session\", \"matches\": [{\"context\": \"lly have words to fix it right because uh my I think Daniel sort of captured this well that there's not going to be perfect here and by no means will there be perfect here there's there's a there's a tussle going on in in in all this as we've heard and so there has to be really clear words as to how\", \"matched_pattern\": \"\"}, {\"context\": \"erfect here and by no means will there be perfect here there's there's a there's a tussle going on in in in all this as we've heard and so there has to be really clear words as to how to address that tussle otherwise we're just going to be right back here the next time I agreed thank you okay move o\", \"matched_pattern\": \"\"}], \"confidence\": \"medium\"}, {\"source_uuid\": \"45a7702a-40f3-45dd-8c7a-d88f6285c395\", \"meeting\": \"ietf120\", \"working_group\": \"gaia\", \"subject\": \"IETF 120 - GAIA Working Group Session\", \"matches\": [{\"context\": \"also uh shared the link uh as shared link for our other activities so you can see there our report um uh focuses on Law and policy issues in relation to Leos and we focused on identifying the correct stakeholders and how to engage those stakeholders in law and policy making uh as it applies to these\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"74e444e2-0832-4c3c-a44a-dd1665e7620b\", \"meeting\": \"ietf120\", \"working_group\": \"hrpc\", \"subject\": \"IETF 120 - HRPC Working Group Session\", \"matches\": [{\"context\": \"rnet standards uh because uh we are a governance mechanism in in some fashion but there are other governance mechanisms as well and we are certainly not Democratic um I I don't think we're even multi-stakeholder please don't kill me right now um and uh uh you know there's some really interesting que\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"8a06156f-652f-4e18-9351-827ade120c43\", \"meeting\": \"ietf120\", \"working_group\": \"ietf\", \"subject\": \"IETF 120 - IETF Working Group Session\", \"matches\": [{\"context\": \"going to be held in September this is about how uh we should approach uh cases where uh content should be opted out of being scraped by Ai and we want to have a a discussion between all the different stakeholders in that conversation um so the submissions for that are open now so if this is somethin\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"103a947d-07eb-463c-b33e-1e55930a4326\", \"meeting\": \"ietf120\", \"working_group\": \"regext\", \"subject\": \"IETF 120 - REGEXT Working Group Session\", \"matches\": [{\"context\": \"group but one of the things that I in particular as an individual and and sitting in the roll of this chair I've tried to make a point of doing is that um we do get at least a voice in every impacted stakeholder I'll say so you know a registry a registar couple different Registries if necessary a DN\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"4b07f1a4-dfae-4963-b3bb-5711a84a1b96\", \"meeting\": \"ietf121\", \"working_group\": \"alldispatch\", \"subject\": \"IETF 121 - ALLDISPATCH Working Group Session\", \"matches\": [{\"context\": \"ed identity and credentials um and it does a bunch of things it makes it more flexible It's relatively technologically agnostic it increases desability it enhances assurance and it's leveraging multi-stakeholder govern internet infrastructure which is well supported and longlived um next slide pleas\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"effc1e51-7a06-4303-a7d1-1c74814fac25\", \"meeting\": \"ietf121\", \"working_group\": \"diem\", \"subject\": \"IETF 121 - DIEM Working Group Session\", \"matches\": [{\"context\": \"at discussion we have to have today um the other part of this is and and you know from my perspective and I know from talking to a few other people they've been really surprised at how many different stakeholders have shown up uh to at least represent their their particular use cases and and and how\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"d1496de5-04fa-4fee-a7bd-e5320449ae25\", \"meeting\": \"ietf121\", \"working_group\": \"rasprg\", \"subject\": \"IETF 121 - RASPRG Working Group Session\", \"matches\": [{\"context\": \"m worthy of trust that uh make them make Society trust that these organizations are uh appropriately balancing different uh considerations and uh checking the powers and influence of certain powerful stakeholders and one aspect of that is individuals and their Network and their concern for their rep\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"e8f404f6-3ccd-445c-8823-14d17641f90c\", \"meeting\": \"ietf121\", \"working_group\": \"sidrops\", \"subject\": \"IETF 121 - SIDROPS Working Group Session\", \"matches\": [{\"context\": \"s about why one solution is better than the other while we're not looking at things from the same uh uh Viewpoint um in trying to get consensus on requirements I also think we can achieve uh that all stakeholders in the ecosystem feel hurt I think the publication Point operators and the relying part\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"2ec7e2b8-46b2-4b4e-a466-ce373f2e476c\", \"meeting\": \"ietf121\", \"working_group\": \"tls\", \"subject\": \"IETF 121 - TLS Working Group Session\", \"matches\": [{\"context\": \"your audio and video off until you are ready to speak okay so we have a a fairly uh full agenda here um you know summarizing some of the interms with the the fat and the uh what we term now the trust tussle um we have some register updates some discussion of EC uh dtls clarifications braid certifica\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"85ce5525-9cf4-44c1-9cab-ae4237d88d43\", \"meeting\": \"ietf121\", \"working_group\": \"tvr\", \"subject\": \"IETF 121 - TVR Working Group Session\", \"matches\": [{\"context\": \"rity of this off-path mechanism and here just to highlight that um uh differently to what is uh Pro presented in the applicability draft uh there the requester and the consumer are played by the same stakeholder here would be clearly different stakeholders it's um worth it to note that what we expec\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"ad131d3f-91ac-4a5a-aec2-553865a88a9c\", \"meeting\": \"ietf121\", \"working_group\": \"v6ops\", \"subject\": \"IETF 121 - V6OPS Working Group Session\", \"matches\": [{\"context\": \"people who don't want to be tracked just to point that out so yeah so that's was where was it yeah the pen penultimate point there with 15 seconds to go is we could discuss privacy versus management tussle in 13 seconds n seconds but we won't thank you please don't do that either okay um I started t\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"3fe271f8-c119-49d8-9967-b2e53e01030f\", \"meeting\": \"ietf122\", \"working_group\": \"kitten\", \"subject\": \"IETF 122 - KITTEN Working Group Session\", \"matches\": [{\"context\": \"t part of the slide but what what's the problem we have uh three General mechanisms to compare right now passwords oo2 and pass keys and uh we need to compare them together um for um the different um stakeholders which is the end users Cent implementers server implementers and administrators so what\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"d7e74104-d79b-46fd-bc10-b8debaa87bc7\", \"meeting\": \"ietf122\", \"working_group\": \"mops\", \"subject\": \"IETF 122 - MOPS Working Group Session\", \"matches\": [{\"context\": \"our our way our way of working our um assumptions and and make this work in future more and more and um I think what you also said is basically there's a little bit of an interface problem there's a tussle here between um exposing a lot of details about what you're doing on the transport layer to th\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"97f0e1fb-6c51-416d-8f31-b37dd43204a2\", \"meeting\": \"ietf122\", \"working_group\": \"pquip\", \"subject\": \"IETF 122 - PQUIP Working Group Session\", \"matches\": [{\"context\": \"lready talked to tiu about it I think this is a a great opportunity to capture together what makes an HSM uh Quantum safe what makes equipment Quantum safe as so that you know as as the government uh stakeholders are looking at this they they now have guidelines as to how to select you know uh the e\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"40f87b64-fd06-463f-9bfd-b41d9545c3dc\", \"meeting\": \"ietf123\", \"working_group\": \"diem\", \"subject\": \"IETF 123 - DIEM Working Group Session\", \"matches\": [{\"context\": \"gical solution for any given requirement. >> Okay. And I guess the mapping between a low and technical requirements are obvious or not. >> If I could first answer your first question, I think we need stakeholder input. >> What? >> We need stakeholder input. >> Okay. >> Yeah. To evaluate the requirem\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"d5ed5942-2e18-4c86-9c8b-23a317e360b0\", \"meeting\": \"ietf123\", \"working_group\": \"edm\", \"subject\": \"IETF 123 - EDM Working Group Session\", \"matches\": [{\"context\": \"we still at the ITF have to put our specification first. We shouldn't be like I understand there is a value of running code what has actually worked but not give up our stuff in the middle there is a tussle there because people come all the time to the IT say this is already implemented I'm not goin\", \"matched_pattern\": \"\"}, {\"context\": \"time to the IT say this is already implemented I'm not going to change it because it's already there even though other people in our process which is about consensus still objecting to to it so that tussle we have to always uh address it I think when you talk about deployment I think two things we k\", \"matched_pattern\": \"\"}], \"confidence\": \"medium\"}, {\"source_uuid\": \"454adda3-66fb-48a5-b5ff-b3526269e4a2\", \"meeting\": \"ietf123\", \"working_group\": \"happy\", \"subject\": \"IETF 123 - HAPPY Working Group Session\", \"matches\": [{\"context\": \"are like do you have support for TLS encrypted client and do you support quick or TCP which is really going to be about the ALPN you support HTTP3 versus HTTP2 for example and these are all different stakeholders and preferences you have for how you want to make a connection and they're not necessar\", \"matched_pattern\": \"\"}, {\"context\": \"do agree that conceptually these sort of like we should have this hierarchy of what's important to sort by and I I sort of there was some debate between two versus three and there was like a bit of a tussle there. I I think we probably all agree that one comes first. The problem is that one might re\", \"matched_pattern\": \"\"}], \"confidence\": \"medium\"}, {\"source_uuid\": \"57bca8b1-928e-4286-a038-9c421cfc8e8e\", \"meeting\": \"ietf123\", \"working_group\": \"ufmrg\", \"subject\": \"IETF 123 - UFMRG Working Group Session\", \"matches\": [{\"context\": \"of oification which means that new options will have difficulties to be deployed. >> Yes. >> And with every protocol with options like TCP or IPv6 with the extended headers there is always this >> uh tussle yes between checking everything for security on the avoiding oification of the network. we ha\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}]}",
+      "encoding": "json"
+    }
+  ],
+  "analysis": [
+    {
+      "type": "ietf_principle_corpus_summary",
+      "dialog": [],
+      "vendor": "ietf-hackathon-125",
+      "body": {
+        "principle_id": "tussle",
+        "principle_name": "Tussle in cyberspace",
+        "total_sessions": 50,
+        "total_unique_sources": 50,
+        "meetings_represented": [
+          "ietf110",
+          "ietf111",
+          "ietf112",
+          "ietf113",
+          "ietf114",
+          "ietf115",
+          "ietf116",
+          "ietf117",
+          "ietf118",
+          "ietf120",
+          "ietf121",
+          "ietf122",
+          "ietf123"
+        ],
+        "working_groups": [
+          "6man",
+          "alldispatch",
+          "diem",
+          "dinrg",
+          "edm",
+          "emailcore",
+          "gaia",
+          "gendispatch",
+          "happy",
+          "hrpc",
+          "httpbis",
+          "iabopen",
+          "ietf",
+          "iotops",
+          "kitten",
+          "mops",
+          "nmrg",
+          "ntp",
+          "pquip",
+          "rasprg",
+          "raw",
+          "regext",
+          "secdispatch",
+          "sidrops",
+          "sml",
+          "tls",
+          "tvr",
+          "ufmrg",
+          "v6ops"
+        ],
+        "top_working_groups": [
+          {
+            "group": "hrpc",
+            "count": 7
+          },
+          {
+            "group": "gaia",
+            "count": 4
+          },
+          {
+            "group": "ietf",
+            "count": 3
+          },
+          {
+            "group": "nmrg",
+            "count": 3
+          },
+          {
+            "group": "edm",
+            "count": 3
+          },
+          {
+            "group": "rasprg",
+            "count": 3
+          },
+          {
+            "group": "diem",
+            "count": 3
+          },
+          {
+            "group": "secdispatch",
+            "count": 2
+          },
+          {
+            "group": "gendispatch",
+            "count": 2
+          },
+          {
+            "group": "ntp",
+            "count": 1
+          }
+        ],
+        "meeting_frequency": {
+          "ietf110": 4,
+          "ietf111": 1,
+          "ietf112": 3,
+          "ietf113": 3,
+          "ietf114": 5,
+          "ietf115": 2,
+          "ietf116": 3,
+          "ietf117": 1,
+          "ietf118": 7,
+          "ietf120": 7,
+          "ietf121": 7,
+          "ietf122": 3,
+          "ietf123": 4
+        }
+      },
+      "encoding": "json"
+    }
+  ]
+}

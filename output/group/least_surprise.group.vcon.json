@@ -1,0 +1,85 @@
+{
+  "vcon": "0.0.1",
+  "uuid": "ee2eb6e6-72cd-4a66-9afc-e80eed3cda06",
+  "created_at": "2026-03-14T15:12:40.982389+00:00",
+  "updated_at": "2026-03-14T15:12:40.982389+00:00",
+  "subject": "Principle of least surprise \u2014 IETF Discussion Corpus (ietf112-ietf116)",
+  "group": [
+    {
+      "uuid": "bf4587cc-ef56-46bc-be5b-ba77d2d2dfdd"
+    },
+    {
+      "uuid": "0b06f344-0c21-4b56-bf0e-843c3f24e90a"
+    },
+    {
+      "uuid": "a03f39e2-82b6-4e13-8475-9b1e01f98442"
+    },
+    {
+      "uuid": "838cdb7a-7977-4642-9d6c-cf5843a527e5"
+    }
+  ],
+  "parties": [],
+  "dialog": [],
+  "attachments": [
+    {
+      "type": "application/json",
+      "purpose": "principle_definition",
+      "body": "{\"principle_id\": \"least_surprise\", \"name\": \"Principle of least surprise\", \"description\": \"System should behave in ways that least surprise users and implementers.\", \"rfc_refs\": [\"RFC 3439\"]}",
+      "encoding": "json"
+    },
+    {
+      "type": "application/json",
+      "purpose": "collected_evidence",
+      "body": "{\"total_sessions\": 4, \"sessions\": [{\"source_uuid\": \"bf4587cc-ef56-46bc-be5b-ba77d2d2dfdd\", \"meeting\": \"ietf112\", \"working_group\": \"jsonpath\", \"subject\": \"IETF 112 - JSONPATH Working Group Session\", \"matches\": [{\"context\": \"ach side and when we have a structured path to a structured value on the left-hand side and a path to an array containing that structured value on the right-hand side and then i think it violates the principle of least surprise but i'm happy to put that on the back burner if this is out of order no \", \"matched_pattern\": \"\"}, {\"context\": \"this is out of order no no it's highly material i mean we could say that we could say that unless the left-hand side selects a primitive the answer is always false yeah and i think that violates the principle of least surprise in the case that would also make it hard to actually extend this later th\", \"matched_pattern\": \"\"}], \"confidence\": \"medium\"}, {\"source_uuid\": \"0b06f344-0c21-4b56-bf0e-843c3f24e90a\", \"meeting\": \"ietf114\", \"working_group\": \"iabopen\", \"subject\": \"IETF 114 - IABOPEN Working Group Session\", \"matches\": [{\"context\": \"this it's a hard problem but maybe there are some things to say next slide please so we came up with this simple thing it's just called the data minimization principle and and we're trying to use the principle of least privilege and sort of set it in the protocol context um just reading out allowed \", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"a03f39e2-82b6-4e13-8475-9b1e01f98442\", \"meeting\": \"ietf116\", \"working_group\": \"sidrops\", \"subject\": \"IETF 116 - SIDROPS Working Group Session\", \"matches\": [{\"context\": \"and has documents and procedures or maybe some tooling how to generate the slurm file but but it is based on my experience very useful to keep this format as simple as possible and and adhere to the principle of least astonishments um another smaller objective is to incorporate the erata on on the c\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"838cdb7a-7977-4642-9d6c-cf5843a527e5\", \"meeting\": \"ietf116\", \"working_group\": \"suit\", \"subject\": \"IETF 116 - SUIT Working Group Session\", \"matches\": [{\"context\": \"if the suit report is unencrypted within an encrypted eat token then what we're doing is exposing private in from our um privileged information to the verifier that they don't actually need so by the principle of least privilege we should at least consider the possibility that there are use cases wh\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}]}",
+      "encoding": "json"
+    }
+  ],
+  "analysis": [
+    {
+      "type": "ietf_principle_corpus_summary",
+      "dialog": [],
+      "vendor": "ietf-hackathon-125",
+      "body": {
+        "principle_id": "least_surprise",
+        "principle_name": "Principle of least surprise",
+        "total_sessions": 4,
+        "total_unique_sources": 4,
+        "meetings_represented": [
+          "ietf112",
+          "ietf114",
+          "ietf116"
+        ],
+        "working_groups": [
+          "iabopen",
+          "jsonpath",
+          "sidrops",
+          "suit"
+        ],
+        "top_working_groups": [
+          {
+            "group": "jsonpath",
+            "count": 1
+          },
+          {
+            "group": "iabopen",
+            "count": 1
+          },
+          {
+            "group": "sidrops",
+            "count": 1
+          },
+          {
+            "group": "suit",
+            "count": 1
+          }
+        ],
+        "meeting_frequency": {
+          "ietf112": 1,
+          "ietf114": 1,
+          "ietf116": 2
+        }
+      },
+      "encoding": "json"
+    }
+  ]
+}

@@ -1,0 +1,364 @@
+{
+  "vcon": "0.0.1",
+  "uuid": "c93a4657-0f71-49f0-b5f2-870455334d73",
+  "created_at": "2026-03-14T15:12:40.987204+00:00",
+  "updated_at": "2026-03-14T15:12:40.987204+00:00",
+  "subject": "Protocol ossification \u2014 IETF Discussion Corpus (ietf110-ietf123)",
+  "group": [
+    {
+      "uuid": "33426dd1-3ec8-46ad-985b-462006d1525f"
+    },
+    {
+      "uuid": "41354fb8-a918-45ed-84cf-7d93964009da"
+    },
+    {
+      "uuid": "0718af46-e88e-4e19-adf8-25304a343700"
+    },
+    {
+      "uuid": "31fb4123-0c69-46ed-ba63-3a713c0204bc"
+    },
+    {
+      "uuid": "dd07b1c3-265c-4135-911b-4e41af7b7d9c"
+    },
+    {
+      "uuid": "8c5d9c17-908c-4376-9363-f418536e6ddc"
+    },
+    {
+      "uuid": "4a0d49b3-e521-47da-ae4c-471a81d4b342"
+    },
+    {
+      "uuid": "8a1d79df-aaa9-4fba-9269-7f563dd3b11a"
+    },
+    {
+      "uuid": "a0a8dff2-be67-46e9-859b-1b263895150c"
+    },
+    {
+      "uuid": "20c53073-9af0-46b6-972c-10816aea0555"
+    },
+    {
+      "uuid": "c426e00c-d37e-4bff-b879-2d1febe4e57e"
+    },
+    {
+      "uuid": "6280a865-8e52-4fcd-9fae-5b03c4b2caeb"
+    },
+    {
+      "uuid": "dc7c67f0-c865-4623-9e22-24c719592062"
+    },
+    {
+      "uuid": "eb415df7-bfe2-4bb1-a538-46d1aa2c2c84"
+    },
+    {
+      "uuid": "6a1cc9a4-9321-41d5-9ee1-6ce0902c66a9"
+    },
+    {
+      "uuid": "243f5d67-e667-45c8-97bf-5806a92681c8"
+    },
+    {
+      "uuid": "6e4018cb-8228-424e-a977-4b0389e1491d"
+    },
+    {
+      "uuid": "dfd9fb8b-9f0e-4e6b-bf94-580970356fee"
+    },
+    {
+      "uuid": "7d61c9cf-f592-4378-8358-50287590c760"
+    },
+    {
+      "uuid": "0ea99ba8-d355-4546-bc7f-81e8e3e8e61a"
+    },
+    {
+      "uuid": "8af35d6c-f378-4bc5-b62a-aca9f1149859"
+    },
+    {
+      "uuid": "911b4a0e-d0b5-40a1-b8df-1c8257e32bed"
+    },
+    {
+      "uuid": "db5d444d-5e61-4784-bdeb-fbf96ab27b5d"
+    },
+    {
+      "uuid": "80d57654-d410-4286-936a-595eca67bb50"
+    },
+    {
+      "uuid": "d1e7f93d-7bef-41bd-90e4-7fe475194368"
+    },
+    {
+      "uuid": "4a4922d5-0aff-4a98-a7c2-476f0cfd909d"
+    },
+    {
+      "uuid": "ae025a95-b753-4056-8da6-b5e4218fbb20"
+    },
+    {
+      "uuid": "1534455c-e3a7-4858-afd2-2c6870429dab"
+    },
+    {
+      "uuid": "4ab826c7-2b77-4610-8abb-187de5b0f457"
+    },
+    {
+      "uuid": "46ed2997-b721-45b2-bedb-62d5d116b6b4"
+    },
+    {
+      "uuid": "059606b1-5104-4208-a827-5e3e34c3b826"
+    },
+    {
+      "uuid": "c637efa0-e818-4a52-9f18-54be18fa58a7"
+    },
+    {
+      "uuid": "f031b72b-8103-4c15-8d55-143b85c412d7"
+    },
+    {
+      "uuid": "c8afab75-bb4a-4304-81e0-c81c28d5602e"
+    },
+    {
+      "uuid": "35a84958-5a12-4c34-a6da-125b0876fd36"
+    },
+    {
+      "uuid": "277dcd95-14b4-43d2-9d2b-9d7031477a62"
+    },
+    {
+      "uuid": "c02d59b4-3114-4aef-8b5a-2fcbd922afa9"
+    },
+    {
+      "uuid": "f3b8e735-66a1-48ac-8989-0b2d253dfe0f"
+    },
+    {
+      "uuid": "f9679c9d-dabe-4fb1-9d49-643339ad9a58"
+    },
+    {
+      "uuid": "8d157b28-856b-40f0-9daa-b7483e8a8014"
+    },
+    {
+      "uuid": "45b7f2f2-2e27-417d-850c-9b810c58ff06"
+    },
+    {
+      "uuid": "9678abc3-5665-4aaf-9b7f-d878ad4281c3"
+    },
+    {
+      "uuid": "272c9bb2-ebbf-43e7-83a4-d73d0004df42"
+    },
+    {
+      "uuid": "cc80fa33-7053-4389-b97c-0af463103feb"
+    },
+    {
+      "uuid": "2dd63bc5-316e-4436-87c3-26f54f68a8c6"
+    },
+    {
+      "uuid": "1bdca92c-4fe5-4b7f-b7f9-1d25db664e8b"
+    },
+    {
+      "uuid": "9782cfc1-47bb-4860-b170-0bd6be2752f5"
+    },
+    {
+      "uuid": "406b43d6-e616-4b50-a4c8-faa2499ca430"
+    },
+    {
+      "uuid": "faabf228-46c3-43b2-a4d4-7a551b342a1b"
+    },
+    {
+      "uuid": "b6f2dc54-f6a6-49aa-928d-54752215dd06"
+    },
+    {
+      "uuid": "84b23ad2-b04b-45ca-91cd-364ee420f3d2"
+    },
+    {
+      "uuid": "01fdf024-fe3b-4a0e-8977-1aac53473861"
+    },
+    {
+      "uuid": "a76f6899-86b9-47e7-86ea-0513b0b5141d"
+    },
+    {
+      "uuid": "bbc2f251-25c7-4f42-826a-9b5731049dde"
+    },
+    {
+      "uuid": "1d1ba0b7-55a0-49fd-9e65-178618f474d0"
+    },
+    {
+      "uuid": "ba504ac7-840d-4485-870f-4136abeeeb67"
+    },
+    {
+      "uuid": "26323161-3824-4a6a-b6ce-1d3b18927730"
+    },
+    {
+      "uuid": "2871efdb-6fae-46c4-9738-2c2801745937"
+    },
+    {
+      "uuid": "b41f1c8a-0f4f-47be-9ebf-da28138c1e1b"
+    },
+    {
+      "uuid": "1949d641-b766-4127-a1ae-f0d942a835e3"
+    },
+    {
+      "uuid": "87482d0d-f967-4387-b8b4-41adaec8041f"
+    },
+    {
+      "uuid": "21d1bb06-7428-46c1-8605-d61dc1e460c4"
+    },
+    {
+      "uuid": "e1fd948f-2148-4bde-b560-128a6c88cc3e"
+    },
+    {
+      "uuid": "e011e6ff-dd38-460b-a1c4-7aed2b8d4594"
+    },
+    {
+      "uuid": "d9bb3d9b-7e48-4a6d-a9db-b9f4c154da1d"
+    },
+    {
+      "uuid": "2ec7e2b8-46b2-4b4e-a466-ce373f2e476c"
+    },
+    {
+      "uuid": "ebca9690-9a4f-4063-aa2b-daa204031d40"
+    },
+    {
+      "uuid": "c156f62d-bc99-44ed-96d8-30d404ffb7b6"
+    },
+    {
+      "uuid": "de8cf641-4440-45b5-b311-73b139d1a94e"
+    },
+    {
+      "uuid": "91712bcf-5626-4dac-b0e5-f9c9d064500d"
+    },
+    {
+      "uuid": "d5ed5942-2e18-4c86-9c8b-23a317e360b0"
+    }
+  ],
+  "parties": [],
+  "dialog": [],
+  "attachments": [
+    {
+      "type": "application/json",
+      "purpose": "principle_definition",
+      "body": "{\"principle_id\": \"ossification\", \"name\": \"Protocol ossification\", \"description\": \"Protocols becoming rigid due to middlebox interference. Use-it-or-lose-it for extension points.\", \"rfc_refs\": [\"RFC 9170\"]}",
+      "encoding": "json"
+    },
+    {
+      "type": "application/json",
+      "purpose": "collected_evidence",
+      "body": "{\"total_sessions\": 71, \"sessions\": [{\"source_uuid\": \"33426dd1-3ec8-46ad-985b-462006d1525f\", \"meeting\": \"ietf110\", \"working_group\": \"6man\", \"subject\": \"IETF 110 - 6MAN Working Group Session\", \"matches\": [{\"context\": \"uter so that um so that that um the because the session movement the session control in the 5gc 5g core can know that when you e move from um side a to side b there's a session control that keep that grease period transition it knows where the next upf is going to a correspondingly you can notify th\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"41354fb8-a918-45ed-84cf-7d93964009da\", \"meeting\": \"ietf110\", \"working_group\": \"iabopen\", \"subject\": \"IETF 110 - IABOPEN Working Group Session\", \"matches\": [{\"context\": \"ently talking most about is actually one that existed prior to this program being created but we think is a very important work item that we want to progress that martin thompson began it's the draft use it or lose it and we've met now twice we had our last call in december and we're going to plan a\", \"matched_pattern\": \"\"}, {\"context\": \"isms that we're doing for protocol extensions and are there things that we could add um as notes to the user we lose it draft and one of the topics here was looking at the relative success and um how ossified we see things when we're using something that's a proper version negotiation versus just ex\", \"matched_pattern\": \"\"}, {\"context\": \"version negotiation versus just extending a protocol one of the observations in the document is that you want to be able to use an extension point often and that is the best way to ensure it does not ossify but version negotiation specifically is something that can get used very infrequently and esp\", \"matched_pattern\": \"\"}, {\"context\": \"ost successful cases of this is when a protocol has this version negotiation in some other protocols extension point for example http using the alpn which is just a tls extension which is a very well greased and well understood extension point um we also discussed some anti-patterns like how we see \", \"matched_pattern\": \"\"}], \"confidence\": \"high\"}, {\"source_uuid\": \"0718af46-e88e-4e19-adf8-25304a343700\", \"meeting\": \"ietf110\", \"working_group\": \"masque\", \"subject\": \"IETF 110 - MASQUE Working Group Session\", \"matches\": [{\"context\": \"ally create a compression format for um for ip packets it's very easy to turn that into a lossy compression format accidentally because there's an unlimited space of potential future variability it's ossifying if you're not very careful to stick to the invariance provided by the the underlying forma\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"31fb4123-0c69-46ed-ba63-3a713c0204bc\", \"meeting\": \"ietf110\", \"working_group\": \"ntp\", \"subject\": \"IETF 110 - NTP Working Group Session\", \"matches\": [{\"context\": \"he protocol specification um authentication as a requirement with oxygen with optional confidentiality um as well as some some statements about backwards compatibility uh taking into consideration uh ossification which uh i think it was a yuki who brought up on the list not too long ago um as well a\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"dd07b1c3-265c-4135-911b-4e41af7b7d9c\", \"meeting\": \"ietf110\", \"working_group\": \"quic\", \"subject\": \"IETF 110 - QUIC Working Group Session\", \"matches\": [{\"context\": \"defined the invariance to say once you get to the version field that defines everything else that is in the packet it might or might not use tls you might or might not have heard of it you can send a greased version with completely incomprehensible payload and all of that is legal per the invariants\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"8c5d9c17-908c-4376-9363-f418536e6ddc\", \"meeting\": \"ietf110\", \"working_group\": \"rift\", \"subject\": \"IETF 110 - RIFT Working Group Session\", \"matches\": [{\"context\": \"open source and deals with a lot of you know the magic of the real implementations coming up and what the stuff looks like and further considerations when you build the fabric and so on and so on so use it or lose it actually you won't lose it it's out there for free okay next one please uh all righ\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"4a0d49b3-e521-47da-ae4c-471a81d4b342\", \"meeting\": \"ietf110\", \"working_group\": \"rtgarea\", \"subject\": \"IETF 110 - RTGAREA Working Group Session\", \"matches\": [{\"context\": \"sure we've unearthed all of them yet and to develop a way forward that deliberately changes the mpls architecture to a model that meets the new needs we don't want the protocol to to stall or become ossified so it needs to meet future needs but we don't want to discover that in meeting the short-ter\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"8a1d79df-aaa9-4fba-9269-7f563dd3b11a\", \"meeting\": \"ietf111\", \"working_group\": \"iabopen\", \"subject\": \"IETF 111 - IABOPEN Working Group Session\", \"matches\": [{\"context\": \"to have a look at it and then i really wanted to draw your attention at um there are a few more documents that are somehow on the horizon for the iap but the one which is called draft ib lucid or um use it or lose it it's the one that is like probably the next one we will look at in evolution that's\", \"matched_pattern\": \"\"}, {\"context\": \"e is really that a lot of previous design around how you can uh thought around how you can design a protocol well to guarantee extensibility isn't enough because um things not being actively used and ossifying even if they're designed perfectly can still lead to a loss of extensibility and this is p\", \"matched_pattern\": \"\"}, {\"context\": \"ther other data that just happens to be readable and uh entities have been reading it or reading these pieces of data and as has been discussed many times before this results in some negative effects ossification because you can't change things that people somewhere depend on it's also systemic ince\", \"matched_pattern\": \"\"}], \"confidence\": \"high\"}, {\"source_uuid\": \"a0a8dff2-be67-46e9-859b-1b263895150c\", \"meeting\": \"ietf111\", \"working_group\": \"maprg\", \"subject\": \"IETF 111 - MAPRG Working Group Session\", \"matches\": [{\"context\": \"le boxes uh there are using uh the technique of analyzing uh the sender's key but we also went a little bit further so we used a tool which is called a tracebox whose goal it is basically to identify middlebox interference along a certain connection and we then classified uh hosts into uh three diff\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"20c53073-9af0-46b6-972c-10816aea0555\", \"meeting\": \"ietf111\", \"working_group\": \"masque\", \"subject\": \"IETF 111 - MASQUE Working Group Session\", \"matches\": [{\"context\": \"get get there end to end so um why does this need to be an extension to an existing message and not just a new message thank you so much so keeping it getting the number of joints small and and well greased that's that's more likely to be well graced isn't it um so the uh i mean that makes sense the\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"c426e00c-d37e-4bff-b879-2d1febe4e57e\", \"meeting\": \"ietf111\", \"working_group\": \"nfsv4\", \"subject\": \"IETF 111 - NFSV4 Working Group Session\", \"matches\": [{\"context\": \"st that everybody can run they it basically is part of all the tests that we bring to the testing events does that make sense okay okay okay i'm not sure it would it you know see final four is pretty ossified i'm not sure it's appropriate to add any tls related test to it um but we do i think we do \", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"6280a865-8e52-4fcd-9fae-5b03c4b2caeb\", \"meeting\": \"ietf111\", \"working_group\": \"quic\", \"subject\": \"IETF 111 - QUIC Working Group Session\", \"matches\": [{\"context\": \"in this space that i'm connected to one is called quickv2 um it has a few purposes which you can see there uh and it's but like mainly it's well first of all we've had talk about version greasing and ossification and a lot of people said we should drop a v2 really quickly well this is a very quick v\", \"matched_pattern\": \"\"}, {\"context\": \"text okay it's that would be proposal number four okay thank you martin christian quick video that says that it works for pretty much all implementation do quickv1 the problem if we don't do that is ossification i mean if we have to get the approval of each application group before quick v2 can be d\", \"matched_pattern\": \"\"}], \"confidence\": \"medium\"}, {\"source_uuid\": \"dc7c67f0-c865-4623-9e22-24c719592062\", \"meeting\": \"ietf111\", \"working_group\": \"tls\", \"subject\": \"IETF 111 - TLS Working Group Session\", \"matches\": [{\"context\": \"ck one of which is having like a per specialization key um and one of which have like an ech based key um it's not entirely accurate which of these would prevent exactly what i think they all prevent ossification somewhat but like maybe some of the windfall streaming um i'm actually not entirely sur\", \"matched_pattern\": \"\"}, {\"context\": \"hat implement talk so thanks yeah i absolutely agree um and and there's a tension between that uh stephen hi just echoing john's point um it might be worthwhile thinking about you know having some uh grease like code points that we pick and document on a web page or and get over somewhere for experi\", \"matched_pattern\": \"\"}, {\"context\": \"d be what we have right now um uh and that potentially risks uh as noted you know potential issues with hr later down the road um you could do a mix and match you know take the extension but then not grease it that seems less ideal and then the opposite which is you know don't take the extension and\", \"matched_pattern\": \"\"}, {\"context\": \"th hr later down the road um you could do a mix and match you know take the extension but then not grease it that seems less ideal and then the opposite which is you know don't take the extension and grease it just seems kind of strange um or there's little benefit to it so um i i think the the prop\", \"matched_pattern\": \"\"}, {\"context\": \"yndrome could be empty but if it contains bits then we have to define it with what happens to those bits are wrong so i think no no is like no gifts and no yes it's got some bits and then they can be greased um so i think like i would suggest that like whatever the draft is closer to now is that wha\", \"matched_pattern\": \"\"}], \"confidence\": \"high\"}, {\"source_uuid\": \"eb415df7-bfe2-4bb1-a538-46d1aa2c2c84\", \"meeting\": \"ietf112\", \"working_group\": \"coinrg\", \"subject\": \"IETF 112 - COINRG Working Group Session\", \"matches\": [{\"context\": \"hank you yeah okay so we tune the switch memory for three jobs and uh get that throughput the peak throughput then we reduce the memory to cause contentions we can see dynamic allocation degrees more greasefully than statical approach okay there are more evaluations so in atp we co-designed the host\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"6a1cc9a4-9321-41d5-9ee1-6ce0902c66a9\", \"meeting\": \"ietf112\", \"working_group\": \"dispatch\", \"subject\": \"IETF 112 - DISPATCH Working Group Session\", \"matches\": [{\"context\": \"f that if that makes any sense are you doing it in jason but uh i i would look at the uh assertion format it was designed to be a completely uh flexible system originally it may have been it may have ossified into a particular uh niche but that was the goal but anyway okay understood i will make a n\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"243f5d67-e667-45c8-97bf-5806a92681c8\", \"meeting\": \"ietf112\", \"working_group\": \"iabopen\", \"subject\": \"IETF 112 - IABOPEN Working Group Session\", \"matches\": [{\"context\": \"free to join the mailing list please do it if you're interested as a quick status update we've had two calls since the last ietf meeting and the last iab open one of those was to wrap up on draft ib use it or lose it which was uh mainly authored by martin thompson and then we kind of completed it in\", \"matched_pattern\": \"\"}, {\"context\": \"that are able to do a lot of interop testing and that helps them um validate that their protocol is working and will be deployable on the internet uh dealing with middle boxes and understanding where ossification has already happened um also you know looking long-term towards the maintenance of prot\", \"matched_pattern\": \"\"}], \"confidence\": \"medium\"}, {\"source_uuid\": \"6e4018cb-8228-424e-a977-4b0389e1491d\", \"meeting\": \"ietf112\", \"working_group\": \"quic\", \"subject\": \"IETF 112 - QUIC Working Group Session\", \"matches\": [{\"context\": \"orking group last call and the editors for um working with people on that to get it done that's appreciated the datagram draft also passed working group last call and that's also an ad review and the grease bit working group last call is completed we had some feedback um there's a few minor changes \", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"dfd9fb8b-9f0e-4e6b-bf94-580970356fee\", \"meeting\": \"ietf112\", \"working_group\": \"tls\", \"subject\": \"IETF 112 - TLS Working Group Session\", \"matches\": [{\"context\": \"ate results in a different wire image ctls reveals which template is in use normally but this extension causes all ctls templates that use this extension to be indistinguishable on the wire there's a protocol agility benefit because if the wire format is fully encrypted then only authorized parties \", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"7d61c9cf-f592-4378-8358-50287590c760\", \"meeting\": \"ietf113\", \"working_group\": \"anima\", \"subject\": \"IETF 113 - ANIMA Working Group Session\", \"matches\": [{\"context\": \"ful because it turned out it's revealed a number of bugs and a number of other clients uh that otherwise were not revealed by uh other instances so that is uh there's uh whatever is called that draft use it or lose it kind of thing it's kind of useful um i still haven't quite got the authority key i\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"0ea99ba8-d355-4546-bc7f-81e8e3e8e61a\", \"meeting\": \"ietf113\", \"working_group\": \"avtcore\", \"subject\": \"IETF 113 - AVTCORE Working Group Session\", \"matches\": [{\"context\": \"e're not expecting it to take a year from now um so i think the point lucas made in the um uh in the chat is probably the right one that this should take into account uh the fact that that quick will grease some of these things and it will have multiple versions some of which will be uh compatible a\", \"matched_pattern\": \"\"}, {\"context\": \"y committed it in the past it will be there's a link in the data in to the data tracker in in the uh in the chat that you can you can follow that this particular time what we're using v2 for is uh to grease these things and therefore it will be compatible oh okay okay uh come on all right so so like\", \"matched_pattern\": \"\"}, {\"context\": \"but um you know what one one could put in advice like that uh the question is whether that would uh create a normative reference on quickv2 so well i think similarly on gone quick quick uh quick bit grease which is hopefully okay just a bit grease yeah probably um but we should look at v2 didn't tel\", \"matched_pattern\": \"\"}, {\"context\": \"advice like that uh the question is whether that would uh create a normative reference on quickv2 so well i think similarly on gone quick quick uh quick bit grease which is hopefully okay just a bit grease yeah probably um but we should look at v2 didn't tell us to just until uh colin uh so i mean y\", \"matched_pattern\": \"\"}, {\"context\": \"d quick v1 presumably is not going away so you can keep using quickv1 if that's what you need to use so i mean after all that i mean i guess it sounds like we do want to add that reference to the bit grease to say you know if you're demultiplexing don't negotiate it um so probably i'd suggest do a r\", \"matched_pattern\": \"\"}], \"confidence\": \"high\"}, {\"source_uuid\": \"8af35d6c-f378-4bc5-b62a-aca9f1149859\", \"meeting\": \"ietf113\", \"working_group\": \"lamps\", \"subject\": \"IETF 113 - LAMPS Working Group Session\", \"matches\": [{\"context\": \"tely yeah okay i wonder if we should just start issuing certificates you know with some bogus extension that has a megabyte of random data in it just just to kind of you know to test out something to grease out the systems and see who's going to blow up and kind of present some stuff like that that \", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"911b4a0e-d0b5-40a1-b8df-1c8257e32bed\", \"meeting\": \"ietf113\", \"working_group\": \"maprg\", \"subject\": \"IETF 113 - MAPRG Working Group Session\", \"matches\": [{\"context\": \"a little bit more in details next slide please so just as a brief recap quick is based on udp and has to pick a udp property so usually it does not have states and it's based on udp course to prevent ossification attacks on the other end it has also some properties inherited from tcp because it need\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"db5d444d-5e61-4784-bdeb-fbf96ab27b5d\", \"meeting\": \"ietf113\", \"working_group\": \"opsawg\", \"subject\": \"IETF 113 - OPSAWG Working Group Session\", \"matches\": [{\"context\": \"perators like they were back in 1998 where there was you know you know very infrequent changes of network policy and they like to relegate operators to uh you know the fact that their only role is is ossification and and i think that's a you know it's a it's a very much a convenient view for uh the \", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"80d57654-d410-4286-936a-595eca67bb50\", \"meeting\": \"ietf113\", \"working_group\": \"panrg\", \"subject\": \"IETF 113 - PANRG Working Group Session\", \"matches\": [{\"context\": \"e people hate them they try to help out in tcp and in fact you know because well they sometimes do something useful right they have good intentions well intended but but you know terrible outcomes of ossification of playing tricks to tcp that they have to do and this is why we all hate them so quick\", \"matched_pattern\": \"\"}, {\"context\": \"comes of ossification of playing tricks to tcp that they have to do and this is why we all hate them so quick has started encrypting the header large part of it which makes it impossible to introduce ossification and also makes it impossible to help the transfer in the network which has the outcome \", \"matched_pattern\": \"\"}, {\"context\": \"to have a proxy that is a no-go and uh so this is my effort to retrofit and this is probably where you want to throw stuff at me retrofit proxies into uh quick now okay first of all i claim that the ossification problem is probably at least partially due to the fact that these proxies are transparen\", \"matched_pattern\": \"\"}, {\"context\": \"an obvious issue here that if we start adding a specific function then we build a reliance on that function in the network and not everybody may be happy with the outcomes of that we may reintroduce ossification if we don't do it right if we get it right maybe that could work here's another proposal\", \"matched_pattern\": \"\"}, {\"context\": \"hanges to the main protocols of the main protocol you couldn't really help quick much without changing it at all but the idea is to make it as minimal as we possibly can and if we get this right then ossifying the sidecar would mean that the performance improvement doesn't improve per se but which i\", \"matched_pattern\": \"\"}], \"confidence\": \"high\"}, {\"source_uuid\": \"d1e7f93d-7bef-41bd-90e4-7fe475194368\", \"meeting\": \"ietf113\", \"working_group\": \"quic\", \"subject\": \"IETF 113 - QUIC Working Group Session\", \"matches\": [{\"context\": \"the reviewers from the various areas um and for the editors in responding to those issues uh i think we're in a good place we will be working with our head to progress onto the next stage um and the grease bit document uh is dura shepherd write-up from me um so that's on me and that'll be coming soo\", \"matched_pattern\": \"\"}, {\"context\": \"ted v2 draft uh just for any of you who are not paying attention this has a few purposes it is not adding any features to quick it is not um fixing anything about quick version one it is an effort to grease the version field to have a target for this vn thing that that david and ecker have been work\", \"matched_pattern\": \"\"}, {\"context\": \"nd a any connection id and then there's like this mostly unrelated thing about offloading retry to some sort of service or hardware thing or whatever um and uh that like is loosely under the theme of middlebox coordination but otherwise there's no really ship at all and so um i think there was prett\", \"matched_pattern\": \"\"}], \"confidence\": \"high\"}, {\"source_uuid\": \"4a4922d5-0aff-4a98-a7c2-476f0cfd909d\", \"meeting\": \"ietf113\", \"working_group\": \"rtgarea\", \"subject\": \"IETF 113 - RTGAREA Working Group Session\", \"matches\": [{\"context\": \"me they are not successful enough for wide adoption but yet not arming the running of the operational networks and i think it would be a very valuable work to do in ietf to address the problem of the ossification of the internet thanks and jeff and the timing is impeccable uh at least in u.s part of\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"ae025a95-b753-4056-8da6-b5e4218fbb20\", \"meeting\": \"ietf114\", \"working_group\": \"edm\", \"subject\": \"IETF 114 - EDM Working Group Session\", \"matches\": [{\"context\": \"been two years yeah weird evolvability deployability and maintainability so evolvability um i think is mainly around taking up some of the work that had been done previously in iab around preventing ossification figuring out how do we maintain extensibility that's related to one of the documents we'\", \"matched_pattern\": \"\"}, {\"context\": \"working groups so we're trying to understand like what's the life cycle to make sure that our things are actually working so as far as you know what have we done we did publish rc 9170 which was the use it or lose it draft formally titled the long-term viability of protocol extension mechanisms we'v\", \"matched_pattern\": \"\"}, {\"context\": \"fications will have issues and problems and they will miss things that they will have places where they don't tell you to do it um then one of the other things at least when we look at what we did in use it or lose it and talk about extensibility we also talk about how you want to be very clear for \", \"matched_pattern\": \"\"}], \"confidence\": \"high\"}, {\"source_uuid\": \"1534455c-e3a7-4858-afd2-2c6870429dab\", \"meeting\": \"ietf114\", \"working_group\": \"ippm\", \"subject\": \"IETF 114 - IPPM Working Group Session\", \"matches\": [{\"context\": \"ied signal from transport headers means that it's not integral uh to the operation of the transport which means you can just turn it off or you can only enable it selectively when you need it you can grease them um and that's that will help against protocolsification next please um some of the prior\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"4ab826c7-2b77-4610-8abb-187de5b0f457\", \"meeting\": \"ietf114\", \"working_group\": \"ntp\", \"subject\": \"IETF 114 - NTP Working Group Session\", \"matches\": [{\"context\": \"e to do a better analysis of how the requirements are translating into reality so go ahead james so i've dug up uh my old spreadsheet and there is five things that are outstanding two are uh unknowns ossification and the three that were not yet met were uh minimizing abuse capability no notification\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"46ed2997-b721-45b2-bedb-62d5d116b6b4\", \"meeting\": \"ietf114\", \"working_group\": \"quic\", \"subject\": \"IETF 114 - QUIC Working Group Session\", \"matches\": [{\"context\": \"ther quick documents for reasons that are not really worth going into but we no longer have those on our plate and they are rfc's where they can live in perpetuity so and then other updates the quick grease bit which is a very simple uh a relatively simple document but important one is currently in \", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"059606b1-5104-4208-a827-5e3e34c3b826\", \"meeting\": \"ietf114\", \"working_group\": \"tls\", \"subject\": \"IETF 114 - TLS Working Group Session\", \"matches\": [{\"context\": \"so um one an alternative you could think of for how to get the ech information out of a web server is to use the retry configs um and that could work i think um the idea is you just make a kind of a greased connection or something to the the web server and it would give you the retry configs and the\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"c637efa0-e818-4a52-9f18-54be18fa58a7\", \"meeting\": \"ietf115\", \"working_group\": \"core\", \"subject\": \"IETF 115 - CORE Working Group Session\", \"matches\": [{\"context\": \"these kinds of proposals so I would I would say you should start by by going to DNS knob and seeing what the DNS Community makes of it I think that the biggest concern there has generally been about ossification the concern being that if a new format cannot express not only any DNS message that can \", \"matched_pattern\": \"\"}, {\"context\": \"ng that if a new format cannot express not only any DNS message that can be defined today but any DNS message that will ever could ever be defined losslessly uh if it doesn't meet that bar then it is ossifying it's creating devices that appear to do DNS but actually only support a subset you know cr\", \"matched_pattern\": \"\"}], \"confidence\": \"medium\"}, {\"source_uuid\": \"f031b72b-8103-4c15-8d55-143b85c412d7\", \"meeting\": \"ietf115\", \"working_group\": \"httpbis\", \"subject\": \"IETF 115 - HTTPBIS Working Group Session\", \"matches\": [{\"context\": \"a fourth option which is Kick the Can down the road uh we're not painting ourselves into a corner because if we need it the correct thing is the frame types we have one extension joint that we should grease well we don't need 17 of them so just say we don't use them done okay and sure maybe I won't \", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"c8afab75-bb4a-4304-81e0-c81c28d5602e\", \"meeting\": \"ietf115\", \"working_group\": \"maprg\", \"subject\": \"IETF 115 - MAPRG Working Group Session\", \"matches\": [{\"context\": \"p with a new piece of work about iot security by the numbers and Ignacio Castro will be up next with kovatus ietf uh considering uh something unusual measuring the ietf itself and whether or not it's ossified so sort of a little variation on the kind of measurements we typically look at and then we'\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"35a84958-5a12-4c34-a6da-125b0876fd36\", \"meeting\": \"ietf115\", \"working_group\": \"masque\", \"subject\": \"IETF 115 - MASQUE Working Group Session\", \"matches\": [{\"context\": \"plement get Adder info I think this is useful I don't I see this as quite distinct from a deeper system for conveying DNS results generally which is a a much bigger problem and runs into a lot of DNS ossification questions and uh please change the name don't the DNS used is not good enough let's do \", \"matched_pattern\": \"\"}, {\"context\": \"is I I'm still not convinced that this is a good idea the the concept itself of partial reordering on the proxy uh because this starts to smell like a TCP accelerator uh and those have been great for ossification and making performance worse I have numbers for that one um so on that I'm not sure it'\", \"matched_pattern\": \"\"}, {\"context\": \"wei I think it's actually a good idea to do a reordering in the proxy that you have the end point I have some kind of weakened Point yeah but there is a whole lot of discussion regarding the protocol ossification that kind of stuff yeah so we can I think we need to find the middle ground for for the\", \"matched_pattern\": \"\"}], \"confidence\": \"high\"}, {\"source_uuid\": \"277dcd95-14b4-43d2-9d2b-9d7031477a62\", \"meeting\": \"ietf115\", \"working_group\": \"tdd\", \"subject\": \"IETF 115 - TDD Working Group Session\", \"matches\": [{\"context\": \"nything for for various reasons and oh no but it also leads to what I'm kind of most deeply concerned about which is that and they'll probably laugh because this is my um hobby horse but like version ossification um with the things that our visit I mean the question alluded to things we could read i\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"c02d59b4-3114-4aef-8b5a-2fcbd922afa9\", \"meeting\": \"ietf115\", \"working_group\": \"webtrans\", \"subject\": \"IETF 115 - WEBTRANS Working Group Session\", \"matches\": [{\"context\": \"n action item with Bernard to talk to the HTP chairs see how they feel about this because um neither of them are in the room right now and this sounds like it could either be the and just in terms of ossification my gut feeling is that if whatever we design in web transfer will probably cover every \", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"f3b8e735-66a1-48ac-8989-0b2d253dfe0f\", \"meeting\": \"ietf116\", \"working_group\": \"dinrg\", \"subject\": \"IETF 116 - DINRG Working Group Session\", \"matches\": [{\"context\": \"ed you can click on the YouTube link and take a look it's a quite interesting discussion and in particular I quoted one slice and out of that talk with my picture right I think that I coined the word middlebox but I must claim that I made the words I didn't create middle box myself the uh why I call\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"f9679c9d-dabe-4fb1-9d49-643339ad9a58\", \"meeting\": \"ietf116\", \"working_group\": \"edm\", \"subject\": \"IETF 116 - EDM Working Group Session\", \"matches\": [{\"context\": \"um so just as a recapture some of the work that we've done in this program over the past um uh mainly been focused around a couple documents that Martin had actually started previously we had our uh use it or lose it uh draft uh that talked about the importance of active use and mention things like \", \"matched_pattern\": \"\"}, {\"context\": \"aised the question of how do we measure if greasing is actually effective or working and we talked about some of the limitations of you know there there's only really a certain category of issues and ossification bugs that greasing can help with and there are lots of other things that it does not um\", \"matched_pattern\": \"\"}, {\"context\": \"y one dimension of greasing uh there are other things like the order that you do of you know TLS extensions other types of Behavioral changes which also are important to Greece if you want to prevent ossification and we also talk about the fact that uh some categories of greasing um like if you're g\", \"matched_pattern\": \"\"}, {\"context\": \"be something potentially that we could refer to instead of just pointing people back to the TLs document if we're trying to tell them to use this in lots of other ways um we can also Point people to use it or lose it but it's not quite as Direct on practical advice for just specific protocols so wha\", \"matched_pattern\": \"\"}, {\"context\": \"y didn't have any Greece and we had a conversation with the authors and they they added it which I think is really good but it took a lot of back and forth to kind of explain exactly when and how you grease like there's a GitHub issue um and I realized that for folks here that have implemented Greec\", \"matched_pattern\": \"\"}], \"confidence\": \"high\"}, {\"source_uuid\": \"8d157b28-856b-40f0-9daa-b7483e8a8014\", \"meeting\": \"ietf116\", \"working_group\": \"lake\", \"subject\": \"IETF 116 - LAKE Working Group Session\", \"matches\": [{\"context\": \"points there are there is a proposal on the implementation guidance draft and as well there is uh there is work proposed by Christian on essentially on using Greece methods increase for uh using the grease methods for uh as an another extension to Eads uh yes yeah I can do that man okay can you shar\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"45b7f2f2-2e27-417d-850c-9b810c58ff06\", \"meeting\": \"ietf116\", \"working_group\": \"mls\", \"subject\": \"IETF 116 - MLS Working Group Session\", \"matches\": [{\"context\": \"through a few revisions um the major one was uh this draft 18 it resolves the discussed positions we got when our isg evaluation wasn't anything major in those the more major change we made was this grease thing um our distinguished colleague David scanzi of the architecture board came around and su\", \"matched_pattern\": \"\"}, {\"context\": \"evaluation wasn't anything major in those the more major change we made was this grease thing um our distinguished colleague David scanzi of the architecture board came around and suggest we do this grease approach to maintaining extensibility and avoiding ossification which has worked well and some\", \"matched_pattern\": \"\"}, {\"context\": \"change we made was this grease thing um our distinguished colleague David scanzi of the architecture board came around and suggest we do this grease approach to maintaining extensibility and avoiding ossification which has worked well and some other protocols the ITF which involves you know insertin\", \"matched_pattern\": \"\"}], \"confidence\": \"high\"}, {\"source_uuid\": \"9678abc3-5665-4aaf-9b7f-d878ad4281c3\", \"meeting\": \"ietf116\", \"working_group\": \"opsec\", \"subject\": \"IETF 116 - OPSEC Working Group Session\", \"matches\": [{\"context\": \"up in my head but um uh limiting our Reliance on IP addresses seems like um the the right direction to move in um and and this this this work just seems like it further you know encourages us to like ossify on the use of IP addresses um and I I'll I'll relinquish the mic but like I I I I hope that's\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"272c9bb2-ebbf-43e7-83a4-d73d0004df42\", \"meeting\": \"ietf116\", \"working_group\": \"roll\", \"subject\": \"IETF 116 - ROLL Working Group Session\", \"matches\": [{\"context\": \"e that which is done it a majority of nodes around them believes the same and so they get to the state that they believe the the nodes are root is down and there's nothing you can do when everybody Degreaser root is done the the only way to join the do deck again is by the root rebooting and issuing\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"cc80fa33-7053-4389-b97c-0af463103feb\", \"meeting\": \"ietf116\", \"working_group\": \"tls\", \"subject\": \"IETF 116 - TLS Working Group Session\", \"matches\": [{\"context\": \"o the handle encryption is specifically costly in closed networks think about high performance Computing and networks that use Hardware transport protocols such as ldma in those networks the risks of ossification are less severe and may be considered mitigated and additionally also the while format \", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"2dd63bc5-316e-4436-87c3-26f54f68a8c6\", \"meeting\": \"ietf116\", \"working_group\": \"webtrans\", \"subject\": \"IETF 116 - WEBTRANS Working Group Session\", \"matches\": [{\"context\": \"y unresolved cell we currently Define uh an 8-bit error code space for recessed streams and the way we Define it is we take like a small chunk of uh H3 error code space and then we'll like remove the grease code points and it's like continuous except for those uh and people have complained that eigh\", \"matched_pattern\": \"\"}, {\"context\": \"t eight bits is not enough and they kind of sympathize with that statement uh so there are multiple options we can deal with this one of them is we can just leave it to this another is we can use the grease algorithm thing to just take like their H3 Erica spaces like uh 64 bits uh I'm sorry 62 bits \", \"matched_pattern\": \"\"}], \"confidence\": \"medium\"}, {\"source_uuid\": \"1bdca92c-4fe5-4b7f-b7f9-1d25db664e8b\", \"meeting\": \"ietf117\", \"working_group\": \"avtcore\", \"subject\": \"IETF 117 - AVTCORE Working Group Session\", \"matches\": [{\"context\": \"een ice and quick it is done with the stun magic cookie things that need to be negotiated include the ice parameters and candidates the role the quick certificate fingerprints whether or not to use a grease bit and then whether or not to use this thing I'm calling a multiplexing ID I'll slide on tha\", \"matched_pattern\": \"\"}, {\"context\": \"old is that we need to pick some values for the strings there so I put UDP slash quick and M equals application and then um if we want to allow the negotiation of options like quick extensions or the grease bit then we have uh an equals line for that and lastly the mid can be used both for putting t\", \"matched_pattern\": \"\"}], \"confidence\": \"medium\"}, {\"source_uuid\": \"9782cfc1-47bb-4860-b170-0bd6be2752f5\", \"meeting\": \"ietf117\", \"working_group\": \"core\", \"subject\": \"IETF 117 - CORE Working Group Session\", \"matches\": [{\"context\": \"hat yep it's a good idea to use those values but still emphasize emphasize that um it still has to be discovered because we'll have examples in there and if even an example can send the temptation to ossification I'm like we can't avoid that yeah maybe you can have at least one example that actually\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"406b43d6-e616-4b50-a4c8-faa2499ca430\", \"meeting\": \"ietf117\", \"working_group\": \"edm\", \"subject\": \"IETF 117 - EDM Working Group Session\", \"matches\": [{\"context\": \"e implementation of quick that um I work to we have the idea of Greece Greece frames and hb3 that are ignored and we do and that works and that has worked for a while but that the sequencing of those grease frames within the concept of a HTTP message and things might break it even though we thought \", \"matched_pattern\": \"\"}, {\"context\": \"ppened as a result right even that's a learning right yeah so we shouldn't draw a conclusion that if we'd done that then this would have been the answer but we can say this is what happened we didn't grease it we could have greased it correct so an interesting fact here of um one of the uh actually \", \"matched_pattern\": \"\"}, {\"context\": \"what you should do for like the Ayanna registry considerations when you were adding this and here's what you should do for this and like make sure that you uh are not actually validating that they're greased things upon receipt and like other things so just you have the quick bullet list of like her\", \"matched_pattern\": \"\"}, {\"context\": \"as a receiver you know like you want to pause until the end of the stream and expect like just to read all of the data out and done and go having to kind of hang around while somebody sends you this grease frame while you wait for the the Finish is annoying but it's completely legit and so maybe tha\", \"matched_pattern\": \"\"}, {\"context\": \"s trying to figure you know what can we learn from this is there something useful to put in here the the main point at least I got from that is the the realization that you know we are most likely to grease in the ways that are easy and convenient but that is not necessarily the way the place that's\", \"matched_pattern\": \"\"}], \"confidence\": \"high\"}, {\"source_uuid\": \"faabf228-46c3-43b2-a4d4-7a551b342a1b\", \"meeting\": \"ietf117\", \"working_group\": \"quic\", \"subject\": \"IETF 117 - QUIC Working Group Session\", \"matches\": [{\"context\": \"bit more there then in regards to the rfps that we now added so as we agreed upon last time we would add everything up to and including the rfcs that were finalized in 2022 so for example we have the grease bit extension we have the extended connect for web sockets and http 3. and then we have the e\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"b6f2dc54-f6a6-49aa-928d-54752215dd06\", \"meeting\": \"ietf117\", \"working_group\": \"saag\", \"subject\": \"IETF 117 - SAAG Working Group Session\", \"matches\": [{\"context\": \"get people smart people to look at the protocol and figure out uh you know how to make it better next slide please yeah finally something we learned um even uh even more so after the RFC was um this grease thing applies everywhere uh you know it started off in TLS space adding random bits to part of\", \"matched_pattern\": \"\"}, {\"context\": \"to designers in the first run so yeah that's that's my that's my schtick um my Five Points ship it Embrace and extend build the community get the extensibility where it makes makes sense validate and grease um kind of a random bat grab bag of points but it seems to have been a pretty good combinatio\", \"matched_pattern\": \"\"}], \"confidence\": \"medium\"}, {\"source_uuid\": \"84b23ad2-b04b-45ca-91cd-364ee420f3d2\", \"meeting\": \"ietf117\", \"working_group\": \"tls\", \"subject\": \"IETF 117 - TLS Working Group Session\", \"matches\": [{\"context\": \"what gives and we can go and investigate and see what the situation is so from that we found two sites operated by the same organization reasonably popular and they just buff whenever they see an ech grease extension um this was pretty concerning but actually just testing it they barf whenever they \", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"01fdf024-fe3b-4a0e-8977-1aac53473861\", \"meeting\": \"ietf118\", \"working_group\": \"core\", \"subject\": \"IETF 118 - CORE Working Group Session\", \"matches\": [{\"context\": \"though implementations uh expect that kind of we're built in an ecosystem where they didn't see those those extensions ever uh this has worked well for TCP uh sorry for for TLS there this was called Grease and I've just taken the name and now we're not putting grease to TLS which was the kind of the\", \"matched_pattern\": \"\"}, {\"context\": \"an ecosystem where they didn't see those those extensions ever uh this has worked well for TCP uh sorry for for TLS there this was called Grease and I've just taken the name and now we're not putting grease to TLS which was the kind of the image like have a mechanism and it rusts shut if you don't i\", \"matched_pattern\": \"\"}, {\"context\": \"ed Grease and I've just taken the name and now we're not putting grease to TLS which was the kind of the image like have a mechanism and it rusts shut if you don't if you don't actuate it or at least grease it regularly um so the document um focus please the the thank you uh the document introduces \", \"matched_pattern\": \"\"}], \"confidence\": \"high\"}, {\"source_uuid\": \"a76f6899-86b9-47e7-86ea-0513b0b5141d\", \"meeting\": \"ietf118\", \"working_group\": \"edm\", \"subject\": \"IETF 118 - EDM Working Group Session\", \"matches\": [{\"context\": \"documents and right now uh we are working on discussing a document about greasing and trying to make some of the more either uh more abstract things that we had in um like previous documents like the use it or lose it draft I forget the RFC number that that got published as and also things that are \", \"matched_pattern\": \"\"}, {\"context\": \"tion right so I wanted to add in text that talks about should the receiver detect log or whatever the lack of receiving any greasing should the receiver do something if it says I never got any of the grease stuff right that's an interesting signal that says something is wrong here what should you do\", \"matched_pattern\": \"\"}, {\"context\": \"and there's a tussle here because greeting kind of opticat that or maybe exercises that so I think it might be worth figuring out how the network wide measurement thing will get some useful data from greased core points when they're visible in the network obviously some of these are not visible in t\", \"matched_pattern\": \"\"}, {\"context\": \"uiring an Integrity check or some other thing may be another way you like say you like you have to decrypt this entire thing and process it all at once to to kind of guarantee by side effect that the greased code points were processed and used cool all right I'm sure I'm going to miss some of that w\", \"matched_pattern\": \"\"}, {\"context\": \"d call Everything's authenticated and like things can't be dropped you can just they can just be completely removed uh the the completely message is removed so what I would have done already was like grease up every code point that I can that that that that where this works um but what I didn't thin\", \"matched_pattern\": \"\"}], \"confidence\": \"high\"}, {\"source_uuid\": \"bbc2f251-25c7-4f42-826a-9b5731049dde\", \"meeting\": \"ietf118\", \"working_group\": \"httpapi\", \"subject\": \"IETF 118 - HTTPAPI Working Group Session\", \"matches\": [{\"context\": \"re there was hope that somebody would step up and go and wred life cycle header to replace the deprecation header um that didn't happen as of a few months ago and so we decided in order to apply some grease to the process that we would set a deadline of this meeting to say if somebody wants to go do\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"1d1ba0b7-55a0-49fd-9e65-178618f474d0\", \"meeting\": \"ietf118\", \"working_group\": \"lake\", \"subject\": \"IETF 118 - LAKE Working Group Session\", \"matches\": [{\"context\": \"and at any rate a kind of as long as we're mindful of what we take um we can also learn from The Experience what worked well there one thing that worked well there uh is RFC 8702 uh sorry1 providing grease to um T TLS extension points next slide please what this what this means is that um what what \", \"matched_pattern\": \"\"}, {\"context\": \"se not do this because it will be very awkward when both say that hey let's do this and then they finded out that um yeah well um I actually can't so um the semantics are always the same as with many grease options um if you receive them just ignore them but as they are all authenticated we'll make \", \"matched_pattern\": \"\"}, {\"context\": \"ring with options there are two more extension points in in in in ad hoc that that are the methods and the Cod heads that are used um I don't think so they can't be extended in the same they can't be greased in the same way because when gree would be applied then the negotiation would fail um there \", \"matched_pattern\": \"\"}], \"confidence\": \"high\"}, {\"source_uuid\": \"ba504ac7-840d-4485-870f-4136abeeeb67\", \"meeting\": \"ietf119\", \"working_group\": \"dnsop\", \"subject\": \"IETF 119 - DNSOP Working Group Session\", \"matches\": [{\"context\": \"which is great because we got another author for that um and I think with some of the delag work this is becoming more more interesting um sort of the next slide and then at the end um the the the DS grease document that two going to present so that looks interesting as well um and then let's do as \", \"matched_pattern\": \"\"}, {\"context\": \"ings like this in in DNS software for many years but it turns out in the intervening time other protocol communities have already done this um and the basic idea is and it has a name even it's called Grease or greasing and the basic idea is this is a technique that exercises the regular use of unall\", \"matched_pattern\": \"\"}, {\"context\": \"l space and how to apply it to it is an IAB program I AP oliz Wes okay I retract my statement and I've been corrected by Wes uh okay so um the first question is what protocol elements in DNS could we grease so here's a list that we came up with new DNS header Flags new edns header Flags new OP codes\", \"matched_pattern\": \"\"}, {\"context\": \"ansports although I think some of that is probably covered by the recent thing that deprive put out right the opportunistic unilateral thing but you know there's TCP as well which presumably could be greased uh all right so the next question is how to choose unallocated code points I think Mark's op\", \"matched_pattern\": \"\"}, {\"context\": \"ifferent sub ranges May elicit different response Behavior so you have to you know be a little bit U sophisticated about how you deal with that uh the other question is how often or how frequently to grease queries and I've just exerted the text in that document there are personal feeling is that uh\", \"matched_pattern\": \"\"}], \"confidence\": \"high\"}, {\"source_uuid\": \"26323161-3824-4a6a-b6ce-1d3b18927730\", \"meeting\": \"ietf120\", \"working_group\": \"deleg\", \"subject\": \"IETF 120 - DELEG Working Group Session\", \"matches\": [{\"context\": \"nt to do um second point is to disagree with what John LaVine just said because in fact once somebody does it everyone can mograph and do that and there are processes within that staff can do to help grease this so following what we're doing here in the working group the requirement that we have a p\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"2871efdb-6fae-46c4-9738-2c2801745937\", \"meeting\": \"ietf120\", \"working_group\": \"edm\", \"subject\": \"IETF 120 - EDM Working Group Session\", \"matches\": [{\"context\": \"item we have that we have kind of agreed to work on is trying to give more concrete advice around greasing and things that look like greasing uh we have previous rfc's that we've produced uh like the use it or lose it document that cover things like greasing but uh did not go into some of the more p\", \"matched_pattern\": \"\"}, {\"context\": \"did not go into some of the more practical details about how you actually apply that into protocols uh so that's what we're doing here and this includes things as we'll talk about that go beyond just greased code points Etc um the status of this draft is that it is kind of like a IAB track individua\", \"matched_pattern\": \"\"}, {\"context\": \"hink the the thing I'm concerned about is you we go and recommend people you know greasing is great go and use it a lot um and then they do um and then they either um make themselves so open to being greased that they create an attack factor that they may not have had before or that they are aware o\", \"matched_pattern\": \"\"}, {\"context\": \"e the earlier section that's more like these new you know little subsections of here the pieces of advice to follow um maybe clarifying I guess positive advice to the clients or whoever is generating grease to not to you know not not do it too much right like use it use grease sparingly don't don't \", \"matched_pattern\": \"\"}, {\"context\": \"tions of here the pieces of advice to follow um maybe clarifying I guess positive advice to the clients or whoever is generating grease to not to you know not not do it too much right like use it use grease sparingly don't don't over Grease the thing uh because that could lead to these types of uh p\", \"matched_pattern\": \"\"}], \"confidence\": \"high\"}, {\"source_uuid\": \"b41f1c8a-0f4f-47be-9ebf-da28138c1e1b\", \"meeting\": \"ietf121\", \"working_group\": \"ccwg\", \"subject\": \"IETF 121 - CCWG Working Group Session\", \"matches\": [{\"context\": \"take a couple of meeting Cycles somewhere between one and three meetings um and figure out kind of that model we were just talking about for so long um and how do we want to make that go and kind of Grease those Wheels uh before we take on additional congestion control gorithms at the same time wher\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"1949d641-b766-4127-a1ae-f0d942a835e3\", \"meeting\": \"ietf121\", \"working_group\": \"httpbis\", \"subject\": \"IETF 121 - HTTPBIS Working Group Session\", \"matches\": [{\"context\": \"f extensibility and it's a bit orthogonal to this drop maybe but then should we be greasing capules are we are you just to repeat that at the mic the the spec for capsules recommends greasing and has grease values and our Chrome's implementation will send grease capsules on web transport for example\", \"matched_pattern\": \"\"}, {\"context\": \"aybe but then should we be greasing capules are we are you just to repeat that at the mic the the spec for capsules recommends greasing and has grease values and our Chrome's implementation will send grease capsules on web transport for example uh David skazi OG capsule Enthusiast um I think this is\", \"matched_pattern\": \"\"}], \"confidence\": \"medium\"}, {\"source_uuid\": \"87482d0d-f967-4387-b8b4-41adaec8041f\", \"meeting\": \"ietf121\", \"working_group\": \"lake\", \"subject\": \"IETF 121 - LAKE Working Group Session\", \"matches\": [{\"context\": \"s Lake ODS and Lake implementation considerations by Joan and Marco 15 and 10 minutes respectively Then followed by non-working group items uh individual submissions uh draft on remote attestation on grease on pre-shared key authentication with ad hoc application profiles and then the latest 00 subm\", \"matched_pattern\": \"\"}, {\"context\": \"s that we done in in in in TS um but I think that's a good one um so I think that um and there has been a lot of text written about that already other draft um concretely um there is not now not only grease for ad hoc which defines those options but also General guidance in RFC 9170 and an upcoming \", \"matched_pattern\": \"\"}, {\"context\": \"hich not you don't care does the version number play a role Marco asked not given the numbers of readers we've had probably not significantly um I mean I think the the factors here you know maybe the grease thing kind of stands alone there may be more relations between other ones or other dependenci\", \"matched_pattern\": \"\"}, {\"context\": \"soon after adoption do we have opinion on that please go to the microphone if you have information on that we don't know okay so we again we confirm on the list but it sounds a bit like doing the the grease one first maybe then the profiles psk rats in that order if we start now and we kind of give \", \"matched_pattern\": \"\"}, {\"context\": \"once I so okay I think prioritization is a good idea but I guess the timeline is then very clear from here to the end of the year that we call these routes out yeah so which and again if we start the grease draft and say this this's a twoe c option if we get a bunch of people saying yeah that looks \", \"matched_pattern\": \"\"}], \"confidence\": \"high\"}, {\"source_uuid\": \"21d1bb06-7428-46c1-8605-d61dc1e460c4\", \"meeting\": \"ietf121\", \"working_group\": \"mediaman\", \"subject\": \"IETF 121 - MEDIAMAN Working Group Session\", \"matches\": [{\"context\": \"h this before March no my personal I said it's purely selfish it it's perfectly possible okay yeah no I only have the one what do you mean by finish uh pass clear the isg oh that's not up to us I can grease some Wheels do tell well we we can get it to the isg yes or we can aim to keep it to the iceg\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"e1fd948f-2148-4bde-b560-128a6c88cc3e\", \"meeting\": \"ietf121\", \"working_group\": \"netmod\", \"subject\": \"IETF 121 - NETMOD Working Group Session\", \"matches\": [{\"context\": \"nd whether that is a good thing or not um personally I think we have to figure out how to publish documents quicker so if we have a test case that we get used to publishing frequently that might help Grease the skids for other documents so I'm not opposed to using 847 as that as that you know sure t\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"e011e6ff-dd38-460b-a1c4-7aed2b8d4594\", \"meeting\": \"ietf121\", \"working_group\": \"ntp\", \"subject\": \"IETF 121 - NTP Working Group Session\", \"matches\": [{\"context\": \"ct that we learned that almost all you know clients are pretty bad at actually checking uh version tags checking non stxs in responses and verifying signatures and this really highlights the need for grease uh I I think it's you know servers should servers should Grease the responses uh enough for t\", \"matched_pattern\": \"\"}, {\"context\": \"ad at actually checking uh version tags checking non stxs in responses and verifying signatures and this really highlights the need for grease uh I I think it's you know servers should servers should Grease the responses uh enough for to sort of force clients to do this kind of checking uh we found \", \"matched_pattern\": \"\"}], \"confidence\": \"medium\"}, {\"source_uuid\": \"d9bb3d9b-7e48-4a6d-a9db-b9f4c154da1d\", \"meeting\": \"ietf121\", \"working_group\": \"quic\", \"subject\": \"IETF 121 - QUIC Working Group Session\", \"matches\": [{\"context\": \"tion to seeing this using an arrow code is is not a good design choice because it's got like 62 bits of possible future people putting stuff in there and asking you to do things and you might need to grease these things or you might need to like avoid being dossed in some way that you're being compe\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"2ec7e2b8-46b2-4b4e-a466-ce373f2e476c\", \"meeting\": \"ietf121\", \"working_group\": \"tls\", \"subject\": \"IETF 121 - TLS Working Group Session\", \"matches\": [{\"context\": \"t are mandatory and you're supposed to not accept an e config if you don't understand one of them there was some debate about whether this future but we haven't um so um the idea here is that you can grease them um and under those circumstan says you should never have that no client ever valid to us\", \"matched_pattern\": \"\"}, {\"context\": \"avid Benjamin justest at the very end here and you done valid um and um you know honestly like what we're really worried about is like clients specifically greasing like specifically checking for the grease and and then you know abandoning it I think we're like pretty far off off field so um I close\", \"matched_pattern\": \"\"}], \"confidence\": \"medium\"}, {\"source_uuid\": \"ebca9690-9a4f-4063-aa2b-daa204031d40\", \"meeting\": \"ietf122\", \"working_group\": \"6man\", \"subject\": \"IETF 122 - 6MAN Working Group Session\", \"matches\": [{\"context\": \"t that might be interesting try find a current or previous ad and ask them your questions and uh if you need to maybe start uh discussing with your management or your uh employer whatever to uh maybe Grease the skids to see if uh this is something you can get some time to do if you're interested so \", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"c156f62d-bc99-44ed-96d8-30d404ffb7b6\", \"meeting\": \"ietf122\", \"working_group\": \"ccwg\", \"subject\": \"IETF 122 - CCWG Working Group Session\", \"matches\": [{\"context\": \"who have not looked at it earlier so uh we have defined a new variable called the maximum flight size which is the largest value of the flight size since the last time the congestion window was uh degreased and if the congestion window was never decreased then it's a maximum value of the flight size\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"de8cf641-4440-45b5-b311-73b139d1a94e\", \"meeting\": \"ietf122\", \"working_group\": \"cose\", \"subject\": \"IETF 122 - COSE Working Group Session\", \"matches\": [{\"context\": \"nda um people are free to add themselves to the queue to talk about anything Co related Christian um hi I'd like to take that opportunity to ask a bit around whether at any time in Coy um um applying grease to header parameters that is um introducing items that don't have any particular meaning of t\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"91712bcf-5626-4dac-b0e5-f9c9d064500d\", \"meeting\": \"ietf122\", \"working_group\": \"lake\", \"subject\": \"IETF 122 - LAKE Working Group Session\", \"matches\": [{\"context\": \"sion. So in terms of the working group uh since the last uh ITF meeting we had a lot of activity going on mainly four documents have been adopted following the uh Dublin discussions. These are uh the grease document uh edited by Christian. App profiles edited by Marco Lake uh remote attestation work\", \"matched_pattern\": \"\"}, {\"context\": \"next next one is Christian I think it's remote so uh remote yes yes uh the deck has been share slice control slice control thank you yes you're good to go yep um so I'd like to talk about um applying grease to ad hoc which means that we utilize the code points that we have um to even deliberately if\", \"matched_pattern\": \"\"}, {\"context\": \"er suite the EAD item and the credentials and so far this document has talked about the cipher suite and the and the EAD item. uh the big question and and the method is something that we can't really grease because using a method that the peer doesn't support will just fail the protocol. The big que\", \"matched_pattern\": \"\"}, {\"context\": \"method is something that we can't really grease because using a method that the peer doesn't support will just fail the protocol. The big question that I'd like to get towards an answer is um can we grease cozy headers? And what this means is um that if a recip if a recipient receives a message uh t\", \"matched_pattern\": \"\"}, {\"context\": \"but then uh the uh negotiation fails which is something that we'll have a hard time getting implementations to really support um because we can't we can't test it out or if we can use that we should grease So we should uh define uh key additional keys that we can just send along in situations where \", \"matched_pattern\": \"\"}], \"confidence\": \"high\"}, {\"source_uuid\": \"d5ed5942-2e18-4c86-9c8b-23a317e360b0\", \"meeting\": \"ietf123\", \"working_group\": \"edm\", \"subject\": \"IETF 123 - EDM Working Group Session\", \"matches\": [{\"context\": \"more structure to it. We're essentially introducing like hey Greece is this thing. It came from TLS but a lot of other protocols are using it and it's something that we've talked about in things like use it or lose it. Um but there are a lot of practical issues that come up that we think are useful \", \"matched_pattern\": \"\"}, {\"context\": \"w do you represent this into Ayanna? Well, uh what are the uh parts where you use uh unpredictable values? How do you use them unpredictably? Uh we talk about uh some of the dangers of special casing grease values. Uh thank you. >> Oh jeez. Wow. >> That is terrible. Does it really help? >> That's be\", \"matched_pattern\": \"\"}, {\"context\": \"h Martin for bringing up some of the cases where we've seen particularly bad special casing. And so we tried to create some pseudo code that gave examples of like what's the right way to uh handle uh grease logic in ways that aren't going to break other things. Um there's a section we have now on so\", \"matched_pattern\": \"\"}, {\"context\": \"the client hello spreading over two packets and that broke a lot of people. the TLDDR fail issue. Um I think that's an example where you know had we done that type of greasing which not really using grease values but a protocol variability of spreading out your data over multiple packets etc that ma\", \"matched_pattern\": \"\"}, {\"context\": \"e can make this clearer. Some of the text that Dave has added in a pull request within well the last few weeks touch on this uh in a more clear way what what Greasing can do and what can't do. It can grease the code points that are reserved. It can't grease extensions that are real that don't exist \", \"matched_pattern\": \"\"}], \"confidence\": \"high\"}]}",
+      "encoding": "json"
+    }
+  ],
+  "analysis": [
+    {
+      "type": "ietf_principle_corpus_summary",
+      "dialog": [],
+      "vendor": "ietf-hackathon-125",
+      "body": {
+        "principle_id": "ossification",
+        "principle_name": "Protocol ossification",
+        "total_sessions": 71,
+        "total_unique_sources": 71,
+        "meetings_represented": [
+          "ietf110",
+          "ietf111",
+          "ietf112",
+          "ietf113",
+          "ietf114",
+          "ietf115",
+          "ietf116",
+          "ietf117",
+          "ietf118",
+          "ietf119",
+          "ietf120",
+          "ietf121",
+          "ietf122",
+          "ietf123"
+        ],
+        "working_groups": [
+          "6man",
+          "anima",
+          "avtcore",
+          "ccwg",
+          "coinrg",
+          "core",
+          "cose",
+          "deleg",
+          "dinrg",
+          "dispatch",
+          "dnsop",
+          "edm",
+          "httpapi",
+          "httpbis",
+          "iabopen",
+          "ippm",
+          "lake",
+          "lamps",
+          "maprg",
+          "masque",
+          "mediaman",
+          "mls",
+          "netmod",
+          "nfsv4",
+          "ntp",
+          "opsawg",
+          "opsec",
+          "panrg",
+          "quic",
+          "rift",
+          "roll",
+          "rtgarea",
+          "saag",
+          "tdd",
+          "tls",
+          "webtrans"
+        ],
+        "top_working_groups": [
+          {
+            "group": "quic",
+            "count": 7
+          },
+          {
+            "group": "tls",
+            "count": 6
+          },
+          {
+            "group": "edm",
+            "count": 6
+          },
+          {
+            "group": "lake",
+            "count": 4
+          },
+          {
+            "group": "iabopen",
+            "count": 3
+          },
+          {
+            "group": "masque",
+            "count": 3
+          },
+          {
+            "group": "ntp",
+            "count": 3
+          },
+          {
+            "group": "maprg",
+            "count": 3
+          },
+          {
+            "group": "core",
+            "count": 3
+          },
+          {
+            "group": "6man",
+            "count": 2
+          }
+        ],
+        "meeting_frequency": {
+          "ietf110": 7,
+          "ietf111": 6,
+          "ietf112": 5,
+          "ietf113": 8,
+          "ietf114": 5,
+          "ietf115": 6,
+          "ietf116": 8,
+          "ietf117": 6,
+          "ietf118": 4,
+          "ietf119": 1,
+          "ietf120": 2,
+          "ietf121": 8,
+          "ietf122": 4,
+          "ietf123": 1
+        }
+      },
+      "encoding": "json"
+    }
+  ]
+}

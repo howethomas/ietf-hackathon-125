@@ -1,0 +1,678 @@
+{
+  "vcon": "0.0.1",
+  "uuid": "7caf0ca6-4750-45ff-af2f-2187c30284aa",
+  "created_at": "2026-03-14T15:12:40.998394+00:00",
+  "updated_at": "2026-03-14T15:12:40.998394+00:00",
+  "subject": "Connectivity as primary goal \u2014 IETF Discussion Corpus (ietf110-ietf123)",
+  "group": [
+    {
+      "uuid": "a699e33c-c11b-4917-abda-87a0497e97e7"
+    },
+    {
+      "uuid": "e1454928-f4ff-44c7-a6de-8d1e1b44fcb0"
+    },
+    {
+      "uuid": "15e45e09-c4d8-4886-94e1-2428926ff362"
+    },
+    {
+      "uuid": "651acaf7-2b4d-4330-9087-0fc3826600ef"
+    },
+    {
+      "uuid": "b71b5518-eda2-45a0-b39e-219450e84296"
+    },
+    {
+      "uuid": "c9a2958e-80bd-4781-87e6-4a2193775980"
+    },
+    {
+      "uuid": "f9e94977-2e2b-44ce-91f4-5f7128aefd11"
+    },
+    {
+      "uuid": "56256558-6655-41db-bf75-9f2a12640ec1"
+    },
+    {
+      "uuid": "a461b978-a3c7-4122-9ccc-af4cdb04d0e4"
+    },
+    {
+      "uuid": "ba662d66-881a-4e5a-b377-fb84c5eef8d4"
+    },
+    {
+      "uuid": "ec7c1132-d803-4b90-9c63-48adc4369edd"
+    },
+    {
+      "uuid": "f5c6b8b8-f1cb-4ef2-9050-b51fa225f0c1"
+    },
+    {
+      "uuid": "e693045f-54ff-4b87-aa43-cc0d28b3c8cc"
+    },
+    {
+      "uuid": "20c53073-9af0-46b6-972c-10816aea0555"
+    },
+    {
+      "uuid": "b6edc6a1-ed08-4329-ba98-5d84a1c8fb14"
+    },
+    {
+      "uuid": "bf5211c1-4b6e-417c-a1f8-720725ed696e"
+    },
+    {
+      "uuid": "6ae4da1e-82f7-4a64-b4ac-82c8c415ccc8"
+    },
+    {
+      "uuid": "99b6eb1b-4c2b-4b2c-93a7-393a88fde62c"
+    },
+    {
+      "uuid": "2aec7662-47b1-4b93-b820-601f41ccac19"
+    },
+    {
+      "uuid": "dc7c67f0-c865-4623-9e22-24c719592062"
+    },
+    {
+      "uuid": "eb415df7-bfe2-4bb1-a538-46d1aa2c2c84"
+    },
+    {
+      "uuid": "1ba03911-b774-490e-9fd9-10a73a48898d"
+    },
+    {
+      "uuid": "cc90bc92-7626-45d3-b9f7-595142e953fd"
+    },
+    {
+      "uuid": "d47393b8-f7da-4465-8a97-9a1011c4e12f"
+    },
+    {
+      "uuid": "f9e95034-a279-463e-a586-42f4ab63f371"
+    },
+    {
+      "uuid": "d6ea0cf6-bfcc-4f7c-a9fa-ca2a49b4ee81"
+    },
+    {
+      "uuid": "c0c6e0e2-d6c3-4de5-a05c-7c784a955082"
+    },
+    {
+      "uuid": "b433a52d-fef7-4ef9-93f7-8a0c87ceb7ff"
+    },
+    {
+      "uuid": "850adcb2-b9d2-4742-a3be-f4e343c67fe4"
+    },
+    {
+      "uuid": "0235ea10-5cc4-46f7-a73e-30428be9285b"
+    },
+    {
+      "uuid": "0a8bb3d2-c74b-40b1-8df3-429cedc4e400"
+    },
+    {
+      "uuid": "cc2845dd-95b6-4711-9c60-4387d2c37cdb"
+    },
+    {
+      "uuid": "8faf2149-fe58-4f2f-8a24-528d156d9268"
+    },
+    {
+      "uuid": "ce03a56a-5469-4d68-b8ec-8484e1fa6e26"
+    },
+    {
+      "uuid": "5672e66a-33e9-4fbe-a44a-02e4bcb48ec8"
+    },
+    {
+      "uuid": "4a4922d5-0aff-4a98-a7c2-476f0cfd909d"
+    },
+    {
+      "uuid": "cf8bb636-fae3-4700-8d50-6a4f4209b369"
+    },
+    {
+      "uuid": "07d6f0dc-b638-439a-83b9-d18d933bad1a"
+    },
+    {
+      "uuid": "9b468e36-16a9-4ac3-8590-3e36dccd0d80"
+    },
+    {
+      "uuid": "290199d3-0764-4ea1-aec8-af76f58b0d3c"
+    },
+    {
+      "uuid": "f01e24b2-51b5-4627-b2ee-278a85b29ef7"
+    },
+    {
+      "uuid": "f18d9322-d703-434b-a6a2-473d626917ae"
+    },
+    {
+      "uuid": "0bf7a946-95c6-4cca-afea-e7330f9ea708"
+    },
+    {
+      "uuid": "dbd8495c-6a4e-4b33-905e-01665e8fe6f5"
+    },
+    {
+      "uuid": "e5f8d262-d1b9-472b-b963-07a2ea57fbe8"
+    },
+    {
+      "uuid": "cfbeaf18-a52f-4893-b420-a8b1d5a15bc9"
+    },
+    {
+      "uuid": "2771650f-49b8-44c4-bba5-9ed4f0afc662"
+    },
+    {
+      "uuid": "a5e830b7-21c6-4cdc-b779-9670d4c4358b"
+    },
+    {
+      "uuid": "74015d5d-d7db-486c-8f0a-e263d4315aa9"
+    },
+    {
+      "uuid": "49703cd9-b522-4207-a6a7-857985861274"
+    },
+    {
+      "uuid": "2124f543-19c8-473f-9f59-38d64b66bff0"
+    },
+    {
+      "uuid": "88d13f37-7d81-4e19-acb6-eafd299d34be"
+    },
+    {
+      "uuid": "48a86332-d4d5-4387-948a-d0ada5d7bdef"
+    },
+    {
+      "uuid": "dac68ac8-44b8-4bf1-aa4f-277221bf819c"
+    },
+    {
+      "uuid": "29c54a5d-b9cc-4666-b116-195ffe9c3298"
+    },
+    {
+      "uuid": "1d885818-b263-49ff-ba13-807c2f4e48a4"
+    },
+    {
+      "uuid": "73f103cf-0b33-4561-8945-881acb00f22b"
+    },
+    {
+      "uuid": "4562a42c-c0f1-4bb8-bb46-82fbe19eb552"
+    },
+    {
+      "uuid": "9d5724d4-ca92-4a0c-9930-91ba483a8620"
+    },
+    {
+      "uuid": "eab232ad-0333-4f9b-a260-5da9ca57c46f"
+    },
+    {
+      "uuid": "55377685-8f6b-4740-94e7-f36bad9afb4d"
+    },
+    {
+      "uuid": "594110ee-c5c9-4e50-b7ad-cb2c4945eaca"
+    },
+    {
+      "uuid": "1dcb83db-60c8-4c5d-9474-48a970455ab7"
+    },
+    {
+      "uuid": "8a82d5d9-297e-4179-aa7d-c4c2dbc3e0ed"
+    },
+    {
+      "uuid": "e62fd174-9f1c-4339-912e-1ee6acb6ab75"
+    },
+    {
+      "uuid": "c8afab75-bb4a-4304-81e0-c81c28d5602e"
+    },
+    {
+      "uuid": "3025066f-d645-4cea-aa14-141c40ef51b2"
+    },
+    {
+      "uuid": "2e7c4861-fea5-4884-ae2c-7af2c3c7e03e"
+    },
+    {
+      "uuid": "8f423ec8-f900-48d7-8fd5-68cde4244a24"
+    },
+    {
+      "uuid": "5b145e52-e730-4a47-ac16-c68827536f04"
+    },
+    {
+      "uuid": "2ee351ca-ff2f-4be1-9978-e46cd9c74b74"
+    },
+    {
+      "uuid": "6d3c5a54-93a9-4bfe-8978-5e93710d722d"
+    },
+    {
+      "uuid": "f23c0468-03a9-4987-aaf0-a5b99e68b152"
+    },
+    {
+      "uuid": "39d3802f-8ec0-4706-84ee-46b5cfc9d856"
+    },
+    {
+      "uuid": "f31aa18f-2922-40f2-bff3-91a45c054148"
+    },
+    {
+      "uuid": "181a2459-560c-4414-afe9-028144bb986d"
+    },
+    {
+      "uuid": "36915d19-69af-4866-aef7-14ab65dcbf28"
+    },
+    {
+      "uuid": "7af1a179-ece1-40e7-b13a-bbaaefeb3715"
+    },
+    {
+      "uuid": "da7c0cbb-7714-4394-a5ea-951a326fdf71"
+    },
+    {
+      "uuid": "6e5ab9e1-0e3f-4c83-ba0e-51defa49c2a1"
+    },
+    {
+      "uuid": "8b6e1698-aaf2-43ca-861f-8a3a95ea03b0"
+    },
+    {
+      "uuid": "f4008408-6ca6-4a4f-862c-df1ef6ea67e1"
+    },
+    {
+      "uuid": "35d0ee23-effa-4206-a7e0-1dfec8bc632f"
+    },
+    {
+      "uuid": "1f656276-9429-4749-a51f-6f26900f4023"
+    },
+    {
+      "uuid": "8cc66edd-9efd-4380-9610-e3a63f533431"
+    },
+    {
+      "uuid": "a828035e-ce9c-40bb-9a7e-cf7f8b2c9475"
+    },
+    {
+      "uuid": "eb5c0b08-98c8-40dd-b887-c1a51df66e08"
+    },
+    {
+      "uuid": "55ae6600-76a6-4d1e-8d6f-f370a4479a6b"
+    },
+    {
+      "uuid": "589f2f2d-f311-4e3c-8bb9-5f914088bbea"
+    },
+    {
+      "uuid": "d94ae8f3-007b-4244-bccf-c736e1a25792"
+    },
+    {
+      "uuid": "7b4c93f5-d96d-4d8a-8105-62f03586148c"
+    },
+    {
+      "uuid": "bf31b405-0786-4b20-820a-eacd9390aba6"
+    },
+    {
+      "uuid": "bf1ae1e0-6a4c-4ad1-8165-17073d8b8a9d"
+    },
+    {
+      "uuid": "c23647ec-3090-4f40-bfd4-2b8a35649aff"
+    },
+    {
+      "uuid": "2751eb5a-34ef-4ee0-aebd-6dc98dc2b72a"
+    },
+    {
+      "uuid": "347cc771-2bc1-426c-8486-a64212e408db"
+    },
+    {
+      "uuid": "7056a09c-5de1-4a46-835a-30a810a203a4"
+    },
+    {
+      "uuid": "4ccbb48a-462e-40fc-aa55-6b312d3e2a0e"
+    },
+    {
+      "uuid": "695caf4d-53bd-4fe7-8ca8-f5b1c582c9f1"
+    },
+    {
+      "uuid": "8e9a46e9-6f10-4c09-b080-984eea2bbfd7"
+    },
+    {
+      "uuid": "3f45f84d-a245-4d03-97fb-c9f567fcf5de"
+    },
+    {
+      "uuid": "1b104d44-ed1b-44c5-b908-df77fff3520a"
+    },
+    {
+      "uuid": "31bf5eed-caa2-444b-a3d8-f62a808249c1"
+    },
+    {
+      "uuid": "0f18742c-c597-4af5-962b-c781b97919ab"
+    },
+    {
+      "uuid": "30ca9e9b-0280-4400-af20-b4a98dbfac23"
+    },
+    {
+      "uuid": "c88db125-3302-4170-9c71-afc47390d58c"
+    },
+    {
+      "uuid": "74e6a426-1f9e-4726-97d6-7df2b4748331"
+    },
+    {
+      "uuid": "669f74fc-5a83-4835-b4bd-21b2cfc4a8cb"
+    },
+    {
+      "uuid": "322da6a9-a51d-4016-91a2-c11224b0008e"
+    },
+    {
+      "uuid": "d333e89e-43b1-4e59-a804-8ec391f5db8d"
+    },
+    {
+      "uuid": "68c4b5b3-584e-41ac-9673-c6f6d891e7f1"
+    },
+    {
+      "uuid": "f6a9388f-d43d-441c-a47b-10412079909c"
+    },
+    {
+      "uuid": "eabc7adf-3883-4b92-8b67-84f30ce8e00e"
+    },
+    {
+      "uuid": "d2ece060-04a7-40bb-825e-0a496653120f"
+    },
+    {
+      "uuid": "9b3fc637-9016-45cc-b028-f83461fff578"
+    },
+    {
+      "uuid": "236a720c-1411-4e67-b850-7fcafe4324ed"
+    },
+    {
+      "uuid": "ee6d7023-ba50-44b1-bfe8-d8b053729495"
+    },
+    {
+      "uuid": "73c561b6-1d15-454d-8323-f56d607322a0"
+    },
+    {
+      "uuid": "ce7eb41f-3aa3-44e4-a1be-58382189731a"
+    },
+    {
+      "uuid": "6e9fc426-9ed1-4f95-971b-768c9dd4838a"
+    },
+    {
+      "uuid": "ab39cafd-5ca6-4676-9b56-ca10ae00cf84"
+    },
+    {
+      "uuid": "45a7702a-40f3-45dd-8c7a-d88f6285c395"
+    },
+    {
+      "uuid": "5c257359-001c-470b-84be-5c48a053efe2"
+    },
+    {
+      "uuid": "3014521b-1c5d-48c2-85aa-40ddd553f962"
+    },
+    {
+      "uuid": "c46d7ced-b5db-49cd-a34d-ad63187b570e"
+    },
+    {
+      "uuid": "13cbdfbb-c69f-402a-81cf-0225eeb61553"
+    },
+    {
+      "uuid": "b4f90493-d878-484d-b351-8000db6b3bd1"
+    },
+    {
+      "uuid": "d4cb0cd3-ac27-4866-9b81-ef6115024db4"
+    },
+    {
+      "uuid": "dad2c970-06c6-4cb0-b7b1-b89f0b3cd753"
+    },
+    {
+      "uuid": "57eb6c21-df17-4faf-891b-f6ece8de3cc3"
+    },
+    {
+      "uuid": "d84e14c0-e70a-46d0-a49b-0ae612e11c06"
+    },
+    {
+      "uuid": "c0509215-f863-46ea-94d2-9ab27f104232"
+    },
+    {
+      "uuid": "d4e8fd19-8cbe-4b32-b6da-f9fd56c87304"
+    },
+    {
+      "uuid": "4ecb73f1-ad93-41a2-804a-47d1d26ef0af"
+    },
+    {
+      "uuid": "fab91e24-d337-4551-a0b6-3a00d88bfe04"
+    },
+    {
+      "uuid": "c468f768-dcd6-4e8b-9af2-9ebee4515fdb"
+    },
+    {
+      "uuid": "eb440cd8-2d02-4a7e-b665-9c7f3ddefd0b"
+    },
+    {
+      "uuid": "8550180d-1b74-45da-b223-149aba5ef7bd"
+    },
+    {
+      "uuid": "c1c9400c-d351-4026-b740-55c848a1fa34"
+    },
+    {
+      "uuid": "1f4a42c4-97e1-4a8a-9c96-77c619424b50"
+    },
+    {
+      "uuid": "ef032bdf-c681-4463-a728-5b3556b84ec4"
+    },
+    {
+      "uuid": "ad131d3f-91ac-4a5a-aec2-553865a88a9c"
+    },
+    {
+      "uuid": "e8b463d3-b13e-4735-b5f9-fbcfbdf47797"
+    },
+    {
+      "uuid": "90701bc6-555d-4f5c-8a0a-eeea91c996ea"
+    },
+    {
+      "uuid": "b834d759-8e28-4c34-bfd7-5a31e9b0cda4"
+    },
+    {
+      "uuid": "1d5867e1-aa2e-4617-913e-dbe8c627ea6d"
+    },
+    {
+      "uuid": "c450f332-a7ed-4c5f-a154-02a6e23b46c2"
+    },
+    {
+      "uuid": "60574dca-0f96-42d2-84dc-ce703083ac81"
+    },
+    {
+      "uuid": "d930a91b-ba81-47b2-9a88-703479e68cfd"
+    },
+    {
+      "uuid": "89ce84e4-ed5d-4f48-815a-7edea6b5068a"
+    },
+    {
+      "uuid": "4fa030ba-690e-4bcb-864b-43d2447d8648"
+    },
+    {
+      "uuid": "0a96b422-4203-4f48-b6c6-94567d360cf2"
+    },
+    {
+      "uuid": "75079c8b-95fd-4f83-8e42-551c20c6e76f"
+    },
+    {
+      "uuid": "3e63842e-74cf-471b-ae16-0a763dd95f8d"
+    },
+    {
+      "uuid": "1429aad1-2f36-411f-b4b0-8fbaa8824b45"
+    },
+    {
+      "uuid": "469c1a23-dc1d-4e67-b834-c17a8640f618"
+    },
+    {
+      "uuid": "16c3bd0c-c656-4a5e-88ae-798bb18af187"
+    },
+    {
+      "uuid": "454adda3-66fb-48a5-b5ff-b3526269e4a2"
+    },
+    {
+      "uuid": "a54e5df3-455f-4a50-8e9f-8afb49ca2b14"
+    },
+    {
+      "uuid": "37af15c9-f797-4578-8d72-59d6317cfb68"
+    },
+    {
+      "uuid": "5ffcc242-409b-45b2-be73-c36d2c7675ba"
+    },
+    {
+      "uuid": "48b4fdaf-7e48-460b-845b-70be423f7587"
+    },
+    {
+      "uuid": "9b920f7a-8740-4d6f-a6c9-4dcf122a3aa7"
+    },
+    {
+      "uuid": "8f84a79d-27e8-4a98-bd33-0c97d53ddf6a"
+    },
+    {
+      "uuid": "c59b34b5-69f2-48fb-a31d-d2d9070c9ee6"
+    }
+  ],
+  "parties": [],
+  "dialog": [],
+  "attachments": [
+    {
+      "type": "application/json",
+      "purpose": "principle_definition",
+      "body": "{\"principle_id\": \"connectivity\", \"name\": \"Connectivity as primary goal\", \"description\": \"The Internet's primary goal is universal connectivity.\", \"rfc_refs\": [\"RFC 1958\"]}",
+      "encoding": "json"
+    },
+    {
+      "type": "application/json",
+      "purpose": "collected_evidence",
+      "body": "{\"total_sessions\": 165, \"sessions\": [{\"source_uuid\": \"a699e33c-c11b-4917-abda-87a0497e97e7\", \"meeting\": \"ietf110\", \"working_group\": \"bess\", \"subject\": \"IETF 110 - BESS Working Group Session\", \"matches\": [{\"context\": \"re it concerns the network oem layer there between the pe's and well in yellow next slide so this just talks about the other layers briefly and what kind of uh technology you would use for continuity connectivity checking in these other layers including of course the end-to-end ethernet service of e\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"e1454928-f4ff-44c7-a6de-8d1e1b44fcb0\", \"meeting\": \"ietf110\", \"working_group\": \"coinrg\", \"subject\": \"IETF 110 - COINRG Working Group Session\", \"matches\": [{\"context\": \"any documents um and by participating in the ayatura irtf you agree to many of these processes and policies implicitly by joining the session um sure hello everyone i'm i'm sorry i i'm sorry uh i had connectivity issues so terrific let me just get through this and then uh i will advance for you and \", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"15e45e09-c4d8-4886-94e1-2428926ff362\", \"meeting\": \"ietf110\", \"working_group\": \"dnssd\", \"subject\": \"IETF 110 - DNSSD Working Group Session\", \"matches\": [{\"context\": \"anyway uh so what i want to talk about is um is exactly what stuart just described uh sort of the permissionless adding of a stub networks to existing network infrastructure in order to deliver uh uh reachability and discoverability to the devices that are on the stub network um and from the devices\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"651acaf7-2b4d-4330-9087-0fc3826600ef\", \"meeting\": \"ietf110\", \"working_group\": \"hrpc\", \"subject\": \"IETF 110 - HRPC Working Group Session\", \"matches\": [{\"context\": \"ystems i think that's super gener generic um and requires further thinking but i was just wondering how is this related to protocol design and they also mentioned action that block or hinder internet connectivity in relation to peaceful assemblies so is that really the opportunity to use your phone \", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"b71b5518-eda2-45a0-b39e-219450e84296\", \"meeting\": \"ietf110\", \"working_group\": \"icnrg\", \"subject\": \"IETF 110 - ICNRG Working Group Session\", \"matches\": [{\"context\": \"s implemented on routers to hold on the respond request repair message and consumers which means the end user's program cc info discovers the paths and the content caching information in ccns such as reachability hub count rdt on passing over cache conditions and so on as well as multi-pass conditio\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"c9a2958e-80bd-4781-87e6-4a2193775980\", \"meeting\": \"ietf110\", \"working_group\": \"ippm\", \"subject\": \"IETF 110 - IPPM Working Group Session\", \"matches\": [{\"context\": \"when you say you want when you say you want more someplace more explanation more words in the scope the times come please provide text thank you all right let us move on and you want to jump us on to connectivity monitoring i think or yeah i'll let's skip the let's skip our interlude if that's okay \", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"f9e94977-2e2b-44ce-91f4-5f7128aefd11\", \"meeting\": \"ietf110\", \"working_group\": \"mpls\", \"subject\": \"IETF 110 - MPLS Working Group Session\", \"matches\": [{\"context\": \"t for everyone so this this graph was added for to support inter domain ping and traced out the response response for ping and traced out comes via ip in the inter domain case egress will not have ip connectivity to ingress so so so ingress can add a reverse path segment tlb which which will give us\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"56256558-6655-41db-bf75-9f2a12640ec1\", \"meeting\": \"ietf110\", \"working_group\": \"rtgwg\", \"subject\": \"IETF 110 - RTGWG Working Group Session\", \"matches\": [{\"context\": \"just as our fr mechanisms the second question is about uh what function of the failed node could be excluded in the repair node because the proxy behavior is for pass repair which only guarantees the reachability so other functions can't be replaced or proxied only the end function is excluded the t\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"a461b978-a3c7-4122-9ccc-af4cdb04d0e4\", \"meeting\": \"ietf110\", \"working_group\": \"tsvarea\", \"subject\": \"IETF 110 - TSVAREA Working Group Session\", \"matches\": [{\"context\": \"r illustration where we have you know some number of nodes nodes one two three and four on the vertical with some notion of time on the horizontal and if if blue uh here or the shaded area represents connectivity between the nodes if you have a data volume which we call d1 and it has to wait for an \", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"ba662d66-881a-4e5a-b377-fb84c5eef8d4\", \"meeting\": \"ietf111\", \"working_group\": \"ccamp\", \"subject\": \"IETF 111 - CCAMP Working Group Session\", \"matches\": [{\"context\": \"e capability already provided for the optical transceiver we have the same physical layer attributes and optical impairment and we have the same possibility to use the same topology entity local link connectivity list that we also use in the drop part of path for the rodam model um from a functional\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"ec7c1132-d803-4b90-9c63-48adc4369edd\", \"meeting\": \"ietf111\", \"working_group\": \"dtn\", \"subject\": \"IETF 111 - DTN Working Group Session\", \"matches\": [{\"context\": \"he kodi md minute taking facility built into meet echo this is a collaborative editing tool so please help out um i happen to know adam is somewhere in north dakota at the moment and has fairly dodgy connectivity so if you spot him missing something please feel free to uh edit yourself equally names\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"f5c6b8b8-f1cb-4ef2-9050-b51fa225f0c1\", \"meeting\": \"ietf111\", \"working_group\": \"lamps\", \"subject\": \"IETF 111 - LAMPS Working Group Session\", \"matches\": [{\"context\": \"no questions daniel daniel your video is not showing and i'm not sure whether you're able to speak but you may need to press some buttons okay hi folks sorry about that i just had a weird network uh connectivity issue here can we just go back one slide i wanted to make a comment about this reply the\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"e693045f-54ff-4b87-aa43-cc0d28b3c8cc\", \"meeting\": \"ietf111\", \"working_group\": \"lsr\", \"subject\": \"IETF 111 - LSR Working Group Session\", \"matches\": [{\"context\": \"l go it is going to basically times out anyway okay next slide please so and basically this is uh the the tlb that we are defining to use the the pulse lsps it's it's what we call a summary component reachability loss power steel will be basically when you do a summarization whether it being on a l1\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"20c53073-9af0-46b6-972c-10816aea0555\", \"meeting\": \"ietf111\", \"working_group\": \"masque\", \"subject\": \"IETF 111 - MASQUE Working Group Session\", \"matches\": [{\"context\": \"l you want to do i would actually suggest that you not use connect ip but instead use connect udp or regular connect because i generally agree with that but i know people who like seem to want to use connectivity for this purpose um for people who do want to use connect ip in the way that you descri\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"b6edc6a1-ed08-4329-ba98-5d84a1c8fb14\", \"meeting\": \"ietf111\", \"working_group\": \"mops\", \"subject\": \"IETF 111 - MOPS Working Group Session\", \"matches\": [{\"context\": \"subscribe to when you purchase a car from them and so there's a number of things within 5g that really helps you know this there's all that additional spectrum the 5g brings is really enhanced radio connectivity um and then there's a whole um 5g uh cloud and the 5g video edge stack that can actually\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"bf5211c1-4b6e-417c-a1f8-720725ed696e\", \"meeting\": \"ietf111\", \"working_group\": \"opsawg\", \"subject\": \"IETF 111 - OPSAWG Working Group Session\", \"matches\": [{\"context\": \"'s a very easy one but the more complex one and then we want to understand that whenever one component degrades or fails what service are impacted that's what we've been missing in industry right the connectivity the connections theory between the operational state and the service context so for thi\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"6ae4da1e-82f7-4a64-b4ac-82c8c415ccc8\", \"meeting\": \"ietf111\", \"working_group\": \"pim\", \"subject\": \"IETF 111 - PIM Working Group Session\", \"matches\": [{\"context\": \"s fine to reuse the existing attribute um i'll get back to that on the on the next slide so the use case is basically doing list multicast so you have like lisp sites that have multicast and you want connectivity between the sites between the sites it can be like a unicast network so you do head on \", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"99b6eb1b-4c2b-4b2c-93a7-393a88fde62c\", \"meeting\": \"ietf111\", \"working_group\": \"rtgwg\", \"subject\": \"IETF 111 - RTGWG Working Group Session\", \"matches\": [{\"context\": \"ola header is simply an rfc 2473 ipv6 encapsulation header using ipv6 encapsulation uh then finally arrow and omni proxy servers configure ipv4 and or ipv6 anycast addresses to advertise the omnilink reachability to into access networks that would allow potential clients that connect to the access n\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"2aec7662-47b1-4b93-b820-601f41ccac19\", \"meeting\": \"ietf111\", \"working_group\": \"spring\", \"subject\": \"IETF 111 - SPRING Working Group Session\", \"matches\": [{\"context\": \"re is some failure in the transit node we could use fr mechanisms such as tifa but when there is a field node in the endpoint of the srv6 path the existing fr mechanisms cannot be used to restore the reachability yes srv6 end-to-end protection could work in this case but we think a simpler and faste\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"dc7c67f0-c865-4623-9e22-24c719592062\", \"meeting\": \"ietf111\", \"working_group\": \"tls\", \"subject\": \"IETF 111 - TLS Working Group Session\", \"matches\": [{\"context\": \"have anything else sir i'll just take you out of the queue um and then uh as far as improv strats we have the usual suspects um ech compact tls um and a46 biz um a hybrid key exchange and then return reachability check for 1.2 1.3 we talking about some of them today and others um are just you know s\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"eb415df7-bfe2-4bb1-a538-46d1aa2c2c84\", \"meeting\": \"ietf112\", \"working_group\": \"coinrg\", \"subject\": \"IETF 112 - COINRG Working Group Session\", \"matches\": [{\"context\": \"in terms of research this system could also be supported perhaps better by a routing system that gives you more information so for example [Music] resource education information directly and not only reachability information and so for coin we think this could be an example for like new protocol wor\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"1ba03911-b774-490e-9fd9-10a73a48898d\", \"meeting\": \"ietf112\", \"working_group\": \"dnssd\", \"subject\": \"IETF 112 - DNSSD Working Group Session\", \"matches\": [{\"context\": \"imarily to enable stub networks to advertise services on infrastructure networks so this stub network being like an iot network that's just one hop away and doesn't have any transit but just provides reachability to clients that have different uh you know 802.15.4 radios or something like that um an\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"cc90bc92-7626-45d3-b9f7-595142e953fd\", \"meeting\": \"ietf112\", \"working_group\": \"gaia\", \"subject\": \"IETF 112 - GAIA Working Group Session\", \"matches\": [{\"context\": \"h satellite would be one and i don't know if steve is here but there is a lot going on in the field of satellite both from the technical point of view but also from the policy point of view status of connectivity again lots going on in the last two years and so having you know presentation about wha\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"d47393b8-f7da-4465-8a97-9a1011c4e12f\", \"meeting\": \"ietf112\", \"working_group\": \"opsawg\", \"subject\": \"IETF 112 - OPSAWG Working Group Session\", \"matches\": [{\"context\": \"a call with you always okay perfect so where the grad representative service resides not in all situations it also shows the dependencies for successful service so you know if you say i need to have connectivity between a and b and c and d etc just organizing this those dependencies will still give \", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"f9e95034-a279-463e-a586-42f4ab63f371\", \"meeting\": \"ietf112\", \"working_group\": \"rtgwg\", \"subject\": \"IETF 112 - RTGWG Working Group Session\", \"matches\": [{\"context\": \"ange very frequently for example link cost if we use the satellite distance as selling cost then it will keep changing and the uh cellulite ground station link it'll also keep changing because the uh reachability issue and the it will have an interruption every two to three minutes uh for 450 kilome\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"d6ea0cf6-bfcc-4f7c-a9fa-ca2a49b4ee81\", \"meeting\": \"ietf112\", \"working_group\": \"spring\", \"subject\": \"IETF 112 - SPRING Working Group Session\", \"matches\": [{\"context\": \"the pc is involved so this mechanism is where the bgp is involved for stitching the end-to-end path these domains are heterogeneous and there is actually on the borders there itself the the protocol reachability is not leaked or not land by the ingress pe one it is actually switched automatically by\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"c0c6e0e2-d6c3-4de5-a05c-7c784a955082\", \"meeting\": \"ietf113\", \"working_group\": \"alto\", \"subject\": \"IETF 113 - ALTO Working Group Session\", \"matches\": [{\"context\": \"oint of view or angle so the idea would be to have alto as a element capable of exposing combined information between network and and compute capabilities so adding metric resources topology view and reachability and so on so far in fact there are two existing pieces of work on this subject i put th\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"b433a52d-fef7-4ef9-93f7-8a0c87ceb7ff\", \"meeting\": \"ietf113\", \"working_group\": \"bess\", \"subject\": \"IETF 113 - BESS Working Group Session\", \"matches\": [{\"context\": \"ec edge scenario where we have an ipv4 and ipv6 mlri uh from a control plane perspective they're they're being carried over a single v6 only pier uh and we're forwarding v4 and v6 and we have end end reachability cdc um and we're using the default uh per cd label allocation um we've tested with a v4\", \"matched_pattern\": \"\"}, {\"context\": \"vpn like semantics that is one of the reasons i have brought it to best because best deals with services but you're i so you're only for i haven't read into all the details you're only discussing the connectivity between the radio and the upf and then upf but not the the so you're not trying to repl\", \"matched_pattern\": \"\"}], \"confidence\": \"medium\"}, {\"source_uuid\": \"850adcb2-b9d2-4742-a3be-f4e343c67fe4\", \"meeting\": \"ietf113\", \"working_group\": \"dtn\", \"subject\": \"IETF 113 - DTN Working Group Session\", \"matches\": [{\"context\": \"res in the back i think to stress a little bit that this is indeed a solution for a challenged uh challenged network management solution so first picture kind of said hey look agent b here might lose connectivity for some time even though it's generating reports to send back to the manager it still \", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"0235ea10-5cc4-46f7-a73e-30428be9285b\", \"meeting\": \"ietf113\", \"working_group\": \"gaia\", \"subject\": \"IETF 113 - GAIA Working Group Session\", \"matches\": [{\"context\": \"e in materials in energy in devices which are more or less durable um of course we can as humans use it less but but there are new applications in the original talk about using it more so having more connectivity in more places means having more base stations more dense to have more people connected\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"0a8bb3d2-c74b-40b1-8df3-429cedc4e400\", \"meeting\": \"ietf113\", \"working_group\": \"icnrg\", \"subject\": \"IETF 113 - ICNRG Working Group Session\", \"matches\": [{\"context\": \"ities of these um these protocols are similarly somewhat different in terms of how they support multipath and how they can support the existence of caching in intermediate nodes so ping gives you the reachability of names both in from producers and on path caches and we have again packet formats for\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"cc2845dd-95b6-4711-9c60-4387d2c37cdb\", \"meeting\": \"ietf113\", \"working_group\": \"intarea\", \"subject\": \"IETF 113 - INTAREA Working Group Session\", \"matches\": [{\"context\": \"k on the expectation from 3gpp which is called the ngren which will integrate the area constellation with 5g and the internet at this moment what we plan to do is that we want to provide the basic ip connectivity or basic for satellite network and all drafts so far are only informational experiment \", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"8faf2149-fe58-4f2f-8a24-528d156d9268\", \"meeting\": \"ietf113\", \"working_group\": \"irtfopen\", \"subject\": \"IETF 113 - IRTFOPEN Working Group Session\", \"matches\": [{\"context\": \"day i'll be presenting my recent work on understanding the impact of a cosmic phenomenon that is capable of taking down the internet which is solar superstorms what are the impacts of losing internet connectivity we know that it can affect our professional and social life significantly especially no\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"ce03a56a-5469-4d68-b8ec-8484e1fa6e26\", \"meeting\": \"ietf113\", \"working_group\": \"lsr\", \"subject\": \"IETF 113 - LSR Working Group Session\", \"matches\": [{\"context\": \"k anymore so there are a bunch of other proposals that we've discussed pua putting loopbacks in bgp don't aggregate the loopbacks many other ideas the root problem here is that igps are carrying live reachability not liveness and if we want to talk about liveness we really really need another mechan\", \"matched_pattern\": \"\"}, {\"context\": \"e status and information for the nrp's vtns in a scalable manner so here is uh the summary about the optimizations for the battery scalability the first thing we can do is we can map multiple overlay connectivity services to the same vtn so that we can use the one shared vtn to provide annually netw\", \"matched_pattern\": \"\"}], \"confidence\": \"medium\"}, {\"source_uuid\": \"5672e66a-33e9-4fbe-a44a-02e4bcb48ec8\", \"meeting\": \"ietf113\", \"working_group\": \"pce\", \"subject\": \"IETF 113 - PCE Working Group Session\", \"matches\": [{\"context\": \"is informational draft we essentially want to enable service providers to build one segment routing network that can not only run typical connection what i call connectionless services like ip or vpn connectivity or layer 2 vpn connectivity but also address the requirements and the needs for what of\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"4a4922d5-0aff-4a98-a7c2-476f0cfd909d\", \"meeting\": \"ietf113\", \"working_group\": \"rtgarea\", \"subject\": \"IETF 113 - RTGAREA Working Group Session\", \"matches\": [{\"context\": \"ation transponders and impairment awareness so as you as you can see are also in the intellect mallet so we did pretty a lot of work in the impairment free type of networking basically we assume that reachability is the only issue when connecting uh when connecting devices in this type of approach w\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"cf8bb636-fae3-4700-8d50-6a4f4209b369\", \"meeting\": \"ietf113\", \"working_group\": \"rtgwg\", \"subject\": \"IETF 113 - RTGWG Working Group Session\", \"matches\": [{\"context\": \"ollected in the previous meeting and also in the ietf e2 set mail discussion and also i added the 3gpp engine run requirement of cellar network where the iep infrastructure is required to provide the connectivity uh also in the slides i have a simulation for mobility links and the path you can see h\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"07d6f0dc-b638-439a-83b9-d18d933bad1a\", \"meeting\": \"ietf113\", \"working_group\": \"savnet\", \"subject\": \"IETF 113 - SAVNET Working Group Session\", \"matches\": [{\"context\": \"nt and a good question so the quick comment is that in my view the reason we're having the discussion the reason we're having the problem is that all the current methods are using what is effectively reachability information bgp as a substitute for allowed forwarding paths uh for sort of address val\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"9b468e36-16a9-4ac3-8590-3e36dccd0d80\", \"meeting\": \"ietf113\", \"working_group\": \"scim\", \"subject\": \"IETF 113 - SCIM Working Group Session\", \"matches\": [{\"context\": \"right which goes to the protocol right is is a restful protocol the the only way that we want to do this or are we thinking in terms of things like grpc or web sockets where we might want to reverse connectivity in some cases and i'll give an example of that later that's a great point ned i hope you\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"290199d3-0764-4ea1-aec8-af76f58b0d3c\", \"meeting\": \"ietf113\", \"working_group\": \"spring\", \"subject\": \"IETF 113 - SPRING Working Group Session\", \"matches\": [{\"context\": \"ng node seven and four and which can terminate the certain end cap and then advertise the new one so in the case of in this case what we are trying to show is this is srv6 vpn end to end so we need a reachability to an ok locator of node 10 if the traffic is just in from the node 1 to node 10. so wh\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"f01e24b2-51b5-4627-b2ee-278a85b29ef7\", \"meeting\": \"ietf114\", \"working_group\": \"6man\", \"subject\": \"IETF 114 - 6MAN Working Group Session\", \"matches\": [{\"context\": \"itecture of the internal network may be quite complex so this is to say the main reason there is a lot of literature that has already described these cases so how to let's say deal with the different connectivity cases or the lack of connectivity because of faults you see some example there cytopolo\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"f18d9322-d703-434b-a6a2-473d626917ae\", \"meeting\": \"ietf114\", \"working_group\": \"bmwg\", \"subject\": \"IETF 114 - BMWG Working Group Session\", \"matches\": [{\"context\": \"ork of the test the type of the payload the um the protocol used for label distribution and clearly if there is maybe somebody interested with that we take for granted that we are using just ethernet connectivity but in case other let's say media formats can also be used i will say next slide unless\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"0bf7a946-95c6-4cca-afea-e7330f9ea708\", \"meeting\": \"ietf114\", \"working_group\": \"gaia\", \"subject\": \"IETF 114 - GAIA Working Group Session\", \"matches\": [{\"context\": \"satellite communication systems we can actually now provide very high quality internet connection to the rural and remote communities and we can see that it has satellite networks has long been a key connectivity option for community networks on a global scale and in the report of broadband coverage\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"dbd8495c-6a4e-4b33-905e-01665e8fe6f5\", \"meeting\": \"ietf114\", \"working_group\": \"icnrg\", \"subject\": \"IETF 114 - ICNRG Working Group Session\", \"matches\": [{\"context\": \"less there's anything else you want to suggest for discussion today all right so i'll stop sharing if i can just bring up the slides if you want so if i can hear a song so he may be experiencing some connectivity or audio let's issues him a few more seconds okay can you hear me yeah yeah oh finally \", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"e5f8d262-d1b9-472b-b963-07a2ea57fbe8\", \"meeting\": \"ietf114\", \"working_group\": \"idr\", \"subject\": \"IETF 114 - IDR Working Group Session\", \"matches\": [{\"context\": \"ets over ipv4 and now similarly with 4p the term finds the tunneling of ipv4 packets over a ipv6 core next slide so for pe architecture and overview so 4p roughly it so sorry 4p routers exchange ipv4 reachability transparently tunneled over an ipv6 core using multi-particle bgp rfc 2545 using bgp ne\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"cfbeaf18-a52f-4893-b420-a8b1d5a15bc9\", \"meeting\": \"ietf114\", \"working_group\": \"ietf\", \"subject\": \"IETF 114 - IETF Working Group Session\", \"matches\": [{\"context\": \"the lab with multiple vendor equipment and software and so on so we were very excited about that and we are eager to get this out there for users on the internet in the future and make their internet connectivity even better so that is it shortest host presentation ever thank you very much for comin\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"2771650f-49b8-44c4-bba5-9ed4f0afc662\", \"meeting\": \"ietf114\", \"working_group\": \"irtfopen\", \"subject\": \"IETF 114 - IRTFOPEN Working Group Session\", \"matches\": [{\"context\": \"middle Bluetooth uh doesn't really provide full internet access it's more like a cable replacement Channel a wireless USB of sorts and then on the right we have low pans which aim to provide internet connectivity at the same level as Wi-Fi would but to embedded devices and while operating within the\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"a5e830b7-21c6-4cdc-b779-9670d4c4358b\", \"meeting\": \"ietf114\", \"working_group\": \"opsec\", \"subject\": \"IETF 114 - OPSEC Working Group Session\", \"matches\": [{\"context\": \"so hard when so many people are working my take is that it's basically because we're trying to infer some information about data plane forwarding from a signal that was never designed for it which is reachability bjp so that signal just doesn't have enough information um to do the right to for the s\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"74015d5d-d7db-486c-8f0a-e263d4315aa9\", \"meeting\": \"ietf114\", \"working_group\": \"rtgwg\", \"subject\": \"IETF 114 - RTGWG Working Group Session\", \"matches\": [{\"context\": \"e figured well we might as well back up back up if we can and have the least intrusive uh change so that's why we did that uh we also changed some instances of black hole to talk about uh advertising reachability yet dropping the packets so that that was that was that was the main impetus and we pro\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"49703cd9-b522-4207-a6a7-857985861274\", \"meeting\": \"ietf114\", \"working_group\": \"savnet\", \"subject\": \"IETF 114 - SAVNET Working Group Session\", \"matches\": [{\"context\": \"omething on this go ahead yeah um yes so my comment is that when a prefix has a no export attached to it in uh towards one provider within the customer cone uh it will it won't it still wants to have reachability throughout the internet i suppose so p1 will announce uh uh people with as1 will announ\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"2124f543-19c8-473f-9f59-38d64b66bff0\", \"meeting\": \"ietf114\", \"working_group\": \"scitt\", \"subject\": \"IETF 114 - SCITT Working Group Session\", \"matches\": [{\"context\": \"that you want to support uh let's come up with the interactions my slides are gone i have 30 seconds left oh okay um but we can take questions now you know you can continue it's just a lost internet connectivity oh oh that's it's not me it's you okay um that's that's unusual it's not a sabotage thin\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"88d13f37-7d81-4e19-acb6-eafd299d34be\", \"meeting\": \"ietf114\", \"working_group\": \"sidrops\", \"subject\": \"IETF 114 - SIDROPS Working Group Session\", \"matches\": [{\"context\": \"e aspa i think is problematic semantically um because i can imagine a scenario where a customer wants to use a transit link purely in the outbound direction and never intends to advertise any inbound reachability over it and therefore doesn't include that adjacency in their aspa but expects the retu\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"48a86332-d4d5-4387-948a-d0ada5d7bdef\", \"meeting\": \"ietf114\", \"working_group\": \"snac\", \"subject\": \"IETF 114 - SNAC Working Group Session\", \"matches\": [{\"context\": \"etwork that's attached to another network dependent on that network and doesn't provide routing so so we wanted to be able to attach that kind of network to an infrastructure network we wanted mutual reachability between hosts on the infrastructure and hosts on the stub network and mutual discoverab\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"dac68ac8-44b8-4bf1-aa4f-277221bf819c\", \"meeting\": \"ietf115\", \"working_group\": \"6man\", \"subject\": \"IETF 115 - 6MAN Working Group Session\", \"matches\": [{\"context\": \"45 a host will tell the router hey I have this address but it will also tell the router hey you know if there is some rotting or some operation above you do it for me please ensure that you give me a reachability and if the router above is effectively an ND proxy for instance a Wi-Fi access point do\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"29c54a5d-b9cc-4666-b116-195ffe9c3298\", \"meeting\": \"ietf115\", \"working_group\": \"bess\", \"subject\": \"IETF 115 - BESS Working Group Session\", \"matches\": [{\"context\": \"m going to talk about a short refresh changes that we've made in version zero one and next steps next slide please the uh the draft um in the introduction talks about different ways of uh having interconnectivity across domains for evpm vpws services it talks about three different solutions which ar\", \"matched_pattern\": \"\"}, {\"context\": \"ehaviors may come up next slide please this shows how this uh tlv is carried so we have a Services running from ah E 10 to E1 which is I'm showing here VPN Services the VPN label and on one we need a reachability to E10 low back so it's at our left and the right domain are mpls and the middle domain\", \"matched_pattern\": \"\"}], \"confidence\": \"medium\"}, {\"source_uuid\": \"1d885818-b263-49ff-ba13-807c2f4e48a4\", \"meeting\": \"ietf115\", \"working_group\": \"can\", \"subject\": \"IETF 115 - CAN Working Group Session\", \"matches\": [{\"context\": \"sure there could be ways of optimization and that part but we can consider those as a static and priority out of the control of the of the operator so the only thing what we can play with is the the reachability how far or how how much time we can spend from the budget delay in reaching the unspecif\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"73f103cf-0b33-4561-8945-881acb00f22b\", \"meeting\": \"ietf115\", \"working_group\": \"coinrg\", \"subject\": \"IETF 115 - COINRG Working Group Session\", \"matches\": [{\"context\": \"m next slide please so what is changing what is challenging about this we identify mainly a cost for pool maintenance for example peers need I said before to continuously establish and maintain these reachability information to discover new peers and to send information about the latest state of the\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"4562a42c-c0f1-4bb8-bb46-82fbe19eb552\", \"meeting\": \"ietf115\", \"working_group\": \"detnet\", \"subject\": \"IETF 115 - DETNET Working Group Session\", \"matches\": [{\"context\": \"a plan and the data flows just uh translate through the path that has already been set up by the dynamic control plan and for then a management plan it will provide a result of performance monitoring connectivity detection which is very a core part of the then that idea because we we try to provide \", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"9d5724d4-ca92-4a0c-9930-91ba483a8620\", \"meeting\": \"ietf115\", \"working_group\": \"dinrg\", \"subject\": \"IETF 115 - DINRG Working Group Session\", \"matches\": [{\"context\": \"d as the the world changes that's the definition also change all right there used to be end-to-end is end-to-end reliability and that's no longer there you know even with mobile there's no end-to-end connectivity but uh yeah I'll give that to the well we've taken we've taken her 20 minutes uh but I \", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"eab232ad-0333-4f9b-a260-5da9ca57c46f\", \"meeting\": \"ietf115\", \"working_group\": \"dtn\", \"subject\": \"IETF 115 - DTN Working Group Session\", \"matches\": [{\"context\": \"-shared definitions while I can't guarantee that the managing and manage device are always going to have a connection we need to take advantage of the times where they can have those brief periods of connectivity so in that moment um there is data and models that are going to be pre-shared and the m\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"55377685-8f6b-4740-94e7-f36bad9afb4d\", \"meeting\": \"ietf115\", \"working_group\": \"hotrfc\", \"subject\": \"IETF 115 - HOTRFC Working Group Session\", \"matches\": [{\"context\": \"lic internet so the places on the internet that you are not in control of and there you basically have two tools available one is Ping and ping gives you very little information so you have interface reachability you know that interface is reachable and it gives you a round trip time estimation with\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"594110ee-c5c9-4e50-b7ad-cb2c4945eaca\", \"meeting\": \"ietf115\", \"working_group\": \"hrpc\", \"subject\": \"IETF 115 - HRPC Working Group Session\", \"matches\": [{\"context\": \"ilt called Sino and an emergency communications project we have stood up in Ukraine since the beginning of the war there and that is basically helping people communicate with each other when internet connectivity is not present I think by and large all about Technologies are built in defense of free\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"1dcb83db-60c8-4c5d-9474-48a970455ab7\", \"meeting\": \"ietf115\", \"working_group\": \"idr\", \"subject\": \"IETF 115 - IDR Working Group Session\", \"matches\": [{\"context\": \"specifications and the flow forwarding actions to be performed to the match the traffic and in the context of itm network slicing the network slice traffic needs to be steered into an NRP to meet the connectivity and also the performance requirements as defined in the item nether slice framework dra\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"8a82d5d9-297e-4179-aa7d-c4c2dbc3e0ed\", \"meeting\": \"ietf115\", \"working_group\": \"ippm\", \"subject\": \"IETF 115 - IPPM Working Group Session\", \"matches\": [{\"context\": \"dopted one which is uh which are these performance measurements on on on on link aggregation um then we move on to uh to the capacity protocol encrypted PDM responsiveness uh we will not be doing the connectivity monitoring here a slight updated agenda and then move on with data Integrity Yang and s\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"e62fd174-9f1c-4339-912e-1ee6acb6ab75\", \"meeting\": \"ietf115\", \"working_group\": \"lsr\", \"subject\": \"IETF 115 - LSR Working Group Session\", \"matches\": [{\"context\": \"these the applications themselves and any draft let's say this this becomes assuming this becomes a standard at some point anything that uses it would need to Define the adherence to the condition of reachability in other words over this sparse topology are you you'd normally only be able to use inf\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"c8afab75-bb4a-4304-81e0-c81c28d5602e\", \"meeting\": \"ietf115\", \"working_group\": \"maprg\", \"subject\": \"IETF 115 - MAPRG Working Group Session\", \"matches\": [{\"context\": \"uh you can contact Muhammad who's address whose email address is in the IMC the first software online MC paper here and read their short IMC paper about measuring uh our browser side view of starlink connectivity and then lastly Muhammad offered to share with you is they're starting up a new series \", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"3025066f-d645-4cea-aa14-141c40ef51b2\", \"meeting\": \"ietf115\", \"working_group\": \"mboned\", \"subject\": \"IETF 115 - MBONED Working Group Session\", \"matches\": [{\"context\": \"450 that is the protocol uh use the UDP based encapsulation to overcome the situation as the situation that the receiver side and between the receiver side and the source side there is no multicaster connectivity means that there is no uh director connection so the AMT enables the sites and hosts or\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"2e7c4861-fea5-4884-ae2c-7af2c3c7e03e\", \"meeting\": \"ietf115\", \"working_group\": \"mimi\", \"subject\": \"IETF 115 - MIMI Working Group Session\", \"matches\": [{\"context\": \"cover that when we actually look yeah if you could between now and when we start talking about the charter look there's a line in the charter about respect respecting expressed user preferences about reachability and discoverability and see if you think it captures this bit as well about kind of whe\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"8f423ec8-f900-48d7-8fd5-68cde4244a24\", \"meeting\": \"ietf115\", \"working_group\": \"rtgwg\", \"subject\": \"IETF 115 - RTGWG Working Group Session\", \"matches\": [{\"context\": \"st year's major service disruptions at large providers mainly caused by configuration mistakes they took a large set of services down for a considerable amount of time so Services depend on resilient connectivity and the control plane connectivity is inherently important I in The Meta case for examp\", \"matched_pattern\": \"\"}, {\"context\": \"he third one points must reaches is register its information to that network but the registration is opting optional for einclined endpoints uh each client unemployes subscribe to the network for the reachability of the IPS to its E2 where it where it is interesting the registration and the substitu\", \"matched_pattern\": \"\"}], \"confidence\": \"medium\"}, {\"source_uuid\": \"5b145e52-e730-4a47-ac16-c68827536f04\", \"meeting\": \"ietf115\", \"working_group\": \"scim\", \"subject\": \"IETF 115 - SCIM Working Group Session\", \"matches\": [{\"context\": \"aim to be skim experts um so ID and meta look a lot like what they should be from core from the from the original core schema admin state is a little information about the device schemas is from core connectivity connectivity refers to how to connect to the device what sort of connectivity the devic\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"2ee351ca-ff2f-4be1-9978-e46cd9c74b74\", \"meeting\": \"ietf115\", \"working_group\": \"snac\", \"subject\": \"IETF 115 - SNAC Working Group Session\", \"matches\": [{\"context\": \"rom uh buff to today's meeting and on mailing list uh this work group will work on connecting sub networks to infrastructure networks focusing on the mechanisms for addressability discoverability and reachability we have GitHub already as uh setup where you can do issue tracking but we intend to use\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"6d3c5a54-93a9-4bfe-8978-5e93710d722d\", \"meeting\": \"ietf116\", \"working_group\": \"bess\", \"subject\": \"IETF 116 - BESS Working Group Session\", \"matches\": [{\"context\": \"es so this document does actually that thing uh it's basically an informational document it does not create new procedures at least for the moment it summarizes the impact of the interdomain option b connectivity and VPN procedures for all the evpn services analyzes potential Solutions based on the \", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"f23c0468-03a9-4987-aaf0-a5b99e68b152\", \"meeting\": \"ietf116\", \"working_group\": \"ccamp\", \"subject\": \"IETF 116 - CCAMP Working Group Session\", \"matches\": [{\"context\": \"sion and review on the Middle East so if you are interested in one in any of these topics please review the drafts and your comments to the list so that we can progress the documents uh the layer one connectivity service model uh uh these has passed the working group plus Cola we are waiting for a S\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"39d3802f-8ec0-4706-84ee-46b5cfc9d856\", \"meeting\": \"ietf116\", \"working_group\": \"dtn\", \"subject\": \"IETF 116 - DTN Working Group Session\", \"matches\": [{\"context\": \"into those decisions made to support network Management in a challenged environment I've put the reference model up on this slide to talk through a couple of those features so in the brief moments of connectivity that we do have between the managed and managing device we take advantage of that to pr\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"f31aa18f-2922-40f2-bff3-91a45c054148\", \"meeting\": \"ietf116\", \"working_group\": \"gaia\", \"subject\": \"IETF 116 - GAIA Working Group Session\", \"matches\": [{\"context\": \"um different scenario turning off the links turning off the switches and so on to test the redundancy and test the different accessibility across to all the members pinging in full mesh scenario the reachability of the real States uh from the XP manager when it's done and then it's a everything's pa\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"181a2459-560c-4414-afe9-028144bb986d\", \"meeting\": \"ietf116\", \"working_group\": \"lisp\", \"subject\": \"IETF 116 - LISP Working Group Session\", \"matches\": [{\"context\": \"um uh this uh protocol um enables uh at least two things which are a little bit different one is a network virtualization overlay and um since we are in routing area this is usually the primary focus connectivity but it also enables a network function distribution so these first came up about 10 yea\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"36915d19-69af-4866-aef7-14ab65dcbf28\", \"meeting\": \"ietf116\", \"working_group\": \"maprg\", \"subject\": \"IETF 116 - MAPRG Working Group Session\", \"matches\": [{\"context\": \"more uh uh to size that Chrome uses up to the minimal size of 1 1200 bytes that also went to the right which is basically limited by our MTU and the picture is almost the same so we had a couple of unreachability issues on the far right but overall you see a lot of amplification and the multi-rtd ha\", \"matched_pattern\": \"\"}, {\"context\": \"vice and then you have to consider which metric and at which level of aggregation you're actually measuring so you can have performance metrics or you can have something like a functional metric like connectivity so you choose all of these things and you design a great measurement campaign um but yo\", \"matched_pattern\": \"\"}], \"confidence\": \"medium\"}, {\"source_uuid\": \"7af1a179-ece1-40e7-b13a-bbaaefeb3715\", \"meeting\": \"ietf116\", \"working_group\": \"masque\", \"subject\": \"IETF 116 - MASQUE Working Group Session\", \"matches\": [{\"context\": \"n only access that Target via the proxy next slide please so let's look at a use case for webrtc we have a Sten server we have two users Alice and Bob next slide please so Alice gets webrtc connected connectivity through the Sten server and Alice and Bob establish a peer-to-peer connection for a voi\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"da7c0cbb-7714-4394-a5ea-951a326fdf71\", \"meeting\": \"ietf116\", \"working_group\": \"opsawg\", \"subject\": \"IETF 116 - OPSAWG Working Group Session\", \"matches\": [{\"context\": \"e model we are not making this these assumptions and then there is this I would say this this third notion this is what we call the bearers the Bears are really W there this is the links the physical connectivity that you you have between the equipment and we are trying to generalize the notion of t\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"6e5ab9e1-0e3f-4c83-ba0e-51defa49c2a1\", \"meeting\": \"ietf116\", \"working_group\": \"pce\", \"subject\": \"IETF 116 - PCE Working Group Session\", \"matches\": [{\"context\": \"a certain op it's not so much about the T constraints on each individual link so in the original request for adoption I was looking at it more like that about hey I'm just filtering Sid selection do reachability ignore that underlying PE and then now I see this as being one step further which is inv\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"8b6e1698-aaf2-43ca-861f-8a3a95ea03b0\", \"meeting\": \"ietf116\", \"working_group\": \"snac\", \"subject\": \"IETF 116 - SNAC Working Group Session\", \"matches\": [{\"context\": \"d at it with those glasses on and see if um I wonder um so uh yeah I'm wondering if um I can't remember uh we I put I the the actual implementation that I've done of this oh yeah here it is router on reachability detection section 5.1.2.2.2 um so basically the idea here is to use unicast to probe so\", \"matched_pattern\": \"\"}, {\"context\": \"um I'd have to think about what that would look like but yeah I agree that sounds like it's worth it's worth considering yeah thank you so much and uh one more thing uh is this document scope is also global reachability from the internet to the stub Network also that's a that's a that's a wish not a\", \"matched_pattern\": \"\"}, {\"context\": \"wish not a it's not guaranteed right if you if you set up a stub router and you have dhcpv6 prefix delegation on your network which uh Tim's going to talk about in a minute um then that would enable global reachability but and also if you if you don't have uh dhcpv6 prefix delegation you can still u\", \"matched_pattern\": \"\"}], \"confidence\": \"high\"}, {\"source_uuid\": \"f4008408-6ca6-4a4f-862c-df1ef6ea67e1\", \"meeting\": \"ietf116\", \"working_group\": \"tvr\", \"subject\": \"IETF 116 - TVR Working Group Session\", \"matches\": [{\"context\": \"s as you may well know in one sentence um a description of bundle protocol it's a store and forward you know system right or layer 3 system where you store bundles when you don't have connectivity or reachability to the destination until you know reachability come back for example when you have a li\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"35d0ee23-effa-4206-a7e0-1dfec8bc632f\", \"meeting\": \"ietf117\", \"working_group\": \"6man\", \"subject\": \"IETF 117 - 6MAN Working Group Session\", \"matches\": [{\"context\": \"for wireless empty is now called subnet neighbor Discovery so what it really talks about is how you couple a uni which is based on classical ND and an nni which is a routing protocol so as to enable reachability over the whole subnet and I had another question which was a great and interesting quest\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"1f656276-9429-4749-a51f-6f26900f4023\", \"meeting\": \"ietf117\", \"working_group\": \"bmwg\", \"subject\": \"IETF 117 - BMWG Working Group Session\", \"matches\": [{\"context\": \"event as the satellites are continuously moving at high speed around the globe and the next slide please and secondly we have also given many strategies on how to set up the ground to set the lighter connectivity which uh gives what uh which satellite is one grand satellite it is one grand station i\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"8cc66edd-9efd-4380-9610-e3a63f533431\", \"meeting\": \"ietf117\", \"working_group\": \"hrpc\", \"subject\": \"IETF 117 - HRPC Working Group Session\", \"matches\": [{\"context\": \"tail is not important the important thing is this is something that we can measure and not just imagine next slide please so the final part is an active public IP space and the goal here is universal reachability which was a long-term part of the definition of the engine that we cared about and um t\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"a828035e-ce9c-40bb-9a7e-cf7f8b2c9475\", \"meeting\": \"ietf117\", \"working_group\": \"idr\", \"subject\": \"IETF 117 - IDR Working Group Session\", \"matches\": [{\"context\": \"ed but um along the same Concepts so here we have shown ecology in which the same route is being injected from C1 and C2 and the idea is to always prefer the the C1 as an exit point so long as it has connectivity to at least one of the p is P1 and P2 right so okay uh so here what we are saying is th\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"eb5c0b08-98c8-40dd-b887-c1a51df66e08\", \"meeting\": \"ietf117\", \"working_group\": \"masque\", \"subject\": \"IETF 117 - MASQUE Working Group Session\", \"matches\": [{\"context\": \"t we're proposing uh in the path we'll uh we put two asterisks to indicate oh any any destination and of course like so we'll also add a context uh context ID for connect2db listen to specify this is connectivity listener specific and in the data in in the datagram as you can see each um datagram ha\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"55ae6600-76a6-4d1e-8d6f-f370a4479a6b\", \"meeting\": \"ietf117\", \"working_group\": \"mboned\", \"subject\": \"IETF 117 - MBONED Working Group Session\", \"matches\": [{\"context\": \"everyone I'm Ethan liuf from Channel mobile and I will present the Mt young model uh briefly today according to the RFC 7450 use the UDP based encapsulation to overcome the network lack of multicast connectivity the AMT enables sites hosts or applicants do not have the native multicast access to net\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"589f2f2d-f311-4e3c-8bb9-5f914088bbea\", \"meeting\": \"ietf117\", \"working_group\": \"opsawg\", \"subject\": \"IETF 117 - OPSAWG Working Group Session\", \"matches\": [{\"context\": \"the following got the limitations for digital map modeling that we found so ITF Network topology model only have unit that Action Link does not support bi-directional it only supports point-to-point connectivity not multiple connectivity it doesn't allow links between different networks it allows on\", \"matched_pattern\": \"\"}, {\"context\": \"but if you start thinking about that if you want to associate the genitalistics like delay or value availability maybe the air Square problem is unavoidable so it depends I I if you only want to give reachability in a multi-point multiplier I can see a possibility to to save some information but if \", \"matched_pattern\": \"\"}], \"confidence\": \"medium\"}, {\"source_uuid\": \"d94ae8f3-007b-4244-bccf-c736e1a25792\", \"meeting\": \"ietf117\", \"working_group\": \"pquip\", \"subject\": \"IETF 117 - PQUIP Working Group Session\", \"matches\": [{\"context\": \"rminology that we use rather than the cryptography property seems like a good place to start prior to actually looking at any formalization of mathematical properties okay thank you and um oh we lost connectivity um so Michael your last and then I'll try to figure out what to do about connectivity p\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"7b4c93f5-d96d-4d8a-8105-62f03586148c\", \"meeting\": \"ietf117\", \"working_group\": \"rtgarea\", \"subject\": \"IETF 117 - RTGAREA Working Group Session\", \"matches\": [{\"context\": \"e could have some input from the operational technology vendors what problems are they facing I know a few but they're coming and asking those like you know very specific how can I have deterministic connectivity that my application can um that my service can distinguish between data if I lose the d\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"bf31b405-0786-4b20-820a-eacd9390aba6\", \"meeting\": \"ietf117\", \"working_group\": \"satp\", \"subject\": \"IETF 117 - SATP Working Group Session\", \"matches\": [{\"context\": \"e charter you know uh we didn't we didn't bite the whole problem at once so thank you very much for that uh yogish as well so are we assuming that the two gateways are online all the time in terms of connectivity is we hope so I'm assuming yes and that's why we got we got Raphael so so the model we'\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"bf1ae1e0-6a4c-4ad1-8165-17073d8b8a9d\", \"meeting\": \"ietf117\", \"working_group\": \"snac\", \"subject\": \"IETF 117 - SNAC Working Group Session\", \"matches\": [{\"context\": \"as a to-do list for the document editors which is me and Jonathan so um next slide um so then there's a pair of sections uh about maintaining uh the AIL prefix and generating a Ula prefix to provide reachability um and uh these sections are kind of related to the previous sections that I just discus\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"c23647ec-3090-4f40-bfd4-2b8a35649aff\", \"meeting\": \"ietf117\", \"working_group\": \"tvr\", \"subject\": \"IETF 117 - TVR Working Group Session\", \"matches\": [{\"context\": \"now make more suggestions about this site please contact us the third one is about wording so right now we have it in the document it's called mobile devices the suggestion is to change it to Dynamic reachability and we all I think with Rich consensus on this and we'll change this in the next versio\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"2751eb5a-34ef-4ee0-aebd-6dc98dc2b72a\", \"meeting\": \"ietf118\", \"working_group\": \"6man\", \"subject\": \"IETF 118 - 6MAN Working Group Session\", \"matches\": [{\"context\": \"ld say that uh I understand that you wants to uh eliminate the issue of multiple addresses per host but I should I think that uh it should also consider L flag so if the operator wants to have onlink connectivity between the hosts it's probably uh for some reason so to disre a flag only if the L fla\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"347cc771-2bc1-426c-8486-a64212e408db\", \"meeting\": \"ietf118\", \"working_group\": \"gaia\", \"subject\": \"IETF 118 - GAIA Working Group Session\", \"matches\": [{\"context\": \"tart by saying we go way back because it reminds me that we're all getting really old um so the talk is not a research talk the talk is more a Cry for Help um I'm working towards trying to understand connectivity I'm working towards trying to find ways to improve terrestrial connectivity in Africa a\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"7056a09c-5de1-4a46-835a-30a810a203a4\", \"meeting\": \"ietf118\", \"working_group\": \"genarea\", \"subject\": \"IETF 118 - GENAREA Working Group Session\", \"matches\": [{\"context\": \"do like the disclosure requirement I think that's good um but I agree with other people that well so I would not suggest like completely dropping this but I would try to define a very minimum set of connectivity that we need um like how much h how much like porn people can watch or whether they can \", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"4ccbb48a-462e-40fc-aa55-6b312d3e2a0e\", \"meeting\": \"ietf118\", \"working_group\": \"ietf\", \"subject\": \"IETF 118 - IETF Working Group Session\", \"matches\": [{\"context\": \"d of applause for all of these sponsors thank you very much [Applause] for thank thank you very much for your contributions um we also have a number of people who support us with equipment servic and connectivity um this is there are a number of people on here who have actually been supporting us fo\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"695caf4d-53bd-4fe7-8ca8-f5b1c582c9f1\", \"meeting\": \"ietf118\", \"working_group\": \"ippm\", \"subject\": \"IETF 118 - IPPM Working Group Session\", \"matches\": [{\"context\": \"ically to generate uh congestion whereas this tool will work with basically monitoring latency alongside the background traffic that the user is generating for their just normal day-to-day internet's connectivity needs could you calculate your you know quality of outcome graph for a particular appli\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"8e9a46e9-6f10-4c09-b080-984eea2bbfd7\", \"meeting\": \"ietf118\", \"working_group\": \"irtfopen\", \"subject\": \"IETF 118 - IRTFOPEN Working Group Session\", \"matches\": [{\"context\": \"s to be absolutely correct when DNS does not work or when you get a wrong response or the software is vulnerable to being attacked by malicious parties this can have dire reable consequences you lose connectivity worldwide so DNS has a very unfortunate property of what we call having a large blast r\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"3f45f84d-a245-4d03-97fb-c9f567fcf5de\", \"meeting\": \"ietf118\", \"working_group\": \"lsr\", \"subject\": \"IETF 118 - LSR Working Group Session\", \"matches\": [{\"context\": \"adopted after the last uh ITF meeting next slide please so there is no significant change here uh what we change is the way that we adverti the new flags that have been defined for advertising the unreachability so in the previous version of the draft we used different mechanism for spf2 and differe\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"1b104d44-ed1b-44c5-b908-df77fff3520a\", \"meeting\": \"ietf118\", \"working_group\": \"madinas\", \"subject\": \"IETF 118 - MADINAS Working Group Session\", \"matches\": [{\"context\": \"but then if let's say I think we can Contin discussion in the mar as far as the general practice here if you if the if the the device behind the 5G houseb asking doing a layer two and then require IP connectivity to the network I was suppose in this case somehow somewhere 5G uh I'm not expert on the\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"31bf5eed-caa2-444b-a3d8-f62a808249c1\", \"meeting\": \"ietf118\", \"working_group\": \"snac\", \"subject\": \"IETF 118 - SNAC Working Group Session\", \"matches\": [{\"context\": \"a partition like that happens we're going to wind up with the same prefix on both partitions and if we have the same prefix on both partitions then two different stub rers are going to be advertising reachability to that prefix but they're actually advertising reachability to what are effectively tw\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"0f18742c-c597-4af5-962b-c781b97919ab\", \"meeting\": \"ietf118\", \"working_group\": \"tsvwg\", \"subject\": \"IETF 118 - TSVWG Working Group Session\", \"matches\": [{\"context\": \"and there's also been a a developments around having that include the full TLS handshake because we've also seen Brokenness where TCP is being terminated by proxies but doesn't actually have endtoend connectivity with the um actual server that we're trying to reach um so here's the roughly updated s\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"30ca9e9b-0280-4400-af20-b4a98dbfac23\", \"meeting\": \"ietf118\", \"working_group\": \"tvr\", \"subject\": \"IETF 118 - TVR Working Group Session\", \"matches\": [{\"context\": \"y uh we have three categories of use case in the document uh one major change based on the comments we receed last time is for the third category we change the uh title from mobile devices to Dynamic reachability and for this three category of use cases um the major work we did is more editorial cha\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"c88db125-3302-4170-9c71-afc47390d58c\", \"meeting\": \"ietf119\", \"working_group\": \"anima\", \"subject\": \"IETF 119 - ANIMA Working Group Session\", \"matches\": [{\"context\": \"the target I don't want to go into it till I've written it up but um I just want to mention that it seems to be a useful thing so I see two aspects here one is that that brusi usually as assumes TLS connectivity um but CMP does not it it works over any transport including sneaker net yes so that's w\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"74e6a426-1f9e-4726-97d6-7df2b4748331\", \"meeting\": \"ietf119\", \"working_group\": \"dtn\", \"subject\": \"IETF 119 - DTN Working Group Session\", \"matches\": [{\"context\": \"t the first half is pretty much well known by this working group but anyway uh the dtn architecture and lables Communication in challenged or stressed networks which are characterized by intermittent connectivity High delays High error rates low energy low beid rates in some cases these are features\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"669f74fc-5a83-4835-b4bd-21b2cfc4a8cb\", \"meeting\": \"ietf119\", \"working_group\": \"gaia\", \"subject\": \"IETF 119 - GAIA Working Group Session\", \"matches\": [{\"context\": \"trying to uh develop Technology Solutions using that frequencies in order for us to um to uh uh to um to say to our lawmakers that to allot this uh uh slot of frequencies uh for example for uh Mob by connectivity and uh for other uh needs for example uh our 600 MHz Spectrum we will we will be vacate\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"322da6a9-a51d-4016-91a2-c11224b0008e\", \"meeting\": \"ietf119\", \"working_group\": \"hackathon\", \"subject\": \"IETF 119 - HACKATHON Working Group Session\", \"matches\": [{\"context\": \"rea and the security area so for anyone who's familiar with the path validation it's a derived work with that the problem statement is that uh traditional routing security only guarantees the correct reachability and does not guarantee some more uh Advanced security like predictability of affording \", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"d333e89e-43b1-4e59-a804-8ec391f5db8d\", \"meeting\": \"ietf119\", \"working_group\": \"httpbis\", \"subject\": \"IETF 119 - HTTPBIS Working Group Session\", \"matches\": [{\"context\": \"sense to start a mask proxy using quick and hb3 but we know some users can't use such services for whatever reasons whether it be a network issue or something else um and they want to increase their reachability say or their availability so a fullback option is needed but you didn't start with that \", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"68c4b5b3-584e-41ac-9673-c6f6d891e7f1\", \"meeting\": \"ietf119\", \"working_group\": \"idr\", \"subject\": \"IETF 119 - IDR Working Group Session\", \"matches\": [{\"context\": \"and and if you have to leverage NHC in these are the ways um given that intent is expressed via one or more metric types um and and this is a metric value that is referenced uh for during the nextop reachability uh evaluation or when we do the cumulative cost competition so in that sense um if there\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"f6a9388f-d43d-441c-a47b-10412079909c\", \"meeting\": \"ietf119\", \"working_group\": \"qirg\", \"subject\": \"IETF 119 - QIRG Working Group Session\", \"matches\": [{\"context\": \"identify which are the roles of straight straight straight and planes and start playing with the interfaces taking into account that one of one of the straa one of the STA is purely classical is pure connectivity physical connectivity is how we establish a a optical link between points A and B class\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"eabc7adf-3883-4b92-8b67-84f30ce8e00e\", \"meeting\": \"ietf119\", \"working_group\": \"quic\", \"subject\": \"IETF 119 - QUIC Working Group Session\", \"matches\": [{\"context\": \"how explicit we need to be in listing all groups of events so for example our quick document has various categories of events you if your general transport based events but you also have what we call connectivity events or recovery events having to do with congest control for example um and in the e\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"d2ece060-04a7-40bb-825e-0a496653120f\", \"meeting\": \"ietf119\", \"working_group\": \"savnet\", \"subject\": \"IETF 119 - SAVNET Working Group Session\", \"matches\": [{\"context\": \"h ing fil has no Automation and the strict urpf is strict which may lead to packet loss and the validation and uh lrpf is permissive uh our focus is uh Computing sound net rules based on intro domain connectivity some net rules can dynamic adjusted to the changes of network topology apply interface \", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"9b3fc637-9016-45cc-b028-f83461fff578\", \"meeting\": \"ietf119\", \"working_group\": \"spring\", \"subject\": \"IETF 119 - SPRING Working Group Session\", \"matches\": [{\"context\": \"nd we rely on the head-end router to on failures to Mark the path as ineligible and we only rely on the pce or the owner of the intent to actually restore it back to eligibility so we will be running connectivity check validation on all the parts of our policies we can use any protocol at our dispos\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"236a720c-1411-4e67-b850-7fcafe4324ed\", \"meeting\": \"ietf119\", \"working_group\": \"teas\", \"subject\": \"IETF 119 - TEAS Working Group Session\", \"matches\": [{\"context\": \"more common we believe the more common scenario in in carriers Network where you have your metri Regional uh meshed network with the A adms and uh there we're going to have this uh this point too uh connectivity between plugable and plugable between two routers so we believe this is the most the mos\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"ee6d7023-ba50-44b1-bfe8-d8b053729495\", \"meeting\": \"ietf119\", \"working_group\": \"v6ops\", \"subject\": \"IETF 119 - V6OPS Working Group Session\", \"matches\": [{\"context\": \"x uh this draft illustrate how to leverage the advantage of IPv6 in promoting the EET virtual networks uh which use IPv6 and analy so even six a ler 2 Network model built on top of IPv6 an to provide connectivity between this dispers uh custom sites and uh this is framework E network is s map to ipe\", \"matched_pattern\": \"\"}, {\"context\": \"uter in this case obviously the client has two prefixes but only one default router because the second default router will be removed quite quickly from the default router table because of neighbor unreachability detection the link local address becomes unreachable because that router is on another \", \"matched_pattern\": \"\"}], \"confidence\": \"medium\"}, {\"source_uuid\": \"73c561b6-1d15-454d-8323-f56d607322a0\", \"meeting\": \"ietf120\", \"working_group\": \"anrw\", \"subject\": \"IETF 120 - ANRW Working Group Session\", \"matches\": [{\"context\": \"a cloud service the Red Dot at the bottom that wants to be reachable to all users let's say their seller users the Red Dot at the top what this cloud service is going to do is it's going to advertise reachability to the prefix that covers its IP addresses on all the appearing links because it wants \", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"ce7eb41f-3aa3-44e4-a1be-58382189731a\", \"meeting\": \"ietf120\", \"working_group\": \"bess\", \"subject\": \"IETF 120 - BESS Working Group Session\", \"matches\": [{\"context\": \"uh uh initially we start with the uh single stack mode and the VX running cap is uh ipv4 and uh we upgrade the underlay Network protocol uh either IG or bgp to dual stack uh to provide both V4 and V6 connectivity and uh then uh we uh upgrade the evpn VX and cap for the first V uh and uh to dualist s\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"6e9fc426-9ed1-4f95-971b-768c9dd4838a\", \"meeting\": \"ietf120\", \"working_group\": \"dmm\", \"subject\": \"IETF 120 - DMM Working Group Session\", \"matches\": [{\"context\": \"ect segment so in for the C magic other we advertise information related to the service so inside on Direct segment they can have multiple service so the direct the dment r only advertise the the the reachability information of that direct assment but the service each service inside dment R is diffe\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"ab39cafd-5ca6-4676-9b56-ca10ae00cf84\", \"meeting\": \"ietf120\", \"working_group\": \"dtn\", \"subject\": \"IETF 120 - DTN Working Group Session\", \"matches\": [{\"context\": \"perates uh we're not inventing any new mechanisms but uh we're taking advantage of the way that PX is currently designed which originated in the era of uh sub networks that were that were uh had poor connectivity between them that had intermittent connectivity that had uh uh Network splits and disco\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"45a7702a-40f3-45dd-8c7a-d88f6285c395\", \"meeting\": \"ietf120\", \"working_group\": \"gaia\", \"subject\": \"IETF 120 - GAIA Working Group Session\", \"matches\": [{\"context\": \"'s a director of technology for the Southern California tribal Chairman's Association or the sctca and director of the tribal digital Village um tdv Network initiative Matt's a wellknown person in um connectivity alone but also uh in tribal connectivity or indigenous connectivity he's going to speak\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"5c257359-001c-470b-84be-5c48a053efe2\", \"meeting\": \"ietf120\", \"working_group\": \"iabopen\", \"subject\": \"IETF 120 - IABOPEN Working Group Session\", \"matches\": [{\"context\": \"ho's Bill uh I'm currently the executive director of clear sky connections at that what pays the bills uh everything else is pretty much volunteer on the acting executive director with the indigenous connectivity Institute uh currently the chair of the first mile connectivity Consortium where we do \", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"3014521b-1c5d-48c2-85aa-40ddd553f962\", \"meeting\": \"ietf120\", \"working_group\": \"iepg\", \"subject\": \"IETF 120 - IEPG Working Group Session\", \"matches\": [{\"context\": \"for power affluent devices that is uh a technical way of saying not resource constraint that is you know everyday devices such as phones and laptops and PCs and so on and the objective is to achieve connectivity during internet phase failures yeah uh so this is a brief description a pictorial descri\", \"matched_pattern\": \"\"}, {\"context\": \"second point also maybe is in your wish list so one of the challenges you have whenever you're doing these sort of low bandwidth applications is if you have a generic device that just says I have IP reachability now having a prioritization scheduler to control what can use that bandwidth could be ve\", \"matched_pattern\": \"\"}], \"confidence\": \"medium\"}, {\"source_uuid\": \"c46d7ced-b5db-49cd-a34d-ad63187b570e\", \"meeting\": \"ietf120\", \"working_group\": \"ipsecme\", \"subject\": \"IETF 120 - IPSECME Working Group Session\", \"matches\": [{\"context\": \"it done quickly valer go ahead uh first of all thank you for providing uh use cases and I fully understand the use case um when this tools can be used for manually used for operator to check the ESP connectivity but uh when what about the use case when it is used before the um EP State establishment\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"13cbdfbb-c69f-402a-81cf-0225eeb61553\", \"meeting\": \"ietf120\", \"working_group\": \"maprg\", \"subject\": \"IETF 120 - MAPRG Working Group Session\", \"matches\": [{\"context\": \"now the the names here are not really quite right or representative uh but we essentially had one like here's a you know a cable like Network that maybe something that someone sees that's not a great connectivity uh here's a much slower DSL network but something without too much delay um and then we\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"b4f90493-d878-484d-b351-8000db6b3bd1\", \"meeting\": \"ietf120\", \"working_group\": \"rtgwg\", \"subject\": \"IETF 120 - RTGWG Working Group Session\", \"matches\": [{\"context\": \"g of dynamic address resolution and as for nud we Define the node nud to enable the function on the interface and reachable time for the time that considered the neighbor reachable after receiving it reachability confirmation um the NS interal is the interval of retransmitting in messages of address\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"d4cb0cd3-ac27-4866-9b81-ef6115024db4\", \"meeting\": \"ietf120\", \"working_group\": \"sidrops\", \"subject\": \"IETF 120 - SIDROPS Working Group Session\", \"matches\": [{\"context\": \"ld simplify both registration process narrowing the field for possible mistakes and also simplify processing on the router software uh to make my mind I decided to extend the modeling uh of uh system connectivity with a ground study I asked fellow operators asked on mailing list and even sent half a\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"dad2c970-06c6-4cb0-b7b1-b89f0b3cd753\", \"meeting\": \"ietf120\", \"working_group\": \"srv6ops\", \"subject\": \"IETF 120 - SRV6OPS Working Group Session\", \"matches\": [{\"context\": \"G side as new Services come up and even Wireline as we trying to kind of even the services between Wireline and wireless we need these Advanced traffic engineering capabilities uh seamless end to end connectivity using Sr again back to the encapsulation symbol protocol if we can get it across multip\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"57eb6c21-df17-4faf-891b-f6ece8de3cc3\", \"meeting\": \"ietf120\", \"working_group\": \"teas\", \"subject\": \"IETF 120 - TEAS Working Group Session\", \"matches\": [{\"context\": \"I think the version five we removed NRP from the from the text of of the draft and then we okay we change the transport plane to interp transport plane transfer plane sorry so you know to provide the connectivity and mpes one of course maybe if there's if there's a better time for that so for exampl\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"d84e14c0-e70a-46d0-a49b-0ae612e11c06\", \"meeting\": \"ietf120\", \"working_group\": \"tvr\", \"subject\": \"IETF 120 - TVR Working Group Session\", \"matches\": [{\"context\": \"be consumed by application these applications could be internal that could be a packet core from the mobile network for instance or a CDN internal CDN to the operator or could be even external maybe connectivity between data centers or even external CDN so um the draft has been presented in I think \", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"c0509215-f863-46ea-94d2-9ab27f104232\", \"meeting\": \"ietf120\", \"working_group\": \"v6ops\", \"subject\": \"IETF 120 - V6OPS Working Group Session\", \"matches\": [{\"context\": \"ince the last ietf um to make that happen uh terminology changes including redefine defining native ip4 explicitly because we were taking some things for granted um about being able to get direct ip4 connectivity um we replaced the term session where we meant use of the same ip4 Tuple um for end to \", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"d4e8fd19-8cbe-4b32-b6da-f9fd56c87304\", \"meeting\": \"ietf121\", \"working_group\": \"6man\", \"subject\": \"IETF 121 - 6MAN Working Group Session\", \"matches\": [{\"context\": \"prefixes it would pick up a prefix uh which was advertised by selected default gway way so if one of the default getways let's say old one uh is unreachable and it can be easily detected by Network unreachability detection then the client will just pick up the correct new prefix and use the source a\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"4ecb73f1-ad93-41a2-804a-47d1d26ef0af\", \"meeting\": \"ietf121\", \"working_group\": \"bess\", \"subject\": \"IETF 121 - BESS Working Group Session\", \"matches\": [{\"context\": \"they advertise they are configured for this ancas multihoming mode right and that is signaled in a special flag in the ad per es routes they're going to use an enas VP and they need to advertise the reachability in the underlay for that anyast VP the 0v routes are completely suppressed and in case o\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"fab91e24-d337-4551-a0b6-3a00d88bfe04\", \"meeting\": \"ietf121\", \"working_group\": \"dtn\", \"subject\": \"IETF 121 - DTN Working Group Session\", \"matches\": [{\"context\": \"obust and that it it survives reboot and is persistent storage and not just storage and that implicitly there is a store and forward model that is a better choice than attempting to affect continuous connectivity or other Alternatives which uh these are just sort of cut and paste out of 4838 uh next\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"c468f768-dcd6-4e8b-9af2-9ebee4515fdb\", \"meeting\": \"ietf121\", \"working_group\": \"gaia\", \"subject\": \"IETF 121 - GAIA Working Group Session\", \"matches\": [{\"context\": \"anticipating something which has come to be I think which is that the internet allows all human Technologies to proceed in a mesh and it modifies the very way that people pursue science or or pursue connectivity amongst themselves okay that's that's the only philosophy slide here I promise um so nex\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"eb440cd8-2d02-4a7e-b665-9c7f3ddefd0b\", \"meeting\": \"ietf121\", \"working_group\": \"ietf\", \"subject\": \"IETF 121 - IETF Working Group Session\", \"matches\": [{\"context\": \"ragmentation artificial intelligence and the digital divide regardless of what lies ahead I still have my belief that we must continue to improve internet technology and more importantly preserve the connectivity and the singularity of the global internet thank you once again for this tremendous hon\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"8550180d-1b74-45da-b223-149aba5ef7bd\", \"meeting\": \"ietf121\", \"working_group\": \"lsr\", \"subject\": \"IETF 121 - LSR Working Group Session\", \"matches\": [{\"context\": \"want to run it on a plain IP network we have IP Flex algo which can do that but the problem with that is that you need to advertise your prefixes as an algo prefixes and that would mean you lose the reachability of the prefixes in the algo zero topology so that is not really an option if you are in \", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"c1c9400c-d351-4026-b740-55c848a1fa34\", \"meeting\": \"ietf121\", \"working_group\": \"rift\", \"subject\": \"IETF 121 - RIFT Working Group Session\", \"matches\": [{\"context\": \"is as a routing protocol in correct yeah that's basically what what what is the desire for whatever million operational peral reasons yeah yeah Rift is kind of manageability and if you want loop back reachability if you want stuff like that but but they the so their chassi driver is small they want \", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"1f4a42c4-97e1-4a8a-9c96-77c619424b50\", \"meeting\": \"ietf121\", \"working_group\": \"savnet\", \"subject\": \"IETF 121 - SAVNET Working Group Session\", \"matches\": [{\"context\": \"both interface uh of the rotor a and rotor B uh for the S on intermediate interface it's recommended to also use the Loy list Rule and we use the lsdb information of the igp protocol to calculate the connectivity and the uh the devices and the interface uh for example uh for the uh calculation of no\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"ef032bdf-c681-4463-a728-5b3556b84ec4\", \"meeting\": \"ietf121\", \"working_group\": \"teas\", \"subject\": \"IETF 121 - TEAS Working Group Session\", \"matches\": [{\"context\": \"ons so we then we can bring those surface functions into our topology we have uh three kind of uh relationships so on the left diagram the top that's uh uh on the inside of the te node we bring in uh connectivity matrices which uh models the relationship between uh service functions in that node and\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"ad131d3f-91ac-4a5a-aec2-553865a88a9c\", \"meeting\": \"ietf121\", \"working_group\": \"v6ops\", \"subject\": \"IETF 121 - V6OPS Working Group Session\", \"matches\": [{\"context\": \"stays uh for a while it's not a real issue because you really do not see cat address outside of your network age but still uh Andre suggested that we change the definition of uh having native before connectivity because we basically still want to explicitly say that uh if device has has iv4 it shoul\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"e8b463d3-b13e-4735-b5f9-fbcfbdf47797\", \"meeting\": \"ietf122\", \"working_group\": \"dinrg\", \"subject\": \"IETF 122 - DINRG Working Group Session\", \"matches\": [{\"context\": \"design then uh did uh someone from uh the dance group talking about their notion of uh providing the client uh DNS authenticated the names so that you can have two-way certification for the T secure connectivity and then of course we're looking looked into about utilizing DS name not in the more Gen\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"90701bc6-555d-4f5c-8a0a-eeea91c996ea\", \"meeting\": \"ietf122\", \"working_group\": \"dmm\", \"subject\": \"IETF 122 - DMM Working Group Session\", \"matches\": [{\"context\": \"he purpose of the multiple type of the segment is the u segment discovery. The segment discovery route should provide appropriate erouting information to resolve the session transmod route uh for the reachability and we also have the uh different type of the uh session trans route. Each session tran\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"b834d759-8e28-4c34-bfd7-5a31e9b0cda4\", \"meeting\": \"ietf122\", \"working_group\": \"icnrg\", \"subject\": \"IETF 122 - ICNRG Working Group Session\", \"matches\": [{\"context\": \"loser to the uh requesting device uh however there are some uh challenge when uh implementing the n ndn on the D2D communication the first thing is the because the native of the D2D is the optimistic connectivity and uh this will be need to be handled outside IND the end so in this case we uh utiliz\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"1d5867e1-aa2e-4617-913e-dbe8c627ea6d\", \"meeting\": \"ietf122\", \"working_group\": \"idr\", \"subject\": \"IETF 122 - IDR Working Group Session\", \"matches\": [{\"context\": \"g in Middle that's causing a but but uh causing a flap but but the draft double check because specific and clear about that because I'm thinking about very remote nodes where you do have intermittent connectivity you might only have one Uplink for example and it kind of defeats the purpose of it tha\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"c450f332-a7ed-4c5f-a154-02a6e23b46c2\", \"meeting\": \"ietf122\", \"working_group\": \"ietf\", \"subject\": \"IETF 122 - IETF Working Group Session\", \"matches\": [{\"context\": \"2 local supporters the Thailand convention and exhibition Bureau and our friends at TH Nick um those who run. th thank you very [Applause] much now um also want to thank our um equipment services and connectivity sponsors um one of them has been particularly generous which I'll mention in a minute b\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"60574dca-0f96-42d2-84dc-ce703083ac81\", \"meeting\": \"ietf122\", \"working_group\": \"intarea\", \"subject\": \"IETF 122 - INTAREA Working Group Session\", \"matches\": [{\"context\": \"ofiling qu to make it work better in those very long delay Network environments and last uh we will look at the DNS cons considerations for these type of enrichments which are with inter intermediate connectivity and whether we want to how we want to plan for this now if all that I said makes you ex\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"d930a91b-ba81-47b2-9a88-703479e68cfd\", \"meeting\": \"ietf122\", \"working_group\": \"irtfopen\", \"subject\": \"IETF 122 - IRTFOPEN Working Group Session\", \"matches\": [{\"context\": \"ore so it's important to put in a well structured format so in this in in this task is to translate a natural language input into a dictionary or other well structured format for example here we have reachability from ROM to mill waypoint requirement from ROM to million to 501 or 502. And to evaluat\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"89ce84e4-ed5d-4f48-815a-7edea6b5068a\", \"meeting\": \"ietf122\", \"working_group\": \"nmop\", \"subject\": \"IETF 122 - NMOP Working Group Session\", \"matches\": [{\"context\": \"the planning for the access network is going depend upon what is the passive plant right so if you look at things like hfc andt and hes past the planning side of things takes into consideration those connectivity items as well right whereas if you're looking at just inter core Network side of things\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"4fa030ba-690e-4bcb-864b-43d2447d8648\", \"meeting\": \"ietf122\", \"working_group\": \"pim\", \"subject\": \"IETF 122 - PIM Working Group Session\", \"matches\": [{\"context\": \"ation um and these are in fact actual uh common deployments um that affect um the Contra plan overhead so this constant replenishment andand randomization that has been designed to cope with CH and unreachability cause um Contra pain overhead in terms of the number of bites that one needs to establi\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"0a96b422-4203-4f48-b6c6-94567d360cf2\", \"meeting\": \"ietf122\", \"working_group\": \"snac\", \"subject\": \"IETF 122 - SNAC Working Group Session\", \"matches\": [{\"context\": \"now move on to the next slide see what happens yeah and um when this prefix is delegated you can have different kinds of prefixes so as I said you could have a global prefix which is good for Global connectivity um but at the same time uh could have some disadvantages uh because it may change over t\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"75079c8b-95fd-4f83-8e42-551c20c6e76f\", \"meeting\": \"ietf122\", \"working_group\": \"tiptop\", \"subject\": \"IETF 122 - TIPTOP Working Group Session\", \"matches\": [{\"context\": \"r to terrestrial internet than the other use cases and uh yet still a bit challenging. So it's uh growing towards our ultimate goals of uh deep space IP. Uh the the moon may actually have pretty rich connectivity options with uh surface wireless networks, relay uh networks in orbit around the moon a\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"3e63842e-74cf-471b-ae16-0a763dd95f8d\", \"meeting\": \"ietf122\", \"working_group\": \"v6ops\", \"subject\": \"IETF 122 - V6OPS Working Group Session\", \"matches\": [{\"context\": \"ay because you need at least one RT before you get the prefix which means it's at least one RT before seat for example can start and before all these only applications starts actually getting network connectivity and meantime those applications might fail or report some issues and so on so and you k\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"1429aad1-2f36-411f-b4b0-8fbaa8824b45\", \"meeting\": \"ietf123\", \"working_group\": \"dnsop\", \"subject\": \"IETF 123 - DNSOP Working Group Session\", \"matches\": [{\"context\": \"see if we can do better than example.com for this stuff. Um we need it like example.com. We want a domain that makes it clear what we're doing. Basically the so the server logs clearly show this is a reachability probe. But there's no need for iterative resolution in most of these use cases. We're j\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"469c1a23-dc1d-4e67-b834-c17a8640f618\", \"meeting\": \"ietf123\", \"working_group\": \"dtn\", \"subject\": \"IETF 123 - DTN Working Group Session\", \"matches\": [{\"context\": \"et protocols. The retransmission of lost bundle data uh from the source which would be the endto-end approach. Um it may take so much time due to very lengthy signal propagation delays and punctuated connectivity that the delivery of the retransmitted data delivery of the complete data including all\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"16c3bd0c-c656-4a5e-88ae-798bb18af187\", \"meeting\": \"ietf123\", \"working_group\": \"fantel\", \"subject\": \"IETF 123 - FANTEL Working Group Session\", \"matches\": [{\"context\": \"l traffic we didn't have this kind of requirement TCP transmiters here it doesn't work this way the problem statement what we have today in ATF mostly routing protocols distributing information about reachability they're not fast enough the information they distribute is not kind of information we n\", \"matched_pattern\": \"\"}, {\"context\": \"ions from collective library perspective of symmetry of GPUs. So in best case it will slow down in worst case it will crash your job not failure very similar there's assumption that you have rails or connectivity per GPU pairs when it breaks uh communication library don't really react well so fatal \", \"matched_pattern\": \"\"}], \"confidence\": \"medium\"}, {\"source_uuid\": \"454adda3-66fb-48a5-b5ff-b3526269e4a2\", \"meeting\": \"ietf123\", \"working_group\": \"happy\", \"subject\": \"IETF 123 - HAPPY Working Group Session\", \"matches\": [{\"context\": \"stall a specific V6 route to Google DNS over V6 into your VPN because otherwise Chrome like I am on network I'm not going to even send quad day. So maybe we want to talk about what how you define the connectivity. do you really need default or you need or you have an interface with that connectivity\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"a54e5df3-455f-4a50-8e9f-8afb49ca2b14\", \"meeting\": \"ietf123\", \"working_group\": \"hrpc\", \"subject\": \"IETF 123 - HRPC Working Group Session\", \"matches\": [{\"context\": \"headline version of this is that the internet um through the entire technical stack throughout the uh infrastructure all the way from the application layer um through the product layer through the um connectivity layers. um and and certainly in the business models that you deliver it and in the digi\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"37af15c9-f797-4578-8d72-59d6317cfb68\", \"meeting\": \"ietf123\", \"working_group\": \"iepg\", \"subject\": \"IETF 123 - IEPG Working Group Session\", \"matches\": [{\"context\": \"ting today how can we detect external disruptions from a service provider perspective. Next slide please. to provide you a bit of uh a bit of context. Service price um provide offer multiple IP based connectivity services such as BGP and PL/SVPNs or internet connectivity. We all know that network di\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"5ffcc242-409b-45b2-be73-c36d2c7675ba\", \"meeting\": \"ietf123\", \"working_group\": \"ipsecme\", \"subject\": \"IETF 123 - IPSECME Working Group Session\", \"matches\": [{\"context\": \"formats which is borrowing from the IPFS congestion control payloads and that can do more things but in the un unencrypted one we don't need any of those we just need a basic packet format to see the reachability because it's unencrypted. You cannot put any data in there. Um and so we we hope to mak\", \"matched_pattern\": \"\"}, {\"context\": \"of the story should be keep your signature keys safe otherwise you do not have security. >> Hi J. >> Yeah. So one comment regarding the uh the con you list here for the option one. You say sacrifice connectivity with Lexi pier. By like Pier assume you mean that the pier only supports like weak diffi\", \"matched_pattern\": \"\"}], \"confidence\": \"medium\"}, {\"source_uuid\": \"48b4fdaf-7e48-460b-845b-70be423f7587\", \"meeting\": \"ietf123\", \"working_group\": \"nmop\", \"subject\": \"IETF 123 - NMOP Working Group Session\", \"matches\": [{\"context\": \"down to the cables and the fibers. So all of these has to be set up in place in order to set up the services and the controller is doing that and correlating everything uh on demand when you get the connectivity request. Uh this unfortunately was an issue with the PowerPoint to PDF. So the the requi\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"9b920f7a-8740-4d6f-a6c9-4dcf122a3aa7\", \"meeting\": \"ietf123\", \"working_group\": \"qirg\", \"subject\": \"IETF 123 - QIRG Working Group Session\", \"matches\": [{\"context\": \"or where in the in previous presentations we we are talking about set three straighten three straighta one with a service one for for the quantum forwarding and the quantum protocols one for the pure connectivity to build the network and and the physical network itself and the idea is that in each o\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"8f84a79d-27e8-4a98-bd33-0c97d53ddf6a\", \"meeting\": \"ietf123\", \"working_group\": \"sidrops\", \"subject\": \"IETF 123 - SIDROPS Working Group Session\", \"matches\": [{\"context\": \"ind this uh update to be uh invalid uh however in partial deployment or or if there is no alternate path if there's an alternate path or in partial deployment um many ASS uh would continue to have uh reachability to to ASC uh or the prefixes at ASC. Uh so what so the question is uh do the operators \", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}, {\"source_uuid\": \"c59b34b5-69f2-48fb-a31d-d2d9070c9ee6\", \"meeting\": \"ietf123\", \"working_group\": \"srv6ops\", \"subject\": \"IETF 123 - SRV6OPS Working Group Session\", \"matches\": [{\"context\": \"s and more segment lists and uh additional research and very important part is how to deliver PM in this uh customer environment because we can attach customer VM basically but we need to measure the connectivity etc etc and finally final slides I just recently published article on LinkedIn about ho\", \"matched_pattern\": \"\"}], \"confidence\": \"low\"}]}",
+      "encoding": "json"
+    }
+  ],
+  "analysis": [
+    {
+      "type": "ietf_principle_corpus_summary",
+      "dialog": [],
+      "vendor": "ietf-hackathon-125",
+      "body": {
+        "principle_id": "connectivity",
+        "principle_name": "Connectivity as primary goal",
+        "total_sessions": 165,
+        "total_unique_sources": 165,
+        "meetings_represented": [
+          "ietf110",
+          "ietf111",
+          "ietf112",
+          "ietf113",
+          "ietf114",
+          "ietf115",
+          "ietf116",
+          "ietf117",
+          "ietf118",
+          "ietf119",
+          "ietf120",
+          "ietf121",
+          "ietf122",
+          "ietf123"
+        ],
+        "working_groups": [
+          "6man",
+          "alto",
+          "anima",
+          "anrw",
+          "bess",
+          "bmwg",
+          "can",
+          "ccamp",
+          "coinrg",
+          "detnet",
+          "dinrg",
+          "dmm",
+          "dnsop",
+          "dnssd",
+          "dtn",
+          "fantel",
+          "gaia",
+          "genarea",
+          "hackathon",
+          "happy",
+          "hotrfc",
+          "hrpc",
+          "httpbis",
+          "iabopen",
+          "icnrg",
+          "idr",
+          "iepg",
+          "ietf",
+          "intarea",
+          "ippm",
+          "ipsecme",
+          "irtfopen",
+          "lamps",
+          "lisp",
+          "lsr",
+          "madinas",
+          "maprg",
+          "masque",
+          "mboned",
+          "mimi",
+          "mops",
+          "mpls",
+          "nmop",
+          "opsawg",
+          "opsec",
+          "pce",
+          "pim",
+          "pquip",
+          "qirg",
+          "quic",
+          "rift",
+          "rtgarea",
+          "rtgwg",
+          "satp",
+          "savnet",
+          "scim",
+          "scitt",
+          "sidrops",
+          "snac",
+          "spring",
+          "srv6ops",
+          "teas",
+          "tiptop",
+          "tls",
+          "tsvarea",
+          "tsvwg",
+          "tvr",
+          "v6ops"
+        ],
+        "top_working_groups": [
+          {
+            "group": "dtn",
+            "count": 8
+          },
+          {
+            "group": "gaia",
+            "count": 8
+          },
+          {
+            "group": "rtgwg",
+            "count": 7
+          },
+          {
+            "group": "bess",
+            "count": 6
+          },
+          {
+            "group": "snac",
+            "count": 6
+          },
+          {
+            "group": "lsr",
+            "count": 5
+          },
+          {
+            "group": "6man",
+            "count": 5
+          },
+          {
+            "group": "idr",
+            "count": 5
+          },
+          {
+            "group": "hrpc",
+            "count": 4
+          },
+          {
+            "group": "icnrg",
+            "count": 4
+          }
+        ],
+        "meeting_frequency": {
+          "ietf110": 9,
+          "ietf111": 11,
+          "ietf112": 6,
+          "ietf113": 14,
+          "ietf114": 13,
+          "ietf115": 18,
+          "ietf116": 11,
+          "ietf117": 12,
+          "ietf118": 11,
+          "ietf119": 12,
+          "ietf120": 15,
+          "ietf121": 10,
+          "ietf122": 12,
+          "ietf123": 11
+        }
+      },
+      "encoding": "json"
+    }
+  ]
+}
