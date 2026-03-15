@@ -2,108 +2,111 @@
 
 ## Introduction
 
-The principle of "Simplicity / complexity management" stands as one of the IETF's most fundamental yet challenging design philosophies. Expressed succinctly as "complexity is the primary impediment to scaling," this principle argues that network protocols and systems should favor simple, understandable designs over complex ones. This isn't merely an aesthetic preference—it's a hard-learned engineering discipline born from decades of watching ambitious protocols fail under their own complexity.
+"Complexity is the primary impediment to scaling. Keep designs simple." This fundamental principle, codified in [RFC 3439](https://www.rfc-editor.org/rfc/rfc3439), represents one of the Internet's most enduring architectural philosophies. While it sounds deceptively straightforward, this principle has guided decades of Internet protocol development and continues to shape how engineers approach network design challenges.
 
-The principle gained formal recognition in [RFC 3439](https://www.rfc-editor.org/rfc/rfc3439), "Some Internet Architectural Guidelines and Philosophy," authored by Randy Bush and Dave Meyer in 2002. However, its roots trace back to the Internet's earliest days, when pioneers like Jon Postel advocated for the "robustness principle" and simple, extensible designs. The IETF community has repeatedly observed that while complexity often seems like the path to more powerful or complete solutions, it frequently becomes the enemy of interoperability, maintainability, and successful deployment.
+The principle emerged from hard-won experience in the Internet's early decades. As documented in RFC 3439, "Some Internet Architectural Guidelines and Philosophy" by Bush and Meyer in 2002, the Internet's remarkable success stems partly from deliberate choices to favor simple, composable protocols over complex, monolithic ones. This wasn't academic theorizing — it was a response to witnessing both spectacular failures of over-engineered systems and surprising successes of minimalist approaches.
 
-In the modern Internet era, as protocols handle everything from IoT sensors to high-frequency trading, this principle has become more critical than ever. The corpus of IETF discussions from 2021 to 2025 reveals 418 instances where working groups explicitly grappled with complexity management—a testament to its ongoing relevance as engineers balance feature richness against operational reality.
+In IETF working groups today, this principle remains vibrantly relevant. As our analysis of 418 sessions across IETF meetings 110-123 (March 2021 to July 2025) demonstrates, engineers continue to invoke simplicity as both a design goal and a critical lens for evaluating proposals. From routing protocols to cryptographic frameworks, the tension between functionality and complexity shapes every significant technical decision.
 
 ## Understanding This Principle
 
-**The Core Idea**
+**The Core Idea** — Simple systems scale; complex ones break under their own weight. Think of a small neighborhood restaurant that serves exceptional food with a focused menu, efficient kitchen workflow, and staff who know every dish intimately. As it grows popular, the owners face pressure to add more menu items, expand seating, offer delivery, create a rewards program, and accommodate special dietary needs. Each addition seems reasonable, but collectively they transform a smoothly-running operation into a chaotic system where orders get confused, quality suffers, staff turnover increases, and customers leave frustrated. The restaurant's original strength — simplicity that enabled excellence — gets buried under accumulated complexity.
 
-Keep protocol designs as simple as possible while still solving the problem at hand, because complexity kills adoption, breaks interoperability, and makes systems impossible to debug or evolve.
+**Why It Matters** — In network protocols, complexity manifests as interoperability failures, security vulnerabilities, implementation bugs, and operational nightmares. Consider IPv6 adoption versus IPv4 network address translation (NAT). IPv6 represents the "clean" solution — a simple expansion of address space with straightforward forwarding rules. NAT, by contrast, is a complexity band-aid that breaks end-to-end connectivity, complicates application design, and creates subtle failure modes. Yet NAT succeeded because it solved an immediate problem simply, while IPv6's comprehensive approach initially seemed too complex to deploy incrementally. The irony is that NAT's accumulated complexity has now become far more burdensome than IPv6's original design, but the immediate simplicity advantage mattered more than long-term architectural purity.
 
-Think of this principle like urban planning. When cities grow organically, they often develop simple, intuitive layouts—main roads that follow natural geography, neighborhoods that cluster around practical needs like markets or transportation hubs. These cities, like Boston's Back Bay or the historic centers of European cities, remain vibrant and navigable centuries later. But when planners try to optimize everything at once—creating elaborate highway interchanges, complex zoning rules, and intricate traffic management systems—they often produce places like certain modern suburban developments where you need GPS to buy groceries and a traffic engineer's degree to understand the road signs.
+**The Tension** — The counterforce to simplicity is feature pressure. Customers demand new capabilities, vendors want competitive differentiation, and engineers see elegant ways to solve multiple problems simultaneously. Standards bodies face intense pressure to accommodate diverse use cases, leading to protocols that try to be everything to everyone. This pressure is often legitimate — the world genuinely needs these capabilities — but each addition increases the protocol's cognitive load, implementation complexity, and potential failure modes.
 
-The best urban designs solve real problems (getting people where they need to go) with solutions that feel obvious in retrospect. They're easy to explain to newcomers, easy to modify when needs change, and resilient when individual components fail. The worst designs might look impressive on paper and optimize for multiple goals simultaneously, but they're brittle, confusing, and impossible to fix when something goes wrong.
+**How to Recognize It** — You're seeing this principle at work when:
 
-**Why It Matters**
-
-When network protocols violate the simplicity principle, they fail in predictable ways. Consider IPv6, which solved real problems (address exhaustion, routing table growth) but introduced significant complexity with features like stateless autoconfiguration, neighbor discovery, and multiple address types per interface. While IPv6 works well, its deployment took decades partly because network operators found it harder to understand, configure, and troubleshoot than IPv4's simpler model.
-
-Contrast this with HTTP, which succeeded wildly despite (or because of) its apparent simplicity. Early HTTP was just request-response text messages over TCP connections. This simplicity meant anyone could implement it, debug it with basic tools, and extend it incrementally. Even as HTTP evolved to support complex modern web applications, it maintained conceptual simplicity at its core.
-
-The practical consequences are stark: complex protocols take longer to standardize, have more implementation bugs, suffer worse interoperability problems, and often get deployed incorrectly in production. Simple protocols can be implemented by junior engineers, debugged with standard tools, and understood by operators during 3 AM outages.
-
-**The Tension**
-
-The pressure against simplicity is relentless and often well-intentioned. Engineers see related problems and want to solve them all at once rather than requiring multiple protocols. Standards committees want to future-proof designs by anticipating every possible use case. Vendors want feature differentiation. Researchers want to publish novel contributions rather than incremental improvements.
-
-There's also a deeper psychological factor: complex solutions often feel more professional or sophisticated than simple ones. It's easy to dismiss a simple protocol as "obvious" or "not enough of a contribution," even when simplicity is the hardest thing to achieve. As the saying goes, "I would have written a shorter letter, but I didn't have the time."
-
-**How to Recognize It**
-
-You're seeing this principle at work when:
-
-* A working group decides to split a large protocol into smaller, composable pieces rather than creating one monolithic standard
-* Engineers choose to defer features to future versions rather than complicate the initial design
-* A protocol design prioritizes making the common case simple, even if it makes advanced use cases slightly more verbose
-* Implementers can explain the core protocol behavior to a colleague in under five minutes
-* Operators can troubleshoot problems using standard tools rather than specialized diagnostic software
+* A team chooses to build three focused tools instead of one swiss-army-knife application, even though it means more repositories to maintain
+* An architecture review rejects a clever optimization because it makes the system harder to reason about and debug
+* A protocol design deliberately omits requested features to keep the core specification implementable by a small team
+* Engineers debate whether a new feature belongs in an existing system or deserves its own separate component
 
 ## Early IETF Work
 
-The IETF's commitment to simplicity emerged from painful early experiences with overly complex protocols. The OSI protocol suite of the 1980s served as a cautionary tale—despite significant standardization effort and government backing, OSI protocols like X.400 email and X.500 directory services largely failed in the marketplace. They were comprehensively designed, addressed many use cases, but were notoriously difficult to implement correctly and operate reliably.
+The Internet's foundational protocols embody this simplicity principle through deliberate design choices that favored minimal, composable components over monolithic solutions. TCP/IP succeeded partly because it separated concerns cleanly — IP handles packet delivery, TCP manages reliable streams — rather than bundling everything into a single complex protocol like the ISO's OSI stack attempted. The original HTTP specification was famously simple: request/response semantics, human-readable headers, and stateless operation. This simplicity enabled rapid adoption and experimentation.
 
-Meanwhile, the Internet protocol suite succeeded by embracing simplicity and modularity. TCP/IP split networking into layers with clean interfaces. SMTP kept email simple enough that implementations could fit on floppy disks. DNS provided a distributed directory service by focusing on one problem (name resolution) rather than attempting a comprehensive information system. Jon Postel's "robustness principle"—"be conservative in what you do, be liberal in what you accept from others"—exemplified this philosophy of preferring simple, forgiving designs over rigid, complex ones.
+However, the IETF learned some hard lessons about complexity through failures. The original SNMP (Simple Network Management Protocol) lived up to its name initially, but successive versions accumulated features and complexity that made implementation and deployment increasingly difficult. Similarly, early attempts at comprehensive solutions like the ISO/OSI protocol suite foundered partly due to their complexity, while the Internet's "rough consensus and running code" philosophy favored simpler, incremental approaches.
 
-The contrast became even starker with web protocols. HTTP succeeded where more sophisticated alternatives like Gopher+ and WAIS failed, largely because HTTP was simple enough for anyone to implement and extend. This pattern repeated throughout the 1990s: simple protocols (DHCP, BGP-4, SSH) gained wide adoption while more ambitious efforts struggled. By the time RFC 3439 was published in 2002, the IETF had internalized these lessons into explicit architectural guidance.
+The principle was formalized through experience with protocols that violated it. X.400 email systems, comprehensive but complex, lost to SMTP's simplicity. Complex routing protocols with extensive feature sets struggled with interoperability while simpler approaches like BGP (despite its own complexities) achieved widespread deployment. These experiences shaped RFC 3439's explicit articulation of simplicity as a fundamental architectural principle, recognizing that the Internet's success came not despite its simplicity, but because of it.
 
 ## Key References
 
-* [RFC 3439: Some Internet Architectural Guidelines and Philosophy](https://www.rfc-editor.org/rfc/rfc3439) — The foundational document establishing simplicity as a core Internet design principle
-* [RFC 1958: Architectural Principles of the Internet](https://www.rfc-editor.org/rfc/rfc1958) — Early articulation of Internet design philosophy including preference for simple solutions
+- [RFC 3439: Some Internet Architectural Guidelines and Philosophy](https://www.rfc-editor.org/rfc/rfc3439) — The foundational document that explicitly codifies simplicity as a core Internet design principle
+- [RFC 1958: Architectural Principles of the Internet](https://www.rfc-editor.org/rfc/rfc1958) — Earlier articulation of Internet design philosophy that influenced the simplicity principle
+- [End-to-End Arguments in System Design](https://web.mit.edu/Saltzer/www/publications/endtoend/endtoend.pdf) — Saltzer, Reed, and Clark's seminal paper on keeping network complexity at the edges
 
 ## This Principle in IETF Discussions
 
-The simplicity principle appears consistently across IETF working groups, though its application varies significantly by context. In [netmod](https://datatracker.ietf.org/wg/netmod/about/), the principle often governs decisions about YANG data modeling complexity. As seen in the November 2024 Dublin discussion, the working group deliberately chose to "keep it simple" rather than "boil the ocean" when designing package-level module specifications:
+The principle of simplicity management appears consistently across IETF working groups, often arising when engineers must choose between comprehensive solutions and focused approaches. In the [netmod](https://datatracker.ietf.org/wg/netmod/about/) working group during IETF 111, this tension emerged clearly during discussions of YANG module versioning:
 
-> "this is the exact set of modules I support uh at a given package level and these are the versions of those modules I support along with features and any deviations but what we got to was let's try and keep it simple so let's not have that distinction let's not try and to to like boil the ocean and do"
+> "we were um looking at one point about having two different extensions one was revision or derived and one was revision or derived compatible but in the end we decided to kind of keep it simple and we think the majority of the realistic use cases don't require a derived or compa"
 
-This reflects a mature engineering judgment: while comprehensive solutions might seem more elegant, they often prove harder to implement and deploy successfully.
+*[View source vCon](https://github.com/vcon-dev/ietf-meeting-vcons/blob/main/ietf111/ietf111_netmod_28884.vcon.json)*
 
-The [coinrg](https://datatracker.ietf.org/wg/coinrg/about/) research group explicitly engaged with simplicity as a design principle in their November 2022 London session, using it as inspiration for protocol decision-making:
+This exemplifies a common pattern: engineers initially design comprehensive solutions to handle edge cases, then deliberately simplify to focus on core use cases. The [netmod](https://datatracker.ietf.org/wg/netmod/about/) group recognized that trying to solve every versioning scenario upfront would create implementation complexity that might prevent adoption of the basic functionality.
 
-> "aspects and then we thought about what kind of tirebreaker could we have there or how we could then actually derive the decision that we want to have and for um the inspiration we'll then look at the Simplicity principle which basically states that we should always Thrive to the simplest solution or"
+The research community explicitly embraces simplicity as a decision-making tool. During IETF 115, the [coinrg](https://datatracker.ietf.org/wg/coinrg/about/) working group discussed using simplicity as a tiebreaker between competing approaches:
 
-This demonstrates how the principle has evolved beyond implementation guidance to become a philosophical framework for research and design choices.
+> "for um the inspiration we'll then look at the Simplicity principle which basically states that we should always Thrive to the simplest solution or"
 
-The tension between functionality and complexity appears clearly in operational contexts. The [masque](https://datatracker.ietf.org/wg/masque/about/) working group's July 2024 Vancouver discussion shows engineers actively choosing simplicity over optimization:
+*[View source vCon](https://github.com/vcon-dev/ietf-meeting-vcons/blob/main/ietf115/ietf115_coinrg_29890.vcon.json)*
 
-> "u're not changing endpoints now maybe you're changing ports but right the the server is just going to send you an IP in Port and say I'd really rather you be over here fair enough I think we can just keep it simple and move on okay Alexander gini Cloud flare yeah the the whole capsule thing seems li"
+This shows how the principle operates not just as a design guideline, but as an explicit evaluation criterion when multiple technical approaches seem equally viable. The simplest solution often wins not because it's necessarily superior technically, but because it's more likely to be implemented correctly and adopted widely.
 
-The [mls](https://datatracker.ietf.org/wg/mls/about/) working group's November 2024 Dublin session revealed frustration with accumulated complexity, with participants recognizing they had "worked ourselves into well of complexity":
+In more recent discussions, the [masque](https://datatracker.ietf.org/wg/masque/about/) working group at IETF 120 demonstrated how simplicity thinking helps avoid scope creep:
 
-> "al wire formats Richard I hate all of this I the bottom bullet yes absolutely we should do that easy quick fix bug fix clear Omission um the rest of it I feel like we've worked ourselves into well of complexity with a bunch of extra assumptions we've made in safe extension the way safe extensions is"
+> "fair enough I think we can just keep it simple and move on okay Alexander gini Cloud flare yeah the the whole capsule thing seems li"
 
-This candid assessment illustrates how complexity can creep into designs despite good intentions, and the importance of periodic simplification efforts.
+*[View source vCon](https://github.com/vcon-dev/ietf-meeting-vcons/blob/main/ietf120/ietf120_masque_33088.vcon.json)*
+
+The phrase "keep it simple and move on" captures a crucial aspect of complexity management: recognizing when additional features would provide marginal benefit at disproportionate complexity cost. This kind of disciplined scope management prevents protocols from growing beyond their implementers' ability to handle them reliably.
+
+The [mls](https://datatracker.ietf.org/wg/mls/about/) working group at IETF 121 illustrates how complexity can accumulate gradually through well-intentioned extensions:
+
+> "Richard I hate all of this I the bottom bullet yes absolutely we should do that easy quick fix bug fix clear Omission um the rest of it I feel like we've worked ourselves into well of complexity with a bunch of extra assumptions we've made in safe extension the way safe extensions is"
+
+*[View source vCon](https://github.com/vcon-dev/ietf-meeting-vcons/blob/main/ietf121/ietf121_mls_33433.vcon.json)*
+
+This candid observation reveals how complexity accumulates: each individual extension seems reasonable, but collectively they create a "well of complexity" that makes the system harder to understand, implement, and maintain. The speaker's frustration reflects a common experience in protocol development where good intentions lead to overwhelming complexity.
 
 ## Historical Analysis
 
-Discussion of simplicity and complexity management remained remarkably consistent across the 14 IETF meetings from March 2021 through July 2025, with a notable uptick in recent meetings:
+Analysis of simplicity discussions across IETF meetings 110-123 reveals consistent engagement with this principle, with notable variations in intensity:
 
-| Meeting Period | Sessions | Trend |
-|---|---|---|
-| Early (110-113) | 100 | Baseline establishment |
-| Middle (114-119) | 177 | Steady application |
-| Recent (120-123) | 140 | Increased focus |
+| Meeting | Date | Location | Sessions Discussing Simplicity |
+|---------|------|----------|-------------------------------|
+| IETF 110 | March 2021 | Online | 33 |
+| IETF 111 | July 2021 | Online | 16 |
+| IETF 112 | November 2021 | Online | 27 |
+| IETF 113 | March 2022 | Vienna | 24 |
+| IETF 114 | July 2022 | Philadelphia | 27 |
+| IETF 115 | November 2022 | London | 34 |
+| IETF 116 | March 2023 | Yokohama | 31 |
+| IETF 117 | July 2023 | San Francisco | 25 |
+| IETF 118 | November 2023 | Prague | 31 |
+| IETF 119 | March 2024 | Brisbane | 30 |
+| IETF 120 | July 2024 | Vancouver | 28 |
+| IETF 121 | November 2024 | Dublin | 38 |
+| IETF 122 | March 2025 | Bangkok | 35 |
+| IETF 123 | July 2025 | Madrid | 39 |
 
-The pattern shows growing attention to complexity management in recent meetings, with IETF 123 (Madrid) recording the highest number of relevant discussions (39 sessions). This likely reflects the IETF community's growing awareness that successful protocol deployment requires deliberate complexity management as Internet systems become more sophisticated.
+The data shows an interesting pattern: discussion frequency was highest during the early online meetings (IETF 110) and recent in-person meetings (IETF 121-123), suggesting that complexity management becomes more prominent during periods of transition or intensive development activity.
 
-The [nmrg](https://datatracker.ietf.org/wg/nmrg/about/) and [rtgwg](https://datatracker.ietf.org/wg/rtgwg/about/) working groups lead in discussions (9 sessions each), which makes sense given their focus on network management and routing—areas where complexity directly impacts operational success. The [cfrg](https://datatracker.ietf.org/wg/cfrg/about/) appears prominently (8 sessions), reflecting ongoing challenges in making cryptographic protocols both secure and implementable.
+The working groups most engaged with simplicity span diverse technical domains. Research groups like [nmrg](https://datatracker.ietf.org/wg/nmrg/about/) and [coinrg](https://datatracker.ietf.org/wg/coinrg/about/) frequently invoke simplicity as an evaluation criterion for competing approaches. Infrastructure groups like [rtgwg](https://datatracker.ietf.org/wg/rtgwg/about/) and [6man](https://datatracker.ietf.org/wg/6man/about/) wrestle with balancing feature requests against operational simplicity. Security-focused groups like [cfrg](https://datatracker.ietf.org/wg/cfrg/about/) recognize that cryptographic complexity often introduces vulnerabilities.
 
-The broad distribution across 149 working groups suggests that simplicity isn't just a concern for protocol designers—it affects security, operations, applications, and research groups equally. This universality reinforces the principle's foundational importance in Internet architecture.
+The prominence of [netmod](https://datatracker.ietf.org/wg/netmod/about/) in these discussions reflects the inherent tension in network management: operators want comprehensive modeling capabilities, but complex data models become unmaintainable. Similarly, [masque](https://datatracker.ietf.org/wg/masque/about/)'s frequent simplicity discussions stem from building proxy protocols where each feature addition impacts every implementation.
 
 ## Resources
 
-* [RFC 3439: Some Internet Architectural Guidelines](https://www.rfc-editor.org/rfc/rfc3439) — Essential reading for understanding how simplicity fits into overall Internet design philosophy
-* [Worse is Better (Richard Gabriel)](https://www.dreamsongs.com/WorseIsBetter.html) — Influential essay arguing that simple, pragmatic designs often succeed where theoretically superior complex designs fail
-* [KISS Principle (Wikipedia)](https://en.wikipedia.org/wiki/KISS_principle) — Broader context on simplicity as an engineering principle across domains
-* [The Design of Design (Fred Brooks)](https://en.wikipedia.org/wiki/The_Design_of_Design) — Classic work on design complexity and the challenges of managing it in large engineering projects
+- [RFC 3439: Some Internet Architectural Guidelines and Philosophy](https://www.rfc-editor.org/rfc/rfc3439) — Essential reading for understanding how simplicity fits into the broader Internet architectural philosophy
+- [The Worse is Better Philosophy](https://www.dreamsongs.com/WorseIsBetter.html) — Richard Gabriel's influential essay exploring how simple, imperfect solutions often succeed where complex, comprehensive ones fail
+- [KISS Principle (Wikipedia)](https://en.wikipedia.org/wiki/KISS_principle) — Good overview of "Keep It Simple, Stupid" and its applications across engineering disciplines
+- [End-to-End Arguments in System Design](https://web.mit.edu/Saltzer/www/publications/endtoend/endtoend.pdf) — Classic paper showing how pushing complexity to network edges rather than the core enables scalability and innovation
 
 ---
-*This report was generated from analysis of IETF working group session transcripts using vCon conversation analysis.*
+*This report was generated through analysis of IETF working group session transcripts stored in vCon format, covering meetings 110-123 from March 2021 through July 2025.*
 
 ---
 
@@ -112,4 +115,4 @@ Source: [vcon-dev/ietf-meeting-vcons](https://github.com/vcon-dev/ietf-meeting-v
 Analysis: IETF 125 Hackathon — vCon Principles Detection |
 Group vCon UUID: `719bcf65-a036-4d0c-a959-7ee59ae43328` |
 Sessions analyzed: 418 |
-Generated: 2026-03-14*
+Generated: 2026-03-15*

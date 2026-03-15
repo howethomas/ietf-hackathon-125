@@ -2,116 +2,128 @@
 
 ## Introduction
 
-Trust as an architectural principle represents one of the most fundamental yet challenging aspects of Internet protocol design. Codified in [RFC 3724: The Rise of the Middle and the Future of End-to-End](https://www.rfc-editor.org/rfc/rfc3724), this principle establishes that trust relationships must be explicitly defined before protocol design begins. Rather than assuming trust exists or leaving it to be figured out later, architects must first map out who trusts whom, for what purposes, and under what conditions.
+The principle that "trust relationships must be defined before protocol design" represents one of the most fundamental yet challenging aspects of Internet architecture. Codified in [RFC 3724](https://www.rfc-editor.org/rfc/rfc3724), this principle emerged from decades of hard-learned lessons about the critical importance of understanding who trusts whom, for what purposes, and under what circumstances before building the technical mechanisms that will enforce those relationships.
 
-This principle emerged from decades of hard-won experience in the Internet architecture community. Early Internet protocols often assumed a relatively benign environment with implicit trust relationships. As the network evolved from a research environment to a global communications infrastructure, the consequences of undefined trust became increasingly severe. Security vulnerabilities, privacy breaches, and operational failures repeatedly traced back to protocols that failed to clearly articulate their trust assumptions.
+This principle sits at the heart of Internet security and governance debates. It recognizes that trust is not a technical afterthought but an architectural foundation — much like how a building's structural requirements must be understood before designing the electrical and plumbing systems. The Internet's early designers learned that protocols built without clear trust models often fail catastrophically when deployed at scale, creating security vulnerabilities, governance disputes, and operational nightmares that can persist for decades.
 
-The IETF's embrace of this principle reflects a maturation in thinking about distributed systems security. Modern Internet protocols must operate in environments where some actors are malicious, some are merely incompetent, and even trusted parties may have conflicting interests. By requiring explicit trust models upfront, the principle forces protocol designers to confront these realities rather than hoping they will resolve themselves through implementation experience.
+The ongoing relevance of this principle is evident in its consistent discussion across IETF working groups from 2021 through 2025, appearing in 252 sessions across 100 different working groups. From DNS security to IoT device authentication, from routing protocols to identity management, every major Internet protocol ultimately grapples with fundamental questions about trust relationships and how to encode them into technical systems.
 
 ## Understanding This Principle
 
-**The Core Idea** — Trust relationships must be defined before protocol design. Think of this like designing the organizational chart and access controls for a new company before you build the office building and IT systems.
+**The Core Idea** — You must decide who trusts whom before you design how they'll interact. Think of this like designing the governance structure for a new city: before you build the roads, utilities, and buildings, you need to establish whether there will be neighborhood councils, a mayor, federal oversight, or some other authority structure. The technical infrastructure follows from these trust relationships, not the other way around.
 
-Consider how a well-run corporation handles sensitive information. Before they design workflows, install computer systems, or even hire employees, leadership maps out who needs access to what information and why. The CEO trusts the CFO with financial data, but perhaps not with customer service decisions. The engineering team trusts the product manager to define requirements, but not to push code to production. Department heads trust each other for coordination, but validate claims about budget and timeline independently. These trust relationships aren't accidents — they're deliberate architectural decisions that shape every process, system, and policy that follows.
+Consider a simple real-world analogy: a farmers market. Before opening day, organizers must decide fundamental trust questions: Do customers trust individual farmers to accurately represent their produce, or do they need a central market authority to certify everything? Do farmers trust other farmers not to misrepresent their goods, or do they need enforceable stall assignments? Do both trust the market operator to handle disputes fairly? These aren't technical questions about payment systems or stall construction — they're foundational trust relationships that determine how everything else gets designed.
 
-When a company skips this step and just "figures out permissions later," chaos ensues. Employees either can't access what they need to do their jobs, or they can access everything and sensitive data leaks everywhere. Projects stall while people argue about who has authority to make decisions. The IT team builds systems that encode the wrong assumptions about information flow, requiring expensive retrofits when the real trust model becomes clear.
+**Why It Matters** — When you violate this principle, you end up with systems that work fine in small, controlled environments but collapse under real-world conditions. The classic example is building a protocol that assumes all participants are honest, then discovering in deployment that malicious actors can exploit these assumptions to disrupt or compromise the entire system.
 
-**Why It Matters** — The practical consequences of undefined trust are severe and expensive to fix after the fact. In networking protocols, undefined trust creates three categories of failure: security vulnerabilities, operational brittleness, and deployment conflicts.
+Consider the difference between a system designed with clear trust boundaries versus one where trust relationships are an afterthought. A well-designed system might explicitly require that routing announcements be cryptographically signed by authorized entities, creating clear accountability. A poorly designed system might simply assume that anyone announcing routes is trustworthy, leading to the kinds of BGP hijacking attacks that have plagued the Internet for decades. The technical mechanisms are secondary to the fundamental question: who do we trust to announce what routes, and how do we verify that trust?
 
-Consider the difference between early email protocols and modern messaging systems. SMTP, designed in a more trusting era, assumed mail servers would honestly identify themselves and faithfully relay messages. This worked fine in the 1980s academic Internet, but became a spam and phishing nightmare as the network grew. Retrofitting authentication and anti-abuse mechanisms required decades of additional protocols (SPF, DKIM, DMARC) and never fully solved the fundamental trust problem.
+**The Tension** — The pressure against this principle is enormous because defining trust relationships is politically and organizationally hard, while building technical mechanisms feels like "real work." Engineers often want to start coding immediately, and trust conversations can feel abstract or contentious. It's much easier to say "we'll figure out the security model later" than to have difficult conversations about who should have what authority over whom.
 
-Contrast this with modern encrypted messaging protocols like Signal, which explicitly define trust relationships upfront: users trust their own devices completely, trust the service provider not to retain metadata, and trust contacts only after explicit key exchange. This clear trust model shaped every technical decision — from the cryptographic protocols to the data retention policies to the user interface design. The result is a system that's both more secure and more transparent about its limitations.
-
-**The Tension** — The real-world pressure working against this principle is time and cognitive load. Defining trust relationships forces architects to confront difficult questions they'd rather defer: Who might become an adversary? What happens when trusted parties disagree? How do we handle partial trust? These conversations are often political and uncomfortable, involving trade-offs between security, usability, and business requirements.
-
-Engineers naturally want to focus on the interesting technical problems — the algorithms, the performance optimizations, the clever protocol mechanisms. Trust modeling feels like boring paperwork that slows down development. Product managers want to ship quickly and iterate based on user feedback. Defining trust relationships upfront feels like premature optimization when you're not even sure the basic functionality will work.
-
-There's also a cognitive bias toward assuming good faith. Most protocol designers are honest people working with other honest people, so it's easy to unconsciously assume that all participants will behave reasonably. Explicitly modeling adversarial scenarios requires a paranoid mindset that doesn't come naturally to collaborative environments.
+Furthermore, trust relationships often cross organizational boundaries, requiring coordination between groups that may have competing interests. A protocol designer working on their piece of the puzzle may not want to wait for broader consensus on trust models, especially when those conversations involve lawyers, policy makers, and business stakeholders rather than just engineers.
 
 **How to Recognize It** — You're seeing this principle at work when:
 
-- System architects spend time mapping out "who trusts whom for what" before writing any code, even for internal tools
-- Security reviews begin by examining trust assumptions rather than just looking for implementation bugs
-- Deployment documentation clearly states what entities must be trustworthy for the system to work correctly
-- Protocol specifications include explicit threat models that name potential adversaries and their capabilities
-- Design discussions include phrases like "assuming the PKI is honest" or "if the cloud provider is compromised" rather than treating infrastructure as uniformly trustworthy
+* A design document begins with explicit threat models and trust assumptions rather than jumping straight to protocol mechanics
+* Working groups spend significant time debating "who should be authorized to..." questions before designing the authorization mechanisms themselves
+* Protocols include explicit trust anchor configuration rather than assuming some universal trust infrastructure
+* Security analysis focuses on trust boundary violations and what happens when trust relationships change over time
 
 ## Early IETF Work
 
-The emergence of trust as an architectural principle reflects the Internet's painful evolution from a research network to a global infrastructure. Early Internet protocols like Telnet, FTP, and SMTP were designed for environments where all participants were known, vetted researchers at collaborating institutions. These protocols often transmitted passwords in clear text and assumed that network intermediaries would behave honestly — reasonable assumptions for the ARPANET, but catastrophic for the modern Internet.
+The roots of this principle can be traced back to some of the Internet's earliest security disasters and design debates. The original Internet protocols were largely designed for a research environment where all participants were known and generally trustworthy. As the network expanded beyond academic institutions, the implicit trust assumptions embedded in protocols like the original routing protocols and email systems became serious vulnerabilities.
 
-The turning point came in the 1990s as commercial traffic grew and security incidents proliferated. The Morris Worm of 1988 demonstrated how protocol vulnerabilities could cascade across the entire network. Meanwhile, the deployment of the World Wide Web created a need for protocols that could operate between strangers with potentially conflicting interests. The IETF's response included both immediate security patches (like SSH replacing Telnet) and deeper architectural reflection about trust assumptions in protocol design.
+A key lesson emerged from the deployment of BGP (Border Gateway Protocol), where the assumption that all autonomous system operators would behave honestly led to persistent security problems. The lack of explicit trust relationships in the original design made it extremely difficult to retrofit authentication and authorization mechanisms later. Similar patterns emerged in DNS, where the original design's implicit trust model had to be extensively retrofitted with DNSSEC to provide cryptographic verification of responses.
 
-[RFC 3724](https://www.rfc-editor.org/rfc/rfc3724), published in 2004, represented the culmination of this learning process. The IAB's analysis explicitly connected protocol failures to inadequate trust modeling, arguing that the Internet's evolution toward more "middle boxes" and intermediaries required clearer thinking about end-to-end trust relationships. This RFC didn't just document best practices — it elevated trust modeling from an implementation concern to a fundamental architectural discipline.
+The [IPSEC architecture work](https://www.rfc-editor.org/rfc/rfc2401) in the 1990s represented one of the first systematic attempts to make trust relationships explicit in Internet protocol design. Rather than assuming that network communications were secure, IPSEC began with explicit threat models and trust assumptions, then built cryptographic mechanisms to enforce those relationships. This approach influenced subsequent security protocol designs and helped establish the principle that trust relationships must be architectural foundations rather than afterthoughts.
 
 ## Key References
 
-- [RFC 3724: The Rise of the Middle and the Future of End-to-End](https://www.rfc-editor.org/rfc/rfc3724) — The foundational IAB document establishing trust relationships as a prerequisite for protocol design
-- [Zero Trust Architecture (NIST SP 800-207)](https://csrc.nist.gov/publications/detail/sp/800-207/final) — Modern framework for designing systems that assume no implicit trust
-- [RFC 8555: ACME](https://www.rfc-editor.org/rfc/rfc8555) — Example of explicit trust modeling in Web PKI automation
+* [RFC 3724: The Rise of the Middle and the Future of End-to-End](https://www.rfc-editor.org/rfc/rfc3724) — The seminal IAB document that articulates this and other key architectural principles for Internet design.
+* [RFC 2401: Security Architecture for the Internet Protocol](https://www.rfc-editor.org/rfc/rfc2401) — An early example of explicit trust modeling in protocol design.
+* [RFC 4033: DNS Security Introduction and Requirements](https://www.rfc-editor.org/rfc/rfc4033) — Shows how trust relationships were retrofitted into an existing protocol.
 
 ## This Principle in IETF Discussions
 
-The principle of trust as architecture manifests across diverse IETF working groups, each grappling with how to make trust relationships explicit in their domains. The discussions reveal both the universal importance of this principle and the domain-specific challenges of applying it.
+The principle of defining trust relationships before protocol design emerges consistently across IETF working groups, often in the context of designing authentication and authorization mechanisms for new protocols or extending existing ones.
 
-In authentication and authorization contexts, the principle surfaces as careful mapping of trust boundaries. During IETF 110, the [gnap](https://datatracker.ietf.org/wg/gnap/about/) working group confronted this directly:
+In early 2021 discussions, the [gnap](https://datatracker.ietf.org/wg/gnap/about/) working group grappled directly with this principle:
 
-> "i am very concerned with privacy and i have done some design using privacy by design which means that you identify the primary appointment first once you have the model component and once you have the trust relationship since we have no trust relationship it's impossible to do a privacy by design"
+> "am very concerned with privacy and i have done some design using privacy by design which means that you identify the primary appointment first once you have the model component and once you have the trust relationship since we have no trust relationship it's impossible to do a privacy by design at t"
 
-This comment captures a crucial insight — privacy protections are impossible to design without first understanding who trusts whom. The participant recognized that jumping into technical mechanisms without establishing trust relationships would undermine the entire privacy model.
+*[View source vCon](https://github.com/vcon-dev/ietf-meeting-vcons/blob/main/ietf110/ietf110_gnap_28577.vcon.json)*
 
-Routing security discussions show how trust modeling applies to infrastructure protocols. The [6lo](https://datatracker.ietf.org/wg/6lo/about/) working group in IETF 115 discussed extending zero-trust concepts to routing:
+This quote illustrates the foundational nature of trust relationships — even privacy-preserving design, which might seem like a purely technical challenge, depends on first establishing who trusts whom and for what purposes. The GNAP working group was designing next-generation authorization protocols and discovering that technical privacy mechanisms are meaningless without clear trust boundaries.
+
+The [anima](https://datatracker.ietf.org/wg/anima/about/) working group's discussions in IETF 110 showed how trust relationships become particularly complex in automated systems:
+
+> "working on we had some some rework specifically in the use case too regarding the push what we called the push model because in the last itf meeting and also in the design team we discussed about the trust relationship between the device of the agent that is basically onboarding the pledge and in th"
+
+*[View source vCon](https://github.com/vcon-dev/ietf-meeting-vcons/blob/main/ietf110/ietf110_anima_28679.vcon.json)*
+
+This reflects the challenge of defining trust relationships in scenarios where devices must automatically establish trust without human intervention — a fundamental challenge for IoT and autonomous network management systems.
+
+By 2022, the [lake](https://datatracker.ietf.org/wg/lake/about/) working group was demonstrating mature application of this principle:
+
+> "e protocol so this is addressing that the issues with mentioned in the previous slide thanks a lot so here is the details of the protocol or some of the details and this first we look at what are the trust relationships we assume between these nodes for some reason we've given the nodes names U V an"
+
+*[View source vCon](https://github.com/vcon-dev/ietf-meeting-vcons/blob/main/ietf115/ietf115_lake_29921.vcon.json)*
+
+This quote shows the principle being applied correctly — beginning protocol design by explicitly enumerating trust relationships between different entities rather than assuming them or building them implicitly into the technical mechanisms.
+
+The evolution toward zero-trust architectures is evident in more recent discussions. The [6lo](https://datatracker.ietf.org/wg/6lo/about/) working group in 2022 discussed extending zero-trust principles to routing:
 
 > "owned by a single node or if the different owners share the same key then it's possible to ensure that a route can only be injected in the routing fabric by the real owners okay so the same zero conf zero trust I'm sorry the same zero trust capabilities we have for host now becomes available for pre"
 
-This reflects the evolution from traditional routing protocols that trusted network topology announcements to modern approaches that require explicit cryptographic proof of authority.
+*[View source vCon](https://github.com/vcon-dev/ietf-meeting-vcons/blob/main/ietf115/ietf115_6lo_29941.vcon.json)*
 
-Certificate and PKI discussions demonstrate how trust relationships must be defined at multiple layers. The [danish](https://datatracker.ietf.org/wg/danish/about/) working group at IETF 110 grappled with certificate chain validation:
+This reflects how the principle has evolved to embrace explicit distrust as a design foundation — rather than assuming network components will behave correctly, modern protocols increasingly require cryptographic proof of authorization for every action.
 
-> "first one is called the certificate usage parameter which tells you whether the data corresponds to an end entity certificate or some issuing ca in the certificate chain that you should use as a valid trust anchor"
+By 2024, working groups like [oauth](https://datatracker.ietf.org/wg/oauth/about/) were dealing with complex multi-party trust relationships:
 
-The technical mechanism (certificate usage parameters) exists specifically to make trust relationships explicit — defining which certificates can serve as trust anchors for different purposes.
+> "says that it's okay for me to get an access token to access this data uh and then it can respond with an access token the reason that this can work is because again both of these applications have a trust relationship with the Enterprise IDP through a single sideon so we're able to actually have a c"
 
-More recent discussions show increasing sophistication in trust modeling. The [oauth](https://datatracker.ietf.org/wg/oauth/about/) working group at IETF 120 explored enterprise identity federation:
+*[View source vCon](https://github.com/vcon-dev/ietf-meeting-vcons/blob/main/ietf120/ietf120_oauth_33158.vcon.json)*
 
-> "says that it's okay for me to get an access token to access this data uh and then it can respond with an access token the reason that this can work is because again both of these applications have a trust relationship with the Enterprise IDP through a single sideon"
-
-This demonstrates mature thinking about transitive trust — understanding that A trusting C and B trusting C enables certain interactions between A and B, but only for specific purposes and under defined conditions.
-
-The discussions also reveal ongoing challenges in trust modeling. The [deleg](https://datatracker.ietf.org/wg/deleg/about/) working group at IETF 120 acknowledged the complexity of different trust models:
-
-> "there are going to be people for both of these who are very passionate about different trust models I think that there is a meta requirement here not meta the company Ben meta the real me"
-
-This highlights that even with broad agreement on the principle of explicit trust modeling, communities often disagree about which trust model is appropriate for their use case.
+This illustrates how modern identity and authorization systems must carefully choreograph multiple trust relationships — not just between a user and a service, but between services, identity providers, and various organizational boundaries.
 
 ## Historical Analysis
 
-Discussion of trust as an architectural principle has remained consistently high across IETF 110–123, appearing in 252 sessions across all 14 meetings. The frequency shows remarkable stability, ranging from 11 discussions in IETF 111 to 22 discussions in multiple meetings (113, 114, 116, 118).
+Discussion of trust as an architectural principle has remained remarkably consistent across IETF meetings from 110 through 123, appearing in every single meeting with relatively stable frequency:
 
 | Meeting | Date | Location | Sessions |
 |---------|------|----------|----------|
 | IETF 110 | March 2021 | Online | 19 |
+| IETF 111 | July 2021 | Online | 11 |
+| IETF 112 | November 2021 | Online | 13 |
 | IETF 113 | March 2022 | Vienna | 22 |
 | IETF 114 | July 2022 | Philadelphia | 22 |
+| IETF 115 | November 2022 | London | 18 |
 | IETF 116 | March 2023 | Yokohama | 22 |
+| IETF 117 | July 2023 | San Francisco | 14 |
 | IETF 118 | November 2023 | Prague | 22 |
+| IETF 119 | March 2024 | Brisbane | 16 |
+| IETF 120 | July 2024 | Vancouver | 17 |
+| IETF 121 | November 2024 | Dublin | 19 |
+| IETF 122 | March 2025 | Bangkok | 17 |
+| IETF 123 | July 2025 | Madrid | 20 |
 
-The principle spans an exceptionally broad range of working groups (100 unique groups), indicating its fundamental nature rather than domain-specific relevance. The most active working groups reveal clear patterns: [sidrops](https://datatracker.ietf.org/wg/sidrops/about/) (11 discussions) focuses on routing security, [dnsop](https://datatracker.ietf.org/wg/dnsop/about/) (9) handles DNS security, and [stir](https://datatracker.ietf.org/wg/stir/about/) (8) works on telephone call authentication — all domains where trust relationships are particularly complex and consequential.
+The most frequent discussions occur in working groups dealing with security infrastructure and identity management. The [sidrops](https://datatracker.ietf.org/wg/sidrops/about/) working group leads with 11 discussions, reflecting ongoing work to retrofit trust relationships into Internet routing. The [dnsop](https://datatracker.ietf.org/wg/dnsop/about/) working group follows with 9 discussions, as DNS continues to grapple with trust anchor management and secure resolution.
 
-The emergence of newer working groups like [rats](https://datatracker.ietf.org/wg/rats/about/) (Remote Attestation Procedures, 7 discussions) and [scitt](https://datatracker.ietf.org/wg/scitt/about/) (Supply Chain Integrity, Transparency, and Trust, 6 discussions) suggests that trust modeling is becoming more sophisticated and specialized. These groups exist specifically to define trust relationships for emerging security challenges.
+Notably, newer working groups like [scitt](https://datatracker.ietf.org/wg/scitt/about/) (Supply Chain Integrity, Transparency and Trust) and [rats](https://datatracker.ietf.org/wg/rats/about/) (Remote ATtestation ProcedureS) appear prominently, indicating that trust-as-architecture is central to emerging security protocols rather than just legacy retrofit efforts.
 
-The sustained discussion frequency across the 2021-2025 timeframe likely reflects several trends: the continued growth in Internet-connected devices requiring authentication, increased awareness of supply chain security after high-profile compromises, and the maturation of zero-trust architectural concepts from enterprise IT into Internet protocols.
+The principle spans an extraordinarily broad range of working groups — 100 different groups in total — suggesting that trust relationship definition is not a specialized security concern but a fundamental aspect of almost all Internet protocol design work.
 
 ## Resources
 
-- [RFC 3724: The Rise of the Middle and the Future of End-to-End](https://www.rfc-editor.org/rfc/rfc3724) — Essential reading for understanding how trust assumptions shape protocol design decisions
-- [Zero Trust Architecture (NIST SP 800-207)](https://csrc.nist.gov/publications/detail/sp/800-207/final) — Comprehensive framework for designing systems that make trust relationships explicit rather than implicit
-- [RFC 8555: ACME (Automatic Certificate Management Environment)](https://www.rfc-editor.org/rfc/rfc8555) — Practical example of how explicit trust modeling enables automated certificate management for the Web PKI
-- [Remote ATtestation ProcedureS (RATS) Architecture](https://datatracker.ietf.org/wg/rats/about/) — Modern IETF work on defining trust relationships for device attestation and verification
+* [RFC 3724: The Rise of the Middle and the Future of End-to-End](https://www.rfc-editor.org/rfc/rfc3724) — Essential reading for understanding the architectural principles that guide Internet design, including detailed discussion of trust relationships.
+* [NIST Special Publication 800-207: Zero Trust Architecture](https://csrc.nist.gov/publications/detail/sp/800-207/final) — Modern treatment of how to build systems that make trust relationships explicit rather than implicit.
+* [RFC 4949: Internet Security Glossary, Version 2](https://www.rfc-editor.org/rfc/rfc4949) — Comprehensive definitions of trust-related terminology used in Internet standards.
+* [Security Engineering by Ross Anderson](https://www.cl.cam.ac.uk/~rja14/book.html) — Classic textbook with excellent coverage of how trust models translate into technical security mechanisms.
 
 ---
 
-*This report was generated from analysis of IETF working group session transcripts from meetings 110-123 (March 2021 - July 2025) using vCon (Conversation Container) methodology.*
+*This report was generated from analysis of IETF meeting vCon (virtual conversation) records covering meetings 110-123 (March 2021 - July 2025).*
 
 ---
 
@@ -120,4 +132,4 @@ Source: [vcon-dev/ietf-meeting-vcons](https://github.com/vcon-dev/ietf-meeting-v
 Analysis: IETF 125 Hackathon — vCon Principles Detection |
 Group vCon UUID: `58c23ba4-cfc6-4837-a087-7163b5544553` |
 Sessions analyzed: 252 |
-Generated: 2026-03-14*
+Generated: 2026-03-15*

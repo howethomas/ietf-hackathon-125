@@ -2,96 +2,105 @@
 
 ## Introduction
 
-The "Tussle in cyberspace" principle recognizes a fundamental reality of Internet architecture: competing stakeholders with legitimate but conflicting interests will always exist, and the Internet's design must accommodate these inevitable tensions rather than trying to eliminate them. This principle emerged from the influential 2002 paper "[Tussle in Cyberspace: Defining Tomorrow's Internet](https://groups.csail.mit.edu/ana/Publications/PubPDFs/Tussle2002.pdf)" by David Clark, John Wroclawski, Karen Sollins, and Robert Braden, which argued that Internet architects should design systems that allow competing interests to coexist and negotiate dynamically.
+The principle of "tussle in cyberspace" recognizes a fundamental truth about Internet architecture: the network inevitably becomes an arena where different stakeholders with competing interests clash, and the technical design must accommodate rather than ignore these tensions. First articulated by David Clark and colleagues at MIT in their influential 2002 paper "[Tussle in Cyberspace: Defining Tomorrow's Internet](https://groups.csail.mit.edu/ana/Publications/PubPDFs/Tussle2002.pdf)," this principle argues that successful Internet protocols must be designed with the understanding that conflicts between users, service providers, content creators, governments, and other parties are not bugs to be eliminated, but features to be anticipated and managed.
 
-Unlike many engineering principles that seek to optimize for single objectives, the tussle principle explicitly embraces conflict as a design constraint. It acknowledges that users, service providers, governments, content creators, and network operators often have fundamentally different goals—privacy versus accountability, performance versus security, innovation versus stability—and that these tensions cannot be resolved through technical cleverness alone. Instead, the Internet's architecture should provide mechanisms for these stakeholders to negotiate, compete, and find balance over time.
+Rather than attempting to resolve these tensions through technical fiat, the principle suggests that Internet architecture should provide mechanisms that allow different stakeholders to pursue their interests while maintaining the network's overall functionality. This approach acknowledges that the Internet is not just a technical system, but a socio-technical infrastructure where economic, political, and social forces play out through protocol choices and implementation decisions.
 
-This principle has become increasingly relevant in IETF discussions as the Internet has evolved from a research network to critical global infrastructure. Modern protocol design must navigate complex landscapes of regulatory compliance, business models, security requirements, and user expectations. The tussle principle guides architects to build flexibility and negotiation points into protocols rather than hardcoding particular resolutions to stakeholder conflicts.
+The significance of this principle in IETF work cannot be overstated. It has influenced everything from security protocol design to routing architectures, helping the Internet engineering community understand why purely technical solutions often fail when they don't account for the human and organizational dynamics that drive technology adoption. As our analysis of IETF meetings from 2021 to 2025 shows, this principle remains actively relevant in contemporary protocol debates, appearing across 50 working group sessions spanning nearly every major IETF meeting in this period.
 
 ## Understanding This Principle
 
-**The Core Idea** — Design systems to accommodate competing legitimate interests rather than trying to eliminate the competition. Think of urban planning: a successful city doesn't try to eliminate tension between residents who want quiet neighborhoods, businesses that need customer access, and commuters who need efficient transportation. Instead, good urban design creates zoning systems, mixed-use districts, and transportation networks that allow these competing needs to negotiate and find balance. The city provides the framework for ongoing negotiation rather than picking permanent winners and losers.
+**The Core Idea** — Design systems to accommodate inevitable conflicts between stakeholders rather than trying to eliminate them. Think of this like designing a city's transportation system: you don't build roads assuming everyone will cooperate perfectly and drive at optimal speeds in perfect coordination. Instead, you design for the reality that drivers will have different destinations, different levels of patience, different vehicle capabilities, and sometimes conflicting goals (the delivery truck that needs to double-park versus the commuter who wants clear lanes). A good transportation system provides multiple routes, traffic signals that manage conflicts fairly, and enforcement mechanisms that maintain overall flow despite individual tensions.
 
-Just as a city planner who only optimized for car traffic would create a hostile environment for pedestrians and cyclists, Internet architects who design only for one stakeholder's interests create systems that other stakeholders will route around, circumvent, or actively undermine. The key insight is that these tensions aren't bugs to be fixed—they're permanent features of complex systems that must be designed for explicitly.
+**Why It Matters** — When system designers ignore stakeholder tensions, they often create brittle architectures that fail catastrophically when real-world conflicts emerge. Consider email security: early email protocols assumed a cooperative environment where all mail servers would behave honestly. When spam and phishing emerged, the system had no built-in mechanisms to handle adversarial behavior. The result was an arms race of patches and bolt-on solutions like spam filters, sender authentication schemes, and reputation systems. In contrast, protocols designed with tussle in mind build flexibility and negotiation mechanisms from the start. TLS, for example, includes cipher suite negotiation that allows clients and servers with different security requirements and capabilities to find common ground, rather than forcing a one-size-fits-all solution.
 
-**Why It Matters** — When systems ignore legitimate stakeholder conflicts, those conflicts don't disappear—they manifest in destructive ways. Consider email spam filtering: early systems tried to solve spam through technical means alone, essentially picking sides in the tussle between senders (who want delivery) and recipients (who want control). This approach failed because it didn't provide mechanisms for legitimate bulk senders to negotiate with recipients. Modern email authentication systems like SPF, DKIM, and DMARC succeed because they create technical frameworks that allow senders to prove their legitimacy while giving recipients granular control over what they accept.
-
-Similarly, early peer-to-peer file sharing systems that ignored copyright concerns were eventually shut down or driven underground. Systems like BitTorrent that provided technical mechanisms for both sharing and control—allowing copyright holders to monitor and take action while enabling legitimate uses—proved more durable. The difference wasn't the underlying technology but the recognition that trying to eliminate the tussle between sharers and rights holders was futile.
-
-**The Tension** — The pressure to violate this principle comes from engineering culture's bias toward optimization and clean solutions. Engineers naturally want to solve problems definitively rather than create ongoing negotiation frameworks. There's also pressure from stakeholders who want their particular interests hardcoded into the system rather than subject to ongoing competition. A content delivery network wants protocols that prioritize performance; privacy advocates want protocols that prioritize anonymity; governments want protocols that enable lawful access. Each group lobbies for their concerns to be treated as fundamental requirements rather than one side of a legitimate tussle.
-
-It's much easier to design for a single stakeholder than to create frameworks for ongoing negotiation. The latter requires more complex protocols, careful attention to power balances, and acceptance that your system will never fully satisfy anyone.
+**The Tension** — The natural engineering instinct is to design for the "optimal" case and eliminate sources of conflict as inefficiencies. Engineers are trained to create clean, deterministic systems where all components work in harmony. Business stakeholders often want solutions that clearly favor their interests. Acknowledging tussle means accepting that systems will be messier, more complex, and sometimes less efficient in the short term. It requires building in negotiation mechanisms, fallback options, and flexibility that may seem like unnecessary overhead when you're focused on a specific use case.
 
 **How to Recognize It** — You're seeing this principle at work when:
 
-- Systems provide configuration options and negotiation mechanisms rather than hardcoded behaviors, like TLS cipher suite negotiation that allows clients and servers to find mutually acceptable security levels
-- Protocols include explicit extension points and versioning schemes that allow competing implementations to coexist and evolve, rather than requiring global coordination for every change
-- Architecture documents acknowledge competing legitimate interests and explain how the system allows those interests to negotiate, rather than declaring one interest more important than others
+* A protocol includes multiple options for the same functionality, allowing different implementations to make different trade-offs based on their stakeholders' priorities
+* System designs include explicit negotiation phases where parties can discover each other's capabilities and constraints before proceeding
+* Instead of mandating a single "correct" behavior, specifications define how parties should behave when they disagree or have conflicting requirements
+* Protocols provide hooks or extension points that allow different stakeholders to add their own functionality without breaking the core system
 
 ## Early IETF Work
 
-The Internet's foundational architecture embodied tussle principles even before they were explicitly articulated. The end-to-end principle, codified in [RFC 3724: The Rise of the Middle](https://www.rfc-editor.org/rfc/rfc3724), inherently recognizes the tussle between applications that want control over their communication and networks that want to optimize or manage traffic. By pushing complexity to the edges, the Internet's original design allowed these competing interests to coexist—applications could implement whatever end-to-end protocols they needed while networks focused on packet delivery.
+The roots of the tussle principle can be traced back to fundamental tensions in early Internet architecture, though it wasn't explicitly named until the 2000s. The original Internet design embodied this principle in several key ways. The end-to-end principle, articulated in RFC 1958, reflected an understanding that different applications would have different requirements, and the network should provide basic connectivity while allowing endpoints to implement their own optimizations. This was a conscious decision to avoid building intelligence into the network that might serve some applications well but handicap others.
 
-However, the Internet community learned hard lessons when this balance was disrupted. The deployment of Network Address Translation (NAT) in the 1990s represented a case where network operators' legitimate need to conserve IPv4 addresses conflicted with applications' need for end-to-end connectivity. Rather than providing negotiation mechanisms, NAT simply broke many applications. The resulting years of NAT traversal protocols, STUN servers, and application-layer workarounds demonstrated the costs of ignoring stakeholder tussles rather than designing for them.
+However, the Internet community also learned hard lessons when they failed to anticipate stakeholder conflicts. The original Domain Name System (DNS) design assumed cooperative behavior among name server operators, leading to vulnerabilities like cache poisoning that weren't addressed until decades later. Similarly, the early routing protocols like RIP assumed that all network operators would faithfully advertise correct routing information, an assumption that proved naive as the Internet commercialized and economic incentives created conflicts between providers.
 
-The Domain Name System provides a more successful example of tussle-aware design. DNS allows competing interests—domain registrants who want control, registrars who want business flexibility, and users who want reliable resolution—to negotiate through technical mechanisms like TTL values, multiple nameservers, and delegation chains. While DNS politics can be contentious, the technical architecture provides stable frameworks for these ongoing negotiations.
+[RFC 3724: The Rise of the Middle](https://www.rfc-editor.org/rfc/rfc3724) documented how the Internet's architecture was evolving to include more "middleboxes" - devices like firewalls, load balancers, and proxies that reflected the tussle between network operators' operational needs and the end-to-end principle. Rather than condemning these devices as violations of Internet purity, RFC 3724 acknowledged them as inevitable responses to real stakeholder requirements and began developing principles for how they could coexist with traditional Internet architecture.
 
 ## Key References
 
-- [Tussle in Cyberspace: Defining Tomorrow's Internet](https://groups.csail.mit.edu/ana/Publications/PubPDFs/Tussle2002.pdf) — The foundational paper that articulated how Internet architecture should accommodate rather than eliminate stakeholder conflicts
-- [RFC 3724: The Rise of the Middle](https://www.rfc-editor.org/rfc/rfc3724) — Analysis of how intermediate devices in the network create new stakeholder tensions and architectural challenges
+* **[Tussle in Cyberspace: Defining Tomorrow's Internet](https://groups.csail.mit.edu/ana/Publications/PubPDFs/Tussle2002.pdf)** — The seminal paper by Clark, Wroclawski, Sollins, and Braden that first articulated this principle and its implications for Internet architecture.
+* **[RFC 3724: The Rise of the Middle](https://www.rfc-editor.org/rfc/rfc3724)** — Documents how middleboxes represent a form of architectural tussle and provides principles for accommodating them.
 
 ## This Principle in IETF Discussions
 
-The principle appears prominently in working groups dealing with human rights, network management, and protocol evolution. Early in the COVID-19 pandemic era, the [hrpc](https://datatracker.ietf.org/wg/hrpc/about/) working group grappled with stakeholder balance in standards development:
+The tussle principle appears consistently across IETF working groups, often emerging when technical decisions must navigate competing stakeholder interests. In the [Human Rights Protocol Considerations (HRPC)](https://datatracker.ietf.org/wg/hrpc/about/) working group, participants have grappled with how to balance different stakeholder perspectives in standards development. As one IETF 110 discussion noted, successful technical committees require "a balance of stakeholders so you wanted some of them to be from the manufacturing firms some of them could be from..." different constituencies, acknowledging that standards must accommodate diverse interests rather than favoring any single group.
 
-> "they create the notion of technical committees in specific areas they set up and they came up with a norm such as you had to have a balance of stakeholders so you wanted some of them to be from the manufacturing firms some of them could be fro" (IETF 110, March 2021)
+> "munity um and again the view seemed impacted by specific personal experiences and how people perceive things you know glasses half full or empty or things like that um engaging with external impacted stakeholders uh in general there does seem to be a belief that the ietf cannot exist in a vacuum and"
 
-This discussion reflected ongoing concerns about ensuring diverse perspectives in technical decision-making, recognizing that different stakeholders bring legitimate but competing priorities.
+*IETF 110 - [IETF Working Group](https://datatracker.ietf.org/wg/ietf/about/) Session (March 2021)* *[View source vCon](https://github.com/vcon-dev/ietf-meeting-vcons/blob/main/ietf110/ietf110_ietf_28744.vcon.json)*
 
-The tension between research and deployment emerged clearly in path measurement discussions. During IETF 118 in Prague, the [edm](https://datatracker.ietf.org/wg/edm/about/) working group highlighted a fundamental tussle in network measurement:
+This recognition that the IETF "cannot exist in a vacuum" reflects a mature understanding that technical standards must account for real-world stakeholder dynamics. The discussion explicitly acknowledges that different participants bring different perspectives shaped by their experiences and interests.
 
-> "do the greasing somehow we somehow have to know whether the tests we're doing actually go through the network so we know what works so that researchers can build big data sets over time and there's a tussle here because greeting kind of opticat that or maybe exercises that" (IETF 118, November 2023)
+By IETF 118, the principle was being invoked more explicitly in technical discussions. In an [EDM working group](https://datatracker.ietf.org/wg/edm/about/) session on network measurement, participants identified a fundamental "tussle" between the need for research data and network operators' concerns about greasing mechanisms:
 
-This exemplifies how protocol mechanisms like greasing (deliberately varying protocol elements to prevent ossification) create tensions between research needs and operational stability.
+> "do the greasing somehow we somehow have to know whether the tests we're doing actually go through the network so we know what works so that researchers can build big data sets over time and there's a tussle here because greeting kind of opticat that or maybe exercises that so I think it might be wor"
 
-By IETF 120 in Vancouver, the [emailcore](https://datatracker.ietf.org/wg/emailcore/about/) working group explicitly acknowledged the inherent nature of stakeholder conflicts in email authentication:
+*IETF 118 - [EDM Working Group](https://datatracker.ietf.org/wg/edm/about/) Session (November 2023)* *[View source vCon](https://github.com/vcon-dev/ietf-meeting-vcons/blob/main/ietf118/ietf118_edm_31821.vcon.json)*
 
-> "there's not going to be perfect here and by no means will there be perfect here there's there's a there's a tussle going on in in in all this as we've heard and so there has to be really clear words as to how" (IETF 120, July 2024)
+This example shows how the principle applies to specific technical challenges: researchers need visibility into network behavior to build datasets, while network operators deploying greasing techniques specifically want to obscure certain behaviors to prevent ossification. Rather than viewing this as a problem to solve, the participants recognized it as a legitimate tussle requiring careful design balance.
 
-This recognition that email authentication involves irreconcilable tensions between senders wanting delivery and recipients wanting control led to more nuanced protocol specifications.
+The principle also appears in operational contexts. During an [IOTOPS working group](https://datatracker.ietf.org/wg/iotops/about/) discussion about certificate management, participants identified a "real tussle" between security requirements and operational realities:
 
-The most recent discussions show how this principle applies to emerging areas like connection optimization. At IETF 123 in Madrid, the [happy](https://datatracker.ietf.org/wg/happy/about/) working group discussed competing preferences in connection establishment:
+> "ficates or something and they have some magic you know uh thing that's going to solve your problem but the problem case is real and I think that the that I think that um I think we have a real a real tussle here right because you you many cases you just don't ever want those things to ever expire an"
 
-> "these are all different stakeholders and preferences you have for how you want to make a connection and they're not necessar" (IETF 123, July 2025)
+*IETF 118 - [IOTOPS Working Group](https://datatracker.ietf.org/wg/iotops/about/) Session (November 2023)* *[View source vCon](https://github.com/vcon-dev/ietf-meeting-vcons/blob/main/ietf118/ietf118_iotops_31575.vcon.json)*
 
-This reflects the ongoing challenge of designing protocols that accommodate diverse stakeholder needs in an increasingly heterogeneous Internet environment.
+This reflects the tension between security best practices (regular certificate rotation) and operational simplicity (certificates that never expire). Rather than dismissing either concern, the discussion acknowledges both as legitimate stakeholder interests.
+
+By 2024, the principle was being applied to email security discussions in the [EMAILCORE working group](https://datatracker.ietf.org/wg/emailcore/about/), where participants explicitly acknowledged that "there's not going to be perfect here" and that clear specifications must account for ongoing tensions:
+
+> "lly have words to fix it right because uh my I think Daniel sort of captured this well that there's not going to be perfect here and by no means will there be perfect here there's there's a there's a tussle going on in in in all this as we've heard and so there has to be really clear words as to how"
+
+*IETF 120 - [EMAILCORE Working Group](https://datatracker.ietf.org/wg/emailcore/about/) Session (July 2024)* *[View source vCon](https://github.com/vcon-dev/ietf-meeting-vcons/blob/main/ietf120/ietf120_emailcore_33114.vcon.json)*
+
+Most recently, IETF 123 discussions showed the principle being applied to the eternal tension between specification-first standardization and implementation-driven approaches in the [EDM working group](https://datatracker.ietf.org/wg/edm/about/):
+
+> "we still at the ITF have to put our specification first. We shouldn't be like I understand there is a value of running code what has actually worked but not give up our stuff in the middle there is a tussle there because people come all the time to the IT say this is already implemented I'm not goin"
+
+*IETF 123 - [EDM Working Group](https://datatracker.ietf.org/wg/edm/about/) Session (July 2025)* *[View source vCon](https://github.com/vcon-dev/ietf-meeting-vcons/blob/main/ietf123/ietf123_edm_34524.vcon.json)*
+
+This illustrates the ongoing tension between the IETF's standards-first approach and industry pressure to standardize existing implementations, showing how the tussle principle continues to inform IETF processes themselves.
 
 ## Historical Analysis
 
-Discussion of the tussle principle has remained consistently present across IETF meetings from 2021 to 2025, appearing in 50 sessions across 13 of 14 meetings. The principle shows particular prominence in working groups dealing with human rights ([hrpc](https://datatracker.ietf.org/wg/hrpc/about/)), network measurement ([gaia](https://datatracker.ietf.org/wg/gaia/about/), [edm](https://datatracker.ietf.org/wg/edm/about/)), and security dispatch ([secdispatch](https://datatracker.ietf.org/wg/secdispatch/about/)), suggesting these areas particularly require explicit acknowledgment of competing stakeholder interests.
+Analysis of IETF meetings 110-123 reveals consistent engagement with the tussle principle across diverse working groups, with notable concentration in areas dealing with human rights, measurement, and cross-stakeholder coordination:
 
-| Meeting | Date | Sessions |
-|---------|------|----------|
-| IETF 110 | March 2021 (Online) | 4 |
-| IETF 118 | November 2023 (Prague) | 7 |
-| IETF 120 | July 2024 (Vancouver) | 7 |
-| IETF 121 | November 2024 (Dublin) | 7 |
+| Meeting | Sessions | Notable Trend |
+|---------|----------|---------------|
+| IETF 110-114 | 16 sessions | Early post-pandemic discussions focused on stakeholder inclusion |
+| IETF 115-117 | 6 sessions | Lower activity, possibly due to return to in-person meetings |
+| IETF 118-123 | 28 sessions | Significant increase, with explicit "tussle" terminology becoming common |
 
-The peak discussions in 2023-2024 coincided with increased focus on Internet governance, AI impacts on networking, and post-quantum cryptography transitions—all areas where stakeholder interests diverge significantly. The [hrpc](https://datatracker.ietf.org/wg/hrpc/about/) working group's prominence (7 sessions) reflects ongoing efforts to systematically consider human rights implications in protocol design, inherently a tussle-heavy domain.
+The [Human Rights Protocol Considerations (HRPC)](https://datatracker.ietf.org/wg/hrpc/about/) working group leads in discussions with 7 sessions, reflecting their focus on protocols' societal impacts and multi-stakeholder concerns. The [Global Access to the Internet for All (GAIA)](https://datatracker.ietf.org/wg/gaia/about/) group's 4 sessions similarly reflect concerns about global access and digital divides that inherently involve stakeholder tensions.
 
-Research groups like [nmrg](https://datatracker.ietf.org/wg/nmrg/about/) and [rasprg](https://datatracker.ietf.org/wg/rasprg/about/) frequently invoke this principle when discussing measurement methodologies and routing security, areas where academic, operational, and commercial interests often conflict. The consistent presence across such diverse working groups suggests the principle has become a fundamental lens for IETF architectural thinking.
+Interestingly, the [Network Management Research Group (NMRG)](https://datatracker.ietf.org/wg/nmrg/about/) and [Encrypted DNS Deployment (EDM)](https://datatracker.ietf.org/wg/edm/about/) groups each had 3 sessions, suggesting that measurement and deployment contexts frequently surface stakeholder tensions between operators, researchers, and users.
+
+The significant uptick in discussions during IETF 118-123 corresponds with increased explicit use of "tussle" terminology, suggesting the principle has become more consciously applied rather than just implicitly present in discussions. This may reflect growing maturity in how the IETF community thinks about multi-stakeholder considerations in protocol design.
 
 ## Resources
 
-- [Tussle in Cyberspace (original paper)](https://groups.csail.mit.edu/ana/Publications/PubPDFs/Tussle2002.pdf) — Essential reading for understanding how competing stakeholder interests should shape Internet architecture
-- [RFC 3724: The Rise of the Middle](https://www.rfc-editor.org/rfc/rfc3724) — Examines how intermediate devices create new stakeholder tensions and design challenges
-- [End-to-End Arguments in System Design](http://web.mit.edu/Saltzer/www/publications/endtoend/endtoend.pdf) — The foundational paper on end-to-end principles that implicitly embodies tussle-aware design
-- [Internet Architecture Board Workshop on Internet Technology Adoption and Transition (ITAT)](https://www.iab.org/activities/workshops/) — Regular workshops examining how competing interests affect technology deployment
+* **[Tussle in Cyberspace (original paper)](https://groups.csail.mit.edu/ana/Publications/PubPDFs/Tussle2002.pdf)** — Essential reading for understanding the theoretical foundation and key examples of how stakeholder conflicts shape Internet architecture.
+* **[RFC 3724: The Rise of the Middle](https://www.rfc-editor.org/rfc/rfc3724)** — Provides concrete examples of how tussle manifests in middlebox deployment and offers architectural principles for accommodation.
+* **[Internet Architecture and Innovation](https://mitpress.mit.edu/books/internet-architecture-and-innovation)** by Barbara van Schewick — Comprehensive analysis of how architectural choices affect innovation and competition, with extensive discussion of stakeholder tensions.
 
 ---
 
-*This report was generated from analysis of IETF working group session transcripts using vCon conversation intelligence.*
+*This report was generated through analysis of video conference recordings (vCons) from IETF working group sessions spanning meetings 110-123 (March 2021 - July 2025).*
 
 ---
 
@@ -100,4 +109,4 @@ Source: [vcon-dev/ietf-meeting-vcons](https://github.com/vcon-dev/ietf-meeting-v
 Analysis: IETF 125 Hackathon — vCon Principles Detection |
 Group vCon UUID: `38a47da1-a32e-4d6d-83a0-8bf23b00bf8b` |
 Sessions analyzed: 50 |
-Generated: 2026-03-14*
+Generated: 2026-03-15*

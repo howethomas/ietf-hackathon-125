@@ -271,6 +271,7 @@ def select_best_quotes(sessions: list[dict], max_quotes: int = 10) -> list[dict]
                 "subject": s.get("subject", ""),
                 "confidence": s.get("confidence", "low"),
                 "quality": quality,
+                "source_uuid": s.get("source_uuid", ""),
             })
 
     if not candidates:
@@ -319,7 +320,20 @@ def select_best_quotes(sessions: list[dict], max_quotes: int = 10) -> list[dict]
     return selected[:max_quotes]
 
 
-def build_prompt(parsed: dict, enrichment: dict) -> str:
+def build_uuid_to_path_map(vcons_dir: str) -> dict:
+    """Build a mapping from original vCon UUID to its relative file path."""
+    uuid_map = {}
+    for f in sorted(glob.glob(os.path.join(vcons_dir, "ietf*", "ietf*.vcon.json"))):
+        with open(f) as fh:
+            data = json.load(fh)
+        uuid_map[data.get("uuid")] = os.path.relpath(f, vcons_dir)
+    return uuid_map
+
+
+VCON_GITHUB_BASE = "https://github.com/vcon-dev/ietf-meeting-vcons/blob/main"
+
+
+def build_prompt(parsed: dict, enrichment: dict, uuid_to_path: dict = None) -> str:
     """Build the Claude API prompt with all the context needed for the report."""
     principle = parsed["principle"]
     analysis = parsed["analysis"]
@@ -338,6 +352,10 @@ def build_prompt(parsed: dict, enrichment: dict) -> str:
         quotes_text += f"\nQuote {i} — {q['subject']} ({meeting_label}), WG: {q['working_group']}\n"
         quotes_text += f'"{ctx}"\n'
         quotes_text += f"Confidence: {q['confidence']}\n"
+        # Add vCon download link if available
+        if uuid_to_path and q.get("source_uuid") in uuid_to_path:
+            rel_path = uuid_to_path[q["source_uuid"]]
+            quotes_text += f"Source vCon: [{rel_path}]({VCON_GITHUB_BASE}/{rel_path})\n"
 
     # Format statistics
     meetings = analysis.get("meetings_represented", [])
@@ -434,6 +452,8 @@ List the RFCs and seminal papers with links and brief (1-sentence) descriptions 
 ## This Principle in IETF Discussions
 Write a narrative section that weaves together the actual conversation excerpts above to illustrate how this principle comes up in real IETF deliberations. Use blockquotes (> ) for the excerpts. Attribute each quote to its working group (linked to datatracker) and meeting. Choose the most illustrative 4-6 quotes and provide context for each — what were the participants discussing, and why did this principle matter in that context? IMPORTANT: Select quotes that span the full timeline — include at least one from an early meeting (110-114), one from the middle period (115-119), and one from recent meetings (120-123) to show how the discussion has evolved. Don't use all quotes — pick the best ones for narrative impact.
 
+For each quote used, if a "Source vCon" link was provided, include it as a small download link after the blockquote attribution, like: *[View source vCon](url)*. This lets readers download the original conversation record.
+
 ## Historical Analysis
 Analyze how discussion of this principle has evolved across IETF 110–123 ({IETF_MEETING_DATES.get(meetings[0], '')} to {IETF_MEETING_DATES.get(meetings[-1], '') if meetings else ''}). Use the frequency data to identify trends. When naming working groups, always link them to their IETF datatracker page using this format: [wgname](https://datatracker.ietf.org/wg/wgname/about/). Which working groups discuss it most, and why might that be? Are there any notable patterns — periods of increased discussion, shifts in how the principle is applied? Present the frequency data in a small markdown table.
 
@@ -463,6 +483,7 @@ async def generate_report(
     output_dir: str,
     client: anthropic.AsyncAnthropic,
     model: str = "claude-sonnet-4-20250514",
+    uuid_to_path: dict = None,
 ) -> str:
     """Generate a markdown report for a single group vCon."""
     parsed = load_group_vcon(group_vcon_path)
@@ -475,7 +496,7 @@ async def generate_report(
     pid = principle["principle_id"]
     enrichment = PRINCIPLE_ENRICHMENT.get(pid, {"seminal_papers": [], "rfc_urls": {}, "learn_more": []})
 
-    prompt = build_prompt(parsed, enrichment)
+    prompt = build_prompt(parsed, enrichment, uuid_to_path=uuid_to_path)
 
     print(f"  Calling Claude API for {principle['name']}...", flush=True)
 
@@ -541,6 +562,11 @@ async def main():
         default=None,
         help="Comma-separated list of principle IDs to generate (default: all)",
     )
+    parser.add_argument(
+        "--vcons-dir",
+        default="/root/ietf-hackathon-125/ietf-meeting-vcons",
+        help="Path to ietf-meeting-vcons repo (for source vCon links)",
+    )
     args = parser.parse_args()
 
     api_key = args.api_key or os.environ.get("ANTHROPIC_API_KEY")
@@ -567,6 +593,15 @@ async def main():
 
     client = anthropic.AsyncAnthropic(api_key=api_key)
 
+    # Build UUID-to-path map for source vCon links
+    uuid_to_path = {}
+    if os.path.isdir(args.vcons_dir):
+        print(f"Building vCon UUID map from {args.vcons_dir}...")
+        uuid_to_path = build_uuid_to_path_map(args.vcons_dir)
+        print(f"  Indexed {len(uuid_to_path)} source vCons")
+    else:
+        print(f"Warning: vCons directory not found at {args.vcons_dir}, reports will not include source links")
+
     # Find group vCon files
     pattern = os.path.join(args.group_dir, "*.group.vcon.json")
     files = sorted(glob.glob(pattern))
@@ -590,7 +625,7 @@ async def main():
         pid = os.path.basename(path).replace(".group.vcon.json", "")
         print(f"[{len(results)+1}/{len(files)}] {pid}")
         try:
-            output = await generate_report(path, args.output_dir, client, args.model)
+            output = await generate_report(path, args.output_dir, client, args.model, uuid_to_path=uuid_to_path)
             results.append(output)
         except Exception as e:
             print(f"  ERROR: {e}")

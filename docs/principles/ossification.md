@@ -2,106 +2,122 @@
 
 ## Introduction
 
-Protocol ossification represents one of the Internet's most insidious architectural challenges: the tendency for protocols to become rigid and resistant to change due to interference from middleboxes and the gradual loss of unused extension points. This phenomenon threatens the Internet's fundamental principle of evolvability, making it increasingly difficult to deploy new features or adapt protocols to emerging needs.
+Protocol ossification represents one of the Internet's most insidious architectural challenges: the gradual hardening of protocols into rigid, unchangeable forms due to the accumulation of middleboxes and implementations that make assumptions about protocol behavior. This principle, formally documented in [RFC 9170: Long-Term Viability of Protocol Extension Mechanisms](https://www.rfc-editor.org/rfc/rfc9170), embodies the "use-it-or-lose-it" reality of Internet protocol design—extension points and flexibility mechanisms that aren't actively exercised will eventually become unusable as the ecosystem calcifies around existing patterns.
 
-The principle is perhaps best captured in the maxim "use it or lose it" — protocol extension mechanisms that aren't regularly exercised in production networks gradually become unusable as middleboxes, firewalls, and other network infrastructure begin to treat any deviation from common patterns as suspicious or erroneous traffic. This insight was formalized in [RFC 9170: Long-Term Viability of Protocol Extension Mechanisms](https://www.rfc-editor.org/rfc/rfc9170), which provides comprehensive guidance on maintaining protocol extensibility over time.
+The concept emerged from decades of painful experience with protocols like TCP and HTTP, where well-intentioned features became trapped by middlebox interference and implementation assumptions. When protocols deploy with extension mechanisms but these extensions remain unused, intermediate systems begin to treat any deviation from the observed norm as an error or attack. Over time, what was designed to be flexible becomes effectively immutable, forcing protocol designers to work around their own extension points or abandon them entirely.
 
-Understanding and combating protocol ossification has become critical for the IETF's work, influencing everything from the design of new protocols like QUIC to the evolution of existing standards like TLS and HTTP. The principle shapes how protocol designers think about extension points, version negotiation, and the long-term health of Internet infrastructure.
+This principle has become central to modern IETF protocol design, particularly influencing the development of QUIC, TLS 1.3, and other recent protocols. It represents a hard-learned lesson about the difference between theoretical extensibility and practical evolvability in Internet-scale systems, where the installed base of middleboxes and implementations can effectively veto protocol evolution regardless of what the specification permits.
 
 ## Understanding This Principle
 
-**The Core Idea** — Protocol extension mechanisms become unusable if they're not regularly exercised in production traffic. Think of protocol ossification like unused fire exits in a large office building. When the building opens, all the emergency exits work perfectly and are clearly marked. But over time, if they're never used, facilities managers start storing equipment in front of them, maintenance crews forget to oil the hinges, and security systems begin treating anyone who uses these "unusual" exits as suspicious. Eventually, what were designed as safety valves become completely blocked — exactly when you need them most during an emergency.
+**The Core Idea** — If you don't actively exercise the extension points in your protocol, they will become unusable over time due to interference from middleboxes and assumptions made by implementations.
 
-In networking, protocols are designed with extension points — special fields, optional headers, or version numbers that allow future enhancements without breaking existing implementations. But if these mechanisms aren't regularly used, middleboxes (firewalls, load balancers, content filters) begin to assume that "normal" traffic never uses them. They start dropping packets with unfamiliar option codes or blocking connections that attempt version negotiation. The extension points calcify into unusable vestigial features.
+Think of this like maintaining hiking trails in a national park. When a trail is regularly used by hikers, it stays clear and passable—the constant foot traffic keeps vegetation from overgrowing the path, fallen trees get reported and removed, and park rangers know to maintain the route. But if a trail goes unused for several seasons, nature reclaims it. Brush grows across the path, fallen logs block the way, and eventually the trail becomes so overgrown that it's impassable. Even though the trail was originally designed and built for hiking, without regular use, it effectively ceases to exist as a viable route.
 
-**Why It Matters** — When protocols ossify, innovation grinds to a halt. Consider the difference between HTTP/2 deployment and QUIC deployment. HTTP/2 tried to evolve over existing TCP connections, but years of middlebox ossification around HTTP/1.1 patterns meant that many corporate firewalls and content filters broke HTTP/2 traffic. The deployment was slow and painful. In contrast, QUIC learned from this experience and was designed from day one with deliberate variation in its packet formats and aggressive use of encryption to prevent middleboxes from making assumptions about its internal structure. QUIC deployment has been dramatically faster as a result.
+In the same way, Internet protocols contain "trails" called extension points—reserved fields, optional parameters, version numbers, and negotiation mechanisms designed to allow future enhancements. But if these extension points aren't regularly exercised by real implementations carrying real traffic, the Internet ecosystem grows around them in ways that block their use. Firewalls start dropping packets with unfamiliar options. Load balancers begin to assume certain fields will always contain specific values. Software implementations take shortcuts based on what they've observed in practice rather than what the specification allows.
 
-The consequences extend beyond just deployment speed. Ossified protocols create technical debt across the entire Internet ecosystem. Features that should take months to deploy instead take years or require complete protocol replacements. Security vulnerabilities become harder to patch when you can't safely modify protocol behavior. Performance improvements remain stranded in specifications that can't be deployed.
+**Why It Matters** — When extension points ossify, protocols become evolutionary dead ends, forcing painful workarounds or complete replacement. Consider the difference between TCP and QUIC as a stark example. TCP includes various extension mechanisms, but decades of middlebox interference have made many of them unusable. Want to deploy new TCP options? Good luck getting them through enterprise firewalls and carrier-grade NAT systems that have learned to expect TCP packets to look a certain way. This ossification forced the IETF to develop QUIC as an entirely new transport protocol running over UDP, essentially abandoning TCP's extension points and starting fresh.
 
-**The Tension** — The real-world pressure working against this principle is the fundamental conservatism of network operations. Network administrators are paid to keep things running, not to experiment with new protocol features. Middlebox vendors optimize for the common case — if 99.9% of traffic follows a predictable pattern, why complicate your firewall rules to handle edge cases that might be attack vectors? This creates a classic tragedy of the commons: everyone benefits from having extensible protocols, but no individual operator has sufficient incentive to exercise those extensions until they're needed.
+In contrast, QUIC was designed from day one with aggressive "greasing"—deliberately sending random, meaningless values in extension fields to ensure that any system intolerant of variation fails immediately during development rather than after widespread deployment. This preventive exercise of extension points keeps the evolutionary pathways open. The result is a protocol that can actually evolve, whereas TCP remains largely frozen despite being the foundation of Internet transport.
 
-There's also an inherent chicken-and-egg problem: protocol extensions aren't useful until enough endpoints support them, but extensions won't work reliably until enough middleboxes tolerate them. Breaking this deadlock requires coordinated effort that goes against the Internet's decentralized nature.
+**The Tension** — The counterforce is simple: exercising unused extension points costs engineering time and increases complexity with no immediate benefit. Why implement and test protocol features you don't need today? Why risk introducing bugs or compatibility issues for hypothetical future use cases? Engineering teams face constant pressure to ship features that provide immediate value to users, not to maintain abstract extensibility. Additionally, adding variability to protocols can complicate testing, debugging, and operations. It's much easier to reason about a system that behaves predictably than one that exercises random variations "just in case."
+
+This tension is exacerbated by the fact that ossification happens gradually and invisibly. Unlike a system failure that triggers immediate attention, ossification manifests as the slow erosion of future options—a classic tragedy of the commons where individual rational decisions collectively create a suboptimal outcome.
 
 **How to Recognize It** — You're seeing this principle at work when:
 
-* A new software feature requires "compatibility mode" flags to work through existing network infrastructure
-* Protocol specifications include extensive lists of "implementation considerations" about middlebox behavior  
-* Deployment guides spend more time explaining firewall configurations than the actual protocol features
-* Engineers choose completely new protocols over extending existing ones, even when the extension would be technically simpler
+* Your API includes optional parameters that no clients use, and you're afraid to remove them but suspect they wouldn't work if someone tried
+* Your system's configuration format supports features that were never implemented, and now updating the parser risks breaking assumptions in downstream tools
+* Your protocol includes version negotiation, but in practice only one version works reliably across different network environments due to middlebox interference
+* Your database schema has "reserved for future use" columns that have been empty for years, and you're not sure if applications would handle non-null values correctly
 
 ## Early IETF Work
 
-The IETF's understanding of protocol ossification emerged gradually through painful experience with protocol evolution in the 1990s and early 2000s. Early Internet protocols like IP and TCP were designed with seemingly ample extension space — IP had an options field, TCP had its own options mechanism, and many application protocols included version numbers and extensibility hooks. The original architects assumed that this flexibility would naturally accommodate future innovations.
+The roots of understanding protocol ossification stretch back to the early days of TCP/IP development, though the phenomenon wasn't well understood until years of deployment experience revealed its effects. The original Internet Protocol suite was designed with extensibility in mind—IPv4 included an Options field, TCP provided space for options and flags, and many application protocols included version negotiation mechanisms. The assumption was that these extension points would enable graceful evolution as needs changed.
 
-However, as the Internet scaled and commercial middleboxes proliferated, these extension mechanisms began failing in unexpected ways. The deployment of IPv6, despite being standardized in 1998, encountered massive resistance partly because middleboxes had ossified around IPv4 assumptions. Similarly, TCP options beyond the most basic ones became increasingly unusable as firewalls and NAT devices started treating uncommon option combinations as potentially malicious traffic.
+However, the 1990s and early 2000s brought painful lessons about the gap between specification and reality. The deployment of Network Address Translation (NAT) devices, firewalls, and various "application-aware" middleboxes created a parallel evolution pressure that protocol designers hadn't anticipated. These devices made assumptions about protocol behavior based on observed traffic patterns rather than specification compliance. IPv4 options became largely unusable due to middlebox interference. TCP options faced similar problems, with many enterprise networks dropping packets containing unfamiliar option types. The IPv6 transition revealed how difficult it was to deploy even well-designed protocol evolution when the installed base of middleboxes wasn't prepared for change.
 
-The HTTP/2 standardization process served as a crucial learning experience for the IETF community. Despite careful design and broad industry support, HTTP/2 deployment revealed how thoroughly HTTP/1.1 patterns had become embedded in proxy servers, content delivery networks, and corporate firewalls. This experience directly influenced the development of protocols like QUIC, which incorporated anti-ossification measures from the beginning rather than trying to retrofit them later. The IETF's growing awareness of ossification as a first-class architectural concern culminated in dedicated research groups and working groups focused on measuring and combating the phenomenon.
+The IETF's response evolved gradually. Early efforts focused on documenting middlebox behavior and encouraging "liberal in what you accept" implementations, but experience showed this wasn't sufficient. The development of protocols like SCTP demonstrated that even clean-slate designs could face deployment challenges if they didn't account for existing middlebox ecosystems. It wasn't until the development of TLS 1.3 and QUIC that the community fully embraced proactive measures like greasing—deliberately exercising extension points to prevent ossification. These experiences culminated in the formal documentation of the "use-it-or-lose-it" principle in RFC 9170, representing decades of hard-won wisdom about protocol evolution in Internet-scale systems.
 
 ## Key References
 
-* [RFC 9170: Long-Term Viability of Protocol Extension Mechanisms](https://www.rfc-editor.org/rfc/rfc9170) — The definitive guide to understanding and preventing protocol ossification, with concrete recommendations for protocol designers.
-* [RFC 8701: GREASE (Generate Random Extensions And Sustain Extensibility)](https://www.rfc-editor.org/rfc/rfc8701) — Describes the technique of deliberately exercising extension points with random values to prevent ossification.
-* [RFC 9000: QUIC Protocol](https://www.rfc-editor.org/rfc/rfc9000) — A modern protocol designed with extensive anti-ossification measures built in from the start.
+* [RFC 9170: Long-Term Viability of Protocol Extension Mechanisms](https://www.rfc-editor.org/rfc/rfc9170) — The definitive documentation of protocol ossification and the "use-it-or-lose-it" principle
+* [RFC 8701: GREASE (Generate Random Extensions And Sustain Extensibility)](https://www.rfc-editor.org/rfc/rfc8701) — Describes the technique of deliberately exercising extension points to prevent ossification
+* [RFC 9000: QUIC Transport Protocol](https://www.rfc-editor.org/rfc/rfc9000) — A modern protocol designed with ossification prevention as a core principle
 
 ## This Principle in IETF Discussions
 
-The evolution of protocol ossification as a central concern in IETF work is clearly visible in working group discussions from 2021 to 2025. Early conversations focused heavily on documenting and formalizing the "use it or lose it" principle, with the [iabopen](https://datatracker.ietf.org/wg/iabopen/about/) working group driving much of the foundational work:
+Protocol ossification has been a persistent theme across IETF working groups, reflecting both the historical pain of dealing with ossified protocols and the ongoing effort to prevent future ossification. The discussions reveal how this principle has evolved from a theoretical concern to a practical design requirement that shapes day-to-day protocol development.
+
+In the early period of our analysis, the [iabopen](https://datatracker.ietf.org/wg/iabopen/about/) working group was actively developing what would become RFC 9170. During IETF 110 in March 2021, participants discussed the importance of this work:
 
 > "ently talking most about is actually one that existed prior to this program being created but we think is a very important work item that we want to progress that martin thompson began it's the draft use it or lose it and we've met now twice we had our last call in december and we're going to plan a"
 
-This quote from IETF 110 shows the early prioritization of what would become RFC 9170, with Martin Thomson's "use it or lose it" draft being identified as a critical work item for the Internet Architecture Board.
+*[View source vCon](https://github.com/vcon-dev/ietf-meeting-vcons/blob/main/ietf110/ietf110_iabopen_28684.vcon.json)*
 
-By 2022, the focus had shifted from documentation to practical implementation, particularly around the GREASE technique for preventing ossification. The [quic](https://datatracker.ietf.org/wg/quic/about/) working group became a testing ground for anti-ossification strategies:
+This early discussion shows the IETF recognizing the fundamental importance of formalizing lessons learned about protocol evolution. The work was considered critical enough to warrant dedicated attention from the Internet Architecture Board.
 
-> "e're not expecting it to take a year from now um so i think the point lucas made in the um uh in the chat is probably the right one that this should take into account uh the fact that that quick will grease some of these things and it will have multiple versions some of which will be uh compatible a"
+The [tls](https://datatracker.ietf.org/wg/tls/about/) working group's discussions during IETF 111 revealed how ossification concerns directly influence protocol design decisions:
 
-This discussion from IETF 113's [avtcore](https://datatracker.ietf.org/wg/avtcore/about/) session reflects how QUIC's built-in greasing mechanisms were influencing other protocol design efforts, with working groups explicitly considering how QUIC's approach to maintaining extensibility could be applied more broadly.
+> "ck one of which is having like a per specialization key um and one of which have like an ech based key um it's not entirely accurate which of these would prevent exactly what i think they all prevent ossification somewhat but like maybe some of the windfall streaming um i'm actually not entirely sur"
 
-However, the practical challenges of implementing anti-ossification measures also became apparent. In IETF 115, the [masque](https://datatracker.ietf.org/wg/masque/about/) working group grappled with the tension between preventing ossification and avoiding unintended consequences:
+*[View source vCon](https://github.com/vcon-dev/ietf-meeting-vcons/blob/main/ietf111/ietf111_tls_28904.vcon.json)*
+
+This quote illustrates how protocol designers must constantly evaluate whether their design choices will maintain flexibility or contribute to future ossification—a consideration that affects even detailed cryptographic design decisions.
+
+In the middle period, working groups began implementing concrete anti-ossification measures. The [masque](https://datatracker.ietf.org/wg/masque/about/) working group's discussions at IETF 115 showed wariness about features that might contribute to ossification:
 
 > "is I I'm still not convinced that this is a good idea the the concept itself of partial reordering on the proxy uh because this starts to smell like a TCP accelerator uh and those have been great for ossification and making performance worse I have numbers for that one um so on that I'm not sure it'"
 
-This comment highlights how fear of creating new ossification points can sometimes constrain protocol design, with engineers being cautious about features that might become problematic middlebox behaviors.
+*[View source vCon](https://github.com/vcon-dev/ietf-meeting-vcons/blob/main/ietf115/ietf115_masque_29955.vcon.json)*
 
-By 2023, discussions in the [edm](https://datatracker.ietf.org/wg/edm/about/) working group showed growing sophistication in understanding the limitations of anti-ossification techniques:
+This comment reflects the community's hard-learned lesson that well-intentioned middlebox features often become sources of ossification, constraining future protocol evolution in unexpected ways.
+
+The [edm](https://datatracker.ietf.org/wg/edm/about/) working group at IETF 116 addressed the practical challenges of implementing anti-ossification measures:
 
 > "aised the question of how do we measure if greasing is actually effective or working and we talked about some of the limitations of you know there there's only really a certain category of issues and ossification bugs that greasing can help with and there are lots of other things that it does not um"
 
-This reflects the maturing understanding that while techniques like GREASE are valuable, they're not panaceas — the community was developing more nuanced approaches to different types of ossification problems.
+*[View source vCon](https://github.com/vcon-dev/ietf-meeting-vcons/blob/main/ietf116/ietf116_edm_30421.vcon.json)*
 
-Recent discussions show the principle becoming institutionalized across multiple working groups. The [lake](https://datatracker.ietf.org/wg/lake/about/) working group's 2024 activities demonstrate how anti-ossification measures are now being built into protocols from the beginning rather than retrofitted:
+This discussion highlights a mature understanding that even anti-ossification techniques have limitations and require careful evaluation of their effectiveness.
 
-> "sion. So in terms of the working group uh since the last uh ITF meeting we had a lot of activity going on mainly four documents have been adopted following the uh Dublin discussions. These are uh the grease document uh edited by Christian. App profiles edited by Marco Lake uh remote attestation work"
+In recent meetings, the focus has shifted toward operationalizing these lessons. The [edm](https://datatracker.ietf.org/wg/edm/about/) working group at IETF 120 discussed providing more concrete guidance:
 
-This systematic adoption of GREASE documents across multiple protocol efforts shows how the principle has evolved from an architectural concern to a standard engineering practice.
+> "item we have that we have kind of agreed to work on is trying to give more concrete advice around greasing and things that look like greasing uh we have previous rfc's that we've produced uh like the use it or lose it document that cover things like greasing but uh did not go into some of the more p"
+
+*[View source vCon](https://github.com/vcon-dev/ietf-meeting-vcons/blob/main/ietf120/ietf120_edm_33301.vcon.json)*
+
+This evolution shows the IETF moving from understanding the problem to providing practical implementation guidance for protocol designers.
 
 ## Historical Analysis
 
-The frequency of protocol ossification discussions across IETF meetings reveals several important trends in how the community has approached this challenge:
+The frequency of ossification discussions across IETF meetings reveals both the persistence of this concern and its gradual evolution from theoretical principle to operational practice:
 
-| Meeting Period | Sessions | Peak Discussion |
-|----------------|----------|-----------------|
-| Early (110-114) | 31 | IETF 113 (8 sessions) |
-| Middle (115-119) | 21 | IETF 116 (8 sessions) |
-| Recent (120-123) | 15 | IETF 121 (8 sessions) |
+| Meeting | Sessions | Notable Trend |
+|---------|----------|---------------|
+| IETF 110-114 (2021-2022) | 31 total | Peak academic interest, formalizing principles |
+| IETF 115-119 (2022-2024) | 25 total | Implementation focus, practical experience |
+| IETF 120-123 (2024-2025) | 15 total | Operational guidance, lessons learned |
 
-The data shows intense early activity as the IETF community worked to formalize the principle and develop practical countermeasures, followed by a gradual decline as the approaches became more standardized and routine. The peaks at IETF 113, 116, and 121 correspond to key milestone meetings where major documents were advancing or new applications of the principle were being explored.
+The highest activity occurred during IETF 110-114, coinciding with the finalization of RFC 9170 and the integration of anti-ossification measures into protocols like QUIC and TLS 1.3. The [quic](https://datatracker.ietf.org/wg/quic/about/) working group led discussions with 7 sessions, which makes sense given that QUIC was designed as a clean-slate transport protocol with ossification prevention as a core principle.
 
-The [quic](https://datatracker.ietf.org/wg/quic/about/) and [tls](https://datatracker.ietf.org/wg/tls/about/) working groups led early discussions, which makes sense given their role as pioneers in implementing comprehensive anti-ossification strategies. The later prominence of the [edm](https://datatracker.ietf.org/wg/edm/about/) working group reflects the community's shift toward more systematic analysis of extension mechanisms across all protocols.
+Interestingly, the [edm](https://datatracker.ietf.org/wg/edm/about/) working group shows sustained engagement (6 sessions) as the community worked to distill lessons learned into actionable guidance for future protocol development. The [lake](https://datatracker.ietf.org/wg/lake/about/) working group's recent adoption of greasing documents shows how these principles are now being systematically applied to new protocol development efforts.
 
-Notably, the [lake](https://datatracker.ietf.org/wg/lake/about/) working group's consistent engagement with ossification concerns in more recent meetings demonstrates how the principle has become embedded in routine protocol design work. Rather than being an exceptional concern for a few high-profile protocols, preventing ossification is now considered standard practice across diverse protocol areas including IoT security, network time protocols, and core Internet infrastructure.
+The decline in discussion frequency in recent meetings (IETF 120-123) likely reflects the maturation of understanding—ossification prevention has moved from an emerging concern to an established best practice that's simply built into modern protocol design processes.
 
-The geographic pattern of peak discussions — Vienna (IETF 113), Yokohama (IETF 116), and Dublin (IETF 121) — suggests that in-person meetings facilitated more intensive collaboration on these complex architectural issues, with working groups using face-to-face time to tackle the nuanced engineering challenges that ossification prevention requires.
+Working groups dealing with constrained environments like [core](https://datatracker.ietf.org/wg/core/about/) (Constrained RESTful Environments) and those working on long-lived protocols like [ntp](https://datatracker.ietf.org/wg/ntp/about/) (Network Time Protocol) show particular interest, as they must balance extensibility with resource constraints and backward compatibility requirements respectively.
 
 ## Resources
 
-* [RFC 9170: Long-Term Viability of Protocol Extension Mechanisms](https://www.rfc-editor.org/rfc/rfc9170) — Essential reading for anyone designing extensible protocols, with concrete examples of what works and what fails in practice.
-* [RFC 8701: GREASE (Generate Random Extensions And Sustain Extensibility)](https://www.rfc-editor.org/rfc/rfc8701) — Describes the most widely deployed technique for preventing ossification, with implementation guidance for protocol designers.
-* [QUIC Protocol Documentation](https://www.rfc-editor.org/rfc/rfc9000) — Study QUIC as a case study in anti-ossification design, showing how modern protocols can be built to resist calcification from day one.
-* [Path MTU Discovery for IP version 6](https://www.rfc-editor.org/rfc/rfc8201) — A historical example of how ossification problems compound over time, useful for understanding why prevention is easier than remediation.
+* [RFC 9170: Long-Term Viability of Protocol Extension Mechanisms](https://www.rfc-editor.org/rfc/rfc9170) — Essential reading for understanding the formal treatment of protocol ossification and the use-it-or-lose-it principle
+* [RFC 8701: GREASE (Generate Random Extensions And Sustain Extensibility)](https://www.rfc-editor.org/rfc/rfc8701) — Practical guidance on implementing anti-ossification measures through deliberate exercise of extension points
+* [QUIC Protocol Documentation](https://datatracker.ietf.org/doc/html/rfc9000) — Example of a modern protocol designed with ossification prevention as a core principle from day one
+* [Internet Architecture Board (IAB) Evolution Working Group](https://datatracker.ietf.org/wg/edm/about/) — Ongoing work on protocol evolution and extensibility best practices
+* ["Protocol Ossification: The Internet's Silent Killer"](https://www.potaroo.net/ispcol/2016-05/ossify.html) — Accessible explanation of how ossification affects real Internet infrastructure
 
 ---
-*This report was generated from analysis of IETF working group session transcripts using vCon conversation analysis technology.*
+
+*This report was generated from analysis of IETF working group session transcripts (vCon format) covering meetings 110-123 (March 2021 - July 2025).*
 
 ---
 
@@ -110,4 +126,4 @@ Source: [vcon-dev/ietf-meeting-vcons](https://github.com/vcon-dev/ietf-meeting-v
 Analysis: IETF 125 Hackathon — vCon Principles Detection |
 Group vCon UUID: `c93a4657-0f71-49f0-b5f2-870455334d73` |
 Sessions analyzed: 71 |
-Generated: 2026-03-14*
+Generated: 2026-03-15*

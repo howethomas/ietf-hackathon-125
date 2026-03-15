@@ -2,85 +2,83 @@
 
 ## Introduction
 
-The principle of least surprise, also known as the principle of least astonishment, is a fundamental design guideline that advocates for systems to behave in ways that minimize unexpected outcomes for users and implementers. This principle emerged from decades of software engineering experience and was formally articulated in Internet architecture through [RFC 3439: Some Internet Architectural Guidelines](https://www.rfc-editor.org/rfc/rfc3439), which emphasizes the importance of predictable behavior in network protocols and systems.
+The principle of least surprise stands as one of the fundamental tenets of good Internet architecture, asserting that systems should behave in ways that least surprise their users and implementers. This principle emerged from decades of software engineering wisdom and found formal expression in Internet architecture through [RFC 3439](https://www.rfc-editor.org/rfc/rfc3439), which codified essential guidelines for Internet design.
 
-In the context of Internet architecture, this principle serves as a crucial guardrail against the natural tendency of complex distributed systems to develop surprising behaviors. When protocols, APIs, or network behaviors violate user expectations based on similar systems or logical assumptions, the cognitive load on implementers increases dramatically, leading to bugs, security vulnerabilities, and interoperability problems. The IETF has increasingly recognized that technical correctness alone is insufficient—protocols must also be cognitively manageable for the engineers who implement and deploy them.
+At its core, this principle recognizes that the Internet's success depends not just on technical correctness, but on the predictability and intuitiveness of its protocols and systems. When network protocols, APIs, or data formats behave unexpectedly, they create friction that cascades through the entire Internet ecosystem—from the engineers implementing protocols to the applications built on top of them, and ultimately to end users.
 
-The principle's significance in IETF work extends beyond mere usability concerns. In a standards environment where multiple independent implementations must interoperate seamlessly, surprising behaviors can fracture the Internet's fundamental coherence. When different implementers interpret ambiguous or surprising specifications differently, the result is not just user frustration but potential network fragmentation and security issues.
+The principle's importance in IETF work cannot be overstated. As the Internet has grown from a research network to critical global infrastructure, the cost of surprising behavior has multiplied exponentially. A protocol quirk that might have affected dozens of researchers in the 1980s can now impact billions of users and countless applications. This reality has made the principle of least surprise not just a nice-to-have design goal, but an essential requirement for Internet-scale systems.
 
 ## Understanding This Principle
 
-**The Core Idea**
+**The Core Idea** — Systems should work the way people naturally expect them to work. Think of a well-designed city where streets follow logical patterns, signs are placed where drivers need them, and similar-looking buildings serve similar purposes. When you arrive in such a city, you can navigate effectively using your existing mental models about how cities work. You don't constantly encounter streets that dead-end without warning, signs that use completely different symbols than everywhere else, or buildings that look like libraries but turn out to be fire stations.
 
-Systems should work the way people naturally expect them to work based on their experience with similar systems and logical reasoning.
+The principle of least surprise operates on the same logic. When engineers encounter a new protocol or API, they bring mental models built from their experience with similar systems. A well-designed system leverages these existing mental models rather than violating them. The protocol behaves as expected based on patterns the engineer already knows, making it easier to implement correctly and maintain over time.
 
-Think about the design of a well-planned city. When you're driving through an unfamiliar neighborhood, you intuitively expect certain things: traffic lights at major intersections, stop signs facing the direction of traffic that must stop, street signs positioned where drivers can see them before making decisions. A city planner could technically place stop signs on the back side of intersection posts or use purple lights instead of red ones—these might even work after people adjust—but they violate deeply ingrained expectations. The result isn't just inconvenience; it's accidents, confusion, and a breakdown in the smooth flow of urban life. The principle of least surprise in city planning means leveraging people's existing mental models and cultural conventions so that navigating the system feels natural rather than requiring constant cognitive effort to decode non-standard patterns.
+**Why It Matters** — Surprising behavior doesn't just create momentary confusion—it creates systemic problems that compound over time. Consider the difference between two data formats: JSON, which follows predictable rules about nesting and typing, versus early XML schemas that sometimes used attributes and sometimes used elements for the same types of data, with no clear pattern. Engineers working with JSON can quickly build reliable intuitions about how it works. They can predict how edge cases will behave and write robust parsing code. Engineers working with inconsistent XML schemas, by contrast, must constantly refer to documentation, handle special cases, and debug unexpected failures.
 
-**Why It Matters**
+The consequences multiply across the ecosystem. Surprising protocols take longer to implement correctly, leading to more bugs in initial deployments. They're harder to debug when problems arise, increasing operational costs. They're more likely to be implemented differently by different vendors, creating interoperability problems. Most critically, they create a cognitive burden that accumulates as systems become more complex. An engineer who encounters surprising behavior in one part of a system becomes more cautious and slower when working with other parts, even when those parts are well-designed.
 
-The practical consequences of violating this principle compound rapidly in complex systems. When engineers encounter surprising behavior, they must either spend extra time understanding the special case, or worse, they make incorrect assumptions that lead to bugs and security vulnerabilities.
+**The Tension** — The pressure to violate this principle comes from legitimate engineering constraints. Sometimes the most surprising solution is also the most efficient, secure, or backwards-compatible. Protocol designers face the constant temptation to optimize for technical elegance or performance at the expense of intuitive behavior. They may reuse existing message formats in creative ways to save bandwidth, or overload existing fields to avoid protocol changes. These optimizations often make sense when viewed through the narrow lens of a single protocol, but they create surprising behavior that radiates outward to affect everyone who implements or operates the system.
 
-Consider the difference between two API designs for handling missing data. A predictable API might return `null` or an empty object when requesting non-existent resources, matching patterns familiar from databases and file systems. A surprising API might return a successful response with a randomly generated placeholder value "to be helpful." The first approach allows developers to apply familiar error-handling patterns; the second forces every implementer to learn system-specific behavior and creates subtle bugs when developers assume standard patterns apply. At scale, these seemingly minor violations create massive cognitive overhead and technical debt across the entire ecosystem of implementations.
+There's also the "expert bias" problem: protocol designers become so familiar with their own systems that they lose the ability to see them through fresh eyes. What seems obvious and natural to someone who has spent months designing a protocol can be completely opaque to an implementer encountering it for the first time.
 
-**The Tension**
+**How to Recognize It** — You're seeing this principle at work when:
 
-The pressure that works against this principle is often well-intentioned optimization or cleverness. Engineers frequently believe they can create "smarter" systems that anticipate user needs or handle edge cases automatically. Sometimes there's pressure to make interfaces more compact or to reuse existing fields in creative ways to avoid protocol changes. Organizations also face time pressure to ship quickly rather than invest in making behaviors intuitive.
-
-The temptation is particularly strong in protocol design, where engineers often think "implementers will read the specification anyway, so we can be clever here." But specifications are read once and implemented many times, often by different people. What seems like an elegant solution to the protocol designer becomes a recurring source of confusion and bugs for every implementation team.
-
-**How to Recognize It**
-
-You're seeing this principle at work when:
-
-* A new system's commands follow the same patterns as familiar tools (like Unix utilities having consistent flag conventions across different programs)
-* Error messages and return codes match the conventions established by similar systems in the same domain
-* Default behaviors align with what users would logically expect rather than requiring special knowledge or configuration
-* Extension points work the way developers would predict based on other extensible systems they've used
+* APIs use consistent naming patterns and parameter orders across similar functions, making it easy to guess how an unfamiliar function works based on familiar ones
+* Error messages provide clear indication of both what went wrong and what action the user should take, rather than cryptic codes that require documentation lookup
+* Configuration file formats follow the same syntax rules throughout, so learning one section teaches you how to work with other sections
+* Protocol extensions use the same design patterns as the base protocol, making them feel like natural evolution rather than bolted-on additions
 
 ## Early IETF Work
 
-The principle of least surprise emerged from hard-won experience in early Internet protocol development. The original TCP/IP suite succeeded partly because it followed predictable patterns—TCP behaved like other reliable stream protocols, UDP like other datagram services, and IP like other packet-switching systems. However, the IETF learned valuable lessons from protocols that violated user expectations.
+The principle of least surprise emerged from hard-won experience in the Internet's formative years, though it wasn't always explicitly articulated as such. Early Internet protocols often prioritized functionality over consistency, leading to systems that worked but surprised implementers in subtle ways. The Simple Mail Transfer Protocol (SMTP), for instance, evolved organically through multiple RFCs, accumulating various command formats and response codes that didn't always follow consistent patterns. While SMTP succeeded in enabling email across the Internet, implementers regularly encountered edge cases where the protocol's behavior didn't match their intuitions.
 
-One notable example was the complexity that arose in email systems when SMTP and related protocols developed surprising edge-case behaviors around message handling and delivery semantics. The proliferation of incompatible email implementations in the 1980s and 1990s partly stemmed from ambiguous specifications that allowed for multiple interpretations, each reasonable in isolation but surprising when combined. This experience informed later IETF thinking about the importance of predictable protocol behavior.
+A more positive example came with the design of the Domain Name System (DNS), which established consistent patterns for message formats, error handling, and hierarchical naming that have proven remarkably durable. DNS's designers made deliberate choices to keep the protocol's behavior predictable: queries and responses follow the same basic structure, error conditions are handled consistently, and the hierarchical namespace works the same way at every level. This consistency contributed significantly to DNS's success and widespread adoption.
 
-The formalization of this principle in [RFC 3439](https://www.rfc-editor.org/rfc/rfc3439) represented the codification of decades of architectural experience. The document emerged from the Internet Architecture Board's recognition that technical correctness was necessary but insufficient—protocols also needed to be cognitively manageable for implementers and operators. This shift marked the IETF's growing sophistication in understanding how human factors impact protocol success.
+The IETF community's growing appreciation for design consistency culminated in RFC 3439, which explicitly articulated the principle of least surprise alongside other architectural guidelines. This RFC represented a shift from purely functional protocol design toward more holistic thinking about how protocols fit into the broader Internet ecosystem. It recognized that technical correctness alone wasn't sufficient—protocols also needed to be approachable and maintainable by the global community of implementers who would ultimately determine their success.
 
 ## Key References
 
-* [RFC 3439: Some Internet Architectural Guidelines](https://www.rfc-editor.org/rfc/rfc3439) - The primary IETF document establishing architectural principles including least surprise
-* [Principle of Least Astonishment (Wikipedia)](https://en.wikipedia.org/wiki/Principle_of_least_astonishment) - Comprehensive overview of the principle's application across software engineering
+- [RFC 3439: Some Internet Architectural Guidelines](https://www.rfc-editor.org/rfc/rfc3439) — The foundational document that formally articulated the principle of least surprise in Internet architecture
+- [Principle of Least Astonishment (Wikipedia)](https://en.wikipedia.org/wiki/Principle_of_least_astonishment) — Comprehensive overview of the principle's application across software engineering and user interface design
 
 ## This Principle in IETF Discussions
 
-The principle of least surprise continues to surface in contemporary IETF working group discussions, often at critical decision points where technical correctness conflicts with predictable behavior. These conversations reveal how the principle operates as a practical constraint in protocol design.
+The principle of least surprise manifests regularly in IETF working group discussions, often as a decisive factor in design decisions. During IETF 112's [jsonpath](https://datatracker.ietf.org/wg/jsonpath/about/) working group session, participants grappled with how comparison operations should behave when applied to different data types:
 
-In the [jsonpath](https://datatracker.ietf.org/wg/jsonpath/about/) working group's November 2021 discussions, the principle emerged during debates about query behavior:
+> "this is out of order no no it's highly material i mean we could say that we could say that unless the left-hand side selects a primitive the answer is always false yeah and i think that violates the principle of least surprise in the case that would also make it hard to actually extend this later"
 
-> this is out of order no no it's highly material i mean we could say that we could say that unless the left-hand side selects a primitive the answer is always false yeah and i think that violates the principle of least surprise in the case that would also make it hard to actually extend this later
+*[View source vCon](https://github.com/vcon-dev/ietf-meeting-vcons/blob/main/ietf112/ietf112_jsonpath_29129.vcon.json)*
 
-This exchange illustrates how the principle serves as a design constraint even when technically simpler solutions exist. The working group recognized that while returning "false" for non-primitive selections might be implementationally cleaner, it would surprise developers familiar with other query languages and complicate future extensions.
+This discussion exemplifies how the principle influences detailed technical decisions. The working group recognized that having comparison operations return false in unexpected cases would create cognitive friction for implementers and users, even if it simplified the initial specification.
 
-The [iabopen](https://datatracker.ietf.org/wg/iabopen/about/) discussions in July 2022 showed how the principle relates to broader architectural concepts:
+The principle also appears in broader architectural discussions. During IETF 114's [iabopen](https://datatracker.ietf.org/wg/iabopen/about/) session on data minimization, participants connected the principle to privacy considerations:
 
-> this it's a hard problem but maybe there are some things to say next slide please so we came up with this simple thing it's just called the data minimization principle and and we're trying to use the principle of least privilege and sort of set it in the protocol context
+> "this it's a hard problem but maybe there are some things to say next slide please so we came up with this simple thing it's just called the data minimization principle and and we're trying to use the principle of least privilege and sort of set it in the protocol context"
 
-While this quote conflates the principle of least surprise with least privilege, it demonstrates how these principles function as a family of related design constraints that IETF participants use to evaluate proposals.
+*[View source vCon](https://github.com/vcon-dev/ietf-meeting-vcons/blob/main/ietf114/ietf114_iabopen_29668.vcon.json)*
 
-By March 2023, the [sidrops](https://datatracker.ietf.org/wg/sidrops/about/) working group was applying the principle to file format design:
+While this speaker mentioned "least privilege" rather than "least surprise," the discussion shows how IETF participants think about predictability principles across different domains, recognizing that consistent behavior reduces surprises for both implementers and end users.
 
-> and has documents and procedures or maybe some tooling how to generate the slurm file but but it is based on my experience very useful to keep this format as simple as possible and and adhere to the principle of least astonishments
+In more recent discussions, the principle has influenced operational considerations. During IETF 116's [sidrops](https://datatracker.ietf.org/wg/sidrops/about/) session, a participant emphasized the importance of keeping configuration formats intuitive:
 
-The emphasis on format simplicity reflects a mature understanding that surprising formats impose ongoing costs on every implementer and operator who must work with them.
+> "and has documents and procedures or maybe some tooling how to generate the slurm file but but it is based on my experience very useful to keep this format as simple as possible and and adhere to the principle of least astonishments"
 
-In the [suit](https://datatracker.ietf.org/wg/suit/about/) working group's concurrent discussions, the principle influenced security architecture decisions:
+*[View source vCon](https://github.com/vcon-dev/ietf-meeting-vcons/blob/main/ietf116/ietf116_sidrops_30204.vcon.json)*
 
-> if the suit report is unencrypted within an encrypted eat token then what we're doing is exposing private in from our um privileged information to the verifier that they don't actually need so by the principle of least privilege we should at least consider the possibility that there are use cases
+This comment, using the alternative phrasing "least astonishment," shows how the principle extends beyond protocol design into operational tooling. The speaker recognized that surprising configuration file formats create ongoing operational burden for network operators.
 
-Although the speaker references least privilege rather than least surprise, the underlying concern reflects similar thinking—avoid surprising implementers with unnecessary complexity or unexpected information exposure.
+The principle also intersects with security considerations, as seen in IETF 116's [suit](https://datatracker.ietf.org/wg/suit/about/) working group discussion about information exposure:
+
+> "if the suit report is unencrypted within an encrypted eat token then what we're doing is exposing private in from our um privileged information to the verifier that they don't actually need so by the principle of least privilege we should at least consider the possibility that there are use cases"
+
+*[View source vCon](https://github.com/vcon-dev/ietf-meeting-vcons/blob/main/ietf116/ietf116_suit_30292.vcon.json)*
+
+Again referencing "least privilege" rather than "least surprise," this discussion shows how related predictability principles influence security design. Unexpected information exposure creates both security risks and cognitive surprises for implementers trying to understand what data flows where.
 
 ## Historical Analysis
 
-Analysis of IETF meetings 110-123 reveals concentrated but focused discussion of the principle of least surprise, appearing in 4 sessions across 3 meetings between November 2021 and March 2023. The discussions cluster around specific technical decisions rather than broad architectural reviews, suggesting the principle functions as a practical design constraint rather than abstract guidance.
+Discussion of the principle of least surprise occurred sporadically across the analyzed IETF meetings, appearing in 4 sessions across 3 meetings between November 2021 and March 2023. The distribution shows concentrated activity during this period:
 
 | Meeting | Date | Sessions |
 |---------|------|----------|
@@ -88,19 +86,21 @@ Analysis of IETF meetings 110-123 reveals concentrated but focused discussion of
 | IETF 114 | July 2022 (Philadelphia) | 1 |
 | IETF 116 | March 2023 (Yokohama) | 2 |
 
-The working groups invoking this principle—[jsonpath](https://datatracker.ietf.org/wg/jsonpath/about/), [iabopen](https://datatracker.ietf.org/wg/iabopen/about/), [sidrops](https://datatracker.ietf.org/wg/sidrops/about/), and [suit](https://datatracker.ietf.org/wg/suit/about/)—represent diverse technical domains from data querying to security architecture. This breadth suggests the principle has become a standard part of IETF design vocabulary across different protocol areas.
+The discussions spanned diverse working groups—[jsonpath](https://datatracker.ietf.org/wg/jsonpath/about/), [iabopen](https://datatracker.ietf.org/wg/iabopen/about/), [sidrops](https://datatracker.ietf.org/wg/sidrops/about/), and [suit](https://datatracker.ietf.org/wg/suit/about/)—suggesting that the principle's relevance transcends specific protocol domains. The [jsonpath](https://datatracker.ietf.org/wg/jsonpath/about/) discussion focused on API design consistency, [iabopen](https://datatracker.ietf.org/wg/iabopen/about/) addressed architectural principles, [sidrops](https://datatracker.ietf.org/wg/sidrops/about/) concerned operational tooling, and [suit](https://datatracker.ietf.org/wg/suit/about/) dealt with security architecture.
 
-The temporal pattern shows steady invocation across the analyzed period, without notable spikes or declines. This consistency indicates the principle has achieved stable recognition as a design constraint rather than representing a passing trend. The specific contexts—query language behavior, data minimization, file format design, and security architecture—demonstrate how the principle applies across the full spectrum of protocol design decisions.
+Notably, several discussions used related terminology like "principle of least privilege" and "principle of least astonishments," indicating that IETF participants often think about predictability and consistency principles as a family of related concepts rather than distinct rules. This suggests the underlying values of predictable, intuitive system behavior permeate IETF discussions even when not explicitly labeled as "least surprise."
+
+The concentration of discussions during 2021-2023 may reflect increased attention to user experience and operational complexity as Internet systems have matured. Working groups appear to be more explicitly considering how their technical decisions affect the broader community of implementers and operators, not just the immediate functional requirements.
 
 ## Resources
 
-* [RFC 3439: Some Internet Architectural Guidelines](https://www.rfc-editor.org/rfc/rfc3439) - Essential reading for understanding how this principle fits into broader Internet architectural thinking
-* [Principle of Least Astonishment (Wikipedia)](https://en.wikipedia.org/wiki/Principle_of_least_astonishment) - Comprehensive treatment of the principle's application beyond networking, with examples from user interface design and software engineering
-* [The Design of Everyday Things by Don Norman](https://en.wikipedia.org/wiki/The_Design_of_Everyday_Things) - Classic text on design principles that illuminates why predictable behavior matters for any human-system interaction
+- [RFC 3439: Some Internet Architectural Guidelines](https://www.rfc-editor.org/rfc/rfc3439) — Essential reading for understanding how the principle of least surprise fits into broader Internet architectural thinking
+- [Principle of Least Astonishment (Wikipedia)](https://en.wikipedia.org/wiki/Principle_of_least_astonishment) — Provides broader context on how this principle applies across software engineering, user interface design, and system architecture
+- [The Design of Everyday Things by Don Norman](https://en.wikipedia.org/wiki/The_Design_of_Everyday_Things) — While not Internet-specific, this classic work explores how good design makes complex systems intuitive and predictable
 
 ---
 
-*This report was generated through analysis of IETF working group session transcripts and vCon data spanning meetings 110-123.*
+*This report was generated through analysis of IETF meeting transcripts stored in vCon (Virtual Conversation) format, covering meetings 110-123 from March 2021 through July 2025.*
 
 ---
 
@@ -109,4 +109,4 @@ Source: [vcon-dev/ietf-meeting-vcons](https://github.com/vcon-dev/ietf-meeting-v
 Analysis: IETF 125 Hackathon — vCon Principles Detection |
 Group vCon UUID: `ee2eb6e6-72cd-4a66-9afc-e80eed3cda06` |
 Sessions analyzed: 4 |
-Generated: 2026-03-14*
+Generated: 2026-03-15*
