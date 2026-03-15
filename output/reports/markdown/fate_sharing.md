@@ -2,83 +2,101 @@
 
 ## Introduction
 
-Fate sharing is a fundamental architectural principle of the Internet that dictates that related parts of a system should fail together, with critical state maintained only at endpoints rather than in intermediate network elements. This principle, formally articulated in [RFC 1958](https://www.rfc-editor.org/rfc/rfc1958), emerged from the early design philosophy of the DARPA Internet protocols and has profoundly shaped how we build resilient, scalable network systems.
+Fate sharing is one of the Internet's most fundamental architectural principles, codified in [RFC 1958](https://www.rfc-editor.org/rfc/rfc1958) as part of the core design philosophy that has guided Internet protocol development for decades. The principle states that "related parts of a system fail together" and that "state should be maintained only at endpoints." This seemingly simple rule has profound implications for how we build distributed systems that can survive failures and scale across the globe.
 
-The concept was first systematically described by David Clark in his seminal 1988 paper "[The Design Philosophy of the DARPA Internet Protocols](http://ccr.sigcomm.org/archive/1995/jan95/ccr-9501-clark.pdf)," where he explained that fate sharing addresses the fundamental challenge of building robust distributed systems. Rather than trying to protect shared state in the network from all possible failures, the Internet's design philosophy embraces the reality that failures will occur and ensures that when they do, the impact is predictable and recoverable. By keeping state at the endpoints and allowing related components to fail together, the network core remains simple and stateless, contributing to the Internet's remarkable scalability and resilience.
+The concept emerged from the early work of Internet pioneers like David Clark, whose seminal 1988 paper "[The Design Philosophy of the DARPA Internet Protocols](http://ccr.sigcomm.org/archive/1995/jan95/ccr-9501-clark.pdf)" articulated the fundamental trade-offs that shaped the Internet's architecture. Fate sharing was born from hard-won experience with earlier network architectures that failed catastrophically when critical intermediate components went down, taking entire systems with them.
 
-This principle continues to be highly relevant in contemporary Internet engineering, as evidenced by its frequent discussion across IETF working groups from 2021 to 2025. As new protocols and architectures emerge—from QUIC's connection management to distributed networking paradigms—engineers must carefully consider how fate sharing applies to ensure their designs maintain the Internet's core architectural strengths.
+In IETF working groups today, fate sharing continues to be a touchstone for protocol design decisions. As our analysis of IETF meetings 110-123 (March 2021 to July 2025) shows, this principle was discussed in 544 sessions across 141 working groups, demonstrating its enduring relevance as the Internet evolves to support new applications, from IoT devices to quantum networking.
+
+## Understanding This Principle
+
+**The Core Idea** — If two parts of a system depend on each other to work, they should fail together rather than independently. Think of it like a restaurant kitchen: instead of having one shared grill that serves all tables (where a grill failure kills everyone's orders), each cooking station has its own equipment, so when something breaks, only that station's customers are affected, not the entire restaurant.
+
+This analogy reveals why fate sharing exists: it's about containing failures and avoiding mysterious, hard-to-debug problems. When the shared grill breaks, customers don't understand why their food isn't coming — the failure is invisible to them, and the restaurant staff has to manage the complex problem of redistributing orders or rebuilding shared state. But when each station's equipment fails independently, the impact is localized and the problem is obvious.
+
+**Why It Matters** — When you violate fate sharing, you create hidden dependencies that turn small failures into big disasters. Consider the difference between two email systems: one that stores all user sessions on a central server versus one that keeps session state in the client. In the centralized system, if the session server goes down, every user loses their login state simultaneously, even though the mail servers are still running. Users see a confusing failure: they can't access email, but the service appears to be "up." 
+
+In the fate-sharing design, if a user's device crashes, only that user loses their session — and they understand why (their device rebooted). The failure is obvious and contained. More importantly, when the email service itself fails, users naturally lose access, which is the expected behavior. The failures are aligned with user expectations rather than creating mysterious partial failures.
+
+**The Tension** — The real-world pressure against fate sharing is efficiency and resource sharing. Centralized state often seems more efficient: one shared cache serves everyone, one connection pool handles all requests, one coordinator manages all transactions. It's tempting to build shared infrastructure because it reduces resource usage and can seem easier to manage. Organizations often prefer centralized control because it feels more manageable and observable.
+
+This efficiency argument is seductive but often false economy. Shared state requires complex coordination protocols, failure recovery mechanisms, and creates single points of failure that demand expensive high-availability solutions. The "simpler" centralized design becomes vastly more complex when you account for all the failure handling it requires.
+
+**How to Recognize It** — You're seeing fate sharing at work when:
+
+- A web application stores session data in browser cookies rather than server-side databases, so user sessions survive server restarts
+- Microservices avoid shared databases, even though it means duplicating some data, because they want service failures to be independent
+- Your team chooses to replicate configuration data to each server rather than having all servers query a central config service
+- A distributed system puts related data on the same physical machine, accepting that both pieces fail together rather than trying to spread them across different failure domains
+
+## Early IETF Work
+
+The Internet's original design embodied fate sharing through its radical architectural choice: making the network itself stateless and pushing all intelligence to the endpoints. This was a deliberate rejection of the telephone network model, where circuit switches maintained connection state and a single switch failure could break thousands of calls. Early Internet protocols like TCP deliberately maintained connection state only at the communicating hosts, allowing packets to flow through any available path and making the core network much more resilient to individual router failures.
+
+However, the principle wasn't always perfectly applied. Early routing protocols like RIP and some of the initial multicast designs created shared state in the network that violated fate sharing principles. The painful lessons learned from these designs — where network state could become inconsistent or where single points of failure emerged — helped reinforce the principle's importance. The development of BGP and later routing protocols showed how to build distributed coordination while respecting fate sharing: each router maintains its own view of the network topology, and failures are contained rather than cascading.
+
+Perhaps the most instructive early example was the contrast between connection-oriented network layer proposals (like X.25) and the Internet's connectionless IP design. X.25 networks maintained per-connection state in intermediate nodes, creating fate sharing violations that made the network fragile and complex to manage. The Internet's choice to keep network layer stateless, despite seeming "inefficient," proved its wisdom through decades of robust operation.
 
 ## Key References
 
-- **[RFC 1958: Architectural Principles of the Internet](https://www.rfc-editor.org/rfc/rfc1958)** — The foundational RFC that formally codifies fate sharing among other key Internet design principles.
-- **[The Design Philosophy of the DARPA Internet Protocols](http://ccr.sigcomm.org/archive/1995/jan95/ccr-9501-clark.pdf)** — David Clark's influential 1988 paper that first articulated the theoretical foundation for fate sharing in Internet architecture.
+- [RFC 1958: Architectural Principles of the Internet](https://www.rfc-editor.org/rfc/rfc1958) — The foundational document codifying Internet architectural principles including fate sharing
+- [The Design Philosophy of the DARPA Internet Protocols](http://ccr.sigcomm.org/archive/1995/jan95/ccr-9501-clark.pdf) — David Clark's seminal 1988 paper explaining the engineering trade-offs that shaped Internet architecture
+- [Fate-sharing (Wikipedia)](https://en.wikipedia.org/wiki/Fate-sharing) — Accessible overview with examples from various distributed systems contexts
 
 ## This Principle in IETF Discussions
 
-The principle of fate sharing appears regularly in IETF working group discussions, often arising when engineers grapple with fundamental questions of where to place state and how to handle failures in distributed systems. These conversations reveal how the principle continues to guide protocol design decisions across diverse networking domains.
+Fate sharing discussions in recent IETF meetings reveal how this principle continues to guide protocol design decisions across diverse working groups. The conversations show engineers grappling with when to share state versus when to keep it separate, often in the context of new technologies that challenge traditional assumptions.
 
-In the BABEL working group at IETF 110, participants discussed the challenges of packet fragmentation and its implications for fate sharing:
+In the [babel](https://datatracker.ietf.org/wg/babel/about/) working group during IETF 110, participants discussed a clear violation of fate sharing:
 
-> "Fragmentation required packets are going to fail to reach the sending host and you're going to have mysterious failures where some things work and then get stuck. So the problem here is that you have no fate sharing between the data... between on the one hand the data path and on the other hand..."
+> "agmentation required packets are going to fail to reach the sending host and you're going to have mysterious failures where some things work and then get stuck so the problem here is that you have no fate sharing between the data between on the one hand the date and act pass and on the other hand th"
 
-This discussion highlights a classic fate sharing concern: when packet fragments are handled independently by the network, the fate of the overall communication becomes unpredictable. If some fragments succeed while others fail, the receiving endpoint cannot reconstruct the original message, leading to the "mysterious failures" the speaker describes.
+This excerpt illustrates the classic fate sharing problem: when path discovery and data transmission use different mechanisms, you get "mysterious failures" where some things work but others don't. The failure modes aren't aligned, creating the kind of hard-to-debug problems that fate sharing is designed to prevent.
 
-The MOQ (Media Over QUIC) working group at IETF 115 provided another perspective on fate sharing, specifically in the context of media streaming:
+The principle surfaces regularly in security contexts, as seen in [ipsecme](https://datatracker.ietf.org/wg/ipsecme/about/) discussions during IETF 119:
 
-> "Even though on extensible encoding they don't... you could break them into individual segments too. You can break it down as far as you want. In this case we've got a segment for an individual frame so it's not fate sharing with the other frames when it doesn't need to be and then finally you could just break..."
+> "is different it's native as extension header so basic IPv6 header will just indicate that inside we have as extension header and everything else is hidden it actually has some advantages uh if ESP is stateless allow through your uh filtering then you don't need you don't need any keep Al lives if th"
 
-Here, the discussion centers on granular control over fate sharing in media delivery. The working group was exploring how to structure media data so that individual frames don't unnecessarily share fate with unrelated content, allowing for more efficient delivery and failure recovery in streaming scenarios.
+This conversation touches on a key fate sharing benefit: when security state is stateless (no shared state in intermediate nodes), you eliminate the need for keepalive mechanisms and the associated failure modes. The security processing fails or succeeds with the packet itself, rather than depending on separate state management.
 
-The principle also surfaces in security contexts, as seen in the IPSECME working group discussion at IETF 119:
+Storage and state management challenges appear across multiple working groups. In [6lo](https://datatracker.ietf.org/wg/6lo/about/) during IETF 120, engineers discussed how to handle device restarts:
 
-> "It's different, it's native as extension header so basic IPv6 header will just indicate that inside we have as extension header and everything else is hidden. It actually has some advantages... if ESP is stateless allow through your filtering then you don't need... you don't need any keep alives if..."
+> "good point uh about the usage of nonvolatile memory because like in other documents um if by any chance uh a node restarts so basically what it does it checks in the nonvolatile memory if he has some State he can re-register okay so the text has been um updated in a few places in order to to uh cons"
 
-This conversation touches on how IPsec's stateless design (ESP) embodies fate sharing principles by avoiding the need for keep-alive mechanisms that would create shared state in the network infrastructure.
+This reflects the ongoing tension in IoT contexts between fate sharing (where device state should disappear with device failure) and practical concerns about recovery time and user experience. The solution being discussed — storing minimal state locally for faster recovery — represents a careful balance that maintains fate sharing principles while addressing operational needs.
 
-These examples demonstrate how fate sharing remains a living principle in Internet engineering—not merely a historical concept, but an active consideration that shapes how modern protocols handle state management, failure scenarios, and system boundaries.
+Emerging protocols continue to wrestle with these trade-offs. A [moq](https://datatracker.ietf.org/wg/moq/about/) discussion from IETF 115 showed concerns about protocol complexity:
+
+> "otocol from three dropped but there is a lot of things in quick cards missing here I think the pop sub relationship and they use Quick datagram and for the pub sub I think maybe it can bring a lot of State in the Renee I think that's why you drop it"
+
+This conversation reveals how fate sharing concerns influence protocol design decisions. The worry about "a lot of State in the Renee" (relay) reflects classic fate sharing thinking: putting state in intermediate nodes creates complexity and failure modes that violate the principle.
 
 ## Historical Analysis
 
-Analysis of IETF discussions from March 2021 through July 2025 reveals interesting patterns in how fate sharing is discussed across different working groups and time periods. The principle has been consistently relevant, appearing in 544 sessions across all 14 meetings in this timeframe.
+Analysis of fate sharing discussions across IETF 110-123 reveals interesting patterns in how the principle is applied to emerging technologies. The frequency of discussions has remained relatively stable, with a notable spike in IETF 123 (Madrid, July 2025) suggesting renewed focus as new architectural challenges emerge.
 
-| Meeting | Date | Sessions Discussing Fate Sharing |
-|---------|------|--------------------------------|
-| IETF 110 | March 2021 | 33 |
-| IETF 111 | July 2021 | 31 |
-| IETF 112 | November 2021 | 30 |
-| IETF 113 | March 2022 | 41 |
-| IETF 114 | July 2022 | 38 |
-| IETF 115 | November 2022 | 51 |
-| IETF 116 | March 2023 | 48 |
-| IETF 117 | July 2023 | 40 |
-| IETF 118 | November 2023 | 38 |
-| IETF 119 | March 2024 | 32 |
-| IETF 120 | July 2024 | 38 |
-| IETF 121 | November 2024 | 30 |
-| IETF 122 | March 2025 | 33 |
-| IETF 123 | July 2025 | 61 |
+| Meeting | Date | Location | Sessions |
+|---------|------|----------|----------|
+| IETF 110 | March 2021 | Online | 33 |
+| IETF 115 | November 2022 | London | 51 |
+| IETF 116 | March 2023 | Yokohama | 48 |
+| IETF 123 | July 2025 | Madrid | 61 |
 
-The data shows several notable trends. Discussion peaked at IETF 115 (November 2022) with 51 sessions, followed by a sustained period of high activity through IETF 116 and 117. Interestingly, there's a dramatic spike at IETF 123 (July 2025) with 61 sessions—nearly double the typical meeting frequency—suggesting renewed focus on fate sharing principles, possibly driven by emerging technologies or architectural discussions.
+The working groups with the highest frequency of fate sharing discussions reflect the areas where the principle remains most actively relevant. [Core](https://datatracker.ietf.org/wg/core/about/) and [dtn](https://datatracker.ietf.org/wg/dtn/about/) (Delay-Tolerant Networking) lead the list, which makes sense given their focus on constrained environments where fate sharing is crucial for resilience. The prominence of [6lo](https://datatracker.ietf.org/wg/6lo/about/) and IoT-related groups reflects the challenges of applying Internet principles to resource-constrained devices.
 
-The working groups most frequently discussing fate sharing provide insight into where this principle remains most relevant. The CORE working group (13 sessions) and DTN (Delay-Tolerant Networking, 13 sessions) lead the discussions, which makes sense given their focus on fundamental protocol mechanisms and challenged network environments where fate sharing considerations are critical. The presence of 6LO (IPv6 over Low-Power Wireless Personal Area Networks, 12 sessions) and DMM (Distributed Mobility Management, 12 sessions) in the top groups reflects the ongoing challenges of applying Internet principles to constrained and mobile environments.
+Interestingly, [quic](https://datatracker.ietf.org/wg/quic/about/) and [masque](https://datatracker.ietf.org/wg/masque/about/) appear prominently, suggesting that even modern transport protocol development continues to grapple with fate sharing questions. This indicates the principle's relevance isn't diminishing but rather evolving to address new architectural contexts like encrypted transport and application-layer protocols.
 
-The appearance of QUIC (11 sessions) and MASQUE (10 sessions) among the top discussing groups indicates that fate sharing remains highly relevant to modern transport and tunneling protocols. These newer protocol efforts must carefully consider how to maintain the Internet's architectural principles while addressing contemporary requirements for performance, security, and deployment flexibility.
-
-The broad distribution across 141 unique working groups demonstrates that fate sharing is not confined to specific technical domains but remains a cross-cutting architectural concern that influences protocol design across the entire Internet standards landscape.
+The geographic distribution of high-discussion meetings (London, Yokohama, Madrid having peaks) doesn't show obvious patterns, suggesting that fate sharing discussions are driven more by technical evolution than by regional concerns or in-person versus virtual meeting dynamics.
 
 ## Resources
 
-**Foundational Documents:**
-- **[RFC 1958: Architectural Principles of the Internet](https://www.rfc-editor.org/rfc/rfc1958)** — Essential reading that formally codifies fate sharing alongside other core Internet design principles; provides the authoritative definition used throughout IETF work.
-- **[The Design Philosophy of the DARPA Internet Protocols](http://ccr.sigcomm.org/archive/1995/jan95/ccr-9501-clark.pdf)** — David Clark's foundational 1988 paper that established the theoretical framework for Internet architecture including fate sharing; crucial for understanding the "why" behind the principle.
-
-**Additional Learning Resources:**
-- **[Fate-sharing (Wikipedia)](https://en.wikipedia.org/wiki/Fate-sharing)** — Accessible introduction to the concept with practical examples and links to related networking concepts; good starting point for those new to Internet architectural principles.
-
-These resources provide a comprehensive foundation for understanding fate sharing from both theoretical and practical perspectives, enabling engineers to apply this principle effectively in their protocol design work.
+- [RFC 1958: Architectural Principles of the Internet](https://www.rfc-editor.org/rfc/rfc1958) — Essential reading for anyone working on Internet protocols; provides the authoritative statement of fate sharing and other core principles
+- [Clark 1988: Design Philosophy of DARPA Internet Protocols](http://ccr.sigcomm.org/archive/1995/jan95/ccr-9501-clark.pdf) — The intellectual foundation explaining why fate sharing emerged from practical engineering trade-offs rather than theoretical considerations  
+- [Fate-sharing (Wikipedia)](https://en.wikipedia.org/wiki/Fate-sharing) — Accessible introduction with examples spanning networking, distributed systems, and organizational design
+- [End-to-End Arguments in System Design](https://web.mit.edu/Saltzer/www/publications/endtoend/endtoend.pdf) — Saltzer, Reed & Clark's foundational paper on end-to-end design principles, which provides the theoretical foundation for fate sharing
 
 ---
-*This report was generated from analysis of IETF working group session transcripts (vCon format) covering meetings 110-123 (March 2021 - July 2025).*
+*This report was generated through analysis of IETF working group session transcripts using vCon conversation analysis techniques.*
 
 ---
 

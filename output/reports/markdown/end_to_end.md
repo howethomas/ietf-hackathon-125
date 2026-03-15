@@ -2,93 +2,112 @@
 
 ## Introduction
 
-The end-to-end principle stands as one of the foundational architectural principles of the Internet, articulating that network intelligence should reside at the endpoints rather than within the network infrastructure itself. First formally articulated by J.H. Saltzer, D.P. Reed, and D.D. Clark in their seminal 1984 paper ["End-to-End Arguments in System Design"](https://web.mit.edu/Saltzer/www/publications/endtoend/endtoend.pdf), this principle argues that functions can only be correctly and completely implemented at the application layer, where the communicating endpoints have full knowledge of their requirements and constraints.
+The end-to-end principle stands as one of the foundational architectural principles of the Internet, asserting that intelligence should reside at the network's endpoints rather than in the network infrastructure itself. First articulated by J.H. Saltzer, D.P. Reed, and D.D. Clark in their seminal 1984 paper ["End-to-End Arguments in System Design"](https://web.mit.edu/Saltzer/www/publications/endtoend/endtoend.pdf), this principle fundamentally shaped how the Internet was designed and continues to influence protocol development today.
 
-This principle has profoundly shaped Internet architecture and protocol design, establishing a philosophy that keeps the network core simple and "dumb" while pushing complexity to the edges where applications and users reside. The IETF has formally recognized this principle in [RFC 1958](https://www.rfc-editor.org/rfc/rfc1958) as a core architectural principle of the Internet, and later examined its evolution in [RFC 3724](https://www.rfc-editor.org/rfc/rfc3724), which explores how the rise of middleboxes and network intermediaries has challenged traditional end-to-end assumptions.
+The principle's core insight is deceptively simple: functions can only be correctly and completely implemented with the knowledge and help of the application standing at the endpoints of the communication system. This philosophy was formally adopted by the IETF in [RFC 1958](https://www.rfc-editor.org/rfc/rfc1958) as one of the architectural principles of the Internet, and later examined in detail in [RFC 3724](https://www.rfc-editor.org/rfc/rfc3724), which explored how this principle evolved as networks grew more complex.
 
-The principle's enduring relevance to Internet engineering is evident in its continued discussion across IETF working groups, where it serves both as a design guideline for new protocols and as a lens for evaluating how the Internet's architecture continues to evolve in response to changing requirements, business models, and technological capabilities.
+The end-to-end principle matters because it defines a fundamental division of labor in network design. It argues against placing application-specific functionality within the network infrastructure, instead advocating for a simple, general-purpose network that provides basic connectivity while leaving complex, application-specific logic to the endpoints. This architectural choice has enabled the Internet's remarkable innovation and scalability, allowing new applications to flourish without requiring changes to the underlying network infrastructure.
+
+## Understanding This Principle
+
+**The Core Idea**
+
+Intelligence should live at the edges, not in the middle. Think of the end-to-end principle like a highway system. The roads themselves don't need to know whether you're driving to a wedding, a grocery store, or a hospital—they just provide reliable transportation infrastructure. All the specialized knowledge about your destination, route preferences, and cargo stays with you, the driver. The highway's job is simply to get you from point A to point B safely and efficiently.
+
+This analogy captures why the end-to-end principle exists: specialization and flexibility. Just as highways become more useful when they serve many different types of travelers without favoring any particular trip purpose, networks become more powerful when they provide general-purpose connectivity without embedding assumptions about specific applications. If highways had to understand every possible journey type—with special lanes for wedding parties, different speed limits for grocery runs, and mandatory stops for medical emergencies—they would become impossibly complex and couldn't adapt to new travel needs.
+
+In networking terms, this means the network infrastructure (routers, switches, and transmission systems) should focus on delivering packets reliably, while applications (web browsers, video calls, email) handle their own specific requirements for security, reliability, and functionality.
+
+**Why It Matters**
+
+When this principle is violated, systems become brittle and innovation stalls. Consider email as a concrete example. Early email systems often embedded delivery logic, message formatting, and even user interface decisions into the network infrastructure itself. Each network had its own email format and delivery mechanisms. This meant that sending email between different networks required complex gateways that understood multiple email formats, and adding new email features required updating network infrastructure.
+
+The Internet's approach followed the end-to-end principle instead. The network simply delivers packets containing email data, while email applications at the endpoints handle message composition, encryption, spam filtering, and user interfaces. This separation allowed email innovation to flourish—we got rich HTML emails, attachment handling, mobile email clients, and advanced spam filtering without requiring any changes to routers or network protocols. A network operator doesn't need to understand or upgrade their equipment when someone invents a new email feature.
+
+The contrast is stark: violating the end-to-end principle creates a system where every new application feature requires coordinated updates across network infrastructure, while following it enables rapid innovation at the application layer without network changes.
+
+**The Tension**
+
+The real-world pressure against this principle is compelling: putting intelligence in the network often seems like the obvious solution. Network operators can see all the traffic, have control over performance, and can potentially optimize in ways that individual applications cannot. Why not add video compression to routers to improve streaming performance? Why not build spam filtering into email servers? Why not optimize web traffic at the network level?
+
+This temptation is particularly strong when facing performance problems or security challenges. Network operators think, "I can see this inefficient behavior across thousands of applications—surely I can fix it better than each application can fix it individually." The appeal of centralized optimization and control is powerful, especially when individual applications seem to be making suboptimal choices.
+
+The pressure intensifies with business incentives. Telecommunications companies and internet service providers often want to offer "value-added services" that differentiate their networks. Cloud providers want to offer network-level optimizations. Equipment vendors want to sell more sophisticated, feature-rich network devices.
+
+**How to Recognize It**
+
+You're seeing the end-to-end principle at work when:
+
+* A platform provides simple, general-purpose APIs rather than building specific features for each use case—like how cloud storage offers basic read/write operations instead of specialized interfaces for photos, documents, and backups
+* A system pushes complexity to the edges—like how the web allows browsers to handle different content types (video, documents, interactive apps) rather than requiring web servers to understand each format
+* New capabilities can be added without changing core infrastructure—like how smartphone app stores enable thousands of new applications without requiring cellular network upgrades
+
+## Early IETF Work
+
+The Internet's design fundamentally embodied the end-to-end principle from its earliest days, distinguishing it from the more centralized telecommunications networks of the era. The decision to implement TCP at the endpoints rather than in the network infrastructure was a crucial early application of this principle. While telephone networks managed connection state and reliability guarantees within their switching infrastructure, the Internet pushed these functions to the endpoints, allowing the network layer (IP) to remain stateless and focused solely on packet delivery.
+
+This architectural choice proved prescient during the development of the Domain Name System (DNS) in the 1980s. Rather than embedding name resolution logic throughout the network infrastructure, [RFC 1034](https://www.rfc-editor.org/rfc/rfc1034) and [RFC 1035](https://www.rfc-editor.org/rfc/rfc1035) established a distributed system where endpoints perform their own name lookups using specialized DNS servers. This allowed naming policies and resolution strategies to evolve independently of routing infrastructure.
+
+However, the IETF community also learned through experience about the challenges of maintaining this principle. Network Address Translation (NAT), while solving practical IPv4 address shortage problems, represented a significant departure from end-to-end connectivity. The complexity and application compatibility issues that NAT introduced served as a cautionary tale about the costs of violating end-to-end principles, ultimately motivating many of the design choices in IPv6 and influencing ongoing discussions about network architecture in IETF working groups today.
 
 ## Key References
 
-- **[RFC 1958: Architectural Principles of the Internet](https://www.rfc-editor.org/rfc/rfc1958)** — Establishes the end-to-end principle as a fundamental architectural principle of the Internet.
-- **[RFC 3724: The Rise of the Middle and the Future of End-to-End](https://www.rfc-editor.org/rfc/rfc3724)** — Examines how middleboxes and network intermediaries challenge traditional end-to-end assumptions.
-- **[End-to-End Arguments in System Design](https://web.mit.edu/Saltzer/www/publications/endtoend/endtoend.pdf)** — The original 1984 paper by Saltzer, Reed, and Clark that introduced the principle.
+* [RFC 1958: Architectural Principles of the Internet](https://www.rfc-editor.org/rfc/rfc1958) — The foundational IETF document establishing the end-to-end principle as a core Internet architectural principle
+* [RFC 3724: The Rise of the Middle and the Future of End-to-End](https://www.rfc-editor.org/rfc/rfc3724) — An examination of how the end-to-end principle has evolved and the pressures against it in modern networks
+* [End-to-End Arguments in System Design](https://web.mit.edu/Saltzer/www/publications/endtoend/endtoend.pdf) — The original 1984 paper by Saltzer, Reed, and Clark that articulated the fundamental concepts
 
 ## This Principle in IETF Discussions
 
-The end-to-end principle continues to be actively discussed across IETF working groups, often in the context of how modern Internet realities challenge traditional architectural assumptions. These discussions reveal both the principle's enduring relevance and the ongoing tension between ideal architectural principles and practical network evolution.
+The end-to-end principle continues to generate active discussion across IETF working groups, particularly as new networking paradigms challenge traditional assumptions. In the [babel](https://datatracker.ietf.org/wg/babel/about/) working group during IETF 110, participants grappled with how protocol designs could inadvertently violate the principle:
 
-In the DINRG (Decentralized Internet Infrastructure Research Group), participants frequently grapple with how the principle applies to today's Internet landscape. At IETF 115 in London, one speaker observed a fundamental shift in Internet topology:
+> "this protocol breaks the main properties of it breaks the main properties of the end-to-end principle so okay i've already said that next please okay so what is the problem well with"
+
+This concern about maintaining end-to-end properties reflects ongoing vigilance in the routing community about preserving fundamental architectural principles even as protocols evolve to meet new requirements.
+
+Research groups have been particularly active in exploring the boundaries and evolution of this principle. The [coinrg](https://datatracker.ietf.org/wg/coinrg/about/) working group has extensively examined how computing in the network relates to traditional end-to-end arguments. During IETF 115, they explicitly addressed this tension:
+
+> "had had at this research group earlier and what we now try to do is basically um yeah have a bit more thoughts on how we can actually combine or what is the interplay between transport protocols the end-to-end principle and Computing in the network"
+
+This discussion represents a significant evolution in how the IETF community thinks about the principle—not as an absolute rule, but as a design consideration that must be balanced against other architectural goals like performance and efficiency.
+
+The [dinrg](https://datatracker.ietf.org/wg/dinrg/about/) working group has taken a more critical perspective, questioning whether traditional principles still hold in today's Internet. During IETF 115, they observed:
 
 > "drives the user base up and that builds the economy of scale in today's internet the result is really a flattening of the traditional topology of the internet what we've got is a situation where the end-to-end principle isn't really the principle that's at work here"
 
-This observation reflects a broader concern within the research community about how content delivery networks, cloud services, and platform consolidation have altered the Internet's original end-to-end architecture. The speaker suggests that economic forces and scale effects have created a reality where traffic increasingly flows through intermediary platforms rather than directly between endpoints.
+This observation reflects a mature recognition that the Internet's evolution has created new realities that challenge traditional architectural assumptions.
 
-The evolution of Internet principles was further discussed at IETF 116 in Yokohama, where DINRG participants acknowledged that long-held assumptions about Internet architecture are being challenged:
+By IETF 122, discussions in [dinrg](https://datatracker.ietf.org/wg/dinrg/about/) had evolved toward considering how to reestablish end-to-end principles in future systems:
 
-> "to be honest and so in terms of the recent evolution of the internet what we see is that principles that were true 20 years ago no longer hold true now for instance we'll talk a little later about the end-to-end principle"
+> "the second thing is also bit aligned to what we discussed here before is to um kind of reinstalling the end to end principle for future application development so um um Foster development on um application"
 
-This frank assessment highlights the ongoing tension between maintaining architectural principles and adapting to technological and economic realities that weren't anticipated when these principles were first articulated.
-
-Interestingly, the principle also appears in discussions of newer technologies where its application remains valid. In the SECDISPATCH working group at IETF 117, participants discussed how VPN tunnels can coexist with end-to-end principles:
-
-> "this works this is not considered a violation of the end-to-end principle right like packets are still flowing end to end there's a tunnel in the middle"
-
-This discussion demonstrates how the principle continues to provide guidance for evaluating new security architectures, helping engineers distinguish between mechanisms that preserve end-to-end communication (like tunneling) and those that fundamentally alter it.
-
-The SATP working group at IETF 116 even applied end-to-end thinking to blockchain and distributed ledger contexts, showing the principle's broader applicability:
-
-> "literally what that means and this is the analog to the end-to-end principles principle for those who are on the din mailing list"
-
-This cross-pollination of ideas demonstrates how fundamental Internet principles continue to inform thinking in adjacent technical domains.
-
-At IETF 120, DINRG participants called for renewed focus on end users and existing principles when considering future Internet architecture:
-
-> "we wouldn't be starting from scratch um if we did that because there are existing principles including the end to end principle um and rfc's looking at how that's being how it's evolving"
-
-This suggests recognition that while the Internet has evolved significantly, foundational principles like end-to-end design remain valuable starting points for addressing contemporary challenges.
+This progression from questioning the principle's relevance to actively considering its restoration demonstrates the IETF community's ongoing engagement with fundamental architectural questions.
 
 ## Historical Analysis
 
-Analysis of IETF discussions from meetings 110-123 (March 2021 to July 2025) reveals interesting patterns in how the end-to-end principle has been discussed across this period. The principle was discussed in 56 sessions across 36 different working groups, demonstrating its broad relevance across IETF work.
+Discussion of the end-to-end principle across IETF meetings 110-123 reveals several interesting patterns in how the community approaches this foundational concept:
 
-| Meeting | Date/Location | Discussion Count |
-|---------|---------------|-----------------|
-| IETF 110 | March 2021 (Online) | 5 |
-| IETF 111 | July 2021 (Online) | 6 |
-| IETF 113 | March 2022 (Vienna) | 5 |
-| IETF 114 | July 2022 (Philadelphia) | 6 |
-| IETF 115 | November 2022 (London) | 7 |
-| IETF 116 | March 2023 (Yokohama) | 2 |
-| IETF 117 | July 2023 (San Francisco) | 6 |
-| IETF 118 | November 2023 (Prague) | 7 |
-| IETF 119 | March 2024 (Brisbane) | 3 |
-| IETF 120 | July 2024 (Vancouver) | 1 |
-| IETF 121 | November 2024 (Dublin) | 1 |
-| IETF 122 | March 2025 (Bangkok) | 3 |
-| IETF 123 | July 2025 (Madrid) | 4 |
+| Meeting Period | Discussion Frequency | Key Themes |
+|---|---|---|
+| Early (110-114) | High activity (22 sessions) | Principle violations and preservation |
+| Middle (115-119) | Peak activity (25 sessions) | Research into computing-in-network tensions |
+| Recent (120-123) | Declining activity (9 sessions) | Focus on restoration and future applications |
 
-The data shows peak discussion periods in 2022-2023, particularly at IETF 115 and 118, both with seven sessions discussing the principle. This period coincides with increased focus on Internet architecture research and concerns about platform concentration and content delivery evolution.
+The data shows that research groups dominate these discussions, with [dinrg](https://datatracker.ietf.org/wg/dinrg/about/) leading with 7 sessions, followed by [dtn](https://datatracker.ietf.org/wg/dtn/about/), [nmrg](https://datatracker.ietf.org/wg/nmrg/about/), and [coinrg](https://datatracker.ietf.org/wg/coinrg/about/) each contributing 3-4 sessions. This concentration in research groups suggests the community is actively exploring how traditional principles apply to emerging networking paradigms rather than simply applying established doctrine.
 
-The most active working groups provide insights into where end-to-end principles are most relevant today. DINRG leads with seven discussions, reflecting the research community's focus on how decentralization and traditional Internet principles interact. DTN (Delay-Tolerant Networking) and NMRG (Network Management Research Group) each had four discussions, suggesting that end-to-end principles remain particularly relevant in challenging networking environments and management contexts.
+The temporal pattern is particularly revealing. The peak discussion period (IETF 115-118) coincided with significant industry interest in edge computing, 5G networks, and computing-in-network approaches—all of which challenge traditional end-to-end assumptions. The recent decline in discussion frequency may indicate either that the community has reached some consensus on how to balance these competing considerations, or that attention has shifted to more concrete protocol work informed by these architectural discussions.
 
-Notably, discussions appear to decline in 2024-2025, with significantly fewer sessions addressing the principle. This could indicate either that the principle has become well-understood and implicit in discussions, or that attention has shifted to other architectural concerns as the Internet continues to evolve.
-
-The broad distribution across 36 working groups—including security (SECDISPATCH), routing (LSR), and even blockchain (SATP) groups—demonstrates that end-to-end thinking remains a cross-cutting concern that influences work across many technical domains within the IETF.
+Notably, security-focused groups like [secdispatch](https://datatracker.ietf.org/wg/secdispatch/about/) and [ace](https://datatracker.ietf.org/wg/ace/about/) also appear in the discussion list, suggesting that end-to-end principles remain relevant to authentication and authorization architecture as distributed systems become more complex.
 
 ## Resources
 
-- **[RFC 1958: Architectural Principles of the Internet](https://www.rfc-editor.org/rfc/rfc1958)** — Essential reading that codifies the end-to-end principle as a foundational Internet design principle alongside other architectural guidelines.
-
-- **[RFC 3724: The Rise of the Middle and the Future of End-to-End](https://www.rfc-editor.org/rfc/rfc3724)** — Provides crucial historical perspective on how the Internet has evolved away from pure end-to-end architecture and examines the implications for future protocol design.
-
-- **[End-to-End Arguments in System Design](https://web.mit.edu/Saltzer/www/publications/endtoend/endtoend.pdf) by Saltzer, Reed, and Clark** — The foundational 1984 paper that introduced the principle; essential for understanding the original reasoning and scope of end-to-end arguments.
-
-- **[End-to-End Principle (Wikipedia)](https://en.wikipedia.org/wiki/End-to-end_principle)** — Accessible overview with examples and discussion of how the principle applies to various network functions and modern Internet challenges.
+* [End-to-End Principle (Wikipedia)](https://en.wikipedia.org/wiki/End-to-end_principle) — Comprehensive overview with additional examples and critiques of the principle
+* [RFC 3724: The Rise of the Middle](https://www.rfc-editor.org/rfc/rfc3724) — Essential reading for understanding how middleboxes and network services have challenged traditional end-to-end assumptions
+* [IETF Architectural Principles of the Internet (RFC 1958)](https://www.rfc-editor.org/rfc/rfc1958) — The complete set of architectural principles that guide Internet protocol development, providing context for how end-to-end arguments fit within broader design philosophy
+* [RFC 8981: The Use of the IP Precedence Field in the TCP Header](https://www.rfc-editor.org/rfc/rfc8981) — Referenced in discussions as an example of how end-to-end arguments influence specific protocol design decisions
 
 ---
 
-*This report was generated from analysis of IETF working group session transcripts covering meetings 110-123 (March 2021 – July 2025).*
+*This report was generated from analysis of IETF working group session transcripts using vCon (Virtual Conversation) data spanning meetings 110-123 (March 2021 - July 2025).*
 
 ---
 

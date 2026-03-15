@@ -233,54 +233,90 @@ def load_group_vcon(path: str) -> dict:
     return parsed
 
 
-def select_best_quotes(sessions: list[dict], max_quotes: int = 8) -> list[dict]:
+def select_best_quotes(sessions: list[dict], max_quotes: int = 10) -> list[dict]:
     """Select the most illustrative conversation quotes across meetings.
 
-    Picks high-confidence matches first, then spreads across meetings and
-    working groups for diversity. Cleans up transcript artifacts.
+    Strategy: spread quotes across the full timeline (early, middle, late),
+    prefer longer/more substantive excerpts, ensure working group diversity,
+    and favor higher-confidence matches.
     """
-    # Score and sort: high confidence first, then spread by meeting
-    scored = []
+    # Build candidate pool with quality scoring
+    candidates = []
     for s in sessions:
         for m in s.get("matches", []):
             ctx = m.get("context", "").strip()
-            if len(ctx) < 40:
+            if len(ctx) < 60:  # Skip very short fragments
                 continue
-            scored.append({
+            meeting = s.get("meeting", "unknown")
+            # Extract meeting number for timeline positioning
+            try:
+                meeting_num = int(meeting.replace("ietf", ""))
+            except ValueError:
+                meeting_num = 0
+
+            # Quality score: longer quotes are usually more substantive,
+            # higher confidence is better
+            conf_score = {"high": 30, "medium": 20, "low": 10}.get(
+                s.get("confidence", "low"), 0
+            )
+            # Reward length up to ~400 chars (diminishing returns after)
+            length_score = min(len(ctx), 400) / 10
+            quality = conf_score + length_score
+
+            candidates.append({
                 "context": ctx,
-                "meeting": s.get("meeting", "unknown"),
+                "meeting": meeting,
+                "meeting_num": meeting_num,
                 "working_group": s.get("working_group", "unknown"),
                 "subject": s.get("subject", ""),
                 "confidence": s.get("confidence", "low"),
+                "quality": quality,
             })
 
-    # Sort: high confidence first
-    conf_order = {"high": 0, "medium": 1, "low": 2}
-    scored.sort(key=lambda x: conf_order.get(x["confidence"], 3))
+    if not candidates:
+        return []
 
-    # Deduplicate by meeting+wg, pick diverse set
+    # Sort by quality descending
+    candidates.sort(key=lambda x: x["quality"], reverse=True)
+
+    # Divide timeline into thirds: early (110-114), middle (115-119), late (120-123)
+    early = [c for c in candidates if c["meeting_num"] <= 114]
+    middle = [c for c in candidates if 115 <= c["meeting_num"] <= 119]
+    late = [c for c in candidates if c["meeting_num"] >= 120]
+
+    # Allocate slots proportionally but guarantee at least some from each era
+    # (if available)
+    slots_per_era = max(2, max_quotes // 3)
+
     selected = []
-    seen = set()
-    for q in scored:
-        key = f"{q['meeting']}_{q['working_group']}"
-        if key not in seen:
-            seen.add(key)
-            selected.append(q)
-        if len(selected) >= max_quotes:
-            break
+    seen_keys = set()  # meeting+wg to avoid duplication
 
-    # If not enough diversity, fill from remaining
-    if len(selected) < max_quotes:
-        for q in scored:
-            key = f"{q['meeting']}_{q['working_group']}"
-            if key in seen:
-                continue
-            selected.append(q)
-            seen.add(key)
-            if len(selected) >= max_quotes:
+    def pick_from(pool, n):
+        picked = []
+        for c in pool:
+            key = f"{c['meeting']}_{c['working_group']}"
+            if key not in seen_keys:
+                seen_keys.add(key)
+                picked.append(c)
+            if len(picked) >= n:
                 break
+        return picked
 
-    return selected
+    # Pick from each era
+    selected.extend(pick_from(late, slots_per_era))    # Recent first
+    selected.extend(pick_from(middle, slots_per_era))
+    selected.extend(pick_from(early, slots_per_era))
+
+    # Fill remaining slots from best remaining across all eras
+    if len(selected) < max_quotes:
+        remaining = [c for c in candidates
+                     if f"{c['meeting']}_{c['working_group']}" not in seen_keys]
+        selected.extend(pick_from(remaining, max_quotes - len(selected)))
+
+    # Sort final selection chronologically for narrative flow
+    selected.sort(key=lambda x: (x["meeting_num"], x["working_group"]))
+
+    return selected[:max_quotes]
 
 
 def build_prompt(parsed: dict, enrichment: dict) -> str:
@@ -315,7 +351,14 @@ def build_prompt(parsed: dict, enrichment: dict) -> str:
     )
 
     top_wg_text = ", ".join(
-        f"{wg['group']} ({wg['count']})" for wg in top_wgs[:10]
+        f"[{wg['group']}](https://datatracker.ietf.org/wg/{wg['group']}/about/) ({wg['count']})"
+        for wg in top_wgs[:10]
+    )
+
+    # Build a lookup of all WG datatracker links for the report
+    all_wgs = analysis.get("working_groups", [])
+    wg_links_text = ", ".join(
+        f"[{wg}](https://datatracker.ietf.org/wg/{wg}/about/)" for wg in all_wgs[:30]
     )
 
     # Format references
@@ -346,8 +389,12 @@ def build_prompt(parsed: dict, enrichment: dict) -> str:
 ## Key References
 {refs_text}
 
+## Working Group Links
+When referencing IETF working groups in the report, always link them to their datatracker page using this format: [wgname](https://datatracker.ietf.org/wg/wgname/about/).
+Here are the working groups involved: {wg_links_text}
+
 ## Selected Conversation Excerpts from IETF Sessions
-These are real excerpts from IETF working group sessions where this principle was discussed. They come from YouTube auto-captions, so they may have minor transcription artifacts.
+These are real excerpts from IETF working group sessions where this principle was discussed. They come from YouTube auto-captions, so they may have minor transcription artifacts. The quotes are drawn from across the full timeline (early, middle, and recent meetings) to show how the principle has been discussed over time.
 {quotes_text}
 
 ## Resources for Further Learning
@@ -374,18 +421,21 @@ Structure this section as follows:
 
 **The Tension** — Every good principle has a counterforce. Explain the real-world pressure that makes this principle hard to follow. Why do engineers and organizations sometimes violate it? What's the temptation? This makes the principle feel real rather than academic.
 
-**How to Recognize It** — Give 2-3 quick "you're seeing this principle at work when..." examples that help the reader spot it in their own technical or business context. These should be brief, concrete, and span different domains (not just networking).
+**How to Recognize It** — Give 2-3 quick "you're seeing this principle at work when..." examples that help the reader spot it in their own technical or business context. Format these as a markdown bullet list (using - or *), with each item on its own line. These should be brief, concrete, and span different domains (not just networking).
 
 Write this section in a conversational, teaching tone — like a great professor explaining something at a whiteboard. Use short paragraphs. Avoid jargon, or define it immediately when used. Aim for roughly 500-700 words in this section.
+
+## Early IETF Work
+Briefly discuss (2-3 paragraphs) early IETF work that either supports or contradicts this principle. What RFCs, architectural discussions, or protocol decisions from the Internet's formative years (1980s-2000s) shaped this principle? Were there notable cases where the IETF community learned the hard way — protocols that violated this principle and suffered for it, or deliberate exceptions that proved controversial? This historical grounding helps readers understand that these principles aren't just theoretical — they were forged through real engineering experience.
 
 ## Key References
 List the RFCs and seminal papers with links and brief (1-sentence) descriptions of each.
 
 ## This Principle in IETF Discussions
-Write a narrative section that weaves together the actual conversation excerpts above to illustrate how this principle comes up in real IETF deliberations. Use blockquotes (> ) for the excerpts. Attribute each quote to its working group and meeting. Choose the most illustrative 4-6 quotes and provide context for each — what were the participants discussing, and why did this principle matter in that context? Don't use all quotes — pick the best ones.
+Write a narrative section that weaves together the actual conversation excerpts above to illustrate how this principle comes up in real IETF deliberations. Use blockquotes (> ) for the excerpts. Attribute each quote to its working group (linked to datatracker) and meeting. Choose the most illustrative 4-6 quotes and provide context for each — what were the participants discussing, and why did this principle matter in that context? IMPORTANT: Select quotes that span the full timeline — include at least one from an early meeting (110-114), one from the middle period (115-119), and one from recent meetings (120-123) to show how the discussion has evolved. Don't use all quotes — pick the best ones for narrative impact.
 
 ## Historical Analysis
-Analyze how discussion of this principle has evolved across IETF 110–123 ({IETF_MEETING_DATES.get(meetings[0], '')} to {IETF_MEETING_DATES.get(meetings[-1], '') if meetings else ''}). Use the frequency data to identify trends. Which working groups discuss it most, and why might that be? Are there any notable patterns — periods of increased discussion, shifts in how the principle is applied? Present the frequency data in a small markdown table.
+Analyze how discussion of this principle has evolved across IETF 110–123 ({IETF_MEETING_DATES.get(meetings[0], '')} to {IETF_MEETING_DATES.get(meetings[-1], '') if meetings else ''}). Use the frequency data to identify trends. When naming working groups, always link them to their IETF datatracker page using this format: [wgname](https://datatracker.ietf.org/wg/wgname/about/). Which working groups discuss it most, and why might that be? Are there any notable patterns — periods of increased discussion, shifts in how the principle is applied? Present the frequency data in a small markdown table.
 
 ## Resources
 A curated list of resources for engineers who want to learn more about this principle — the RFCs, papers, Wikipedia articles, and other references. Use markdown links. Add 2-3 brief annotations explaining why each resource is valuable.
@@ -396,10 +446,12 @@ IMPORTANT GUIDELINES:
 - The "Understanding This Principle" section is the heart of the report — spend real effort making the analogy vivid and the explanation intuitive
 - Write in a professional but accessible tone — an IETF veteran and a new engineering manager should both find value
 - Use markdown formatting: headers, blockquotes, bold, links, tables
+- ALWAYS link IETF working group names to their datatracker page: [wgname](https://datatracker.ietf.org/wg/wgname/about/) — every WG mentioned in the report should be clickable
 - When quoting transcripts, clean up obvious auto-caption artifacts (missing punctuation, word breaks) but preserve the speaker's meaning
+- Select quotes from across the FULL timeline — do not cluster quotes in early meetings. Show how the discussion evolved from 2021 to 2025
 - Do NOT invent quotes — only use the excerpts provided above
 - Do NOT add fabricated statistics — only use the numbers provided
-- The report should be roughly 2000-3500 words (longer than before, due to the new teaching section)
+- The report should be roughly 2500-4000 words (includes teaching section and early IETF history)
 - Include a brief metadata footer noting this was generated from vCon analysis
 """
 
@@ -429,7 +481,7 @@ async def generate_report(
 
     response = await client.messages.create(
         model=model,
-        max_tokens=6000,
+        max_tokens=8000,
         messages=[{"role": "user", "content": prompt}],
     )
 
