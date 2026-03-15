@@ -2,97 +2,109 @@
 
 ## Introduction
 
-"Rough consensus and running code" stands as one of the most influential and enduring principles in Internet governance and protocol development. This deceptively simple phrase encapsulates the Internet Engineering Task Force's (IETF) approach to decision-making: address all concerns but don't let perfect become the enemy of good, and always prefer solutions backed by working implementations over purely theoretical proposals.
+"Rough consensus and running code" stands as perhaps the most iconic principle governing Internet protocol development and IETF decision-making. First articulated by David Clark at a 1992 IETF meeting and later formalized in [RFC 7282](https://www.rfc-editor.org/rfc/rfc7282), this principle fundamentally shapes how the Internet's technical standards evolve. It captures the IETF's pragmatic approach to engineering: address all technical concerns raised by participants, but don't let perfect be the enemy of good, and always prefer solutions that have been proven to work in practice over elegant theories.
 
-The principle emerged from the early culture of Internet development, where pragmatic engineers needed to build a functioning global network without getting bogged down in endless debates. It was formally articulated by David Clark and later codified in [RFC 7282](https://www.rfc-editor.org/rfc/rfc7282) by Pete Resnick in 2014. Unlike traditional standards bodies that might require unanimous agreement before proceeding, the IETF recognized that waiting for perfect consensus would paralyze innovation in the fast-moving world of Internet technology.
+The principle operates on two interconnected levels. "Rough consensus" means that while the IETF doesn't vote or require unanimity, it does demand that all significant objections be heard and addressed—even if not every participant ends up completely satisfied with the final solution. "Running code" means that working implementations carry enormous weight in technical discussions, often more than theoretical arguments or simulation results. Together, these concepts create a bias toward practical, deployable solutions that can actually improve the Internet.
 
-This principle has shaped not just how Internet protocols are developed, but how the Internet itself has evolved—prioritizing solutions that work in practice over those that are theoretically elegant. It reflects a fundamental truth about complex systems: sometimes you need to build something and see how it behaves in the real world before you can fully understand what the right answer should be.
+This approach has proven remarkably successful in building the global Internet we rely on today. Unlike traditional standards bodies that might spend years perfecting specifications before any implementation, the IETF's emphasis on running code has enabled rapid iteration and real-world validation of protocol designs. From TCP/IP to HTTP to BGP, the Internet's most critical protocols emerged through this process of building consensus around working implementations.
 
 ## Understanding This Principle
 
-**The Core Idea** — Move forward when you've addressed everyone's concerns but not necessarily accommodated everyone's preferences, and always prefer solutions that have been proven to work over those that merely sound good on paper.
+**The Core Idea** — The best technical decisions emerge when you address everyone's serious concerns but don't let holdouts block progress, and you trust working prototypes over perfect theories.
 
-Think of this like planning a neighborhood block party. You can't wait until every single neighbor agrees on every detail—the music, the food, the timing, the decorations—or the party will never happen. Instead, you listen to everyone's concerns (noise levels, parking, cleanup), address the serious issues, and move forward even if some people would prefer jazz over rock music. Most importantly, you choose vendors and activities that have actually worked at other block parties rather than untested ideas that sound great in theory but might fail spectacularly when 200 people show up.
+Think of it like designing a new city transportation system. The traditional approach might involve urban planners creating elaborate theoretical models, running simulations, and trying to get every stakeholder group to sign off on the perfect plan before breaking ground. The "rough consensus and running code" approach would instead say: listen carefully to concerns from commuters, business owners, environmental groups, and accessibility advocates, but once you've addressed the major issues, build a pilot route and see how it actually works. If the buses run on time and people use them, that tells you more than any number of traffic flow equations.
 
-The "running code" part means you don't just trust that the sound system will work—you test it first. You don't just assume the caterer is reliable—you check their references from other events. You prioritize proven solutions over theoretical ones, because when the day arrives, what matters is what actually functions, not what looked best in the planning documents.
+The "rough consensus" part means you don't need the taxi lobby to love your bus system—you just need to ensure their concerns about unfair competition have been heard and reasonably addressed, perhaps through regulated ride-sharing integration. The "running code" part means that a single functioning bus route carrying real passengers trumps a hundred theoretical studies about optimal route spacing.
 
-**Why It Matters** — When organizations ignore this principle, they fall into two common traps: analysis paralysis and the "sounds good on paper" fallacy.
+**Why It Matters** — Without this principle, technical standards become either paralyzed by perfectionism or dominated by whoever has the loudest voice. Consider the difference between two approaches to developing a new data format. In the traditional committee approach, experts might spend two years debating edge cases, theoretical optimal structures, and ensuring every possible use case is perfectly supported—only to discover that when implementations finally appear, the format is too complex for real systems and nobody adopts it.
 
-Analysis paralysis happens when teams spend months debating every possible edge case and trying to accommodate every stakeholder's wishes. A classic example is enterprise software projects that drag on for years because every department wants their specific requirements included, and no one is willing to make the hard decisions about what's truly essential versus what's merely nice-to-have. Meanwhile, competitors ship working solutions that capture the market.
+The rough consensus approach would instead start with a working parser and generator, address the major technical objections raised by implementers and users, and ship something that demonstrably works for 80% of use cases. The remaining edge cases get addressed in future versions, guided by real deployment experience rather than speculation.
 
-The "sounds good on paper" fallacy occurs when organizations choose elegant theoretical solutions over battle-tested practical ones. Consider the history of networking protocols: many beautifully designed protocols have failed in practice because they made assumptions that didn't hold up under real-world conditions—network latency, hardware failures, human error, or simply the messiness of how systems actually get deployed. Meanwhile, seemingly inelegant protocols like TCP/IP succeeded because they had working implementations that people could actually use and improve incrementally.
+**The Tension** — The pressure against this principle comes from two powerful forces: the perfectionism of engineers and the politics of organizations. Engineers naturally want to solve problems completely and elegantly before shipping—it feels wrong to leave known issues unaddressed. Meanwhile, organizations often want unanimous buy-in to avoid later blame or resistance. It's much easier to say "everyone agreed to this" than "we listened to everyone and made a judgment call."
 
-**The Tension** — The real-world pressure against this principle comes from perfectionism and the fear of making the "wrong" choice. Engineers often want to solve every possible problem before shipping. Managers want to avoid criticism for not considering all stakeholders. Committees want to appear thorough and inclusive.
+This creates a constant temptation to keep polishing, keep seeking more consensus, keep adding features to address every concern. But in the fast-moving world of Internet protocols, waiting for perfection often means arriving too late. By the time your perfectly consensual, theoretically optimal protocol is ready, three competing solutions are already deployed and gaining network effects.
 
-There's also a deeper tension between democracy and efficiency. True consensus feels more fair—everyone gets what they want—but it's often impossible in practice when dealing with complex technical decisions where tradeoffs are inevitable. The temptation is to keep talking until everyone agrees, but in fast-moving technical fields, the cost of delay often outweighs the benefits of perfect agreement.
+**How to Recognize It** — You're seeing this principle at work when:
 
-Additionally, "running code" can feel risky to organizations used to extensive planning. Building something to test it requires investment without guarantee of success, and it can feel wasteful compared to just thinking through the problem more thoroughly. But this thinking trap assumes you can solve complex problems purely through analysis, when in reality many issues only become apparent when you try to implement solutions in practice.
+- A technical team ships a working prototype to validate an architecture decision rather than debating alternatives in meetings for another month
+- A standards body adopts a specification that has rough edges but multiple interoperable implementations rather than waiting for theoretical perfection
+- An engineering organization moves forward with a design after addressing major concerns, even though some stakeholders still prefer alternative approaches
+- A project prioritizes compatibility with existing deployed systems over clean-slate theoretical elegance
 
-**How to Recognize It** — You're seeing this principle at work when a team says "let's prototype the top three approaches and see which one actually works" instead of debating theoretical pros and cons indefinitely. You see it when a product manager says "we've heard everyone's feedback, addressed the major concerns, and now we need to ship and learn" rather than trying to make everyone completely happy before proceeding. You see it when an architect chooses a proven but imperfect technology over a newer, theoretically superior one that lacks production experience.
+## Early IETF Work
+
+The "rough consensus and running code" principle emerged from hard-won experience in the Internet's formative decades. The early Internet protocols succeeded precisely because they prioritized working implementations over elaborate specifications. TCP/IP displaced more theoretically elegant alternatives like OSI partly because it had functioning code that network administrators could deploy immediately. The original HTTP specification was famously brief and informal, but it enabled the World Wide Web to explode into existence because browsers and servers could interoperate from day one.
+
+However, the IETF also learned painful lessons about the limits of this approach. The IPv4 address space crisis demonstrated what happens when rough consensus settles on a "good enough" solution (32-bit addresses) without fully considering long-term scalability. Similarly, early email protocols like SMTP were designed in an era when the Internet was a trusted academic network—their lack of authentication mechanisms created security problems that plague us today. These experiences taught the IETF that "rough consensus" must still be informed consensus, and "running code" must be code that actually addresses the real problem space.
+
+The principle also reflects the IETF's cultural rejection of traditional standards-making approaches that dominated industries like telecommunications. Where ITU-T might spend years developing comprehensive specifications in isolation, the IETF embraced an iterative approach where implementation experience directly informed specification development. This created a virtuous cycle: protocols that couldn't be implemented or deployed well would fail in the marketplace of running code, while successful protocols would evolve based on operational experience.
 
 ## Key References
 
-- [RFC 7282: On Consensus and Humming in the IETF](https://www.rfc-editor.org/rfc/rfc7282) — The definitive explanation of how rough consensus works in practice and why it's essential for technical decision-making
-- [The Tao of IETF](https://www.ietf.org/about/participate/tao/) — A practical guide to IETF culture and processes, including how rough consensus operates in real working groups
-- [RFC 2026: The Internet Standards Process](https://www.rfc-editor.org/rfc/rfc2026) — The formal process description that codifies how running code and consensus interact in standards development
+- [RFC 7282: On Consensus and Humming in the IETF](https://www.rfc-editor.org/rfc/rfc7282) — The definitive explanation of how consensus works in IETF decision-making processes
+- [RFC 2026: The Internet Standards Process](https://www.rfc-editor.org/rfc/rfc2026) — Describes how rough consensus and running code fit into the formal standardization process
+- [The Tao of IETF](https://www.ietf.org/about/participate/tao/) — Newcomer's guide explaining IETF culture and decision-making principles
 
 ## This Principle in IETF Discussions
 
-The conversation excerpts reveal how "rough consensus and running code" manifests in day-to-day IETF work, particularly around the critical interplay between theoretical proposals and practical implementation.
+The principle of rough consensus and running code continues to guide IETF deliberations across diverse technical domains, as evidenced by working group discussions spanning from March 2021 to July 2025. These conversations reveal how the principle adapts to modern challenges while maintaining its core effectiveness.
 
-In the IPPM (IP Performance Metrics) working group, participants emphasized the importance of backing specifications with actual implementations:
+In early pandemic-era meetings, working groups grappled with validating their theoretical work against implementation reality. The [ippm](https://datatracker.ietf.org/wg/ippm/about/) working group exemplified this approach in March 2021:
 
 > "we converted those shoulds to uh to a must and we've had a running code section in the draft since about last september uh when the running code was released"
 
-This reflects a common pattern where initial drafts start with flexible recommendations ("shoulds") but evolve toward firmer requirements ("musts") as running code demonstrates what actually works in practice. The running code doesn't just validate the concept—it often reveals which aspects of the specification are essential versus optional.
+This quote illustrates the iterative nature of IETF work—specifications evolve based on implementation experience, with actual code informing the tightening of requirements from suggestions ("shoulds") to mandates ("musts").
 
-The CFRG (Crypto Forum Research Group) demonstrated another aspect of the principle—how implementers use running code to validate new cryptographic approaches:
+The principle's philosophical foundations were explicitly discussed in educational contexts, such as this November 2022 explanation from the [emodir](https://datatracker.ietf.org/wg/emodir/about/) working group:
 
-> "in the interest of running code i did implement it uh i added it to my implementation of hpke which is compliant with v"
+> "the uh iesg um so I hinted a little bit earlier that we were going to talk about ietf and consensus um the uh Mantra I guess of the ietf is that we reject King's presidents and votings we believe in rough consensus and running code and this has been around for at least 30 years"
 
-Rather than just proposing a new encryption mode theoretically, the presenter built it into an existing implementation. This approach allows the working group to evaluate not just whether the concept is sound, but how it integrates with real systems and what practical issues emerge.
+This articulation emphasizes the anti-authoritarian nature of IETF decision-making—rejecting both autocratic decisions and pure democracy in favor of merit-based consensus guided by working implementations.
 
-The SIDROPS (Secure Inter-Domain Routing Operations) group illustrated how running code helps validate complex distributed systems:
+Modern challenges to the principle emerged in discussions about existing deployments versus evolving standards. The [dispatch](https://datatracker.ietf.org/wg/dispatch/about/) working group in March 2023 faced exactly this tension:
 
-> "i'll give you an update on the testing we've conducted so far and the status of running codes and then i will conclude with a question to the group on what should be done next"
+> "we have 17 implementations and they deployed it and they've kind of decided that Z means something right and so if uh you know through consensus-based process we decide that Z means something else we would create a bit of Chaos"
 
-Security and routing protocols are particularly dependent on real-world testing because they involve complex interactions between multiple organizations and systems. The "question to the group on what should be done next" shows how running code results inform the rough consensus process—implementation experience directly shapes the group's decisions about future directions.
+This highlights a contemporary challenge: when "running code" has already established de facto standards, the consensus process must weigh backward compatibility against technical improvement. The principle doesn't just favor running code—it must grapple with the ecosystem effects of existing running code.
 
-The rough consensus aspect appeared clearly in a DMARC working group discussion about email authentication:
+By July 2024, discussions showed both the persistence and evolution of the principle. The [dmm](https://datatracker.ietf.org/wg/dmm/about/) working group demonstrated the ongoing emphasis on implementation validation:
 
-> "i do think that's also rough consensus of uh of the group"
+> "in the real world well something we running working on ITF running code R consensus so what you assume as a running system well we may develop a running system"
 
-This comment came after a participant expressed "strong aversion" to a particular technical approach based on operational experience. The working group didn't need to take a formal vote—the chair could recognize that the group had heard the concerns and generally agreed on a direction forward, even if not everyone was completely satisfied.
+Meanwhile, the [grow](https://datatracker.ietf.org/wg/grow/about/) working group showed how the principle enables flexible standardization approaches:
+
+> "just because something is mentioned does not mean people should or must use it um it's just an option um and that makes it ideally easier to find some form of rough consensus whether what is in there is actually okay"
+
+This reflects a mature understanding of how rough consensus can embrace optional mechanisms rather than forcing universal agreement on single solutions.
 
 ## Historical Analysis
 
-Analysis of the discussion frequency across IETF 110–123 reveals interesting patterns in how this principle has been applied:
+Analysis of IETF meetings 110-123 reveals consistent engagement with the principle of rough consensus and running code across the Internet engineering community, with notable patterns in both frequency and working group participation.
 
-| Meeting | Date | Sessions | Notable Context |
-|---------|------|----------|----------------|
-| IETF 110 | March 2021 | 23 | Transition back to in-person meetings |
-| IETF 117 | July 2023 | 30 | Peak discussion period |
-| IETF 123 | July 2025 | 32 | Highest frequency observed |
+| Meeting | Date | Location | Discussions |
+|---------|------|----------|-------------|
+| IETF 110 | March 2021 | Online | 23 |
+| IETF 117 | July 2023 | San Francisco | 30 |
+| IETF 123 | July 2025 | Madrid | 32 |
 
-The principle saw increased discussion frequency over time, particularly jumping from the initial online-only meetings (IETF 110-112) to the hybrid and in-person meetings that followed. This suggests that face-to-face interaction may facilitate the kind of nuanced consensus-building that this principle requires.
+The data shows sustained discussion with a notable increase in recent meetings, suggesting the principle remains highly relevant to contemporary Internet engineering challenges. The peak at IETF 123 (32 discussions) may reflect growing complexity in consensus-building as the Internet infrastructure matures and deployment considerations become more critical.
 
-The top working groups discussing this principle—IETF plenary (11 sessions), EMU (9 sessions), and NETMOD (8 sessions)—span very different technical domains. The high frequency in plenary sessions makes sense, as these often address process and cultural issues. EMU (EAP Method Update) and NETMOD (Network Modeling) represent areas where running code is particularly critical: authentication mechanisms and network management tools must work reliably in diverse real-world environments.
+Working group participation patterns reveal interesting insights about where consensus and implementation challenges most frequently arise. The [ietf](https://datatracker.ietf.org/wg/ietf/about/) plenary sessions lead with 11 discussions, reflecting the principle's foundational role in IETF governance. The [emu](https://datatracker.ietf.org/wg/emu/about/) working group's 9 discussions suggest active consensus-building around EAP methods, while [netmod](https://datatracker.ietf.org/wg/netmod/about/)'s 8 discussions likely reflect ongoing implementation challenges in network modeling standards.
 
-The broad distribution across 135 unique working groups demonstrates that this isn't just a process principle confined to governance discussions—it's a practical tool that working groups across all technical areas use to make progress on complex problems.
+The [hackathon](https://datatracker.ietf.org/wg/hackathon/about/)'s presence with 7 discussions is particularly significant, demonstrating how the IETF's code-focused events directly embody the "running code" aspect of the principle. Similarly, operational working groups like [ippm](https://datatracker.ietf.org/wg/ippm/about/) and [grow](https://datatracker.ietf.org/wg/grow/about/) appear frequently, suggesting that measurement and routing groups regularly grapple with balancing theoretical improvements against deployed practice.
 
-The hackathon's appearance in the top working groups (7 sessions) is particularly telling, as hackathons specifically exist to produce running code that can inform standards work. This represents the principle in its most literal form—creating implementations during the meeting itself to test ideas before they become formal specifications.
+The breadth of participation—135 unique working groups—indicates that rough consensus and running code isn't confined to specific technical domains but rather permeates all areas of Internet standardization work, from security ([rats](https://datatracker.ietf.org/wg/rats/about/)) to routing ([lsr](https://datatracker.ietf.org/wg/lsr/about/)) to operational practices ([sidrops](https://datatracker.ietf.org/wg/sidrops/about/)).
 
 ## Resources
 
-- [RFC 7282: On Consensus and Humming in the IETF](https://www.rfc-editor.org/rfc/rfc7282) — Essential reading for understanding how rough consensus actually works in practice, with concrete examples of good and bad consensus processes
-- [The Tao of IETF](https://www.ietf.org/about/participate/tao/) — A cultural guide that explains not just the formal rules but the unwritten norms about how consensus-building and implementation validation work in IETF culture
-- [RFC 2026: The Internet Standards Process](https://www.rfc-editor.org/rfc/rfc2026) — The formal process documentation that shows how running code requirements are built into the standards track
-- [David Clark's "A Cloudy Crystal Ball" (1992)](https://www.ietf.org/proceedings/24/slides/managerial-overview-1992-jul-13.pdf) — The classic presentation where Clark articulated "rough consensus and running code" as the IETF's core philosophy
-- [IETF Datatracker](https://datatracker.ietf.org/) — Track real working group discussions and see how consensus formation and implementation requirements play out in current standardization work
+- [RFC 7282: On Consensus and Humming in the IETF](https://www.rfc-editor.org/rfc/rfc7282) — Essential reading for understanding how the IETF operationalizes consensus-building without formal voting
+- [The Tao of IETF](https://www.ietf.org/about/participate/tao/) — Practical guide for newcomers explaining IETF culture, including how rough consensus works in practice
+- [RFC 2026: The Internet Standards Process](https://www.rfc-editor.org/rfc/rfc2026) — Formal description of how implementation requirements and consensus evaluation fit into the standards track
+- [David Clark's 1992 IETF presentation](https://www.ietf.org/about/participate/tao/) — Historical context for the original articulation of this principle
+- [IETF Hackathon](https://www.ietf.org/how/runningcode/hackathons/) — See the "running code" principle in action through collaborative implementation events
 
 ---
-
-*This report was generated from analysis of IETF working group session transcripts using vCon (Conversation Data Container) format, covering meetings 110-123 from March 2021 through July 2025.*
+*This report was generated from analysis of IETF working group session transcripts using vCon (virtual Conversation) data processing techniques.*
 
 ---
 

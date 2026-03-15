@@ -2,102 +2,113 @@
 
 ## Introduction
 
-"Connectivity as primary goal" stands as one of the foundational principles of Internet architecture, formally articulated in [RFC 1958: Architectural Principles of the Internet](https://www.rfc-editor.org/rfc/rfc1958) by Brian Carpenter in 1996. This principle asserts that the Internet's fundamental purpose is to enable universal connectivity—the ability for any device, anywhere in the network, to communicate with any other device. While this may seem obvious today, this principle represents a profound architectural choice that has shaped every aspect of how the Internet operates.
+"Connectivity as primary goal" stands as perhaps the most fundamental principle underlying the Internet's architecture. Formalized in [RFC 1958](https://www.rfc-editor.org/rfc/rfc1958), Brian Carpenter's seminal 1996 document on "Architectural Principles of the Internet," this principle declares that the Internet's primary purpose is to enable universal connectivity between any two endpoints, regardless of their location, technology, or administrative domain.
 
-The principle emerged from the early Internet's design philosophy, where researchers prioritized building a network that could survive partial failures and connect diverse systems. Unlike traditional telecommunications networks that were optimized for specific services or controlled environments, the Internet was designed as a general-purpose communication substrate. This "connectivity-first" approach meant that the network's primary job was simply to deliver packets between endpoints, regardless of what applications were running or what types of devices were communicating.
+This principle emerged from the Internet's origins as a research network designed to survive partial failures and connect disparate computing systems. Unlike traditional telecommunications networks that prioritized specific services or performance guarantees, the Internet was built on the radical premise that getting packets from any source to any destination was more important than how efficiently or predictably they arrived. This connectivity-first philosophy enabled the Internet's explosive growth from a handful of university computers to a global network connecting billions of devices.
 
-In the IETF's ongoing work, this principle continues to influence protocol design, routing decisions, and architectural choices. As evidenced by discussions across 165 working group sessions from IETF 110-123, engineers regularly return to this foundational concept when evaluating new technologies, debugging network problems, and designing systems that must operate across the Internet's vast, heterogeneous infrastructure.
+The principle continues to guide IETF protocol development today, influencing decisions about routing protocols, addressing schemes, and network architectures. It serves as a north star when engineers face trade-offs between connectivity and other desirable properties like performance, security, or efficiency. Understanding this principle is crucial for anyone working on Internet protocols, as it explains why certain design patterns persist and why proposals that limit connectivity face heightened scrutiny in IETF discussions.
 
 ## Understanding This Principle
 
-**The Core Idea**
+**The Core Idea** — The Internet should prioritize getting any message to any destination over all other concerns, including speed, efficiency, or elegance.
 
-The Internet exists primarily to connect things, not to control, optimize, or understand what flows between them.
+Think of this like a postal system designed by someone who lived through multiple wars and natural disasters. Most postal services optimize for speed and cost — they want to deliver letters quickly and cheaply along well-established routes between major cities. But imagine designing a postal system where the primary goal isn't speed or cost, but ensuring that any letter can eventually reach any address, even if the roads are bombed, the trains aren't running, and half the post offices are closed.
 
-Think of this principle like a city's road system. A well-designed transportation network doesn't care whether you're driving to work, visiting friends, delivering packages, or heading to the hospital—it simply provides reliable paths between any two points in the city. The road system doesn't optimize specifically for commuters at the expense of delivery trucks, or prioritize shopping trips over emergency vehicles. Instead, it focuses on one fundamental capability: ensuring that anyone can get from anywhere to anywhere else.
+This hypothetical postal system would have multiple backup routes for every destination. It would accept letters in any format — handwritten notes, formal documents, packages, messages carved on wooden blocks. Postal workers would be trained to improvise when standard procedures fail: if the main road to a town is blocked, they'd find hiking trails, boat routes, or even carrier pigeons. The system might be slower and more expensive than a conventional postal service, but it would be nearly impossible to completely cut off communication to any location.
 
-This might seem obvious, but it represents a profound design choice. The city could instead build specialized transportation systems—dedicated commuter rails, separate truck routes, emergency-only highways—that might be more efficient for specific purposes. But by prioritizing universal connectivity, the road system becomes a general-purpose platform that enables countless activities the planners never anticipated. Street food vendors, rideshare services, mobile clinics, and popup markets all become possible because the basic infrastructure simply connects places without prejudging how those connections will be used.
+This is the Internet's fundamental philosophy. Every other network property — speed, cost, security, quality of service — comes second to the basic goal of universal reachability.
 
-**Why It Matters**
+**Why It Matters** — When you violate this principle, you create islands of connectivity that fragment the Internet's global reach.
 
-When networks prioritize connectivity, they become platforms for innovation. When they prioritize control or optimization, they become constraints.
+Consider two real-world examples. In the 1980s and 1990s, many companies deployed proprietary networking protocols — IBM's SNA, Novell's IPX, Digital's DECnet — that worked beautifully within their own ecosystems but couldn't communicate with each other. Each created fast, efficient networks that served their specific communities well. However, connecting these islands required expensive gateways, complex translations, and often simply didn't work. Users faced a world where their computer could talk to some machines but not others, based on arbitrary technical decisions made years earlier.
 
-Consider what happened with early telephone networks versus the Internet. Telephone networks were brilliantly optimized—for voice calls between two parties. They provided excellent audio quality, reliable connections, and sophisticated features like call waiting and conferencing. But their optimization for voice made them terrible platforms for data. When people wanted to use modems for computer communication, they had to work around the telephone network's assumptions about what "communication" meant. The network's focus on optimizing voice calls made it nearly impossible to innovate new services.
+Contrast this with the Internet's approach: TCP/IP wasn't the fastest or most elegant protocol available, but it prioritized universal connectivity. Any device implementing TCP/IP could, in principle, communicate with any other TCP/IP device. This connectivity-first design enabled explosive growth because new networks could join the Internet without asking permission or implementing complex gateway technologies.
 
-The Internet took the opposite approach. Instead of optimizing for any particular application, it focused purely on moving packets between addresses. This made early Internet services arguably worse than their specialized alternatives—email was less reliable than postal mail, early voice over IP was lower quality than telephone calls, and web browsing was slower than dedicated information systems. But because the network prioritized connectivity over optimization, it became a platform where anyone could experiment with new applications without asking permission or redesigning the infrastructure.
+**The Tension** — The pressure against this principle comes from the desire to optimize for specific use cases or business models.
 
-**The Tension**
+It's tempting to design networks that work exceptionally well for particular applications, geographies, or customers. A video streaming service might want to prioritize its traffic over email. A company might want to optimize its network for internal applications while treating external traffic as second-class. A government might want to create a faster, more secure network for its citizens while limiting international connectivity.
 
-The relentless pressure to optimize creates constant temptation to abandon universal connectivity in favor of specialized solutions.
+These optimizations often make technical and business sense in isolation. They can improve performance, reduce costs, enhance security, and serve specific communities better than a general-purpose network. The problem is that each optimization creates boundaries — places where connectivity stops working. Over time, these boundaries accumulate and fragment the network into incompatible pieces.
 
-Network operators face real costs and constraints: bandwidth is expensive, latency matters for user experience, and security threats require active management. It's always tempting to improve performance by treating different types of traffic differently—prioritizing video streams over file downloads, blocking suspicious connections, or optimizing routes for major customers. Each of these optimizations makes sense in isolation and can deliver measurable improvements.
+**How to Recognize It** — You're seeing this principle at work when:
 
-But every optimization away from universal connectivity reduces the network's potential as a platform. When ISPs throttle certain applications, those applications can't compete fairly with alternatives. When networks block or redirect traffic, new services can't reach users. When routing prioritizes some destinations over others, innovation becomes concentrated in privileged locations. The pressure to optimize is constant and rational, but it gradually transforms a general-purpose platform into a collection of special-purpose services.
+- A network protocol includes multiple fallback mechanisms that sacrifice efficiency to maintain connectivity during failures
+- System architects choose standards-based solutions over proprietary ones, even when the proprietary option offers better performance
+- Organizations invest in redundant network paths and diverse routing options rather than optimizing a single high-performance connection
+- Protocol designers add complexity to ensure their system can interoperate with older or different technologies
+- Engineers resist adding features that would prevent their system from working with future, unknown protocols or applications
 
-**How to Recognize It**
+## Early IETF Work
 
-You're seeing this principle at work when networks treat unknown traffic the same as known traffic—forwarding packets based on addresses rather than contents or assumptions about what applications are running. You see it when routing protocols focus on reachability rather than optimization, ensuring every destination is reachable even if not every path is optimal. You recognize it in organizational decisions when teams choose general-purpose solutions that "work everywhere" over specialized solutions that "work better in our specific environment." The principle shows up whenever engineers ask "how do we make this work across the entire Internet?" rather than "how do we make this work perfectly in our controlled environment?"
+The connectivity principle emerged from hard-won experience during the Internet's formative years. The original ARPANET was designed in the late 1960s with connectivity as an explicit goal — researchers wanted to create a network that could survive nuclear attacks by routing around damaged nodes. This military requirement established the philosophical foundation that connectivity trumped efficiency.
+
+Throughout the 1980s and 1990s, the IETF community learned this lesson repeatedly through protocol failures. Early attempts to create "better" Internet protocols — ones optimized for speed, security, or specific applications — often failed to gain adoption precisely because they sacrificed connectivity for other goals. The OSI protocol suite, despite significant technical advantages and international standardization efforts, couldn't overcome TCP/IP's installed base and universal connectivity. Similarly, various attempts to create separate "quality of service" networks or application-specific protocols foundered when they required users to choose between better performance and broader connectivity.
+
+[RFC 1958](https://www.rfc-editor.org/rfc/rfc1958) crystallized these experiences into explicit architectural principles, with connectivity listed first among the Internet's core design goals. The document acknowledged that this principle sometimes conflicts with other desirable properties, but argued that connectivity's primacy was essential to the Internet's success and should guide future protocol development.
 
 ## Key References
 
-- [RFC 1958: Architectural Principles of the Internet](https://www.rfc-editor.org/rfc/rfc1958) — The foundational document articulating connectivity as the Internet's primary goal
-- [End-to-End Arguments in System Design](https://web.mit.edu/Saltzer/www/publications/endtoend/endtoend.pdf) — Saltzer, Reed, and Clark's seminal paper on why networks should focus on basic connectivity
+- [RFC 1958: Architectural Principles of the Internet](https://www.rfc-editor.org/rfc/rfc1958) — The foundational document that codified connectivity as the Internet's primary architectural principle.
 
 ## This Principle in IETF Discussions
 
-The principle of connectivity as a primary goal manifests throughout IETF working group discussions, often emerging when engineers grapple with fundamental questions about reachability, routing, and network resilience.
+The principle of connectivity as a primary goal appears consistently across IETF working group discussions, manifesting in various technical contexts from routing protocols to specialized networks.
 
-In the BESS working group sessions, connectivity concerns appear when designing multi-domain EVPN services:
+Early in the analyzed period, the [bess](https://datatracker.ietf.org/wg/bess/about/) working group grappled with connectivity challenges in virtual private networks. During IETF 113 in Vienna (March 2022), participants discussed scenarios involving IPv4 and IPv6 connectivity over single-stack networks:
 
-> "m going to talk about a short refresh changes that we've made in version zero one and next steps next slide please the uh the draft um in the introduction talks about different ways of uh having interconnectivity across domains for evpm vpws services it talks about three different solutions which ar"
+> "ec edge scenario where we have an ipv4 and ipv6 mlri uh from a control plane perspective they're they're being carried over a single v6 only pier uh and we're forwarding v4 and v6 and we have end end reachability cdc um and we're using the default uh per cd label allocation um we've tested with a v4"
 
-This discussion from IETF 115 illustrates how even advanced networking services must grapple with the fundamental challenge of maintaining connectivity across different administrative domains—a direct application of the universal connectivity principle.
+This discussion exemplifies the principle in practice — engineers designing solutions that maintain end-to-end reachability across different protocol families, even when the underlying infrastructure supports only newer protocols.
 
-The routing working group (RTGWG) explicitly connected connectivity to service reliability during discussions about major provider outages:
-
-> "st year's major service disruptions at large providers mainly caused by configuration mistakes they took a large set of services down for a considerable amount of time so Services depend on resilient connectivity and the control plane connectivity is inherently important I in The Meta case for examp"
-
-This IETF 115 discussion demonstrates how connectivity isn't just an abstract principle—it directly impacts service availability. When connectivity fails, everything built on top of the network fails with it.
-
-In the LSR working group, engineers debated the distinction between reachability and liveness, highlighting a key tension in maintaining universal connectivity:
+The [lsr](https://datatracker.ietf.org/wg/lsr/about/) working group at the same meeting highlighted a fundamental tension between connectivity and liveness detection:
 
 > "k anymore so there are a bunch of other proposals that we've discussed pua putting loopbacks in bgp don't aggregate the loopbacks many other ideas the root problem here is that igps are carrying live reachability not liveness and if we want to talk about liveness we really really need another mechan"
 
-This IETF 113 conversation reveals how routing protocols must balance the need to advertise reachability (supporting universal connectivity) with the need to respond quickly to failures (maintaining practical connectivity).
+This quote illustrates how routing protocols prioritize reachability information over performance optimization, embodying the connectivity-first principle even when it creates technical challenges.
 
-The FANTEL working group's discussions about ATF routing protocols showed how traditional approaches may be insufficient for emerging connectivity requirements:
+By the middle period, discussions had evolved to address service resilience. The [rtgwg](https://datatracker.ietf.org/wg/rtgwg/about/) working group at IETF 115 in London (November 2022) examined real-world connectivity failures:
+
+> "st year's major service disruptions at large providers mainly caused by configuration mistakes they took a large set of services down for a considerable amount of time so Services depend on resilient connectivity and the control plane connectivity is inherently important I in The Meta case for examp"
+
+This discussion connected the abstract principle to concrete business impacts, showing how connectivity failures affect large-scale services and reinforcing why connectivity remains paramount.
+
+More recent discussions have extended the principle to emerging technologies. The [iepg](https://datatracker.ietf.org/wg/iepg/about/) working group at IETF 120 in Vancouver (July 2024) explored connectivity during network failures:
+
+> "for power affluent devices that is uh a technical way of saying not resource constraint that is you know everyday devices such as phones and laptops and PCs and so on and the objective is to achieve connectivity during internet phase failures yeah uh so this is a brief description a pictorial descri"
+
+This represents an evolution of the principle — not just maintaining connectivity under normal conditions, but ensuring it persists during infrastructure failures, extending the original resilience goals to modern device ecosystems.
+
+The most recent discussions show the principle adapting to new protocol contexts. The [fantel](https://datatracker.ietf.org/wg/fantel/about/) working group at IETF 123 in Madrid (July 2025) noted limitations in current reachability mechanisms:
 
 > "l traffic we didn't have this kind of requirement TCP transmiters here it doesn't work this way the problem statement what we have today in ATF mostly routing protocols distributing information about reachability they're not fast enough the information they distribute is not kind of information we n"
 
-This IETF 123 excerpt illustrates how new applications and network conditions challenge existing approaches to maintaining connectivity, forcing engineers to reconsider how the principle applies in practice.
+This suggests ongoing evolution in how the connectivity principle is implemented, with working groups seeking faster, more responsive methods to maintain reachability in modern networks.
 
 ## Historical Analysis
 
-Analysis of IETF discussions from March 2021 to July 2025 reveals consistent engagement with connectivity principles across all 14 meetings, with notable variation in intensity:
+Analysis of discussion frequency across IETF meetings reveals sustained attention to connectivity principles throughout the surveyed period:
 
-| Meeting | Sessions | Notable Focus Areas |
-|---------|----------|-------------------|
-| IETF 110-112 (2021) | 26 total | Post-pandemic connectivity challenges |
-| IETF 113-115 (2022) | 45 total | Peak discussion period, routing resilience |
-| IETF 116-118 (2023) | 34 total | Multi-domain connectivity solutions |
-| IETF 119-123 (2024-2025) | 60 total | Emerging network technologies |
+| Meeting | Date | Discussions |
+|---------|------|------------|
+| IETF 110 | March 2021 | 9 |
+| IETF 115 | November 2022 | 18 |
+| IETF 120 | July 2024 | 15 |
+| IETF 123 | July 2025 | 11 |
 
-The highest concentration of discussions occurred during IETF 115 (London, November 2022) with 18 sessions, coinciding with industry focus on network resilience following several high-profile outages. The DTN and GAIA working groups led discussions with 8 sessions each, reflecting the principle's particular relevance to delay-tolerant networks and global Internet architecture research.
+The peak at IETF 115 (18 discussions) coincided with increased focus on network resilience following several high-profile Internet outages in 2022. This pattern suggests the principle gains prominence during periods when connectivity failures highlight its importance.
 
-The routing-focused working groups (RTGWG, LSR, IDR) collectively contributed 17 sessions, emphasizing how fundamental routing decisions directly implement the connectivity principle. Interestingly, newer working groups like SNAC (Secure Network Access Control) contributed 6 sessions, showing how even security-focused protocols must grapple with maintaining connectivity while adding protection mechanisms.
+The [dtn](https://datatracker.ietf.org/wg/dtn/about/) and [gaia](https://datatracker.ietf.org/wg/gaia/about/) working groups lead in discussion frequency (8 sessions each), reflecting their focus on challenged networks and global access respectively. The [rtgwg](https://datatracker.ietf.org/wg/rtgwg/about/), [bess](https://datatracker.ietf.org/wg/bess/about/), and [snac](https://datatracker.ietf.org/wg/snac/about/) working groups follow closely, indicating that routing and network connectivity discussions consistently invoke this principle.
 
-The consistent presence of connectivity discussions across all meetings and the wide distribution across 68 working groups demonstrates that this principle remains actively relevant to IETF work, not merely a historical artifact. The principle appears to be most actively discussed during periods of network stress or when designing systems that must operate across diverse network conditions.
+The broad distribution across 68 working groups demonstrates the principle's universal relevance in IETF work. From specialized groups like [icnrg](https://datatracker.ietf.org/wg/icnrg/about/) exploring future Internet architectures to established areas like [6man](https://datatracker.ietf.org/wg/6man/about/) maintaining IPv6 connectivity, the principle influences protocol development across all technology domains.
 
 ## Resources
 
-- [RFC 1958: Architectural Principles of the Internet](https://www.rfc-editor.org/rfc/rfc1958) — The definitive statement of Internet architectural principles including connectivity as primary goal
-- [End-to-End Arguments in System Design](https://web.mit.edu/Saltzer/www/publications/endtoend/endtoend.pdf) — Essential paper explaining why network functions should be kept simple to preserve connectivity
-- [Internet Universality Indicators (UNESCO)](https://en.unesco.org/internet-universality-indicators) — Framework for understanding universal Internet access and connectivity from a policy perspective
-- [The Design Philosophy of the DARPA Internet Protocols](https://ccr.sigcomm.org/archive/1995/jan95/ccr-9501-clark.pdf) — David Clark's seminal paper on Internet design goals and the prioritization of connectivity
-- [RFC 3439: Some Internet Architectural Guidelines and Philosophy](https://www.rfc-editor.org/rfc/rfc3439) — Updates and expansions on architectural principles including connectivity considerations
+- [RFC 1958: Architectural Principles of the Internet](https://www.rfc-editor.org/rfc/rfc1958) — Essential reading for understanding how connectivity became the Internet's primary design principle.
+- [Internet Universality (UNESCO)](https://en.unesco.org/internet-universality-indicators) — Explores the policy and social implications of universal Internet connectivity.
+- [End-to-End Arguments in System Design](https://web.mit.edu/Saltzer/www/publications/endtoend/endtoend.pdf) — Classic paper by Saltzer, Reed, and Clark that influenced Internet architecture principles.
 
 ---
-*This report was generated from analysis of IETF working group session transcripts using vCon (virtual Conversation) data from meetings 110-123 (March 2021 - July 2025).*
+*This report was generated from analysis of IETF working group session transcripts using vCon (Conversation Data Container) format.*
 
 ---
 

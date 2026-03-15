@@ -1,112 +1,111 @@
-# Principle of Constant Change
+# Principle of constant change
 
 ## Introduction
 
-The principle of constant change stands as one of the foundational tenets of Internet architecture, formally articulated in [RFC 1958: Architectural Principles of the Internet](https://www.rfc-editor.org/rfc/rfc1958) by Brian Carpenter in 1996. Simply stated, "The Internet must continue to evolve. Design for extensibility." This principle recognizes that the Internet is not a static system but a living, growing organism that must adapt to new technologies, changing user needs, and unforeseen requirements.
+The "Principle of constant change" stands as one of the foundational architectural principles of the Internet, formally articulated in [RFC 1958](https://www.rfc-editor.org/rfc/rfc1958) by Brian Carpenter in 1996. The principle states simply: "The Internet must continue to evolve. Design for extensibility." This deceptively straightforward directive has shaped decades of Internet protocol development, emphasizing that successful network protocols must be designed not just for today's requirements, but for the unknown needs of tomorrow.
 
-The principle emerged from the early Internet's remarkable success in adapting beyond its original scope. What began as ARPANET—a research network connecting a handful of universities—evolved into the global Internet supporting billions of users and applications that its creators never imagined. This transformation was possible precisely because the original designers built extensibility into the core protocols, allowing the network to grow organically rather than requiring complete redesign.
+This principle emerged from hard-learned lessons in the Internet's early development, where rigid protocol designs often became barriers to innovation and adaptation. The Internet's remarkable longevity and continuous growth can be attributed in large part to the IETF community's commitment to this principle, ensuring that protocols can accommodate new technologies, changing requirements, and unforeseen use cases without requiring complete architectural overhauls.
 
-In the IETF's work from 2021 through 2025, this principle has remained critically relevant as engineers grapple with emerging challenges like quantum computing threats, massive IoT deployments, and new application paradigms. The principle guides protocol designers to build systems that can evolve gracefully, ensuring the Internet's continued adaptability in an uncertain future. It's not just about accommodating known future needs—it's about creating space for the unknown innovations that will inevitably emerge.
+In the IETF's ongoing work from 2021 to 2025, this principle has been discussed in 565 working group sessions across all 14 meetings analyzed, making it one of the most consistently relevant architectural considerations in modern Internet protocol development. Its application spans everything from data modeling standards to security protocols to routing mechanisms, demonstrating its universal importance in network design.
 
 ## Understanding This Principle
 
-**The Core Idea**
+**The Core Idea** — Design systems to gracefully accommodate future changes you cannot predict today. Think of this principle like designing a city's infrastructure: the best urban planners don't just build roads for current traffic patterns, but design street grids, utility conduits, and zoning frameworks that can adapt as neighborhoods grow, technologies evolve, and citizens' needs change in ways no one can foresee today.
 
-Design systems so they can grow and change without breaking what already exists.
+When a city planner designs a new district, they might not know whether residents will primarily use cars, bicycles, or some future transportation technology twenty years from now. But they can design street widths that accommodate different vehicle types, lay utility conduits with extra capacity and access points, and create zoning frameworks with clear extension mechanisms. The infrastructure becomes a platform that enables future innovation rather than constraining it.
 
-Think of this like designing a city. When urban planners lay out a new city, they don't just build for today's population—they create infrastructure that can expand. They design street grids that can accommodate new neighborhoods, leave space for utility corridors that can carry future services, and establish zoning patterns that can evolve with changing needs. The best cities have "bones" that remain stable while everything around them adapts and grows.
+This same thinking applies to Internet protocols. When engineers design a protocol today, they cannot predict every future requirement—new security threats, emerging applications, changing network topologies, or novel hardware capabilities. But they can design extension points, reserve space for future options, create flexible data structures, and establish clear mechanisms for adding new features without breaking existing implementations.
 
-The principle of constant change applies this same thinking to Internet protocols. Just as a city planner might require that all new buildings include conduit space for unknown future utilities, protocol designers build in extension points, reserved fields, and negotiation mechanisms that allow new capabilities to be added later without disrupting existing systems.
+**Why It Matters** — When protocols violate this principle, they become evolutionary dead ends that either fragment into incompatible variants or require painful complete rewrites. Consider the contrast between IPv4 and SMTP. IPv4 was designed with a fixed 32-bit address space that seemed enormous in the 1980s, but its lack of extensibility led to the decades-long struggle with address exhaustion and the complex transition to IPv6. Meanwhile, SMTP was designed with extensible command structures and clear mechanisms for adding new capabilities—which is why email protocols have continuously evolved for over forty years without requiring a wholesale replacement.
 
-**Why It Matters**
+Without extensibility, protocols face a tragic choice: either stagnate and become irrelevant as technology advances, or undergo disruptive migrations that fragment the Internet. The principle of constant change prevents this by ensuring protocols can grow organically with their ecosystems, maintaining backward compatibility while enabling innovation.
 
-When you violate this principle, you create digital dead ends—protocols that work perfectly today but become obsolete tomorrow, requiring painful migrations or complete replacements.
+**The Tension** — The counterforce is implementation complexity and the pressure to ship quickly. Designing for extensibility requires additional work upfront—more complex data structures, additional testing scenarios, careful specification of extension mechanisms, and ongoing maintenance of compatibility. When faced with immediate deadlines and concrete requirements, it's tempting to build exactly what's needed today and defer extensibility concerns to "version 2.0." 
 
-Consider IPv4 versus IPv6 as a stark example. IPv4 was designed when the Internet was a small research network. Its 32-bit address space seemed vast for connecting university computers, but offered no room to grow. When the Internet exploded globally, we hit the fundamental limit—you simply cannot fit more than 4.3 billion addresses into 32 bits. The result? A decades-long, still-ongoing migration to IPv6 that has cost billions of dollars and created enormous technical complexity.
+Organizations often resist extensibility because it makes initial implementations harder to understand, potentially slower, and definitely more complex to test. There's also the "YAGNI" (You Aren't Gonna Need It) philosophy that argues against building features before they're required. This creates constant pressure to oversimplify protocols and remove extension points to meet delivery schedules.
 
-Contrast this with HTTP, which was designed with extensibility from the start. HTTP includes header fields that can carry new information, status codes that can be extended, and method names that can be added. This extensibility allowed HTTP to evolve from serving simple web pages to supporting everything from video streaming to real-time gaming to IoT device communication—all without breaking existing browsers or servers.
+**How to Recognize It** — You're seeing this principle at work when:
 
-**The Tension**
+* A protocol reserves unused bits or fields in its message formats, even when there's no immediate use for them
+* APIs include version negotiation mechanisms that allow clients and servers to discover each other's capabilities before communicating
+* Data schemas define clear rules for adding optional fields without breaking older parsers
+* Configuration formats use extensible key-value structures instead of fixed positional parameters
+* System designs include plugin architectures or standardized extension points, even when no extensions are planned yet
 
-The counterforce here is the natural human tendency to optimize for known requirements rather than unknown future needs. Extensibility often means added complexity, reduced performance, and increased implementation cost today to solve problems you might never actually encounter.
+## Early IETF Work
 
-Engineers face constant pressure to ship quickly and efficiently. Adding extension points feels like over-engineering when you have concrete requirements and tight deadlines. Business stakeholders question why they should pay for capabilities they don't need. The temptation is always to build exactly what's required today and assume you can add features later—but "later" often means starting over entirely.
+The principle of constant change was crystallized through painful early experiences with rigid protocol designs that couldn't adapt to the Internet's explosive growth. The original ARPANET protocols of the 1970s were often designed for specific, well-understood environments, but the Internet's rapid expansion in the 1980s and 1990s exposed the limitations of non-extensible designs. Early protocols like Telnet and FTP, while functional, required numerous extensions and modifications as new security requirements, internationalization needs, and performance demands emerged.
 
-This tension is especially acute in resource-constrained environments. Every reserved bit field, every optional parameter, every negotiation handshake consumes bytes, processing cycles, and implementation complexity. When you're designing protocols for IoT devices with severe power and bandwidth constraints, extensibility can feel like an expensive luxury.
+One of the most influential examples was the development of SMTP in [RFC 821](https://www.rfc-editor.org/rfc/rfc821), which included explicit extensibility mechanisms through its command-response structure and the later ESMTP extensions framework. This foresight allowed email to evolve continuously—adding authentication, encryption, multimedia support, and internationalization—without requiring a complete protocol replacement. Conversely, protocols that lacked such mechanisms often became evolutionary dead ends or required disruptive migrations that took decades to complete.
 
-**How to Recognize It**
-
-You're seeing this principle at work when protocols include version numbers that actually get used, when APIs have optional parameters that start empty but fill in over time, or when data formats include "reserved for future use" fields that eventually carry new information. You see it violated when systems require complete replacement rather than gradual upgrade, when adding new features breaks existing implementations, or when protocols fragment into incompatible variants because they couldn't accommodate different needs within a single framework.
+The IPv4 address space exhaustion crisis became a canonical example of what happens when fundamental protocol limitations cannot be extended around. Despite various clever workarounds like NAT and CIDR, the fixed 32-bit address structure ultimately required the development of an entirely new protocol (IPv6), leading to one of the longest and most complex transition periods in Internet history. These experiences taught the IETF community that building extensibility into protocols from the beginning was not optional but essential for the Internet's long-term health.
 
 ## Key References
 
-- [RFC 1958: Architectural Principles of the Internet](https://www.rfc-editor.org/rfc/rfc1958) — The foundational document that articulates this principle along with other core Internet design tenets.
+* [RFC 1958: Architectural Principles of the Internet](https://www.rfc-editor.org/rfc/rfc1958) — Brian Carpenter's foundational document establishing core Internet architectural principles including constant change
+* [RFC 6709: Design Considerations for Protocol Extensions](https://www.rfc-editor.org/rfc/rfc6709) — Comprehensive guidelines for designing extensible protocols and avoiding common pitfalls
+* [RFC 5218: What Makes for a Successful Protocol?](https://www.rfc-editor.org/rfc/rfc5218) — Analysis of protocol success factors with extensive discussion of extensibility requirements
 
 ## This Principle in IETF Discussions
 
-The principle of constant change manifests throughout IETF working groups as engineers grapple with balancing immediate needs against future flexibility. These discussions reveal how the principle applies across diverse protocol domains, from low-level networking to application-layer services.
+The principle of constant change manifests consistently across IETF working groups, often emerging in discussions about data formats, protocol extensions, and backward compatibility. In the early period of our analysis, [bess](https://datatracker.ietf.org/wg/bess/about/) participants at IETF 110 emphasized how new protocol designs focused on "defining extensions that provide efficiency and extensibility and improve upon some of the legacy constraints we have seen in the past." This reflects the ongoing effort to learn from previous limitations and build more adaptable protocols.
 
-In the BESS (BGP Enabled ServiceS) working group, participants explicitly focused on extensibility when developing new safety mechanisms:
+> focusing on the aspects listed below uh i think to highlight here is we have focused on because it is a new safety we have focused on defining extensions that provide efficiency and extensibility and improve upon some of the legacy uh constraints we have you know seen in the past
 
-> "we have focused on defining extensions that provide efficiency and extensibility and improve upon some of the legacy uh constraints we have you know seen in the past"
+The [calext](https://datatracker.ietf.org/wg/calext/about/) working group discovered the practical challenges of extensibility during IETF 110, when they found that "the alternate extensible quote extensible syntax for defining the alarms wasn't quite as extensible as we thought." This highlights how achieving true extensibility requires careful design and testing—it's not sufficient to simply claim a protocol is extensible without validating the extension mechanisms.
 
-This comment from IETF 110 illustrates how working groups use new protocol development as opportunities to address extensibility limitations in existing systems, ensuring that today's solutions don't become tomorrow's constraints.
+> we found out that the uh alternate extensible quote extensible syntax for defining the alarms wasn't quite as extensible as we thought
 
-The challenge of achieving true extensibility became apparent in the CALEXT working group's work on calendar extensions. Engineers discovered that their carefully designed extension mechanism had unexpected limitations:
+By the middle period, [core](https://datatracker.ietf.org/wg/core/about/) participants at IETF 115 were grappling with more sophisticated extensibility challenges, noting that "adding something to a registry after the fact will have no effect in many environments." This reflects the evolution of understanding about extensibility—it's not enough to provide extension points if deployed implementations cannot actually use them.
 
-> "we found out that the uh alternate extensible quote extensible syntax for defining the alarms wasn't quite as extensible as we thought"
+> so that that's a problem with just saying oh we drop in a registry here and and that provides the extensibility we need
 
-This honest assessment from IETF 110 highlights how extensibility is often harder to achieve than initially anticipated, requiring iterative refinement as real-world usage reveals gaps in the original design.
+The [icnrg](https://datatracker.ietf.org/wg/icnrg/about/) research group at IETF 115 demonstrated practical application of the principle, describing how they "Define two keying mechanism one is a pre-shared key... and it is you know extensible you can Define more and hopefully we will get more than those two." This shows extensibility being built into security mechanisms from the beginning, rather than retrofitted later.
 
-Forward compatibility emerged as a key concern in the MASQUE working group, where participants emphasized the importance of explicit signaling for future-proofing:
+> Define we Define two keying mechanism one is a pre-shared key... and it is you know extensible you can Define more and hopefully we will get more than those two
 
-> "i think we need to use the settings um just how it is is i believe the correct way i think it's more for future proofing also to be very explicit that the h3 application is intending to do this"
+In recent discussions, [6man](https://datatracker.ietf.org/wg/6man/about/) participants at IETF 120 showed concern about potential extensibility impacts, asking whether protocol changes might "close off some extensibility path" for implementers. This demonstrates how the principle now influences even detailed technical decisions, with participants actively considering future flexibility implications.
 
-This discussion from IETF 110 shows how engineers must balance simplicity with future flexibility, often choosing more explicit approaches specifically to preserve extensibility options.
+> does it close off some extensibility path for them that's fair enough
 
-The MPLS working group demonstrated practical backward compatibility techniques when extending existing protocols:
+The [anrw](https://datatracker.ietf.org/wg/anrw/about/) research workshop at IETF 120 presented research on "HTP 3 extensible prioritization scheme in the wild," showing how extensibility mechanisms are being studied and validated in real-world deployments, not just designed in theory.
 
-> "this draft split that 16 bit reserve field into two different fields and the eight bit the first eight bit field is used as the algorithm field so this is backward compatible because uh you know if it is the default flex algo then the value will be zero"
-
-This approach from IETF 110 exemplifies how reserved fields enable graceful evolution—the protocol can support new functionality while remaining compatible with implementations that only understand the original specification.
+> and this is the results on HTP 3 extensible prioritization scheme in the wild
 
 ## Historical Analysis
 
-The discussion frequency data reveals consistent attention to the principle of constant change across all IETF meetings from 110 through 123, with notable peaks during transition periods:
+Discussion of the principle of constant change has remained consistently high throughout the analyzed period, with notable peaks during IETF 110 (48 sessions) and IETF 116 (48 sessions). The principle's relevance has proven remarkably stable, never dropping below 31 sessions in any meeting, indicating its fundamental importance across diverse working groups.
 
-| Meeting | Date | Location | Discussions |
-|---------|------|----------|-------------|
-| IETF 110 | March 2021 | Online | 48 |
-| IETF 111 | July 2021 | Online | 31 |
-| IETF 112 | November 2021 | Online | 42 |
-| IETF 113 | March 2022 | Vienna | 40 |
-| IETF 114 | July 2022 | Philadelphia | 35 |
-| IETF 115 | November 2022 | London | 39 |
-| IETF 116 | March 2023 | Yokohama | 48 |
-| IETF 117 | July 2023 | San Francisco | 44 |
-| IETF 118 | November 2023 | Prague | 36 |
-| IETF 119 | March 2024 | Brisbane | 32 |
-| IETF 120 | July 2024 | Vancouver | 43 |
-| IETF 121 | November 2024 | Dublin | 45 |
-| IETF 122 | March 2025 | Bangkok | 39 |
-| IETF 123 | July 2025 | Madrid | 43 |
+| Meeting | Sessions | Period |
+|---------|----------|--------|
+| IETF 110 | 48 | March 2021 (Online) |
+| IETF 111 | 31 | July 2021 (Online) |
+| IETF 112 | 42 | November 2021 (Online) |
+| IETF 113 | 40 | March 2022 (Vienna) |
+| IETF 114 | 35 | July 2022 (Philadelphia) |
+| IETF 115 | 39 | November 2022 (London) |
+| IETF 116 | 48 | March 2023 (Yokohama) |
+| IETF 117 | 44 | July 2023 (San Francisco) |
+| IETF 118 | 36 | November 2023 (Prague) |
+| IETF 119 | 32 | March 2024 (Brisbane) |
+| IETF 120 | 43 | July 2024 (Vancouver) |
+| IETF 121 | 45 | November 2024 (Dublin) |
+| IETF 122 | 39 | March 2025 (Bangkok) |
+| IETF 123 | 43 | July 2025 (Madrid) |
 
-The highest discussion frequencies occurred during IETF 110 and 116 (48 sessions each), suggesting heightened attention to extensibility during periods of significant protocol evolution. IETF 110 coincided with major developments in post-pandemic network requirements, while IETF 116 aligned with quantum-readiness discussions that required extensive protocol extensibility planning.
+The working groups with highest discussion frequency reveal interesting patterns. [netmod](https://datatracker.ietf.org/wg/netmod/about/) leads with 12 sessions, reflecting the critical importance of extensibility in network management data models. [iabopen](https://datatracker.ietf.org/wg/iabopen/about/) sessions (11 discussions) indicate ongoing architectural attention to this principle at the highest levels. Protocol-focused groups like [quic](https://datatracker.ietf.org/wg/quic/about/), [masque](https://datatracker.ietf.org/wg/masque/about/), and [lsr](https://datatracker.ietf.org/wg/lsr/about/) (each with 11 sessions) demonstrate how extensibility concerns permeate modern protocol development.
 
-The working groups most engaged with this principle—netmod, iabopen, lsr, masque, and quic—represent diverse protocol layers but share common challenges in managing protocol evolution. Network modeling (netmod), routing protocols (lsr), and emerging application protocols (masque, quic) all require careful attention to extensibility to accommodate rapidly changing requirements and maintain long-term viability.
-
-The broad distribution across 149 working groups demonstrates that extensibility concerns permeate all aspects of Internet protocol development, from low-level transport mechanisms to high-level application services.
+The broad distribution across 149 working groups—nearly every active IETF working group—shows that extensibility is not confined to specific technical domains but represents a universal design concern. From data formats ([cbor](https://datatracker.ietf.org/wg/cbor/about/)) to network configuration ([netconf](https://datatracker.ietf.org/wg/netconf/about/)) to IPv6 evolution ([6man](https://datatracker.ietf.org/wg/6man/about/)), the principle influences decisions across the entire Internet protocol stack.
 
 ## Resources
 
-- [RFC 1958: Architectural Principles of the Internet](https://www.rfc-editor.org/rfc/rfc1958) — Essential reading for understanding the foundational principles that guide Internet protocol design, including the complete context for the constant change principle.
-
-- [RFC 6709: Design Considerations for Protocol Extensions](https://www.rfc-editor.org/rfc/rfc6709) — Practical guidance for protocol designers on implementing extensibility mechanisms that actually work in practice.
-
-- [Protocol Extensibility (Wikipedia)](https://en.wikipedia.org/wiki/Extensibility) — Accessible overview of extensibility concepts across different types of systems, providing broader context beyond Internet protocols.
+* [RFC 1958: Architectural Principles of the Internet](https://www.rfc-editor.org/rfc/rfc1958) — The foundational document that established this principle, essential reading for understanding Internet architectural philosophy
+* [RFC 6709: Design Considerations for Protocol Extensions](https://www.rfc-editor.org/rfc/rfc6709) — Practical engineering guidance for building extensible protocols, with detailed examples and common pitfalls
+* [RFC 5218: What Makes for a Successful Protocol?](https://www.rfc-editor.org/rfc/rfc5218) — Comprehensive analysis of protocol success factors, with extensive discussion of extensibility's role in long-term protocol viability
+* [Protocol Extensibility (Wikipedia)](https://en.wikipedia.org/wiki/Extensibility) — Accessible overview of extensibility concepts across different domains, helpful for understanding the broader software engineering context
 
 ---
-*This report was generated from vCon analysis of IETF working group session transcripts from meetings 110-123 (March 2021 - July 2025).*
+*This report was generated from analysis of IETF working group session transcripts using vCon conversation analysis.*
 
 ---
 
