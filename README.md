@@ -55,15 +55,15 @@ We processed every recorded working group transcript, searching for moments wher
 ## Repository Structure
 
 ```
-├── site/                          # GitBook-compatible site (GitHub Pages)
+├── docs/                          # GitHub Pages source (Jekyll/Minimal theme)
 │   ├── README.md                  # Landing page
 │   ├── SUMMARY.md                 # Navigation / table of contents
-│   ├── book.json                  # GitBook configuration
 │   └── principles/                # 12 principle reports
-│       ├── end_to_end.md
-│       ├── fate_sharing.md
-│       ├── layering.md
-│       └── ...
+├── site/                          # GitBook-compatible mirror of docs/
+│   ├── README.md
+│   ├── SUMMARY.md
+│   ├── book.json                  # GitBook configuration
+│   └── principles/
 ├── scripts/                       # Analysis pipeline
 │   ├── analyze_vcons.py           # Main orchestrator
 │   ├── keyword_detector.py        # Principle keyword matching

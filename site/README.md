@@ -79,4 +79,4 @@ A [vCon](https://datatracker.ietf.org/doc/draft-ietf-vcon-vcon-container/) is a 
 
 ---
 
-*This site is generated from vCon analysis. Source code and data are available in the [ietf-hackathon-125](https://github.com/vcon-dev/ietf-hackathon-125) repository.*
+*This site is generated from vCon analysis. Source code and data are available in the [ietf-hackathon-125](https://github.com/howethomas/ietf-hackathon-125) repository.*
